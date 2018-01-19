@@ -108,43 +108,15 @@
 		<p><br /> <i> Eimeria </i> species:</p>
 		<p><b>Dr. Adam Reid</b></p>
 		<p>The Wellcome Sanger Institute</p>
+                <p>
+                        <br />
+                </p>
 
 		</div>
 		<div class="main-light-grey-bot"></div>
 			<br />
-		<h3>Developers</h3>
 
-		<div class="main-light-grey-top"></div>
-		<div class="main-light-grey">
-			<p>
-				<br /> <b> Dr. Jacqueline Keane </b>
-			</p>
-			<p>The Wellcome Sanger Institute</p>
-                           <p>Jacqueline McQuillan has a PhD in Software Engineering and joined the
-                              Pathogen Genomics group at the Wellcome Sanger Institute as a
-                              postdoctoral fellow in 2008. In 2010, she took on the role of managing
-                              the Pathogen Informatics team whose main responsibilities are to develop
-                              sequence analysis pipelines and provide informatics support to
-			      the Pathogen Genomics group.</p>
-
-			<p>
-				<br /> <b> Dr. Andrew Page </b>
-			</p>
-			<p>The Wellcome Sanger Institute</p>
-			<p>Andrew has a PhD in Computer Science in the area of distributed computing.
-			   He joined the Sequencing Informatics team at the Wellcome Sanger Institute
-			   in 2009 as a Senior Software Developer and moved to the Pathogen Informatics
-			   team in June 2011 as a Principal Software Developer.
-			<p>
-
-		</div>
-		<div class="main-light-grey-bot"></div>
-
-		<p>
-			<br />
-		</p>
 		<h3>Past contributors</h3>
-
 		<div class="main-light-grey-top"></div>
 		<div class="main-light-grey">
                         <p>

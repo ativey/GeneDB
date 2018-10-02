@@ -2,7 +2,7 @@ package org.genedb.top.chado.mapped;
 
 import static javax.persistence.GenerationType.SEQUENCE;
 
-import org.genedb.db.dao.CvDao;
+import org.genedb.top.db.dao.CvDao;
 import org.apache.log4j.Logger;
 import org.hibernate.annotations.Proxy;
 import org.hibernate.search.annotations.DocumentId;

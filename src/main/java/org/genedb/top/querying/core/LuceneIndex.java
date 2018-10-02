@@ -1,12 +1,12 @@
 package org.genedb.top.querying.core;
 
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.index.IndexReader;
-import org.apache.lucene.queryParser.ParseException;
-import org.apache.lucene.queryParser.QueryParser;
+import org.apache.lucene.queryparser.classic.ParseException;
+import org.apache.lucene.queryparser.classic.QueryParser;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
@@ -45,7 +45,7 @@ public class LuceneIndex {
         return indexName;
     }
 
-    private static final Logger logger = Logger.getLogger(LuceneIndex.class);
+//    private static final Logger logger = Logger.getLogger(LuceneIndex.class);
 
     private IndexReader indexReader;
 
@@ -73,7 +73,7 @@ public class LuceneIndex {
             return;
         }
         String indexFilename = indexDirectoryName + File.separatorChar + indexName;
-        logger.info(String.format("Opening Lucene index at '%s'", indexFilename));
+//        logger.info(String.format("Opening Lucene index at '%s'", indexFilename));
         try {
 
         	directory = FSDirectory.getDirectory(new File(indexFilename));
@@ -114,7 +114,7 @@ public class LuceneIndex {
 
         try {
             query = qp.parse(queryString);
-            logger.debug("query is -> " + query.toString());
+//            logger.debug("query is -> " + query.toString());
 
             return search(query);
         } catch (ParseException e) {

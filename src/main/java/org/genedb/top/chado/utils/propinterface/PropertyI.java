@@ -1,6 +1,6 @@
 package org.genedb.top.chado.utils.propinterface;
 
-import org.gmod.schema.mapped.CvTerm;
+import org.genedb.top.chado.mapped.CvTerm;
 
 /**
  *

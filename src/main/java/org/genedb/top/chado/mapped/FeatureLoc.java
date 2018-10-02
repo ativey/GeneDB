@@ -2,7 +2,7 @@ package org.genedb.top.chado.mapped;
 
 import static javax.persistence.GenerationType.SEQUENCE;
 
-import org.gmod.schema.utils.StrandedLocation;
+import org.genedb.top.chado.utils.StrandedLocation;
 
 import org.apache.log4j.Logger;
 import org.hibernate.annotations.LazyToOne;

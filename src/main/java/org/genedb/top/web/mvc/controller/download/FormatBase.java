@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
-import org.genedb.db.dao.SequenceDao;
-import org.genedb.querying.tmpquery.GeneDetail;
-import org.gmod.schema.mapped.Feature;
+import org.genedb.top.db.dao.SequenceDao;
+import org.genedb.top.querying.tmpquery.GeneDetail;
+import org.genedb.top.chado.mapped.Feature;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.TransactionCallback;
 import org.springframework.transaction.support.TransactionTemplate;

@@ -2,10 +2,10 @@ package org.genedb.top.chado.mapped;
 
 import static javax.persistence.GenerationType.SEQUENCE;
 
-import org.genedb.db.dao.CvDao;
+import org.genedb.top.db.dao.CvDao;
 
-import org.gmod.schema.utils.Rankable;
-import org.gmod.schema.utils.propinterface.PropertyI;
+import org.genedb.top.chado.utils.Rankable;
+import org.genedb.top.chado.utils.propinterface.PropertyI;
 
 import org.apache.log4j.Logger;
 import org.hibernate.annotations.Cascade;

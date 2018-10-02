@@ -1,17 +1,17 @@
 package org.genedb.top.db.dao;
 
-import org.genedb.util.SynchronizedTwoKeyMap;
-import org.genedb.util.TwoKeyMap;
+import org.genedb.top.util.SynchronizedTwoKeyMap;
+import org.genedb.top.util.TwoKeyMap;
 
-import org.gmod.schema.cfg.FeatureType;
-import org.gmod.schema.cfg.FeatureTypeUtils;
-import org.gmod.schema.feature.Polypeptide;
-import org.gmod.schema.mapped.Cv;
-import org.gmod.schema.mapped.CvTerm;
-import org.gmod.schema.mapped.Db;
-import org.gmod.schema.mapped.DbXRef;
-import org.gmod.schema.mapped.Feature;
-import org.gmod.schema.utils.CountedName;
+import org.genedb.top.chado.cfg.FeatureType;
+import org.genedb.top.chado.cfg.FeatureTypeUtils;
+import org.genedb.top.chado.feature.Polypeptide;
+import org.genedb.top.chado.mapped.Cv;
+import org.genedb.top.chado.mapped.CvTerm;
+import org.genedb.top.chado.mapped.Db;
+import org.genedb.top.chado.mapped.DbXRef;
+import org.genedb.top.chado.mapped.Feature;
+import org.genedb.top.chado.utils.CountedName;
 
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
@@ -395,7 +395,7 @@ public class CvDao extends BaseDao {
     public List<CountedName> getAllTermsInCvWithCount(Cv cv) {
         @SuppressWarnings("unchecked")
         List<CountedName> countedNames = getSession().createQuery(
-            "select new org.gmod.schema.utils.CountedName(cvt.name, count(fct.feature))"
+            "select new org.genedb.top.chado.utils.CountedName(cvt.name, count(fct.feature))"
                     + " from FeatureCvTerm fct"
                     + " join fct.cvTerm cvt"
                     + " where cvt.cv=:cv"
@@ -418,7 +418,7 @@ public class CvDao extends BaseDao {
 
         @SuppressWarnings("unchecked")
         List<CountedName> countedNames = getSession().createQuery(
-            "select new org.gmod.schema.utils.CountedName(cvt.name, count(fct.feature.uniqueName))"
+            "select new org.genedb.top.chado.utils.CountedName(cvt.name, count(fct.feature.uniqueName))"
                     + " from FeatureCvTerm fct" + " join fct.cvTerm cvt"
                     + " where fct.feature.organism.commonName in (" + orgNames + ")"
                     + " and cvt.cv.name=:cvName" + " group by cvt.name"
@@ -454,7 +454,7 @@ public class CvDao extends BaseDao {
 
         @SuppressWarnings("unchecked")
         List<CountedName> countedNames = getSession().createQuery(
-            "select new org.gmod.schema.utils.CountedName(cvt.name, count(fct.feature.uniqueName))"
+            "select new org.genedb.top.chado.utils.CountedName(cvt.name, count(fct.feature.uniqueName))"
                     + " from FeatureCvTerm fct" + " join fct.cvTerm cvt"
                     + " where"
                     + orgQuery
@@ -481,7 +481,7 @@ public class CvDao extends BaseDao {
     public List<CountedName> getCountedNamesByCvNameAndFeature(String cvName,
             Polypeptide polypeptide) {
 
-        String query = "select new org.gmod.schema.utils.CountedName( fct.cvTerm.name, count"
+        String query = "select new org.genedb.top.chado.utils.CountedName( fct.cvTerm.name, count"
                 + " (fct)) from FeatureCvTerm fct where" + " fct.cvTerm.id in "
                 + " (select fct.cvTerm.id from FeatureCvTerm fct, Feature f"
                 + " where f=:polypeptide and fct.cvTerm.cv.name=:cvName" + " and fct.feature=f)"
@@ -513,7 +513,7 @@ public class CvDao extends BaseDao {
          * the distinct clause in the query counts only once if there is more
          * than FeatureCvTerm for a Feature with a particular CvTerm
          */
-        String query = "select new org.gmod.schema.utils.CountedName( fct.cvTerm.name, count"
+        String query = "select new org.genedb.top.chado.utils.CountedName( fct.cvTerm.name, count"
                 + " (distinct fct.feature)) from FeatureCvTerm fct where"
                 + " fct.feature.organism.commonName=:organism and " + " fct.cvTerm.id in "
                 + " (select fct.cvTerm.id from FeatureCvTerm fct, Feature f"
@@ -548,7 +548,7 @@ public class CvDao extends BaseDao {
          * the distinct clause in the query counts only once if there is more
          * than FeatureCvTerm for a Feature with a particular CvTerm
          */
-        String query = "select new org.gmod.schema.utils.CountedName( fct.cvTerm.name, count"
+        String query = "select new org.genedb.top.chado.utils.CountedName( fct.cvTerm.name, count"
                 + " (distinct fct.feature)) from FeatureCvTerm fct where"
                 + " fct.feature.organism.commonName=:organism and " + " fct.cvTerm.id in "
                 + " (select fct.cvTerm.id from FeatureCvTerm fct, Feature f"

@@ -19,18 +19,18 @@
 
 package org.genedb.top.web.mvc.controller;
 
-import org.genedb.db.dao.SequenceDao;
-import org.genedb.util.Pair;
-import org.genedb.util.SequenceUtils;
+import org.genedb.top.db.dao.SequenceDao;
+import org.genedb.top.util.Pair;
+import org.genedb.top.util.SequenceUtils;
 
-import org.gmod.schema.feature.AbstractExon;
-import org.gmod.schema.feature.AbstractGene;
-import org.gmod.schema.feature.Polypeptide;
-import org.gmod.schema.feature.ProductiveTranscript;
-import org.gmod.schema.feature.Pseudogene;
-import org.gmod.schema.feature.PseudogenicTranscript;
-import org.gmod.schema.feature.Transcript;
-import org.gmod.schema.mapped.Feature;
+import org.genedb.top.chado.feature.AbstractExon;
+import org.genedb.top.chado.feature.AbstractGene;
+import org.genedb.top.chado.feature.Polypeptide;
+import org.genedb.top.chado.feature.ProductiveTranscript;
+import org.genedb.top.chado.feature.Pseudogene;
+import org.genedb.top.chado.feature.PseudogenicTranscript;
+import org.genedb.top.chado.feature.Transcript;
+import org.genedb.top.chado.mapped.Feature;
 
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;

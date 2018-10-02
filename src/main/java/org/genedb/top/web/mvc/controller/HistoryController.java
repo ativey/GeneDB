@@ -1,12 +1,12 @@
 package org.genedb.top.web.mvc.controller;
 
 
-import org.genedb.querying.core.Query;
-import org.genedb.querying.core.QueryUtils;
-import org.genedb.querying.history.HistoryItem;
-import org.genedb.querying.history.HistoryManager;
+import org.genedb.top.querying.core.Query;
+import org.genedb.top.querying.core.QueryUtils;
+import org.genedb.top.querying.history.HistoryItem;
+import org.genedb.top.querying.history.HistoryManager;
 
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,7 +35,7 @@ import com.google.common.collect.Lists;
 @RequestMapping("/History")
 public class HistoryController {
 
-    Logger logger = Logger.getLogger(HistoryController.class);
+//    Logger logger = Logger.getLogger(HistoryController.class);
 
     private HistoryManagerFactory historyManagerFactory;
     private String historyView;
@@ -55,7 +55,7 @@ public class HistoryController {
         for (Entry<String, HistoryItem> entry : historyManager.getHistoryItems().entrySet()) {
 
         	HistoryItem item = entry.getValue();
-        	logger.info(item.getName());
+        	//logger.info(item.getName());
         	
         	String description = getFormattedParameterMap(item);
         	
@@ -130,11 +130,11 @@ public class HistoryController {
         
         allids.removeAll(hits);
         
-        logger.info("removing " + hits);
-        logger.info(" from " + allids);
+        //logger.info("removing " + hits);
+        //logger.info(" from " + allids);
         
         item.setIds(allids);
-        logger.info(" result " + item.getIds());
+        //logger.info(" result " + item.getIds());
         
         if (item.getNumberItems() < 1) {
             return new ModelAndView("history/list");
@@ -155,7 +155,7 @@ public class HistoryController {
     	
         HttpSession session = request.getSession(false);
         HistoryManager historyManager = historyManagerFactory.getHistoryManager(session);
-        logger.info("Removing item from history");
+        //logger.info("Removing item from history");
         
         HistoryItem item = historyManager.getHistoryItemByID(historyItem-1);
         historyManager.removeItem(item.getName());

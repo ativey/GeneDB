@@ -1,6 +1,6 @@
 package org.genedb.top.chado.feature;
 
-import org.genedb.top.chado.FeatureType;
+import org.genedb.top.chado.cfg.FeatureType;
 import org.genedb.top.chado.mapped.Organism;
 
 import java.sql.Timestamp;

@@ -1,12 +1,12 @@
 package org.genedb.top.db.dao;
 
-import org.gmod.schema.mapped.Analysis;
-import org.gmod.schema.mapped.AnalysisFeature;
-import org.gmod.schema.mapped.CvTerm;
-import org.gmod.schema.mapped.Db;
-import org.gmod.schema.mapped.DbXRef;
-import org.gmod.schema.mapped.Feature;
-import org.gmod.schema.mapped.Synonym;
+import org.genedb.top.chado.mapped.Analysis;
+import org.genedb.top.chado.mapped.AnalysisFeature;
+import org.genedb.top.chado.mapped.CvTerm;
+import org.genedb.top.chado.mapped.Db;
+import org.genedb.top.chado.mapped.DbXRef;
+import org.genedb.top.chado.mapped.Feature;
+import org.genedb.top.chado.mapped.Synonym;
 
 import org.apache.log4j.Logger;
 import org.springframework.transaction.annotation.Transactional;

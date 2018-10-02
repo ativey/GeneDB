@@ -1,32 +1,32 @@
 package org.genedb.top.db.dao;
 
-import org.gmod.schema.feature.AbstractGene;
-import org.gmod.schema.feature.CytoplasmicRegion;
-import org.gmod.schema.feature.GPIAnchorCleavageSite;
-import org.gmod.schema.feature.HelixTurnHelix;
-import org.gmod.schema.feature.MembraneStructure;
-import org.gmod.schema.feature.MembraneStructureComponent;
-import org.gmod.schema.feature.NonCytoplasmicRegion;
-import org.gmod.schema.feature.Polypeptide;
-import org.gmod.schema.feature.PolypeptideDomain;
-import org.gmod.schema.feature.PolypeptideRegion;
-import org.gmod.schema.feature.SignalPeptide;
-import org.gmod.schema.feature.Transcript;
-import org.gmod.schema.feature.TransmembraneRegion;
-import org.gmod.schema.mapped.Analysis;
-import org.gmod.schema.mapped.CvTerm;
-import org.gmod.schema.mapped.DbXRef;
-import org.gmod.schema.mapped.Feature;
-import org.gmod.schema.mapped.FeatureCvTerm;
-import org.gmod.schema.mapped.FeatureDbXRef;
-import org.gmod.schema.mapped.FeatureLoc;
-import org.gmod.schema.mapped.FeatureProp;
-import org.gmod.schema.mapped.FeatureRelationship;
-import org.gmod.schema.mapped.FeatureSynonym;
-import org.gmod.schema.mapped.Organism;
-import org.gmod.schema.mapped.Synonym;
-import org.gmod.schema.utils.CountedName;
-import org.gmod.schema.utils.GeneNameOrganism;
+import org.genedb.top.chado.feature.AbstractGene;
+import org.genedb.top.chado.feature.CytoplasmicRegion;
+import org.genedb.top.chado.feature.GPIAnchorCleavageSite;
+import org.genedb.top.chado.feature.HelixTurnHelix;
+import org.genedb.top.chado.feature.MembraneStructure;
+import org.genedb.top.chado.feature.MembraneStructureComponent;
+import org.genedb.top.chado.feature.NonCytoplasmicRegion;
+import org.genedb.top.chado.feature.Polypeptide;
+import org.genedb.top.chado.feature.PolypeptideDomain;
+import org.genedb.top.chado.feature.PolypeptideRegion;
+import org.genedb.top.chado.feature.SignalPeptide;
+import org.genedb.top.chado.feature.Transcript;
+import org.genedb.top.chado.feature.TransmembraneRegion;
+import org.genedb.top.chado.mapped.Analysis;
+import org.genedb.top.chado.mapped.CvTerm;
+import org.genedb.top.chado.mapped.DbXRef;
+import org.genedb.top.chado.mapped.Feature;
+import org.genedb.top.chado.mapped.FeatureCvTerm;
+import org.genedb.top.chado.mapped.FeatureDbXRef;
+import org.genedb.top.chado.mapped.FeatureLoc;
+import org.genedb.top.chado.mapped.FeatureProp;
+import org.genedb.top.chado.mapped.FeatureRelationship;
+import org.genedb.top.chado.mapped.FeatureSynonym;
+import org.genedb.top.chado.mapped.Organism;
+import org.genedb.top.chado.mapped.Synonym;
+import org.genedb.top.chado.utils.CountedName;
+import org.genedb.top.chado.utils.GeneNameOrganism;
 
 import org.apache.log4j.Logger;
 import org.hibernate.Query;
@@ -592,7 +592,7 @@ public class SequenceDao extends BaseDao {
         if(organism != null) {
 
             geneNameOrganisms = performQuery(GeneNameOrganism.class,
-                            "select new org.gmod.schema.utils.GeneNameOrganism( " +
+                            "select new org.genedb.top.chado.utils.GeneNameOrganism( " +
                             "transcript_gene.objectFeature.uniqueName, transcript_gene.objectFeature.organism.abbreviation) " +
                             "from " +
                             "FeatureRelationship transcript_gene, FeatureRelationship polypeptide_transcript " +
@@ -607,7 +607,7 @@ public class SequenceDao extends BaseDao {
                             new Object[] { cvTermName, cvName });
         } else {
             geneNameOrganisms = performQuery(GeneNameOrganism.class,
-                    "select new org.gmod.schema.utils.GeneNameOrganism( " +
+                    "select new org.genedb.top.chado.utils.GeneNameOrganism( " +
                     "transcript_gene.objectFeature.uniqueName, transcript_gene.objectFeature.organism.abbreviation) " +
                     "from " +
                     "FeatureRelationship transcript_gene, FeatureRelationship polypeptide_transcript " +
@@ -631,7 +631,7 @@ public class SequenceDao extends BaseDao {
         if(organism != null) {
 
             geneNameOrganisms = performQuery(GeneNameOrganism.class,
-                            "select new org.gmod.schema.utils.GeneNameOrganism( " +
+                            "select new org.genedb.top.chado.utils.GeneNameOrganism( " +
                             "transcript_gene.objectFeature.uniqueName, transcript_gene.objectFeature.organism.abbreviation) " +
                             "from " +
                             "FeatureRelationship transcript_gene, FeatureRelationship polypeptide_transcript " +
@@ -646,7 +646,7 @@ public class SequenceDao extends BaseDao {
                             new Object[] { cvTermName, cvNamePattern });
         } else {
             geneNameOrganisms = performQuery(GeneNameOrganism.class,
-                    "select new org.gmod.schema.utils.GeneNameOrganism( " +
+                    "select new org.genedb.top.chado.utils.GeneNameOrganism( " +
                     "transcript_gene.objectFeature.uniqueName, transcript_gene.objectFeature.organism.abbreviation) " +
                     "from " +
                     "FeatureRelationship transcript_gene, FeatureRelationship polypeptide_transcript " +

@@ -1,8 +1,8 @@
 package org.genedb.top.db.domain.hibernateImpls;
 
-import org.genedb.db.domain.services.LockAndNotificationService;
-import org.genedb.db.domain.services.LockStatus;
-import org.genedb.db.domain.services.MessageService;
+import org.genedb.top.db.domain.services.LockAndNotificationService;
+import org.genedb.top.db.domain.services.LockStatus;
+import org.genedb.top.db.domain.services.MessageService;
 
 import java.util.ArrayList;
 import java.util.HashMap;

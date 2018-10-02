@@ -8,8 +8,8 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
-import org.genedb.querying.history.HistoryItem;
-import org.genedb.querying.history.HistoryManager;
+import org.genedb.top.querying.history.HistoryItem;
+import org.genedb.top.querying.history.HistoryManager;
 
 import org.apache.log4j.Logger;
 

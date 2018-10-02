@@ -1,7 +1,7 @@
 package org.genedb.top.querying.history;
 
-import org.apache.log4j.Logger;
-import org.genedb.querying.core.PagedQuery;
+//import org.apache.log4j.Logger;
+import org.genedb.top.querying.core.PagedQuery;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ import java.util.Set;
 
 public class HistoryItem implements Serializable {
 	
-	private Logger logger = Logger.getLogger(HistoryItem.class);
+	//private Logger logger = Logger.getLogger(HistoryItem.class);
 	
     private String name;
 

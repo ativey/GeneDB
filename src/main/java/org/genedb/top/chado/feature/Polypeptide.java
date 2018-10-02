@@ -1,19 +1,19 @@
 package org.genedb.top.chado.feature;
 
 
-import org.genedb.db.analyzers.AllNamesAnalyzer;
-import org.genedb.db.analyzers.AlphaNumericAnalyzer;
-import org.gmod.schema.cfg.FeatureType;
-import org.gmod.schema.mapped.CvTerm;
-import org.gmod.schema.mapped.DbXRef;
-import org.gmod.schema.mapped.Feature;
-import org.gmod.schema.mapped.FeatureCvTerm;
-import org.gmod.schema.mapped.FeatureLoc;
-import org.gmod.schema.mapped.FeatureProp;
-import org.gmod.schema.mapped.FeatureRelationship;
-import org.gmod.schema.mapped.Organism;
-import org.gmod.schema.utils.PeptideProperties;
-import org.gmod.schema.utils.StrandedLocation;
+import org.genedb.top.db.analyzers.AllNamesAnalyzer;
+import org.genedb.top.db.analyzers.AlphaNumericAnalyzer;
+import org.genedb.top.chado.cfg.FeatureType;
+import org.genedb.top.chado.mapped.CvTerm;
+import org.genedb.top.chado.mapped.DbXRef;
+import org.genedb.top.chado.mapped.Feature;
+import org.genedb.top.chado.mapped.FeatureCvTerm;
+import org.genedb.top.chado.mapped.FeatureLoc;
+import org.genedb.top.chado.mapped.FeatureProp;
+import org.genedb.top.chado.mapped.FeatureRelationship;
+import org.genedb.top.chado.mapped.Organism;
+import org.genedb.top.chado.utils.PeptideProperties;
+import org.genedb.top.chado.utils.StrandedLocation;
 import org.apache.log4j.Logger;
 import org.biojava.bio.BioException;
 import org.biojava.bio.proteomics.IsoelectricPointCalc;

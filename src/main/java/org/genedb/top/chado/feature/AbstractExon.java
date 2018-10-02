@@ -1,6 +1,6 @@
 package org.genedb.top.chado.feature;
 
-import org.gmod.schema.mapped.Organism;
+import org.genedb.top.chado.mapped.Organism;
 
 import java.sql.Timestamp;
 

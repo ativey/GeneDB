@@ -1,10 +1,10 @@
 package org.genedb.top.chado.feature;
 
-import org.gmod.schema.cfg.FeatureType;
-import org.gmod.schema.mapped.CvTerm;
-import org.gmod.schema.mapped.Feature;
-import org.gmod.schema.mapped.FeatureRelationship;
-import org.gmod.schema.mapped.Organism;
+import org.genedb.top.chado.cfg.FeatureType;
+import org.genedb.top.chado.mapped.CvTerm;
+import org.genedb.top.chado.mapped.Feature;
+import org.genedb.top.chado.mapped.FeatureRelationship;
+import org.genedb.top.chado.mapped.Organism;
 
 import java.sql.Timestamp;
 import java.util.SortedSet;

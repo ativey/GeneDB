@@ -3,7 +3,7 @@ package org.genedb.top.chado.mapped;
 
 import static javax.persistence.GenerationType.SEQUENCE;
 
-import org.gmod.schema.utils.propinterface.PropertyI;
+import org.genedb.top.chado.utils.propinterface.PropertyI;
 
 import org.hibernate.proxy.HibernateProxy;
 

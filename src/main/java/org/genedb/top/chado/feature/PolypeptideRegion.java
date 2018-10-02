@@ -1,10 +1,10 @@
 package org.genedb.top.chado.feature;
 
-import org.genedb.db.dao.SequenceDao;
+import org.genedb.top.db.dao.SequenceDao;
 
-import org.gmod.schema.cfg.FeatureType;
-import org.gmod.schema.mapped.CvTerm;
-import org.gmod.schema.mapped.Organism;
+import org.genedb.top.chado.cfg.FeatureType;
+import org.genedb.top.chado.mapped.CvTerm;
+import org.genedb.top.chado.mapped.Organism;
 
 import java.sql.Timestamp;
 

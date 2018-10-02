@@ -152,7 +152,7 @@ public class LuceneIndex {
      */
     public TopDocs search(Query query, Sort sort, int maxResults) {
         IndexSearcher searcher = new IndexSearcher(indexReader);
-        logger.debug("searcher is -> " + searcher.toString());
+        //logger.debug("searcher is -> " + searcher.toString());
         try {
             if (sort == null) {
                 return searcher.search(query, maxResults);

@@ -4,9 +4,9 @@ import java.sql.Timestamp;
 
 import javax.persistence.Entity;
 
-import org.gmod.schema.cfg.FeatureType;
-import org.gmod.schema.mapped.CvTerm;
-import org.gmod.schema.mapped.Organism;
+import org.genedb.top.chado.cfg.FeatureType;
+import org.genedb.top.chado.mapped.CvTerm;
+import org.genedb.top.chado.mapped.Organism;
 
 @Entity
 @FeatureType(cv="sequence", term="amino_acid")

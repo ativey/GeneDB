@@ -1,11 +1,11 @@
 package org.genedb.top.chado.feature;
 
-import org.genedb.db.analyzers.AllNamesAnalyzer;
-import org.genedb.db.loading.EmblLocation;
-import org.gmod.schema.mapped.Feature;
-import org.gmod.schema.mapped.FeatureLoc;
-import org.gmod.schema.mapped.FeatureRelationship;
-import org.gmod.schema.mapped.Organism;
+import org.genedb.top.db.analyzers.AllNamesAnalyzer;
+import org.genedb.top.db.loading.EmblLocation;
+import org.genedb.top.chado.mapped.Feature;
+import org.genedb.top.chado.mapped.FeatureLoc;
+import org.genedb.top.chado.mapped.FeatureRelationship;
+import org.genedb.top.chado.mapped.Organism;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.search.annotations.Analyzer;

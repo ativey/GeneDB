@@ -1,9 +1,9 @@
 package org.genedb.top.db.dao;
 
-import org.gmod.schema.mapped.CvTerm;
-import org.gmod.schema.mapped.Organism;
-import org.gmod.schema.mapped.Phylonode;
-import org.gmod.schema.mapped.Phylotree;
+import org.genedb.top.chado.mapped.CvTerm;
+import org.genedb.top.chado.mapped.Organism;
+import org.genedb.top.chado.mapped.Phylonode;
+import org.genedb.top.chado.mapped.Phylotree;
 
 import org.hibernate.Query;
 import org.springframework.transaction.annotation.Transactional;

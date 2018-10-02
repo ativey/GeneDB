@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 
 import org.apache.log4j.Logger;
-import org.genedb.querying.core.QueryException;
+import org.genedb.top.querying.core.QueryException;
 
 public class QueryHistoryItem extends HistoryItem {
 	

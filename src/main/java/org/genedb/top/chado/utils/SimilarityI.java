@@ -1,7 +1,7 @@
 package org.genedb.top.chado.utils;
 
-import org.gmod.schema.mapped.Analysis;
-import org.gmod.schema.mapped.DbXRef;
+import org.genedb.top.chado.mapped.Analysis;
+import org.genedb.top.chado.mapped.DbXRef;
 
 import java.util.Collection;
 

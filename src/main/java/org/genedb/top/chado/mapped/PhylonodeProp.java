@@ -2,7 +2,7 @@ package org.genedb.top.chado.mapped;
 
 // Generated Aug 31, 2006 4:02:18 PM by Hibernate Tools 3.2.0.beta7
 
-import org.gmod.schema.utils.propinterface.PropertyI;
+import org.genedb.top.chado.utils.propinterface.PropertyI;
 
 import static javax.persistence.GenerationType.SEQUENCE; //Added explicit sequence generation behaviour 2.12.2015
 

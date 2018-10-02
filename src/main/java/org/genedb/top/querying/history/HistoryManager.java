@@ -3,8 +3,8 @@ package org.genedb.top.querying.history;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-import org.genedb.querying.core.PagedQuery;
-import org.genedb.querying.core.Query;
+import org.genedb.top.querying.core.PagedQuery;
+import org.genedb.top.querying.core.Query;
 
 public interface HistoryManager {
 

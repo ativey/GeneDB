@@ -2,10 +2,10 @@ package org.genedb.top.chado.feature;
 
 
 import org.apache.log4j.Logger;
-import org.gmod.schema.mapped.CvTerm;
-import org.gmod.schema.mapped.Feature;
-import org.gmod.schema.mapped.FeatureRelationship;
-import org.gmod.schema.mapped.Organism;
+import org.genedb.top.chado.mapped.CvTerm;
+import org.genedb.top.chado.mapped.Feature;
+import org.genedb.top.chado.mapped.FeatureRelationship;
+import org.genedb.top.chado.mapped.Organism;
 
 import java.lang.reflect.InvocationTargetException;
 import java.sql.Timestamp;

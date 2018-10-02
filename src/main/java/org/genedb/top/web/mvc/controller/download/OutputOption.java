@@ -1,0 +1,10 @@
+package org.genedb.top.web.mvc.controller.download;
+
+public enum OutputOption {
+
+    ORGANISM, SYS_ID, PRIMARY_NAME, PRODUCT, GENE_TYPE,
+    SYNONYMS, PREV_SYS_ID, CHROMOSOME, LOCATION, EC_NUMBERS, GO_TERMS,
+    NUM_TM_DOMAINS, SIG_P, GPI_ANCHOR, MOL_WEIGHT,
+    ISOELECTRIC_POINT, GO_IDS, PFAM_IDS, INTERPRO_IDS;
+
+}

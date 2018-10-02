@@ -19,7 +19,6 @@
 
 package org.genedb.top.querying.core;
 
-import org.apache.log4j.Logger;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.index.CorruptIndexException;
@@ -29,6 +28,8 @@ import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.search.BooleanClause.Occur;
 import org.genedb.top.querying.tmpquery.GeneSummary;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 
@@ -46,7 +47,7 @@ import javax.annotation.PostConstruct;
 @Configurable
 public abstract class LuceneQuery implements PagedQuery {
 
-    private static transient final Logger logger = Logger.getLogger(LuceneQuery.class);
+    private static final Logger logger = LoggerFactory.getLogger(LuceneQuery.class);
 
     private int order;
 

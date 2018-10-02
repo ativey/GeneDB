@@ -4,13 +4,14 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-import org.apache.log4j.Logger;
 import org.genedb.top.querying.core.QueryException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class QueryHistoryItem extends HistoryItem {
 	
 	private static final long serialVersionUID = 1178201547605983421L;
-	Logger logger = Logger.getLogger(QueryHistoryItem.class);
+	private static final Logger logger = LoggerFactory.getLogger(QueryHistoryItem.class);
 
 	public QueryHistoryItem(String name) {
 		super(name);

@@ -1,11 +1,11 @@
 package org.genedb.top.chado.feature;
 
-
-import org.apache.log4j.Logger;
 import org.genedb.top.chado.mapped.CvTerm;
 import org.genedb.top.chado.mapped.Feature;
 import org.genedb.top.chado.mapped.FeatureRelationship;
 import org.genedb.top.chado.mapped.Organism;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.InvocationTargetException;
 import java.sql.Timestamp;
@@ -22,8 +22,8 @@ import javax.persistence.Transient;
  */
 @Entity
 public abstract class TranscriptRegion extends Region {
-	
-	private static Logger logger = Logger.getLogger(TranscriptRegion.class);
+
+    private static final Logger logger = LoggerFactory.getLogger(TranscriptRegion.class);
 	
 	@Transient
     private AbstractGene gene;

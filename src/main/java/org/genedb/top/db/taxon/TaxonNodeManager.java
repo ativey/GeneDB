@@ -20,11 +20,12 @@
 package org.genedb.top.db.taxon;
 
 
-import org.apache.log4j.Logger;
-import org.genedb.db.dao.PhylogenyDao;
+import org.genedb.top.db.dao.PhylogenyDao;
 
-import org.gmod.schema.mapped.Phylonode;
+import org.genedb.top.chado.mapped.Phylonode;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Required;
 import org.springframework.transaction.annotation.Transactional;
@@ -43,7 +44,7 @@ import java.util.Set;
 
 public class TaxonNodeManager implements InitializingBean {
 
-	private static Logger logger = Logger.getLogger(TaxonNodeManager.class);
+    private static final Logger logger = LoggerFactory.getLogger(TaxonNodeManager.class);
 
     private PhylogenyDao phylogenyDao;
 

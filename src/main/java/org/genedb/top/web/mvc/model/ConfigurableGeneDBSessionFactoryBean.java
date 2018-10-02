@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.model;
 
-import org.gmod.schema.cfg.ChadoSessionFactoryBean;
+import org.genedb.top.chado.cfg.ChadoSessionFactoryBean;
 import org.hibernate.SessionFactory;
 
 import java.util.Properties;

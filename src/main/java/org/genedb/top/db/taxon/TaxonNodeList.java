@@ -4,14 +4,15 @@ package org.genedb.top.db.taxon;
 import java.io.Serializable;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
 
 import com.google.common.collect.Lists;
 
 public class TaxonNodeList implements Serializable {
 
-    private static final Logger logger = Logger.getLogger(TaxonNodeList.class);
+    private static final Logger logger = LoggerFactory.getLogger(TaxonNodeList.class);
     private List<TaxonNode> nodes = Lists.newArrayList();
 
     public TaxonNodeList() {

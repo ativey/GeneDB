@@ -5,7 +5,8 @@ import java.sql.SQLException;
 
 import org.genedb.top.web.mvc.model.types.DBXRefType;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.simple.ParameterizedRowMapper;
 import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
 
@@ -44,7 +45,7 @@ public class FeatureRelationshipMapper implements ParameterizedRowMapper<Feature
         " and fr.subject_id = ?" +
         " and cvt.name = ?" +
         " and cv.name = ?";
-    Logger logger = Logger.getLogger(FeatureRelationshipMapper.class);
+    private static final Logger logger = LoggerFactory.getLogger(FeatureRelationshipMapper.class);
 
 
     private SimpleJdbcTemplate template;

@@ -1,9 +1,10 @@
 package org.genedb.top.chado.mapped;
 
 
-import static javax.persistence.GenerationType.SEQUENCE;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import org.apache.log4j.Logger;
+import static javax.persistence.GenerationType.SEQUENCE;
 
 import java.io.Serializable;
 import java.util.Collection;
@@ -25,7 +26,7 @@ import javax.persistence.Transient;
 @Entity
 @Table(name="pub")
 public class Pub implements Serializable {
-    private static final Logger logger = Logger.getLogger(Pub.class);
+    private static final Logger logger = LoggerFactory.getLogger(Pub.class);
 
     // Fields
     @SequenceGenerator(name="generator", sequenceName="pub_pub_id_seq", allocationSize = 1)

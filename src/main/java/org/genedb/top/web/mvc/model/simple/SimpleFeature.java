@@ -1,10 +1,12 @@
 package org.genedb.top.web.mvc.model.simple;
 
-import org.apache.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class SimpleFeature {
 
-    Logger logger = Logger.getLogger(SimpleFeature.class);
+    private static final Logger logger = LoggerFactory.getLogger(SimpleFeature.class);
 
     private int featureId;
 

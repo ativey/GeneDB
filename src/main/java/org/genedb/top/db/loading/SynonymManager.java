@@ -1,13 +1,14 @@
 package org.genedb.top.db.loading;
 
-import org.genedb.util.TwoKeyMap;
+import org.genedb.top.util.TwoKeyMap;
 
-import org.gmod.schema.mapped.CvTerm;
-import org.gmod.schema.mapped.Synonym;
-import org.gmod.schema.utils.ObjectManager;
+import org.genedb.top.chado.mapped.CvTerm;
+import org.genedb.top.chado.mapped.Synonym;
+import org.genedb.top.chado.utils.ObjectManager;
 
-import org.apache.log4j.Logger;
 import org.hibernate.Session;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
@@ -36,7 +37,7 @@ import java.util.List;
 class SynonymManager {
     private ObjectManager objectManager;
     private Session session;
-    private static final Logger logger = Logger.getLogger(SynonymManager.class);
+    private static final Logger logger = LoggerFactory.getLogger(SynonymManager.class);
 
     SynonymManager() {
         // empty

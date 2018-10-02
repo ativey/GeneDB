@@ -13,8 +13,9 @@ import org.genedb.top.chado.mapped.DbXRef;
 import org.genedb.top.chado.mapped.Feature;
 import org.genedb.top.chado.utils.CountedName;
 
-import org.apache.log4j.Logger;
 import org.hibernate.Session;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
@@ -26,7 +27,7 @@ import java.util.Map;
 @Transactional(readOnly = true)
 public class CvDao extends BaseDao {
 
-    private static Logger logger = Logger.getLogger(CvDao.class);
+    private static final Logger logger = LoggerFactory.getLogger(cvDao.class);
 
     private static final int CVTERM_MAX_LENGTH = 1024;
     private static final int DBXREF_ACCESSION_MAX_LENGTH = 255;

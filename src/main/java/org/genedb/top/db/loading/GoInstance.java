@@ -1,6 +1,8 @@
 package org.genedb.top.db.loading;
 
-import org.apache.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -33,7 +35,7 @@ public class GoInstance {
     private String attribution;
     private String residue;
 
-    protected static final Logger logger = Logger.getLogger(GoInstance.class);
+    private static final Logger logger = LoggerFactory.getLogger(GoInstance.class);
 
     private static String today;
     static {

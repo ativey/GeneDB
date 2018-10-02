@@ -4,9 +4,10 @@ import static javax.persistence.GenerationType.SEQUENCE;
 
 import org.genedb.top.chado.utils.StrandedLocation;
 
-import org.apache.log4j.Logger;
 import org.hibernate.annotations.LazyToOne;
 import org.hibernate.annotations.LazyToOneOption;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.Serializable;
 import java.util.Collection;
@@ -31,7 +32,7 @@ import javax.persistence.Transient;
 @Table(name = "featureloc")
 public class FeatureLoc implements Serializable {
 
-    private static final Logger logger = Logger.getLogger(FeatureLoc.class);
+    private static final Logger logger = LoggerFactory.getLogger(FeatureLoc.class);
 
     // Fields
 

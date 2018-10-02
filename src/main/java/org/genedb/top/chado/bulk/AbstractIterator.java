@@ -1,13 +1,14 @@
 package org.genedb.top.chado.bulk;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.SQLException;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public abstract class AbstractIterator<E> implements Iterator<E> {
-    private static final Logger logger = Logger.getLogger(AbstractIterator.class);
+    private static final Logger logger = LoggerFactory.getLogger(AbstractIterator.class);
 
     /* Implement the Java Iterator semantics in terms of the simpler getNext().
      * If hasNext() is called, we fetch the next element and store it in the

@@ -1,13 +1,14 @@
 package org.genedb.top.chado.cfg;
 
-import org.gmod.schema.mapped.Feature;
-import org.apache.log4j.Logger;
+import org.genedb.top.chado.mapped.Feature;
 import org.hibernate.HibernateException;
 import org.hibernate.MappingException;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.mapping.PersistentClass;
 import org.hibernate.mapping.SingleTableSubclass;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider;
 import org.springframework.core.type.filter.AnnotationTypeFilter;
@@ -43,7 +44,7 @@ import javax.sql.DataSource;
  */
 @SuppressWarnings("serial")
 public class ChadoAnnotationConfiguration extends AnnotationConfiguration {
-    private static final Logger logger = Logger.getLogger(ChadoAnnotationConfiguration.class);
+    private static final Logger logger = LoggerFactory.getLogger(ChadoAnnotationConfiguration.class);
 
     private DataSource dataSource;
 

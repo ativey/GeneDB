@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.model;
 
-import org.gmod.schema.mapped.DbXRef;
+import org.genedb.top.chado.mapped.DbXRef;
 
 import java.io.Serializable;
 

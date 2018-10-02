@@ -1,9 +1,9 @@
 package org.genedb.top.chado.bulk;
 
 import org.genedb.top.chado.bulk.TranscriptInfo.Polypeptide;
-import org.gmod.schema.utils.CvTermUtils;
-
-import org.apache.log4j.Logger;
+import org.genedb.top.chado.utils.CvTermUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,7 +16,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class BulkProcessor {
-    private static final Logger logger = Logger.getLogger(BulkProcessor.class);
+    private static final Logger logger = LoggerFactory.getLogger(BulkProcessor.class);
 
     // SO accession numbers for important terms
     private static final String SO_POLYPEPTIDE            = "0000104";

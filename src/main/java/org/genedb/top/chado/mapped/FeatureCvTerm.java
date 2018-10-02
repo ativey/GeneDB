@@ -7,9 +7,10 @@ import org.genedb.top.db.dao.CvDao;
 import org.genedb.top.chado.utils.Rankable;
 import org.genedb.top.chado.utils.propinterface.PropertyI;
 
-import org.apache.log4j.Logger;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.Filter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 
@@ -48,7 +49,7 @@ import javax.persistence.Transient;
 @Filter(name="excludeObsoleteFeatures", condition="not feature2_.is_obsolete")
 public class FeatureCvTerm implements Serializable, Rankable, PropertyI, HasPubsAndDbXRefs {
 
-    private static final Logger logger = Logger.getLogger(FeatureCvTerm.class);
+    private static final Logger logger = LoggerFactory.getLogger(FeatureCvTerm.class);
 
     // Fields
 

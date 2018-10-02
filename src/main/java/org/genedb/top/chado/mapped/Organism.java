@@ -3,13 +3,14 @@ package org.genedb.top.chado.mapped;
 import static javax.persistence.GenerationType.SEQUENCE;
 
 import org.genedb.top.db.dao.CvDao;
-import org.apache.log4j.Logger;
 import org.hibernate.annotations.Proxy;
 import org.hibernate.search.annotations.DocumentId;
 import org.hibernate.search.annotations.Field;
 import org.hibernate.search.annotations.Index;
 import org.hibernate.search.annotations.Indexed;
 import org.hibernate.search.annotations.Store;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 
@@ -36,7 +37,7 @@ import javax.persistence.Transient;
 @Indexed
 @Proxy(lazy=false)
 public class Organism implements Serializable {
-    private static final Logger logger = Logger.getLogger(Organism.class);
+    private static final Logger logger = LoggerFactory.getLogger(Organism.class);
 
     @Autowired
     private transient CvDao cvDao;

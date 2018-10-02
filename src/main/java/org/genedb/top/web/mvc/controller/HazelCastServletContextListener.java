@@ -3,13 +3,13 @@ package org.genedb.top.web.mvc.controller;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
-import org.apache.log4j.Logger;
-
 import com.hazelcast.core.Hazelcast;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class HazelCastServletContextListener implements ServletContextListener {
 	
-	private static final Logger logger = Logger.getLogger(HazelCastServletContextListener.class);
+	private static final Logger logger = LoggerFactory.getLogger(HazelCastServletContextListener.class);
 	
 	@Override
 	public void contextInitialized(ServletContextEvent sce) {

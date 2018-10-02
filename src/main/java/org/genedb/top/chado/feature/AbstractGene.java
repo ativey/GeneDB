@@ -6,12 +6,13 @@ import org.genedb.top.chado.mapped.Feature;
 import org.genedb.top.chado.mapped.FeatureLoc;
 import org.genedb.top.chado.mapped.FeatureRelationship;
 import org.genedb.top.chado.mapped.Organism;
-import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.search.annotations.Analyzer;
 import org.hibernate.search.annotations.Field;
 import org.hibernate.search.annotations.Index;
 import org.hibernate.search.annotations.Store;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.orm.hibernate3.SessionFactoryUtils;
 
 import java.lang.reflect.InvocationTargetException;
@@ -32,7 +33,7 @@ import javax.persistence.Transient;
 @SuppressWarnings("serial")
 @Entity
 public abstract class AbstractGene extends TopLevelFeature {
-    private static final Logger logger = Logger.getLogger(AbstractGene.class);
+    private static final Logger logger = LoggerFactory.getLogger(AbstractGene.class);
 
     AbstractGene() {
         // empty

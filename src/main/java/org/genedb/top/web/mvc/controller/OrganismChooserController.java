@@ -19,7 +19,7 @@
 
 package org.genedb.top.web.mvc.controller;
 
-import static org.genedb.web.mvc.controller.TaxonManagerListener.TAXON_NODE_MANAGER;
+import static org.genedb.top.web.mvc.controller.TaxonManagerListener.TAXON_NODE_MANAGER;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,8 +29,8 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.genedb.db.taxon.TaxonNode;
-import org.genedb.db.taxon.TaxonNodeManager;
+import org.genedb.top.db.taxon.TaxonNode;
+import org.genedb.top.db.taxon.TaxonNodeManager;
 import org.springframework.validation.BindException;
 import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.servlet.ModelAndView;

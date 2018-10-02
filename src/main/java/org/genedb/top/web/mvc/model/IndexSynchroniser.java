@@ -1,22 +1,21 @@
 package org.genedb.top.web.mvc.model;
 
-import org.genedb.db.audit.ChangeSet;
+import org.genedb.top.db.audit.ChangeSet;
 
-import org.gmod.schema.feature.AbstractGene;
-import org.gmod.schema.feature.Gap;
-import org.gmod.schema.feature.Gene;
-import org.gmod.schema.feature.MRNA;
-import org.gmod.schema.feature.NcRNA;
-import org.gmod.schema.feature.Polypeptide;
-import org.gmod.schema.feature.Pseudogene;
-import org.gmod.schema.feature.PseudogenicTranscript;
-import org.gmod.schema.feature.RRNA;
-import org.gmod.schema.feature.SnRNA;
-import org.gmod.schema.feature.TRNA;
-import org.gmod.schema.feature.Transcript;
-import org.gmod.schema.mapped.Feature;
+import org.genedb.top.chado.feature.AbstractGene;
+import org.genedb.top.chado.feature.Gap;
+import org.genedb.top.chado.feature.Gene;
+import org.genedb.top.chado.feature.MRNA;
+import org.genedb.top.chado.feature.NcRNA;
+import org.genedb.top.chado.feature.Polypeptide;
+import org.genedb.top.chado.feature.Pseudogene;
+import org.genedb.top.chado.feature.PseudogenicTranscript;
+import org.genedb.top.chado.feature.RRNA;
+import org.genedb.top.chado.feature.SnRNA;
+import org.genedb.top.chado.feature.TRNA;
+import org.genedb.top.chado.feature.Transcript;
+import org.genedb.top.chado.mapped.Feature;
 
-import org.apache.log4j.Logger;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.index.IndexReader;
@@ -33,6 +32,8 @@ import org.hibernate.search.Search;
 import org.hibernate.search.SearchFactory;
 import org.hibernate.search.reader.ReaderProvider;
 import org.hibernate.search.store.DirectoryProvider;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.orm.hibernate3.SessionFactoryUtils;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -52,7 +53,7 @@ public class IndexSynchroniser implements IndexUpdater{
         return 0;
     }
 
-    private static final Logger logger = Logger.getLogger(IndexSynchroniser.class);
+    private static final Logger logger = LoggerFactory.getLogger(IndexSynchroniser.class);
 
     private static final int BATCH_SIZE = 10;//must match BATCH_SIZE in config
 

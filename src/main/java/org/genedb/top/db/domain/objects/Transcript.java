@@ -26,8 +26,8 @@ import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-import org.gmod.schema.mapped.Feature;
-import org.gmod.schema.mapped.FeatureProp;
+import org.genedb.top.chado.mapped.Feature;
+import org.genedb.top.chado.mapped.FeatureProp;
 
 public class Transcript extends LocatedFeature implements Serializable {
     private transient Feature protein;

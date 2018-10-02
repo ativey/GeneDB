@@ -3,7 +3,8 @@
  */
 package org.genedb.top.db.loading;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -22,7 +23,7 @@ import java.util.regex.Pattern;
  *
  */
 class FeatureTable extends EmblFile.Section {
-    private static final Logger logger = Logger.getLogger(FeatureTable.class);
+    private static final Logger logger = LoggerFactory.getLogger(FeatureTable.class);
 
     private String filePath;
 

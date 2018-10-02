@@ -1,25 +1,26 @@
 package org.genedb.top.db.loading;
 
-import org.genedb.db.dao.CvDao;
-import org.genedb.db.dao.GeneralDao;
-import org.genedb.db.dao.PubDao;
-import org.genedb.db.dao.SequenceDao;
+import org.genedb.top.db.dao.CvDao;
+import org.genedb.top.db.dao.GeneralDao;
+import org.genedb.top.db.dao.PubDao;
+import org.genedb.top.db.dao.SequenceDao;
 
-import org.gmod.schema.mapped.CvTerm;
-import org.gmod.schema.mapped.Db;
-import org.gmod.schema.mapped.DbXRef;
-import org.gmod.schema.mapped.Feature;
-import org.gmod.schema.mapped.FeatureCvTerm;
-import org.gmod.schema.mapped.FeatureCvTermDbXRef;
-import org.gmod.schema.mapped.FeatureCvTermProp;
-import org.gmod.schema.mapped.Pub;
-import org.gmod.schema.mapped.PubDbXRef;
-import org.gmod.schema.utils.ObjectManager;
-import org.gmod.schema.utils.Rankable;
+import org.genedb.top.chado.mapped.CvTerm;
+import org.genedb.top.chado.mapped.Db;
+import org.genedb.top.chado.mapped.DbXRef;
+import org.genedb.top.chado.mapped.Feature;
+import org.genedb.top.chado.mapped.FeatureCvTerm;
+import org.genedb.top.chado.mapped.FeatureCvTermDbXRef;
+import org.genedb.top.chado.mapped.FeatureCvTermProp;
+import org.genedb.top.chado.mapped.Pub;
+import org.genedb.top.chado.mapped.PubDbXRef;
+import org.genedb.top.chado.utils.ObjectManager;
+import org.genedb.top.chado.utils.Rankable;
 
-import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.orm.hibernate3.SessionFactoryUtils;
 import org.springframework.transaction.annotation.Transactional;
@@ -32,7 +33,7 @@ import java.util.regex.Pattern;
 
 @Transactional
 public class FeatureUtils implements InitializingBean {
-    private static final Logger logger = Logger.getLogger(FeatureUtils.class);
+    private static final Logger logger = LoggerFactory.getLogger(FeatureUtils.class);
 
     private CvDao cvDao;
     private PubDao pubDao;

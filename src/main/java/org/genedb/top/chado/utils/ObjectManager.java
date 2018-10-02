@@ -1,18 +1,19 @@
 package org.genedb.top.chado.utils;
 
-import org.genedb.db.dao.CvDao;
-import org.genedb.db.dao.GeneralDao;
-import org.genedb.db.dao.PubDao;
-import org.genedb.util.TwoKeyMap;
+import org.genedb.top.db.dao.CvDao;
+import org.genedb.top.db.dao.GeneralDao;
+import org.genedb.top.db.dao.PubDao;
+import org.genedb.top.util.TwoKeyMap;
 
-import org.gmod.schema.mapped.CvTerm;
-import org.gmod.schema.mapped.Db;
-import org.gmod.schema.mapped.DbXRef;
-import org.gmod.schema.mapped.Pub;
-import org.gmod.schema.mapped.Synonym;
+import org.genedb.top.chado.mapped.CvTerm;
+import org.genedb.top.chado.mapped.Db;
+import org.genedb.top.chado.mapped.DbXRef;
+import org.genedb.top.chado.mapped.Pub;
+import org.genedb.top.chado.mapped.Synonym;
 
-import org.apache.log4j.Logger;
 import org.hibernate.EmptyInterceptor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -25,16 +26,16 @@ import java.util.Map;
  * of this class as a Hibernate interceptor, the cache is cleared
  * whenever Hibernate flushes.
  * <p>
- * This mechanism is available to {@link org.genedb.db.loading.auxiliary.Loader} subclasses via
+ * This mechanism is available to {@link org.genedb.top.db.loading.auxiliary.Loader} subclasses via
  * the protected Loader field <code>objectManager</code>. At the time of
- * writing, it's only used by {@link org.genedb.db.loading.auxiliary.InterProLoader}.
+ * writing, it's only used by {@link org.genedb.top.db.loading.auxiliary.InterProLoader}.
  *
  * This class is not currently concurrency-safe.
  *
  * @author rh11
  */
 public class ObjectManager extends EmptyInterceptor {
-    private static final Logger logger = Logger.getLogger(ObjectManager.class);
+    private static final Logger logger = LoggerFactory.getLogger(ObjectManager.class);
     private GeneralDao generalDao;
     private PubDao pubDao;
     private CvDao cvDao;

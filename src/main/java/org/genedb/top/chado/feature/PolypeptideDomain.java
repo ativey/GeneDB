@@ -5,8 +5,8 @@ import org.genedb.top.chado.mapped.CvTerm;
 import org.genedb.top.chado.mapped.DbXRef;
 import org.genedb.top.chado.mapped.FeatureDbXRef;
 import org.genedb.top.chado.mapped.Organism;
-
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Timestamp;
 
@@ -17,7 +17,7 @@ import javax.persistence.Transient;
 @FeatureType(cv="sequence", term="polypeptide_domain")
 public class PolypeptideDomain extends PolypeptideRegion {
 
-    private static final Logger logger = Logger.getLogger(PolypeptideDomain.class);
+    private static final Logger logger = LoggerFactory.getLogger(PolypeptideDomain.class);
 
     PolypeptideDomain() {
         // empty

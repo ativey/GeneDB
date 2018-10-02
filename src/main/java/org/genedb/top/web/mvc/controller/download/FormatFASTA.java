@@ -3,17 +3,18 @@ package org.genedb.top.web.mvc.controller.download;
 import java.io.IOException;
 import java.util.List;
 
-import org.apache.log4j.Logger;
 import org.genedb.top.querying.tmpquery.GeneDetail;
 import org.genedb.top.web.utils.DownloadUtils;
 import org.genedb.top.chado.feature.AbstractGene;
 import org.genedb.top.chado.feature.Polypeptide;
 import org.genedb.top.chado.feature.Transcript;
 import org.genedb.top.chado.mapped.Feature;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class FormatFASTA extends FormatBase {
-	
-	private static Logger logger = Logger.getLogger(FormatFASTA.class);
+
+	private static final Logger logger = LoggerFactory.getLogger(FormatFASTA.class);
 	
 	protected SequenceType sequenceType;
 	

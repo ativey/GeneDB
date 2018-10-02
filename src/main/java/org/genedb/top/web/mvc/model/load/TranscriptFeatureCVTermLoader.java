@@ -5,12 +5,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
 import org.genedb.top.web.mvc.model.types.DBXRefType;
 import org.genedb.top.web.mvc.model.types.DtoObjectArrayField;
 import org.genedb.top.web.mvc.model.types.DtoStringArrayField;
 import org.genedb.top.web.mvc.model.types.FeatureCVTPropType;
 import org.genedb.top.web.mvc.model.types.FeatureCvtermType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
 
 
@@ -20,7 +21,7 @@ import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
  *
  */
 public class TranscriptFeatureCVTermLoader {
-    static Logger logger = Logger.getLogger(TranscriptFeatureCVTermLoader.class);
+    private static final Logger logger = LoggerFactory.getLogger(TranscriptFeatureCVTermLoader.class);
 
     /**
      * Load transcript_featurecvterm records

@@ -1,9 +1,10 @@
 package org.genedb.top.db.dao;
 
-import org.apache.log4j.Logger;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.orm.hibernate3.SessionFactoryUtils;
 import org.springframework.stereotype.Repository;
 
@@ -11,7 +12,7 @@ import java.util.List;
 
 public class BaseDao {
 
-    private static final Logger logger = Logger.getLogger(BaseDao.class);
+    private static final Logger logger = LoggerFactory.getLogger(BaseDao.class);
 
     private SessionFactory sessionFactory;
 

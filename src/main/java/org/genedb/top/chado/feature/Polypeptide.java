@@ -14,7 +14,6 @@ import org.genedb.top.chado.mapped.FeatureRelationship;
 import org.genedb.top.chado.mapped.Organism;
 import org.genedb.top.chado.utils.PeptideProperties;
 import org.genedb.top.chado.utils.StrandedLocation;
-import org.apache.log4j.Logger;
 import org.biojava.bio.BioException;
 import org.biojava.bio.proteomics.IsoelectricPointCalc;
 import org.biojava.bio.proteomics.MassCalc;
@@ -28,6 +27,8 @@ import org.hibernate.search.annotations.Field;
 import org.hibernate.search.annotations.Index;
 import org.hibernate.search.annotations.Indexed;
 import org.hibernate.search.annotations.Store;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
 
 import com.google.common.collect.Lists;
@@ -48,9 +49,9 @@ import javax.persistence.Transient;
 @FeatureType(cv="sequence", term="polypeptide")
 @Indexed
 public class Polypeptide extends Region {
-	
-	
-    private static Logger logger = Logger.getLogger(Polypeptide.class);
+
+
+    private static final Logger logger = LoggerFactory.getLogger(Polypeptide.class);
     
 	@Transient
     private Transcript transcript;

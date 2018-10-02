@@ -1,6 +1,5 @@
 package org.genedb.top.chado.cfg;
 
-import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Interceptor;
 import org.hibernate.SessionFactory;
@@ -10,6 +9,8 @@ import org.hibernate.engine.FilterDefinition;
 import org.hibernate.metadata.ClassMetadata;
 import org.hibernate.metadata.CollectionMetadata;
 import org.hibernate.stat.Statistics;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.Serializable;
 import java.sql.Connection;
@@ -36,7 +37,7 @@ import javax.naming.Reference;
  *
  */
 public class FilteringSessionFactory implements SessionFactory {
-    private static final Logger logger = Logger.getLogger(FilteringSessionFactory.class);
+    private static final Logger logger = LoggerFactory.getLogger(FilteringSessionFactory.class);
 
     private SessionFactory underlyingSessionFactory;
     private Set<String> filters = new HashSet<String>();

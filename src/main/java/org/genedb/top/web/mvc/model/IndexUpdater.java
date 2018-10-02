@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.model;
 
-import org.genedb.db.audit.ChangeSet;
+import org.genedb.top.db.audit.ChangeSet;
 
 /**
  * Marks a program that can accept a changeset, as part of

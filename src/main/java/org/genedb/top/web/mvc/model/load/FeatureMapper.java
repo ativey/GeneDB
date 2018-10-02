@@ -4,12 +4,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.simple.ParameterizedRowMapper;
 
 
 public class FeatureMapper implements ParameterizedRowMapper<FeatureMapper> {
-    Logger logger = Logger.getLogger(FeatureMapper.class);
+    private static final Logger logger = LoggerFactory.getLogger(FeatureMapper.class);
 
     public String getResidues() {
         return residues;

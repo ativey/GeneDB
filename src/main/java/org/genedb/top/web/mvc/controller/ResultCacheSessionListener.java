@@ -10,8 +10,8 @@ import javax.servlet.http.HttpSessionListener;
 
 import org.genedb.top.querying.history.HistoryItem;
 import org.genedb.top.querying.history.HistoryManager;
-
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author gv1
@@ -22,7 +22,7 @@ import org.apache.log4j.Logger;
  **/
 public class ResultCacheSessionListener implements HttpSessionListener {
 //
-    Logger logger = Logger.getLogger(ResultCacheSessionListener.class);
+private static final Logger logger = LoggerFactory.getLogger(ResultCacheSessionListener.class);
 //
     @Override
     public void sessionCreated(HttpSessionEvent event) {

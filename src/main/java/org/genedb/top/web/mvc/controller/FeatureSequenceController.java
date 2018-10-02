@@ -32,7 +32,8 @@ import org.genedb.top.chado.feature.PseudogenicTranscript;
 import org.genedb.top.chado.feature.Transcript;
 import org.genedb.top.chado.mapped.Feature;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -58,7 +59,7 @@ import com.google.common.collect.Maps;
 @Controller
 @RequestMapping("/featureSeq")
 public class FeatureSequenceController {
-    private static final Logger logger = Logger.getLogger(FeatureSequenceController.class);
+    private static final Logger logger = LoggerFactory.getLogger(FeatureSequenceController.class);
 
     private SequenceDao sequenceDao;
     private String geneSequenceView;

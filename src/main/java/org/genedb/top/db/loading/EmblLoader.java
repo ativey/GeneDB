@@ -1,58 +1,58 @@
 package org.genedb.top.db.loading;
 
-import org.genedb.db.dao.CvDao;
-import org.genedb.db.dao.GeneralDao;
-import org.genedb.db.dao.OrganismDao;
-import org.genedb.db.dao.PubDao;
-import org.genedb.util.Counters;
-import org.genedb.util.IterableArray;
+import org.genedb.top.db.dao.CvDao;
+import org.genedb.top.db.dao.GeneralDao;
+import org.genedb.top.db.dao.OrganismDao;
+import org.genedb.top.db.dao.PubDao;
+import org.genedb.top.util.Counters;
+import org.genedb.top.util.IterableArray;
 
-import org.gmod.schema.cfg.FeatureTypeUtils;
-import org.gmod.schema.feature.AbstractExon;
-import org.gmod.schema.feature.AbstractGene;
-import org.gmod.schema.feature.Centromere;
-import org.gmod.schema.feature.Contig;
-import org.gmod.schema.feature.DirectRepeatRegion;
-import org.gmod.schema.feature.FivePrimeUTR;
-import org.gmod.schema.feature.Gap;
-import org.gmod.schema.feature.Gene;
-import org.gmod.schema.feature.InvertedRepeatRegion;
-import org.gmod.schema.feature.MRNA;
-import org.gmod.schema.feature.NcRNA;
-import org.gmod.schema.feature.Polypeptide;
-import org.gmod.schema.feature.PolypeptideMotif;
-import org.gmod.schema.feature.ProductiveTranscript;
-import org.gmod.schema.feature.Pseudogene;
-import org.gmod.schema.feature.PseudogenicTranscript;
-import org.gmod.schema.feature.RRNA;
-import org.gmod.schema.feature.Region;
-import org.gmod.schema.feature.RepeatRegion;
-import org.gmod.schema.feature.RepeatUnit;
-import org.gmod.schema.feature.SECISElement;
-import org.gmod.schema.feature.SnRNA;
-import org.gmod.schema.feature.SnoRNA;
-import org.gmod.schema.feature.Supercontig;
-import org.gmod.schema.feature.TRNA;
-import org.gmod.schema.feature.ThreePrimeUTR;
-import org.gmod.schema.feature.TopLevelFeature;
-import org.gmod.schema.feature.Transcript;
-import org.gmod.schema.feature.UTR;
-import org.gmod.schema.mapped.Analysis;
-import org.gmod.schema.mapped.DbXRef;
-import org.gmod.schema.mapped.Feature;
-import org.gmod.schema.mapped.FeatureCvTerm;
-import org.gmod.schema.mapped.HasPubsAndDbXRefs;
-import org.gmod.schema.mapped.Organism;
-import org.gmod.schema.mapped.Pub;
-import org.gmod.schema.mapped.PubDbXRef;
-import org.gmod.schema.mapped.Synonym;
-import org.gmod.schema.utils.ObjectManager;
+import org.genedb.top.chado.cfg.FeatureTypeUtils;
+import org.genedb.top.chado.feature.AbstractExon;
+import org.genedb.top.chado.feature.AbstractGene;
+import org.genedb.top.chado.feature.Centromere;
+import org.genedb.top.chado.feature.Contig;
+import org.genedb.top.chado.feature.DirectRepeatRegion;
+import org.genedb.top.chado.feature.FivePrimeUTR;
+import org.genedb.top.chado.feature.Gap;
+import org.genedb.top.chado.feature.Gene;
+import org.genedb.top.chado.feature.InvertedRepeatRegion;
+import org.genedb.top.chado.feature.MRNA;
+import org.genedb.top.chado.feature.NcRNA;
+import org.genedb.top.chado.feature.Polypeptide;
+import org.genedb.top.chado.feature.PolypeptideMotif;
+import org.genedb.top.chado.feature.ProductiveTranscript;
+import org.genedb.top.chado.feature.Pseudogene;
+import org.genedb.top.chado.feature.PseudogenicTranscript;
+import org.genedb.top.chado.feature.RRNA;
+import org.genedb.top.chado.feature.Region;
+import org.genedb.top.chado.feature.RepeatRegion;
+import org.genedb.top.chado.feature.RepeatUnit;
+import org.genedb.top.chado.feature.SECISElement;
+import org.genedb.top.chado.feature.SnRNA;
+import org.genedb.top.chado.feature.SnoRNA;
+import org.genedb.top.chado.feature.Supercontig;
+import org.genedb.top.chado.feature.TRNA;
+import org.genedb.top.chado.feature.ThreePrimeUTR;
+import org.genedb.top.chado.feature.TopLevelFeature;
+import org.genedb.top.chado.feature.Transcript;
+import org.genedb.top.chado.feature.UTR;
+import org.genedb.top.chado.mapped.Analysis;
+import org.genedb.top.chado.mapped.DbXRef;
+import org.genedb.top.chado.mapped.Feature;
+import org.genedb.top.chado.mapped.FeatureCvTerm;
+import org.genedb.top.chado.mapped.HasPubsAndDbXRefs;
+import org.genedb.top.chado.mapped.Organism;
+import org.genedb.top.chado.mapped.Pub;
+import org.genedb.top.chado.mapped.PubDbXRef;
+import org.genedb.top.chado.mapped.Synonym;
+import org.genedb.top.chado.utils.ObjectManager;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.orm.hibernate3.SessionFactoryUtils;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -80,7 +80,7 @@ import java.util.regex.Pattern;
  *
  */
 class EmblLoader {
-    private static final Logger logger = Logger.getLogger(EmblLoader.class);
+    private static final Logger logger = LoggerFactory.getLogger(EmblLoader.class);
 
     // Constants
 

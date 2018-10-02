@@ -5,7 +5,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.HashSet;
 
-import org.apache.log4j.Logger;
 import org.genedb.top.db.dao.SequenceDao;
 import org.genedb.top.querying.tmpquery.GeneDetail;
 import org.genedb.top.web.mvc.model.DTOFactory;
@@ -17,11 +16,13 @@ import org.genedb.top.chado.mapped.Synonym;
 import org.genedb.top.chado.feature.Transcript;
 import org.genedb.top.chado.feature.AbstractGene;
 import org.genedb.top.chado.feature.Polypeptide;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
 
 public class GeneDetailFieldValueExctractor {
-	
-	private Logger logger = Logger.getLogger(GeneDetailFieldValueExctractor.class);
+
+	private static final Logger logger = LoggerFactory.getLogger(GeneDetailFieldValueExctractor.class);
 	
 	private String fieldInternalSeparator;
 	private String blankField;

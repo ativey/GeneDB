@@ -28,8 +28,9 @@ import org.genedb.top.chado.mapped.Synonym;
 import org.genedb.top.chado.utils.CountedName;
 import org.genedb.top.chado.utils.GeneNameOrganism;
 
-import org.apache.log4j.Logger;
 import org.hibernate.Query;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
@@ -38,7 +39,7 @@ import java.util.List;
 @Transactional
 public class SequenceDao extends BaseDao {
 
-    private static final Logger logger = Logger.getLogger(SequenceDao.class);
+    private static final Logger logger = LoggerFactory.getLogger(SequenceDao.class);
 
     private CvDao cvDao;
 

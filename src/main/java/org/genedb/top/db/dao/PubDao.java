@@ -1,7 +1,7 @@
 package org.genedb.top.db.dao;
 
-import org.gmod.schema.mapped.DbXRef;
-import org.gmod.schema.mapped.Pub;
+import org.genedb.top.chado.mapped.DbXRef;
+import org.genedb.top.chado.mapped.Pub;
 
 import org.springframework.transaction.annotation.Transactional;
 

@@ -1,8 +1,9 @@
 package org.genedb.top.web.mvc.model.load;
 
+import org.slf4j.Logger;
+
 import java.util.Date;
 
-import org.apache.log4j.Logger;
 
 public class TimerHelper {
 

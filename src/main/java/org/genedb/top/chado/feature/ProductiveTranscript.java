@@ -1,18 +1,19 @@
 package org.genedb.top.chado.feature;
 
-import org.genedb.db.analyzers.AllNamesAnalyzer;
-import org.genedb.db.analyzers.AlphaNumericAnalyzer;
+import org.genedb.top.db.analyzers.AllNamesAnalyzer;
+import org.genedb.top.db.analyzers.AlphaNumericAnalyzer;
 
-import org.gmod.schema.mapped.Feature;
-import org.gmod.schema.mapped.FeatureRelationship;
-import org.gmod.schema.mapped.Organism;
-import org.gmod.schema.mapped.Synonym;
+import org.genedb.top.chado.mapped.Feature;
+import org.genedb.top.chado.mapped.FeatureRelationship;
+import org.genedb.top.chado.mapped.Organism;
+import org.genedb.top.chado.mapped.Synonym;
 
-import org.apache.log4j.Logger;
 import org.hibernate.search.annotations.Analyzer;
 import org.hibernate.search.annotations.Field;
 import org.hibernate.search.annotations.Index;
 import org.hibernate.search.annotations.Store;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
 
 import com.google.common.collect.Lists;
@@ -31,7 +32,7 @@ import javax.persistence.Transient;
 @Entity
 public abstract class ProductiveTranscript extends Transcript {
 
-    private transient Logger logger = Logger.getLogger(ProductiveTranscript.class);
+    private static final Logger logger = LoggerFactory.getLogger(ProductiveTranscript.class);
 
     ProductiveTranscript() {
         // empty

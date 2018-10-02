@@ -1,20 +1,21 @@
 package org.genedb.top.querying.tmpquery;
 
-import org.genedb.db.taxon.TaxonNodeList;
-import org.genedb.db.taxon.TaxonNodeManager;
-import org.genedb.querying.core.LuceneQuery;
-import org.genedb.querying.core.QueryParam;
+import org.genedb.top.db.taxon.TaxonNodeList;
+import org.genedb.top.db.taxon.TaxonNodeManager;
+import org.genedb.top.querying.core.LuceneQuery;
+import org.genedb.top.querying.core.QueryParam;
 
-import org.gmod.schema.cfg.OrganismHeirachy;
+import org.genedb.top.chado.cfg.OrganismHeirachy;
 
 import org.apache.commons.lang.StringUtils;
-import org.apache.log4j.Logger;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.BooleanClause.Occur;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.Errors;
 
@@ -25,7 +26,7 @@ public abstract class OrganismLuceneQuery extends LuceneQuery implements TaxonQu
 
     private static final long serialVersionUID = -1581819678507010911L;
     
-    private static final Logger logger = Logger.getLogger(OrganismLuceneQuery.class);
+    private static final Logger logger = LoggerFactory.getLogger(OrganismLuceneQuery.class);
 
     protected static final TermQuery isCurrentQuery = new TermQuery(new Term("obsolete", "false"));
 

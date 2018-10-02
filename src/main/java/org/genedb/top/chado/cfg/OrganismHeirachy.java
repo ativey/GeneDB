@@ -1,7 +1,7 @@
 package org.genedb.top.chado.cfg;
 
-import org.gmod.schema.feature.Transcript;
-import org.gmod.schema.feature.Gap;
+import org.genedb.top.chado.feature.Transcript;
+import org.genedb.top.chado.feature.Gap;
 
 import org.hibernate.cfg.Configuration;
 import org.springframework.beans.BeansException;

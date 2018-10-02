@@ -1,6 +1,7 @@
 package org.genedb.top.db.loading.auxiliary;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -18,7 +19,7 @@ import java.util.ResourceBundle;
 
 public abstract class Clear {
     //Fixed
-    private static final Logger logger = Logger.getLogger(Clear.class);
+    private static final Logger logger = LoggerFactory.getLogger(Clear.class);
     private static final ResourceBundle config = ResourceBundle.getBundle("project");
 
     private static String getConfigParam(String key) {

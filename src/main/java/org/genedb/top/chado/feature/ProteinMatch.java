@@ -6,8 +6,8 @@ import org.genedb.top.chado.mapped.Feature;
 import org.genedb.top.chado.mapped.FeatureLoc;
 import org.genedb.top.chado.mapped.FeatureRelationship;
 import org.genedb.top.chado.mapped.Organism;
-
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -32,7 +32,7 @@ import javax.persistence.Entity;
 @Entity
 @FeatureType(cv="sequence", term="protein_match")
 public class ProteinMatch extends Match {
-    private static final Logger logger = Logger.getLogger(ProteinMatch.class);
+    private static final Logger logger = LoggerFactory.getLogger(ProteinMatch.class);
 
     ProteinMatch() {
         // empty

@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.search.BooleanQuery;
@@ -12,9 +11,11 @@ import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.ConstantScoreRangeQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.TermQuery;
-import org.genedb.querying.core.QueryClass;
-import org.genedb.querying.core.QueryParam;
+import org.genedb.top.querying.core.QueryClass;
+import org.genedb.top.querying.core.QueryParam;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.validation.Errors;
 
 
@@ -25,7 +26,7 @@ import org.springframework.validation.Errors;
     )
 public class GeneLocationQuery extends OrganismLuceneQuery {
 
-	private transient Logger logger = Logger.getLogger(GeneLocationQuery.class);
+    private static final Logger logger = LoggerFactory.getLogger(GeneLocationQuery.class);
 	private static final long serialVersionUID = 215988209964782170L;
 
 

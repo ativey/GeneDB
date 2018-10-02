@@ -19,7 +19,7 @@
 
 package org.genedb.top.web.mvc.controller;
 
-import org.genedb.web.mvc.controller.download.OutputFormat;
+import org.genedb.top.web.mvc.controller.download.OutputFormat;
 
 public class RegionCommand {
     String name;

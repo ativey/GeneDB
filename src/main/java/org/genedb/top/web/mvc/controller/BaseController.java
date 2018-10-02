@@ -1,10 +1,11 @@
 package org.genedb.top.web.mvc.controller;
 
-import org.genedb.db.taxon.TaxonNodeListFormatter;
-import org.genedb.db.taxon.TaxonNodeManager;
-import org.genedb.util.Pair;
+import org.genedb.top.db.taxon.TaxonNodeListFormatter;
+import org.genedb.top.db.taxon.TaxonNodeManager;
+import org.genedb.top.util.Pair;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
@@ -15,7 +16,7 @@ import com.google.common.collect.Sets;
 
 public class BaseController {
 
-    protected Logger logger = Logger.getLogger(BaseController.class);
+    protected Logger logger = LoggerFactory.getLogger(BaseController.class);
 
     //private TaxonNodeListFormatter taxonNodeListFormatter;
     protected ConversionService conversionService;

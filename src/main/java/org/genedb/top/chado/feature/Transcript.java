@@ -7,7 +7,6 @@ import org.genedb.top.chado.mapped.FeatureLoc;
 import org.genedb.top.chado.mapped.FeatureRelationship;
 import org.genedb.top.chado.mapped.Organism;
 
-import org.apache.log4j.Logger;
 import org.hibernate.search.annotations.Analyzer;
 import org.hibernate.search.annotations.Field;
 import org.hibernate.search.annotations.Index;
@@ -15,6 +14,8 @@ import org.hibernate.search.annotations.Indexed;
 import org.hibernate.search.annotations.Store;
 
 import com.google.common.collect.Lists;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.InvocationTargetException;
 import java.sql.Timestamp;
@@ -32,7 +33,8 @@ import javax.persistence.Transient;
 @Indexed
 public class Transcript extends Region {
 
-    private static Logger logger = Logger.getLogger(Transcript.class);
+    private static final Logger logger = LoggerFactory.getLogger(Transcript.class);
+
     @Transient
     protected AbstractGene gene;
 

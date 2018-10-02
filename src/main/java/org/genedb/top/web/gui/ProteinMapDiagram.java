@@ -1,15 +1,15 @@
 package org.genedb.top.web.gui;
 
-import org.genedb.db.domain.objects.PolypeptideRegionGroup;
-import org.genedb.db.domain.objects.SimplePolypeptideRegion;
-import org.genedb.db.domain.objects.SimpleRegionGroup;
+import org.genedb.top.db.domain.objects.PolypeptideRegionGroup;
+import org.genedb.top.db.domain.objects.SimplePolypeptideRegion;
+import org.genedb.top.db.domain.objects.SimpleRegionGroup;
 
-import org.gmod.schema.feature.GPIAnchorCleavageSite;
-import org.gmod.schema.feature.MembraneStructure;
-import org.gmod.schema.feature.Polypeptide;
-import org.gmod.schema.feature.PolypeptideRegion;
-import org.gmod.schema.feature.SignalPeptide;
-import org.gmod.schema.feature.Transcript;
+import org.genedb.top.chado.feature.GPIAnchorCleavageSite;
+import org.genedb.top.chado.feature.MembraneStructure;
+import org.genedb.top.chado.feature.Polypeptide;
+import org.genedb.top.chado.feature.PolypeptideRegion;
+import org.genedb.top.chado.feature.SignalPeptide;
+import org.genedb.top.chado.feature.Transcript;
 
 import java.awt.Color;
 import java.util.Collection;

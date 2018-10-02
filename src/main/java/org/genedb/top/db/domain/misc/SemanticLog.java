@@ -1,10 +1,11 @@
 package org.genedb.top.db.domain.misc;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class SemanticLog {
 
-    private final Logger logger = Logger.getLogger(this.getClass());
+    private static final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     public void log(String msg, Object... args) {
 

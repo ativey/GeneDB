@@ -1,7 +1,8 @@
 package org.genedb.top.db.loading;
 
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.context.ApplicationContext;
@@ -46,7 +47,7 @@ import java.util.Map;
  *
  */
 public class LoadPileups extends FileProcessor {
-    private static final Logger logger = Logger.getLogger(LoadPileups.class);
+    private static final Logger logger = LoggerFactory.getLogger(LoadPileups.class);
     private static String dbSchema;
     public static void main(String[] args) throws MissingPropertyException, IOException, ParsingException, SQLException {
         if (args.length > 0) {
@@ -193,7 +194,7 @@ class PileupFile {
 
 @Transactional(rollbackFor=DataError.class) // Will also rollback for runtime exceptions, by default
 class PileupsLoader {
-    private static final Logger logger = Logger.getLogger(PileupsLoader.class);
+    private static final Logger logger = LoggerFactory.getLogger(PileupsLoader.class);
 
     private SimpleJdbcTemplate simpleJdbcTemplate;
 

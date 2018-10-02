@@ -1,37 +1,38 @@
 package org.genedb.top.web.mvc.model;
 
-import org.genedb.db.dao.SequenceDao;
-import org.genedb.db.domain.objects.DatabasePolypeptideRegion;
-import org.genedb.db.domain.objects.InterProHit;
-import org.genedb.db.domain.objects.PolypeptideRegionGroup;
-import org.genedb.db.domain.objects.SimpleRegionGroup;
+import org.genedb.top.db.dao.SequenceDao;
+import org.genedb.top.db.domain.objects.DatabasePolypeptideRegion;
+import org.genedb.top.db.domain.objects.InterProHit;
+import org.genedb.top.db.domain.objects.PolypeptideRegionGroup;
+import org.genedb.top.db.domain.objects.SimpleRegionGroup;
 
-import org.gmod.schema.feature.AbstractGene;
-import org.gmod.schema.feature.CytoplasmicRegion;
-import org.gmod.schema.feature.GPIAnchorCleavageSite;
-import org.gmod.schema.feature.MembraneStructure;
-import org.gmod.schema.feature.MembraneStructureComponent;
+import org.genedb.top.chado.feature.AbstractGene;
+import org.genedb.top.chado.feature.CytoplasmicRegion;
+import org.genedb.top.chado.feature.GPIAnchorCleavageSite;
+import org.genedb.top.chado.feature.MembraneStructure;
+import org.genedb.top.chado.feature.MembraneStructureComponent;
 
-import org.gmod.schema.feature.NonCytoplasmicRegion;
-import org.gmod.schema.feature.Polypeptide;
-import org.gmod.schema.feature.PolypeptideDomain;
-import org.gmod.schema.feature.SignalPeptide;
-import org.gmod.schema.feature.Transcript;
-import org.gmod.schema.feature.TransmembraneRegion;
-import org.gmod.schema.mapped.DbXRef;
-import org.gmod.schema.mapped.Feature;
-import org.gmod.schema.mapped.FeatureCvTerm;
-import org.gmod.schema.mapped.FeatureDbXRef;
-import org.gmod.schema.mapped.FeatureLoc;
-import org.gmod.schema.mapped.FeatureProp;
-import org.gmod.schema.mapped.FeaturePub;
-import org.gmod.schema.mapped.FeatureRelationship;
-import org.gmod.schema.mapped.FeatureSynonym;
-import org.gmod.schema.mapped.Organism;
-import org.gmod.schema.mapped.Synonym;
+import org.genedb.top.chado.feature.NonCytoplasmicRegion;
+import org.genedb.top.chado.feature.Polypeptide;
+import org.genedb.top.chado.feature.PolypeptideDomain;
+import org.genedb.top.chado.feature.SignalPeptide;
+import org.genedb.top.chado.feature.Transcript;
+import org.genedb.top.chado.feature.TransmembraneRegion;
+import org.genedb.top.chado.mapped.DbXRef;
+import org.genedb.top.chado.mapped.Feature;
+import org.genedb.top.chado.mapped.FeatureCvTerm;
+import org.genedb.top.chado.mapped.FeatureDbXRef;
+import org.genedb.top.chado.mapped.FeatureLoc;
+import org.genedb.top.chado.mapped.FeatureProp;
+import org.genedb.top.chado.mapped.FeaturePub;
+import org.genedb.top.chado.mapped.FeatureRelationship;
+import org.genedb.top.chado.mapped.FeatureSynonym;
+import org.genedb.top.chado.mapped.Organism;
+import org.genedb.top.chado.mapped.Synonym;
 
-import org.apache.log4j.Logger;
 import org.hibernate.Hibernate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
@@ -50,8 +51,7 @@ import com.google.common.collect.Maps;
 @Component
 public class DTOFactory {
 
-	private transient Logger logger = Logger
-			.getLogger(DTOFactory.class);
+	private static final Logger logger = LoggerFactory.getLogger(DTOFactory.class);
 	
 	@Autowired
 	private SequenceDao sequenceDao;

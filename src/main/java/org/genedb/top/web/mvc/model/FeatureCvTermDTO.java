@@ -1,9 +1,9 @@
 package org.genedb.top.web.mvc.model;
 
-import org.gmod.schema.mapped.FeatureCvTerm;
-import org.gmod.schema.mapped.FeatureCvTermDbXRef;
-import org.gmod.schema.mapped.FeatureCvTermProp;
-import org.gmod.schema.mapped.Pub;
+import org.genedb.top.chado.mapped.FeatureCvTerm;
+import org.genedb.top.chado.mapped.FeatureCvTermDbXRef;
+import org.genedb.top.chado.mapped.FeatureCvTermProp;
+import org.genedb.top.chado.mapped.Pub;
 
 import java.io.Serializable;
 import java.util.ArrayList;

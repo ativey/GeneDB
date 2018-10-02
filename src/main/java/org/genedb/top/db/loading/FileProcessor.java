@@ -1,6 +1,7 @@
 package org.genedb.top.db.loading;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -21,7 +22,7 @@ import java.util.zip.GZIPInputStream;
  * @author rh11
  */
 public abstract class FileProcessor {
-    private static final Logger logger = Logger.getLogger(FileProcessor.class);
+    private static final Logger logger = LoggerFactory.getLogger(FileProcessor.class);
 
     /**
      * Get the value of a system property, throwing an exception if the

@@ -1,15 +1,14 @@
 package org.genedb.top.web.mvc.model;
 
-import org.genedb.db.audit.ChangeSet;
+import org.genedb.top.db.audit.ChangeSet;
 
-import org.gmod.schema.feature.AbstractGene;
-import org.gmod.schema.feature.Gap;
-import org.gmod.schema.feature.Gene;
-import org.gmod.schema.feature.Polypeptide;
-import org.gmod.schema.feature.Transcript;
-import org.gmod.schema.mapped.Feature;
+import org.genedb.top.chado.feature.AbstractGene;
+import org.genedb.top.chado.feature.Gap;
+import org.genedb.top.chado.feature.Gene;
+import org.genedb.top.chado.feature.Polypeptide;
+import org.genedb.top.chado.feature.Transcript;
+import org.genedb.top.chado.mapped.Feature;
 
-import org.apache.log4j.Logger;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.Term;
 import org.hibernate.CacheMode;
@@ -26,6 +25,8 @@ import org.hibernate.search.Search;
 import org.hibernate.search.SearchFactory;
 import org.hibernate.search.reader.ReaderProvider;
 import org.hibernate.search.store.DirectoryProvider;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -70,7 +71,7 @@ import com.google.common.collect.Sets;
  * @author rh11
  */
 public class SmallPopulateLuceneIndices {//implements IndexUpdater {
-    private static Logger logger = Logger.getLogger(SmallPopulateLuceneIndices.class);
+    private static final Logger logger = LoggerFactory.getLogger(SmallPopulateLuceneIndices.class);
 
     /**
      * The number of features to be processed in a single batch. If it's set too

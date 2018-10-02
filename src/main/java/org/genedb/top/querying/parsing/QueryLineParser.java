@@ -1,10 +1,10 @@
 package org.genedb.top.querying.parsing;
 
-import org.genedb.querying.core.BooleanQuery;
-import org.genedb.querying.core.BooleanQueryMode;
-import org.genedb.querying.core.Query;
-import org.genedb.querying.history.HistoryItem;
-import org.genedb.querying.history.HistoryManager;
+import org.genedb.top.querying.core.BooleanQuery;
+import org.genedb.top.querying.core.BooleanQueryMode;
+import org.genedb.top.querying.core.Query;
+import org.genedb.top.querying.history.HistoryItem;
+import org.genedb.top.querying.history.HistoryManager;
 
 //import org.antlr.runtime.ANTLRStringStream;
 //import org.antlr.runtime.CommonTokenStream;

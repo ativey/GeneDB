@@ -3,8 +3,8 @@ package org.genedb.top.db.domain.services;
 import java.util.Collection;
 import java.util.List;
 
-import org.genedb.db.domain.objects.BasicGene;
-import org.genedb.db.domain.objects.Gap;
+import org.genedb.top.db.domain.objects.BasicGene;
+import org.genedb.top.db.domain.objects.Gap;
 
 public interface BasicGeneService {
     BasicGene findGeneByUniqueName(String name);

@@ -1,7 +1,7 @@
 package org.genedb.top.web.tags.db;
 
 import static javax.servlet.jsp.PageContext.APPLICATION_SCOPE;
-import static org.genedb.web.mvc.controller.TaxonManagerListener.TAXON_NODE_MANAGER;
+import static org.genedb.top.web.mvc.controller.TaxonManagerListener.TAXON_NODE_MANAGER;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -18,8 +18,8 @@ import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
 
 import org.apache.commons.lang.StringUtils;
-import org.genedb.db.taxon.TaxonNode;
-import org.genedb.db.taxon.TaxonNodeManager;
+import org.genedb.top.db.taxon.TaxonNode;
+import org.genedb.top.db.taxon.TaxonNodeManager;
 
 /**
  *

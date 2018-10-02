@@ -3,12 +3,13 @@ package org.genedb.top.web.mvc.controller.download;
 import java.io.IOException;
 import java.util.List;
 
-import org.apache.log4j.Logger;
-import org.genedb.querying.tmpquery.GeneDetail;
+import org.genedb.top.querying.tmpquery.GeneDetail;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class FormatHTML extends FormatBase {
-	
-	private Logger logger = Logger.getLogger(FormatHTML.class);
+
+	private static final Logger logger = LoggerFactory.getLogger(FormatHTML.class);
 	
 	protected String headerFieldSeparator;
 	protected String postHeaderFieldSeparator;

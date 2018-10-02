@@ -1,6 +1,7 @@
 package org.genedb.top.db.loading;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -16,7 +17,7 @@ import java.util.regex.Pattern;
  *
  */
 public abstract class EmblLocation {
-    private static final Logger logger = Logger.getLogger(EmblLocation.class);
+    private static final Logger logger = LoggerFactory.getLogger(EmblLocation.class);
 
     /**
      * A regular expression that matches an EMBL &lt;symbol&gt;, as defined in

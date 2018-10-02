@@ -12,7 +12,6 @@ import org.genedb.top.chado.feature.Region;
 import org.genedb.top.chado.utils.CollectionUtils;
 import org.genedb.top.chado.utils.SimilarityI;
 import org.genedb.top.chado.utils.StrandedLocation;
-import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.annotations.Cascade;
@@ -26,6 +25,8 @@ import org.hibernate.search.annotations.Index;
 import org.hibernate.search.annotations.Indexed;
 import org.hibernate.search.annotations.IndexedEmbedded;
 import org.hibernate.search.annotations.Store;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -216,7 +217,7 @@ public abstract class Feature implements java.io.Serializable, HasPubsAndDbXRefs
     private Set<FeatureSynonym> featureSynonyms;
 
     @Transient
-    private Logger logger = Logger.getLogger(Feature.class);
+    private static final Logger logger = LoggerFactory.getLogger(Feature.class);
 
     // Constructors
 

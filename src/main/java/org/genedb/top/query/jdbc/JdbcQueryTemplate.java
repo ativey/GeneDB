@@ -19,7 +19,7 @@
 
 package org.genedb.top.query.jdbc;
 
-import org.genedb.querying.core.QueryTemplate;
+import org.genedb.top.querying.core.QueryTemplate;
 
 import org.springframework.beans.factory.annotation.Required;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;

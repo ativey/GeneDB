@@ -20,7 +20,7 @@
 package org.genedb.top.web.mvc.controller;
 
 
-import org.genedb.db.taxon.TaxonNodeManager;
+import org.genedb.top.db.taxon.TaxonNodeManager;
 
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;

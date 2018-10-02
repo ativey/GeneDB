@@ -3,7 +3,8 @@ package org.genedb.top.chado.mapped;
 
 import static javax.persistence.GenerationType.SEQUENCE;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.Serializable;
 
@@ -21,7 +22,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="feature_dbxref")
 public class FeatureDbXRef implements Serializable {
-    private static final Logger logger = Logger.getLogger(FeatureDbXRef.class);
+    private static final Logger logger = LoggerFactory.getLogger(FeatureDbXRef.class);
 
     // Fields
     @SequenceGenerator(name="generator", sequenceName="feature_dbxref_feature_dbxref_id_seq", allocationSize=1)

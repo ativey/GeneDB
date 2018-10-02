@@ -1,7 +1,7 @@
 package org.genedb.top.db.domain.services;
 
-import org.genedb.db.domain.misc.MethodResult;
-import org.genedb.db.domain.objects.Product;
+import org.genedb.top.db.domain.misc.MethodResult;
+import org.genedb.top.db.domain.objects.Product;
 
 import java.util.List;
 

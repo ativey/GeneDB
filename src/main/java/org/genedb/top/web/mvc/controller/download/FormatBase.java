@@ -7,10 +7,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
 import org.genedb.top.db.dao.SequenceDao;
 import org.genedb.top.querying.tmpquery.GeneDetail;
 import org.genedb.top.chado.mapped.Feature;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.TransactionCallback;
 import org.springframework.transaction.support.TransactionTemplate;
@@ -22,8 +23,8 @@ import org.springframework.transaction.support.TransactionTemplate;
  * @author gv1
  */
 public abstract class FormatBase {
-	
-	private Logger logger = Logger.getLogger(FormatBase.class);
+
+	private static final Logger logger = LoggerFactory.getLogger(FormatBase.class);
 	
 	protected String fieldSeparator = "";
 	protected String fieldInternalSeparator = "";

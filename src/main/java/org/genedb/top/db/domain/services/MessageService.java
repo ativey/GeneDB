@@ -1,6 +1,6 @@
 package org.genedb.top.db.domain.services;
 
-import org.genedb.db.domain.misc.Message;
+import org.genedb.top.db.domain.misc.Message;
 
 import java.util.List;
 

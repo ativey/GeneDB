@@ -2,9 +2,11 @@ package org.genedb.top.chado.mapped;
 
 
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import static javax.persistence.GenerationType.SEQUENCE;
 
-import org.apache.log4j.Logger;
 
 import java.io.Serializable;
 
@@ -21,7 +23,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="feature_cvterm_pub")
 public class FeatureCvTermPub implements Serializable {
-    private static final Logger logger = Logger.getLogger(FeatureCvTermPub.class);
+    private static final Logger logger = LoggerFactory.getLogger(FeatureCvTermPub.class);
 
     // Fields
     @SequenceGenerator(name="generator", sequenceName="feature_cvterm_pub_feature_cvterm_pub_id_seq", allocationSize=1)

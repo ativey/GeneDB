@@ -1,6 +1,5 @@
 package org.genedb.top.query.sql;
 
-import org.apache.log4j.Logger;
 import org.genedb.top.query.AbstractQuery;
 import org.genedb.top.query.Result;
 import org.genedb.top.query.SimpleListResult;
@@ -11,6 +10,8 @@ import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowCallbackHandler;
 import org.springframework.jdbc.datasource.SingleConnectionDataSource;
@@ -30,7 +31,7 @@ public class SqlQuery extends AbstractQuery implements DataSourceAware {
      */
     protected Object[] args;
 
-    private static final Logger logger = Logger.getLogger(SqlQuery.class);
+    private static final Logger logger = LoggerFactory.getLogger(SqlQuery.class);
 
     public void setDataSource(DataSource dataSource) {
         this.dataSource = dataSource;

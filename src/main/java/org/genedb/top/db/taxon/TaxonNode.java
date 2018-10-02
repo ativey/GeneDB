@@ -6,13 +6,11 @@
  */
 package org.genedb.top.db.taxon;
 
-import org.gmod.schema.mapped.Organism;
-import org.gmod.schema.mapped.OrganismProp;
-import org.gmod.schema.mapped.Phylonode;
-import org.gmod.schema.mapped.PhylonodeOrganism;
-import org.gmod.schema.mapped.PhylonodeProp;
-
-import org.apache.log4j.Logger;
+import org.genedb.top.chado.mapped.Organism;
+import org.genedb.top.chado.mapped.OrganismProp;
+import org.genedb.top.chado.mapped.Phylonode;
+import org.genedb.top.chado.mapped.PhylonodeOrganism;
+import org.genedb.top.chado.mapped.PhylonodeProp;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -24,6 +22,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.google.common.collect.Maps;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author art
@@ -31,7 +31,7 @@ import com.google.common.collect.Maps;
  */
 public class TaxonNode implements Serializable {
 
-	private transient Logger logger = Logger.getLogger(TaxonNode.class);
+    private static final Logger logger = LoggerFactory.getLogger(TaxonNode.class);
 
     private String taxonId;
     transient private TaxonNode parent;

@@ -3,8 +3,8 @@ package org.genedb.top.chado.feature;
 import org.genedb.top.chado.cfg.FeatureType;
 import org.genedb.top.chado.mapped.CvTerm;
 import org.genedb.top.chado.mapped.Organism;
-
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.persistence.Entity;
 import javax.persistence.Transient;
@@ -12,7 +12,7 @@ import javax.persistence.Transient;
 @Entity
 @FeatureType(cv="sequence", term="signal_peptide")
 public class SignalPeptide extends PolypeptideRegion {
-    private static final Logger logger = Logger.getLogger(SignalPeptide.class);
+    private static final Logger logger = LoggerFactory.getLogger(SignalPeptide.class);
 
     // Constructors
 

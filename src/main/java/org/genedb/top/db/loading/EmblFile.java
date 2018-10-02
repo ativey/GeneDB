@@ -1,8 +1,8 @@
 package org.genedb.top.db.loading;
 
 import org.genedb.top.db.loading.EmblLoader.OverwriteExisting;
-
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -26,7 +26,7 @@ import java.util.regex.Pattern;
  * @author rh11
  */
 public class EmblFile {
-    private static final Logger logger = Logger.getLogger(EmblFile.class);
+    private static final Logger logger = LoggerFactory.getLogger(EmblFile.class);
 
     private boolean continueOnError = false;
     private String filePath;

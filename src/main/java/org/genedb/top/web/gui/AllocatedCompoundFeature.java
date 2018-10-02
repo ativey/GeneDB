@@ -1,9 +1,9 @@
 package org.genedb.top.web.gui;
 
-import org.genedb.db.domain.objects.CompoundLocatedFeature;
-import org.genedb.db.domain.objects.LocatedFeature;
-
-import org.apache.log4j.Logger;
+import org.genedb.top.db.domain.objects.CompoundLocatedFeature;
+import org.genedb.top.db.domain.objects.LocatedFeature;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -15,7 +15,7 @@ import java.util.List;
  * or tracks.
  */
 public class AllocatedCompoundFeature implements Comparable<AllocatedCompoundFeature> {
-    private static final Logger logger = Logger.getLogger(AllocatedCompoundFeature.class);
+    private static final Logger logger = LoggerFactory.getLogger(AllocatedCompoundFeature.class);
 
     public enum Mode {
         UNPACKED, PACKED, STRATIFIED, STRATIFIED_LTR

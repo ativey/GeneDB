@@ -1,6 +1,7 @@
 package org.genedb.top.querying.core;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Configurable;
 
 import java.util.HashMap;
@@ -10,7 +11,7 @@ import java.util.Map;
 @Configurable
 public class LuceneIndexFactory {
 
-    private static final Logger logger = Logger.getLogger(LuceneIndexFactory.class);
+    private static final Logger logger = LoggerFactory.getLogger(LuceneIndexFactory.class);
 
     private Map<String, LuceneIndex> mapping = new HashMap<String, LuceneIndex>();
 

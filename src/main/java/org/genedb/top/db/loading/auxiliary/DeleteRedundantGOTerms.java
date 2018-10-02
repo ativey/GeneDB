@@ -1,11 +1,12 @@
 package org.genedb.top.db.loading.auxiliary;
 
-import org.gmod.schema.utils.CvTermUtils;
+import org.genedb.top.chado.utils.CvTermUtils;
 
-import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.connection.ConnectionProvider;
 import org.hibernate.engine.SessionFactoryImplementor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -46,7 +47,7 @@ import javax.sql.DataSource;
  * @author rh11
  */
 public class DeleteRedundantGOTerms {
-    private static final Logger logger = Logger.getLogger(DeleteRedundantGOTerms.class);
+    private static final Logger logger = LoggerFactory.getLogger(DeleteRedundantGOTerms.class);
 
     public static void main(String[] args) throws SQLException, IOException {
         ApplicationContext ctx = new ClassPathXmlApplicationContext(

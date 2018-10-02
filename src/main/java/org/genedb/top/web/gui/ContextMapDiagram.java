@@ -1,10 +1,10 @@
 package org.genedb.top.web.gui;
 
-import org.genedb.db.domain.objects.BasicGene;
-import org.genedb.db.domain.objects.Gap;
-import org.genedb.db.domain.services.BasicGeneService;
-
-import org.apache.log4j.Logger;
+import org.genedb.top.db.domain.objects.BasicGene;
+import org.genedb.top.db.domain.objects.Gap;
+import org.genedb.top.db.domain.services.BasicGeneService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Collection;
 import java.util.Set;
@@ -75,7 +75,7 @@ public class ContextMapDiagram extends TrackedDiagram {
      * iterated at all, because overlaps are relatively rare.)
      */
 
-    private static final Logger logger = Logger.getLogger(ContextMapDiagram.class);
+    private static final Logger logger = LoggerFactory.getLogger(ContextMapDiagram.class);
 
     private String organism, chromosome;
 

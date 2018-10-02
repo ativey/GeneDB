@@ -1,6 +1,6 @@
 package org.genedb.top.db.dao;
 
-import org.gmod.schema.mapped.Organism;
+import org.genedb.top.chado.mapped.Organism;
 
 import org.springframework.transaction.annotation.Transactional;
 

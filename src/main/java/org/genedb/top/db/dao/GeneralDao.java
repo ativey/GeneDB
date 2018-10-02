@@ -8,14 +8,15 @@ import org.genedb.top.chado.mapped.DbXRef;
 import org.genedb.top.chado.mapped.Feature;
 import org.genedb.top.chado.mapped.Synonym;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Transactional(readOnly = true)
 public class GeneralDao extends BaseDao {
-    private static final Logger logger = Logger.getLogger(GeneralDao.class);
+    private static final Logger logger = LoggerFactory.getLogger(GeneralDao.class);
 
     private CvDao cvDao;
     public Db getDbByName(String name) {

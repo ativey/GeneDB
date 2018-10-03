@@ -4,9 +4,9 @@ import org.genedb.db.dao.SequenceDao;
 import org.genedb.querying.history.HistoryManager;
 import org.genedb.querying.history.HistoryType;
 
-import org.gmod.schema.feature.Gene;
-import org.gmod.schema.feature.Transcript;
-import org.gmod.schema.mapped.Feature;
+import org.genedb.top.chado.feature.Gene;
+import org.genedb.top.chado.feature.Transcript;
+import org.genedb.top.chado.mapped.Feature;
 
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;

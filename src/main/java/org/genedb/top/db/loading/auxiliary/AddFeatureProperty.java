@@ -1,6 +1,6 @@
 package org.genedb.top.db.loading.auxiliary;
 
-import org.gmod.schema.feature.Polypeptide;
+import org.genedb.top.chado.feature.Polypeptide;
 
 import org.apache.log4j.Logger;
 import org.hibernate.Session;

@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.controller;
 
-import org.gmod.schema.mapped.Organism;
+import org.genedb.top.chado.mapped.Organism;
 
 import java.util.List;
 

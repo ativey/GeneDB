@@ -4,11 +4,11 @@
 //import org.genedb.db.domain.objects.LocatedFeature;
 //import org.genedb.db.domain.objects.PolypeptideRegion;
 //
-//import org.gmod.schema.feature.CytoplasmicRegion;
-//import org.gmod.schema.feature.MembraneStructure;
-//import org.gmod.schema.feature.MembraneStructureComponent;
-//import org.gmod.schema.feature.NonCytoplasmicRegion;
-//import org.gmod.schema.feature.TransmembraneRegion;
+//import org.genedb.top.chado.feature.CytoplasmicRegion;
+//import org.genedb.top.chado.feature.MembraneStructure;
+//import org.genedb.top.chado.feature.MembraneStructureComponent;
+//import org.genedb.top.chado.feature.NonCytoplasmicRegion;
+//import org.genedb.top.chado.feature.TransmembraneRegion;
 //
 //import org.apache.log4j.Logger;
 //import org.postgresql.util.MD5Digest;

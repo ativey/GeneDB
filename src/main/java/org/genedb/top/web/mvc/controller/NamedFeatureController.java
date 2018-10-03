@@ -45,7 +45,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.genedb.top.web.mvc.model.TranscriptDTO;
 
 import org.genedb.top.chado.feature.AbstractGene;
-//import org.gmod.schema.feature.Polypeptide;
+//import org.genedb.top.chado.feature.Polypeptide;
 import org.genedb.top.chado.feature.Transcript;
 import org.genedb.top.chado.mapped.Feature;
 

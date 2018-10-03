@@ -6,7 +6,7 @@
  */
 package org.genedb.top.web.mvc.controller.analysis;
 
-import org.gmod.schema.mapped.Organism;
+import org.genedb.top.chado.mapped.Organism;
 
 import java.io.FileInputStream;
 import java.io.IOException;

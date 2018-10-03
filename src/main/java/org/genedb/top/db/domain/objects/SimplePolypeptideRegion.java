@@ -1,6 +1,6 @@
 package org.genedb.top.db.domain.objects;
 
-import org.gmod.schema.mapped.FeatureLoc;
+import org.genedb.top.chado.mapped.FeatureLoc;
 
 import java.awt.Color;
 

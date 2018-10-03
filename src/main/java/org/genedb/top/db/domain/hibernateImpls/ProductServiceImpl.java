@@ -7,8 +7,8 @@ import org.genedb.db.domain.services.LockAndNotificationService;
 import org.genedb.db.domain.services.LockStatus;
 import org.genedb.db.domain.services.ProductService;
 
-import org.gmod.schema.mapped.CvTerm;
-import org.gmod.schema.mapped.FeatureCvTerm;
+import org.genedb.top.chado.mapped.CvTerm;
+import org.genedb.top.chado.mapped.FeatureCvTerm;
 
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;

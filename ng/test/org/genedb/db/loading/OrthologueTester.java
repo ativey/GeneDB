@@ -4,10 +4,10 @@ import static org.junit.Assert.*;
 
 import org.genedb.db.dao.SequenceDao;
 
-import org.gmod.schema.feature.Polypeptide;
-import org.gmod.schema.feature.ProteinMatch;
-import org.gmod.schema.mapped.Analysis;
-import org.gmod.schema.mapped.AnalysisFeature;
+import org.genedb.top.chado.feature.Polypeptide;
+import org.genedb.top.chado.feature.ProteinMatch;
+import org.genedb.top.chado.mapped.Analysis;
+import org.genedb.top.chado.mapped.AnalysisFeature;
 
 import org.apache.log4j.Logger;
 import org.hibernate.Session;

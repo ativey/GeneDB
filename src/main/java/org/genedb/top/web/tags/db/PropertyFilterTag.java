@@ -14,8 +14,8 @@ import javax.servlet.jsp.tagext.SimpleTagSupport;
 
 import org.apache.log4j.Logger;
 
-import org.gmod.schema.mapped.CvTerm;
-import org.gmod.schema.utils.propinterface.PropertyI;
+import org.genedb.top.chado.mapped.CvTerm;
+import org.genedb.top.chado.utils.propinterface.PropertyI;
 
 public class PropertyFilterTag extends SimpleTagSupport {
 

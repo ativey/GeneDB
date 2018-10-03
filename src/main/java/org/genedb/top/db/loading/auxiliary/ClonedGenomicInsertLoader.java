@@ -12,10 +12,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.apache.log4j.Logger;
-import org.gmod.schema.feature.ClonedGenomicInsert;
-import org.gmod.schema.mapped.Feature;
-import org.gmod.schema.mapped.FeatureLoc;
-import org.gmod.schema.mapped.Organism;
+import org.genedb.top.chado.feature.ClonedGenomicInsert;
+import org.genedb.top.chado.mapped.Feature;
+import org.genedb.top.chado.mapped.FeatureLoc;
+import org.genedb.top.chado.mapped.Organism;
 import org.hibernate.Session;
 
 public class ClonedGenomicInsertLoader extends Loader {

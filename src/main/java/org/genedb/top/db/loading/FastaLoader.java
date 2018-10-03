@@ -21,11 +21,11 @@ package org.genedb.top.db.loading;
 
 import org.genedb.db.dao.OrganismDao;
 
-import org.gmod.schema.feature.Contig;
-import org.gmod.schema.feature.Supercontig;
-import org.gmod.schema.feature.TopLevelFeature;
-import org.gmod.schema.mapped.Feature;
-import org.gmod.schema.mapped.Organism;
+import org.genedb.top.chado.feature.Contig;
+import org.genedb.top.chado.feature.Supercontig;
+import org.genedb.top.chado.feature.TopLevelFeature;
+import org.genedb.top.chado.mapped.Feature;
+import org.genedb.top.chado.mapped.Organism;
 
 import org.apache.log4j.Logger;
 import org.hibernate.Session;

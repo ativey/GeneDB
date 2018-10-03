@@ -2,7 +2,7 @@ package org.genedb.top.web.mvc.controller;
 
 import org.genedb.db.dao.OrganismDao;
 
-import org.gmod.schema.mapped.Organism;
+import org.genedb.top.chado.mapped.Organism;
 
 
 

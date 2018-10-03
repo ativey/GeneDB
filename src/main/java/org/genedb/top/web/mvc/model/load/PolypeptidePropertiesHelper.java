@@ -9,7 +9,7 @@ import org.biojava.bio.seq.io.SymbolTokenization;
 import org.biojava.bio.symbol.SimpleSymbolList;
 import org.biojava.bio.symbol.SymbolList;
 import org.biojava.bio.symbol.SymbolPropertyTable;
-import org.gmod.schema.utils.PeptideProperties;
+import org.genedb.top.chado.utils.PeptideProperties;
 
 
 /**

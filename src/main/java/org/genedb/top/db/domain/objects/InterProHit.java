@@ -1,6 +1,6 @@
 package org.genedb.top.db.domain.objects;
 
-import org.gmod.schema.mapped.DbXRef;
+import org.genedb.top.chado.mapped.DbXRef;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 

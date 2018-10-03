@@ -7,13 +7,13 @@ import org.genedb.db.loading.FeatureTester.GenericTester;
 import org.genedb.db.loading.FeatureTester.PolypeptideTester;
 import org.genedb.db.loading.FeatureTester.TranscriptTester;
 
-import org.gmod.schema.feature.AbstractGene;
-import org.gmod.schema.feature.Contig;
-import org.gmod.schema.feature.Gene;
-import org.gmod.schema.feature.Pseudogene;
-import org.gmod.schema.feature.RepeatRegion;
-import org.gmod.schema.feature.RepeatUnit;
-import org.gmod.schema.mapped.CvTerm;
+import org.genedb.top.chado.feature.AbstractGene;
+import org.genedb.top.chado.feature.Contig;
+import org.genedb.top.chado.feature.Gene;
+import org.genedb.top.chado.feature.Pseudogene;
+import org.genedb.top.chado.feature.RepeatRegion;
+import org.genedb.top.chado.feature.RepeatUnit;
+import org.genedb.top.chado.mapped.CvTerm;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;

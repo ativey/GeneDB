@@ -21,7 +21,7 @@ package org.genedb.top.web.utils;
 
 import org.genedb.web.mvc.controller.Strand;
 
-import org.gmod.schema.mapped.Feature;
+import org.genedb.top.chado.mapped.Feature;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;

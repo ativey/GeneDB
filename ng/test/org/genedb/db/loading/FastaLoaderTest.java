@@ -1,7 +1,7 @@
 package org.genedb.db.loading;
 
-import org.gmod.schema.feature.Contig;
-import org.gmod.schema.feature.Supercontig;
+import org.genedb.top.chado.feature.Contig;
+import org.genedb.top.chado.feature.Supercontig;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

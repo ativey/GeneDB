@@ -3,8 +3,8 @@ package org.genedb.top.db.loading.auxiliary;
 import org.genedb.top.db.loading.GoEvidenceCode;
 import org.genedb.top.db.loading.GoInstance;
 
-import org.gmod.schema.feature.Polypeptide;
-import org.gmod.schema.mapped.DbXRef;
+import org.genedb.top.chado.feature.Polypeptide;
+import org.genedb.top.chado.mapped.DbXRef;
 
 import org.apache.log4j.Logger;
 import org.hibernate.Session;

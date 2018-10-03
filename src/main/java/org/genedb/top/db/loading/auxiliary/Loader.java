@@ -6,11 +6,11 @@ import org.genedb.db.dao.PubDao;
 import org.genedb.db.dao.SequenceDao;
 import org.genedb.top.db.loading.FeatureUtils;
 
-import org.gmod.schema.feature.AbstractGene;
-import org.gmod.schema.feature.Polypeptide;
-import org.gmod.schema.feature.ProductiveTranscript;
-import org.gmod.schema.feature.Transcript;
-import org.gmod.schema.utils.ObjectManager;
+import org.genedb.top.chado.feature.AbstractGene;
+import org.genedb.top.chado.feature.Polypeptide;
+import org.genedb.top.chado.feature.ProductiveTranscript;
+import org.genedb.top.chado.feature.Transcript;
+import org.genedb.top.chado.utils.ObjectManager;
 
 import org.apache.log4j.Logger;
 import org.hibernate.Session;

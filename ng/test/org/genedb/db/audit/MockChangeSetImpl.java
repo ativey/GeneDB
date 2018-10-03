@@ -1,6 +1,6 @@
 package org.genedb.db.audit;
 
-import org.gmod.schema.mapped.Feature;
+import org.genedb.top.chado.mapped.Feature;
 
 import java.sql.SQLException;
 import java.util.Collection;

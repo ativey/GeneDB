@@ -1,7 +1,7 @@
 package org.genedb.db.loading;
 
-import org.gmod.schema.feature.Gene;
-import org.gmod.schema.feature.RepeatRegion;
+import org.genedb.top.chado.feature.Gene;
+import org.genedb.top.chado.feature.RepeatRegion;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;

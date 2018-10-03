@@ -19,9 +19,9 @@ import org.genedb.querying.tmpquery.QuickSearchQuery.QuickSearchQueryResults;
 import org.genedb.querying.tmpquery.TopLevelFeaturesQuery;
 import org.genedb.querying.tmpquery.TopLevelFeaturesQuery.TopLevelFeature;
 
-import org.gmod.schema.mapped.CvTerm;
-import org.gmod.schema.mapped.Feature;
-import org.gmod.schema.mapped.Organism;
+import org.genedb.top.chado.mapped.CvTerm;
+import org.genedb.top.chado.mapped.Feature;
+import org.genedb.top.chado.mapped.Organism;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

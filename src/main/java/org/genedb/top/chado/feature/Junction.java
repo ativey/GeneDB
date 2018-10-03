@@ -1,13 +1,13 @@
 package org.genedb.top.chado.feature;
 
-import org.gmod.schema.cfg.FeatureType;
-import org.gmod.schema.mapped.Feature;
+import org.genedb.top.chado.cfg.FeatureType;
+import org.genedb.top.chado.mapped.Feature;
 
 
-import org.gmod.schema.mapped.CvTerm;
+import org.genedb.top.chado.mapped.CvTerm;
 
-import org.gmod.schema.mapped.FeatureLoc;
-import org.gmod.schema.mapped.Organism;
+import org.genedb.top.chado.mapped.FeatureLoc;
+import org.genedb.top.chado.mapped.Organism;
 
 import java.sql.Timestamp;
 import javax.persistence.Entity;

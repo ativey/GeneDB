@@ -2,10 +2,10 @@ package org.genedb.db.loading.auxiliary;
 
 import static org.junit.Assert.*;
 
-import org.gmod.schema.feature.Polypeptide;
-import org.gmod.schema.feature.PolypeptideDomain;
-import org.gmod.schema.mapped.DbXRef;
-import org.gmod.schema.mapped.FeatureDbXRef;
+import org.genedb.top.chado.feature.Polypeptide;
+import org.genedb.top.chado.feature.PolypeptideDomain;
+import org.genedb.top.chado.mapped.DbXRef;
+import org.genedb.top.chado.mapped.FeatureDbXRef;
 
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;

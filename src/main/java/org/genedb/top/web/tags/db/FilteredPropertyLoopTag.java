@@ -8,7 +8,7 @@ import java.util.List;
 import javax.servlet.jsp.JspTagException;
 import javax.servlet.jsp.jstl.core.LoopTagSupport;
 
-import org.gmod.schema.utils.propinterface.PropertyI;
+import org.genedb.top.chado.utils.propinterface.PropertyI;
 
 public class FilteredPropertyLoopTag extends LoopTagSupport {
     private String cvName;

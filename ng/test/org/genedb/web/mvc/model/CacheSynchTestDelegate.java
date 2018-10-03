@@ -5,18 +5,18 @@
 //import java.util.List;
 //
 //import org.genedb.db.domain.test.MockBasicGeneService;
-//import org.gmod.schema.feature.AbstractGene;
-//import org.gmod.schema.feature.Chromosome;
-//import org.gmod.schema.feature.Gene;
-//import org.gmod.schema.feature.Transcript;
-//import org.gmod.schema.mapped.CvTerm;
-//import org.gmod.schema.mapped.Feature;
-//import org.gmod.schema.mapped.FeatureCvTerm;
-//import org.gmod.schema.mapped.FeatureLoc;
-//import org.gmod.schema.mapped.FeatureRelationship;
-//import org.gmod.schema.mapped.Organism;
-//import org.gmod.schema.mapped.MockChromosome;
-//import org.gmod.schema.mapped.MockTranscript;
+//import org.genedb.top.chado.feature.AbstractGene;
+//import org.genedb.top.chado.feature.Chromosome;
+//import org.genedb.top.chado.feature.Gene;
+//import org.genedb.top.chado.feature.Transcript;
+//import org.genedb.top.chado.mapped.CvTerm;
+//import org.genedb.top.chado.mapped.Feature;
+//import org.genedb.top.chado.mapped.FeatureCvTerm;
+//import org.genedb.top.chado.mapped.FeatureLoc;
+//import org.genedb.top.chado.mapped.FeatureRelationship;
+//import org.genedb.top.chado.mapped.Organism;
+//import org.genedb.top.chado.mapped.MockChromosome;
+//import org.genedb.top.chado.mapped.MockTranscript;
 //
 //import com.sleepycat.collections.StoredMap;
 //

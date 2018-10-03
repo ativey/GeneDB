@@ -1,6 +1,6 @@
 package org.genedb.top.web.tags.db;
 
-import org.gmod.schema.utils.CountedName;
+import org.genedb.top.chado.utils.CountedName;
 
 import org.displaytag.decorator.TableDecorator;
 

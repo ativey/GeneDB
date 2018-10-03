@@ -3,7 +3,7 @@ package org.genedb.db.loading;
 import org.genedb.db.dao.OrganismDao;
 import org.genedb.db.loading.EmblLoader.OverwriteExisting;
 
-import org.gmod.schema.mapped.Organism;
+import org.genedb.top.chado.mapped.Organism;
 
 import org.apache.log4j.Logger;
 import org.hibernate.Session;

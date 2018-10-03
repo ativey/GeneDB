@@ -5,7 +5,7 @@
 //import org.genedb.db.domain.objects.LocatedFeature;
 //import org.genedb.web.mvc.model.BerkeleyMapFactory;
 //
-//import org.gmod.schema.feature.Region;
+//import org.genedb.top.chado.feature.Region;
 //
 //import org.apache.log4j.Logger;
 //

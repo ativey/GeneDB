@@ -1,7 +1,7 @@
 package org.genedb.top.web.mvc.model;
 
 import org.genedb.db.analyzers.AllNamesAnalyzer;
-import org.gmod.schema.utils.CvTermUtils;
+import org.genedb.top.chado.utils.CvTermUtils;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.apache.lucene.analysis.Analyzer;

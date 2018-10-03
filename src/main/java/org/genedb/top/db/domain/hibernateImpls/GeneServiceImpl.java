@@ -7,10 +7,10 @@ import org.genedb.db.domain.objects.Gene;
 import org.genedb.db.domain.objects.Transcript;
 import org.genedb.db.domain.services.GeneService;
 
-import org.gmod.schema.mapped.AnalysisFeature;
-import org.gmod.schema.mapped.Feature;
-import org.gmod.schema.mapped.FeatureRelationship;
-import org.gmod.schema.mapped.FeatureSynonym;
+import org.genedb.top.chado.mapped.AnalysisFeature;
+import org.genedb.top.chado.mapped.Feature;
+import org.genedb.top.chado.mapped.FeatureRelationship;
+import org.genedb.top.chado.mapped.FeatureSynonym;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;

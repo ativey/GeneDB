@@ -1,6 +1,6 @@
 package org.genedb.top.chado.feature;
 
-import org.gmod.schema.cfg.FeatureType;
+import org.genedb.top.chado.cfg.FeatureType;
 
 import javax.persistence.Entity;
 

@@ -1,8 +1,8 @@
 package org.genedb.top.db.loading.auxiliary;
 
-import org.gmod.schema.feature.HelixTurnHelix;
-import org.gmod.schema.feature.Polypeptide;
-import org.gmod.schema.mapped.Analysis;
+import org.genedb.top.chado.feature.HelixTurnHelix;
+import org.genedb.top.chado.feature.Polypeptide;
+import org.genedb.top.chado.mapped.Analysis;
 
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;

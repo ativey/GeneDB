@@ -6,10 +6,10 @@ package org.genedb.top.web.mvc.controller;
 import org.genedb.web.mvc.controller.download.BaseCachingController;
 //
 //import org.apache.log4j.Logger;
-//import org.gmod.schema.feature.Polypeptide;
-//import org.gmod.schema.feature.ProteinMatch;
-//import org.gmod.schema.mapped.Feature;
-//import org.gmod.schema.mapped.FeatureRelationship;
+//import org.genedb.top.chado.feature.Polypeptide;
+//import org.genedb.top.chado.feature.ProteinMatch;
+//import org.genedb.top.chado.mapped.Feature;
+//import org.genedb.top.chado.mapped.FeatureRelationship;
 //import org.springframework.stereotype.Controller;
 //import org.springframework.ui.Model;
 //import org.springframework.web.bind.annotation.PathVariable;

@@ -1,7 +1,7 @@
 package org.genedb.top.chado.feature;
 
-import org.gmod.schema.cfg.FeatureType;
-import org.gmod.schema.mapped.Organism;
+import org.genedb.top.chado.cfg.FeatureType;
+import org.genedb.top.chado.mapped.Organism;
 
 import org.apache.log4j.Logger;
 import org.hibernate.search.annotations.Indexed;

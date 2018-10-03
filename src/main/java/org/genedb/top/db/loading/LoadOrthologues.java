@@ -3,15 +3,15 @@ package org.genedb.top.db.loading;
 import org.genedb.db.dao.OrganismDao;
 import org.genedb.db.dao.SequenceDao;
 
-import org.gmod.schema.feature.AbstractGene;
-import org.gmod.schema.feature.Polypeptide;
-import org.gmod.schema.feature.ProductiveTranscript;
-import org.gmod.schema.feature.ProteinMatch;
-import org.gmod.schema.feature.Transcript;
-import org.gmod.schema.mapped.Analysis;
-import org.gmod.schema.mapped.AnalysisFeature;
-import org.gmod.schema.mapped.FeatureRelationship;
-import org.gmod.schema.mapped.Organism;
+import org.genedb.top.chado.feature.AbstractGene;
+import org.genedb.top.chado.feature.Polypeptide;
+import org.genedb.top.chado.feature.ProductiveTranscript;
+import org.genedb.top.chado.feature.ProteinMatch;
+import org.genedb.top.chado.feature.Transcript;
+import org.genedb.top.chado.mapped.Analysis;
+import org.genedb.top.chado.mapped.AnalysisFeature;
+import org.genedb.top.chado.mapped.FeatureRelationship;
+import org.genedb.top.chado.mapped.Organism;
 
 import org.apache.log4j.Logger;
 import org.hibernate.Session;

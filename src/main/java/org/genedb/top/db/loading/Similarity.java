@@ -1,8 +1,8 @@
 package org.genedb.top.db.loading;
 
-import org.gmod.schema.mapped.Analysis;
-import org.gmod.schema.mapped.DbXRef;
-import org.gmod.schema.utils.SimilarityI;
+import org.genedb.top.chado.mapped.Analysis;
+import org.genedb.top.chado.mapped.DbXRef;
+import org.genedb.top.chado.utils.SimilarityI;
 
 import java.util.ArrayList;
 import java.util.Collection;

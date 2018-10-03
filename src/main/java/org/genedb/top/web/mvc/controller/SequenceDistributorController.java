@@ -31,10 +31,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.genedb.db.dao.SequenceDao;
 
-import org.gmod.schema.feature.Polypeptide;
-import org.gmod.schema.feature.ProductiveTranscript;
-import org.gmod.schema.feature.Transcript;
-import org.gmod.schema.mapped.Feature;
+import org.genedb.top.chado.feature.Polypeptide;
+import org.genedb.top.chado.feature.ProductiveTranscript;
+import org.genedb.top.chado.feature.Transcript;
+import org.genedb.top.chado.mapped.Feature;
 
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpException;

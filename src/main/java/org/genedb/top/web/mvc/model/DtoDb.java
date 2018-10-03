@@ -7,7 +7,7 @@
 //import org.genedb.web.mvc.model.types.FeatureCVTPropType;
 //import org.genedb.web.mvc.model.types.PeptidePropertiesType;
 //
-//import org.gmod.schema.utils.PeptideProperties;
+//import org.genedb.top.chado.utils.PeptideProperties;
 //
 //import org.apache.commons.io.IOUtils;
 //import org.apache.log4j.Logger;

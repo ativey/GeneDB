@@ -5,7 +5,7 @@ import java.util.List;
 import org.genedb.db.dao.CvDao;
 import org.genedb.db.dao.SequenceDao;
 
-import org.gmod.schema.mapped.CvTerm;
+import org.genedb.top.chado.mapped.CvTerm;
 
 import org.springframework.beans.factory.InitializingBean;
 

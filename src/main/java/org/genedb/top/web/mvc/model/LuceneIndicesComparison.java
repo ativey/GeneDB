@@ -14,7 +14,7 @@ import org.apache.lucene.document.Field;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.store.FSDirectory;
 import org.genedb.util.MD5Util;
-import org.gmod.schema.mapped.Feature;
+import org.genedb.top.chado.mapped.Feature;
 
 /**
  * 

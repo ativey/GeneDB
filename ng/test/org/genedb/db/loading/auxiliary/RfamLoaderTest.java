@@ -3,13 +3,13 @@ package org.genedb.db.loading.auxiliary;
 import static org.junit.Assert.*;
 
 
-import org.gmod.schema.feature.Chromosome;
-import org.gmod.schema.feature.Gene;
-import org.gmod.schema.feature.Transcript;
-import org.gmod.schema.mapped.Analysis;
-import org.gmod.schema.mapped.AnalysisFeature;
-import org.gmod.schema.mapped.DbXRef;
-import org.gmod.schema.mapped.FeatureLoc;
+import org.genedb.top.chado.feature.Chromosome;
+import org.genedb.top.chado.feature.Gene;
+import org.genedb.top.chado.feature.Transcript;
+import org.genedb.top.chado.mapped.Analysis;
+import org.genedb.top.chado.mapped.AnalysisFeature;
+import org.genedb.top.chado.mapped.DbXRef;
+import org.genedb.top.chado.mapped.FeatureLoc;
 
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;

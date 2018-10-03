@@ -31,7 +31,7 @@ import org.genedb.db.taxon.TaxonNode;
 import org.genedb.db.taxon.TaxonNodeList;
 import org.genedb.db.taxon.TaxonNodeManager;
 import org.genedb.querying.tmpquery.BrowseCategory;
-import org.gmod.schema.utils.CountedName;
+import org.genedb.top.chado.utils.CountedName;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;

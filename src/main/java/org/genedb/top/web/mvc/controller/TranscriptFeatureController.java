@@ -28,8 +28,8 @@ import org.genedb.web.mvc.model.FeatureDTO;
 import org.genedb.web.mvc.model.GeneDTO;
 import org.genedb.web.mvc.model.TranscriptDTO;
 
-import org.gmod.schema.feature.AbstractGene;
-import org.gmod.schema.mapped.Feature;
+import org.genedb.top.chado.feature.AbstractGene;
+import org.genedb.top.chado.mapped.Feature;
 
 import org.apache.log4j.Logger;
 import org.springframework.jmx.export.annotation.ManagedAttribute;

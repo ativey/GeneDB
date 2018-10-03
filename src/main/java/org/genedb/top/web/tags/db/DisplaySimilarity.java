@@ -1,9 +1,9 @@
 package org.genedb.top.web.tags.db;
 
-import org.gmod.schema.mapped.AnalysisFeature;
-import org.gmod.schema.mapped.Feature;
-import org.gmod.schema.mapped.FeatureLoc;
-import org.gmod.schema.mapped.FeatureProp;
+import org.genedb.top.chado.mapped.AnalysisFeature;
+import org.genedb.top.chado.mapped.Feature;
+import org.genedb.top.chado.mapped.FeatureLoc;
+import org.genedb.top.chado.mapped.FeatureProp;
 
 import org.apache.log4j.Logger;
 

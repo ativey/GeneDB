@@ -3,7 +3,6 @@ package org.genedb.top.chado.cfg;
 import org.genedb.top.chado.feature.Transcript;
 import org.genedb.top.chado.feature.Gap;
 
-import org.hibernate.cfg.Configuration;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;

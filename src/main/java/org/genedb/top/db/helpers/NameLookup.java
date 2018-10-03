@@ -21,7 +21,7 @@ package org.genedb.top.db.helpers;
 
 import org.genedb.db.dao.OrganismDao;
 
-import org.gmod.schema.mapped.Organism;
+import org.genedb.top.chado.mapped.Organism;
 
 // import java.util.List;
 

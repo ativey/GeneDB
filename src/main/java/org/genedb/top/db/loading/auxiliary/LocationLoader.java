@@ -13,13 +13,13 @@ import java.util.Set;
 import java.util.Map.Entry;
 
 import org.apache.log4j.Logger;
-import org.gmod.schema.feature.AbstractExon;
-import org.gmod.schema.feature.AbstractGene;
-import org.gmod.schema.feature.Polypeptide;
-import org.gmod.schema.feature.Transcript;
-import org.gmod.schema.mapped.Feature;
-import org.gmod.schema.mapped.FeatureLoc;
-import org.gmod.schema.mapped.FeatureRelationship;
+import org.genedb.top.chado.feature.AbstractExon;
+import org.genedb.top.chado.feature.AbstractGene;
+import org.genedb.top.chado.feature.Polypeptide;
+import org.genedb.top.chado.feature.Transcript;
+import org.genedb.top.chado.mapped.Feature;
+import org.genedb.top.chado.mapped.FeatureLoc;
+import org.genedb.top.chado.mapped.FeatureRelationship;
 import org.hibernate.Session;
 
 public class LocationLoader extends Loader {

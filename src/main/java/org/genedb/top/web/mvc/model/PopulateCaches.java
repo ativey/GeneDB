@@ -9,10 +9,10 @@
 //import org.genedb.web.gui.RenderedDiagramFactory;
 //import org.genedb.web.mvc.controller.ModelBuilder;
 //
-//import org.gmod.schema.feature.AbstractGene;
-//import org.gmod.schema.feature.NcRNA;
-//import org.gmod.schema.feature.Transcript;
-//import org.gmod.schema.mapped.Feature;
+//import org.genedb.top.chado.feature.AbstractGene;
+//import org.genedb.top.chado.feature.NcRNA;
+//import org.genedb.top.chado.feature.Transcript;
+//import org.genedb.top.chado.mapped.Feature;
 //
 //import org.apache.log4j.BasicConfigurator;
 //import org.apache.log4j.Logger;

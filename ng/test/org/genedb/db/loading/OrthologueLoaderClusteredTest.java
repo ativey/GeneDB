@@ -1,6 +1,6 @@
 package org.genedb.db.loading;
 
-import org.gmod.schema.feature.Chromosome;
+import org.genedb.top.chado.feature.Chromosome;
 
 import org.apache.log4j.Logger;
 import org.junit.AfterClass;

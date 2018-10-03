@@ -15,8 +15,8 @@
 //import org.genedb.web.gui.ImageCreationException;
 //import org.genedb.web.gui.RenderedContextMap;
 //import org.genedb.web.gui.RenderedDiagramFactory;
-//import org.gmod.schema.feature.AbstractGene;
-//import org.gmod.schema.mapped.Feature;
+//import org.genedb.top.chado.feature.AbstractGene;
+//import org.genedb.top.chado.mapped.Feature;
 //import org.hibernate.Session;
 //import org.hibernate.SessionFactory;
 //import org.springframework.orm.hibernate3.SessionFactoryUtils;

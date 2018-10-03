@@ -11,12 +11,12 @@ import org.genedb.querying.core.HqlQuery;
 import org.genedb.querying.core.Query;
 import org.genedb.querying.core.QueryException;
 import org.genedb.querying.core.QueryUtils;
-import org.gmod.schema.feature.Polypeptide;
-import org.gmod.schema.feature.ProteinMatch;
-import org.gmod.schema.mapped.Feature;
-import org.gmod.schema.mapped.FeatureCvTerm;
-import org.gmod.schema.mapped.FeatureLoc;
-import org.gmod.schema.mapped.FeatureRelationship;
+import org.genedb.top.chado.feature.Polypeptide;
+import org.genedb.top.chado.feature.ProteinMatch;
+import org.genedb.top.chado.mapped.Feature;
+import org.genedb.top.chado.mapped.FeatureCvTerm;
+import org.genedb.top.chado.mapped.FeatureLoc;
+import org.genedb.top.chado.mapped.FeatureRelationship;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.Errors;
 

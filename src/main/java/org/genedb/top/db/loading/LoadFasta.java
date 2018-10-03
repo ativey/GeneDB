@@ -1,11 +1,11 @@
 package org.genedb.top.db.loading;
 
-import org.gmod.schema.feature.BACEnd;
-import org.gmod.schema.feature.Chromosome;
-import org.gmod.schema.feature.Contig;
-import org.gmod.schema.feature.EST;
-import org.gmod.schema.feature.Plasmid;
-import org.gmod.schema.feature.Supercontig;
+import org.genedb.top.chado.feature.BACEnd;
+import org.genedb.top.chado.feature.Chromosome;
+import org.genedb.top.chado.feature.Contig;
+import org.genedb.top.chado.feature.EST;
+import org.genedb.top.chado.feature.Plasmid;
+import org.genedb.top.chado.feature.Supercontig;
 
 import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;

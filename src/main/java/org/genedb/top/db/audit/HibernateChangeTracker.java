@@ -1,7 +1,7 @@
 package org.genedb.top.db.audit;
 
-import org.gmod.schema.cfg.ChadoAnnotationConfiguration;
-import org.gmod.schema.cfg.ChadoSessionFactoryBean;
+import org.genedb.top.chado.cfg.ChadoAnnotationConfiguration;
+import org.genedb.top.chado.cfg.ChadoSessionFactoryBean;
 
 import org.apache.log4j.Logger;
 import org.hibernate.CacheMode;

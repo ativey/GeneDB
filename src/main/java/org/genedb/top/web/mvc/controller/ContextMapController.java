@@ -3,7 +3,7 @@
 //import org.genedb.db.dao.SequenceDao;
 //import org.genedb.web.mvc.model.BerkeleyMapFactory;
 //
-//import org.gmod.schema.feature.TopLevelFeature;
+//import org.genedb.top.chado.feature.TopLevelFeature;
 //
 //import org.apache.log4j.Logger;
 //import org.springframework.beans.factory.annotation.Autowired;

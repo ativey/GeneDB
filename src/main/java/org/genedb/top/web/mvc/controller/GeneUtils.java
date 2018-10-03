@@ -1,8 +1,8 @@
 package org.genedb.top.web.mvc.controller;
 
-import org.gmod.schema.feature.MRNA;
-import org.gmod.schema.mapped.Feature;
-import org.gmod.schema.mapped.FeatureRelationship;
+import org.genedb.top.chado.feature.MRNA;
+import org.genedb.top.chado.mapped.Feature;
+import org.genedb.top.chado.mapped.FeatureRelationship;
 
 import java.util.Arrays;
 import java.util.Collection;

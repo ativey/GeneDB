@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.List;
 
 import org.genedb.db.domain.objects.PolypeptideRegionGroup;
-import org.gmod.schema.utils.PeptideProperties;
+import org.genedb.top.chado.utils.PeptideProperties;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 

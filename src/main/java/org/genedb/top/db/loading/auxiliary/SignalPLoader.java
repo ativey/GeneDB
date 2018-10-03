@@ -1,10 +1,10 @@
 package org.genedb.top.db.loading.auxiliary;
 
-import org.gmod.schema.feature.Polypeptide;
-import org.gmod.schema.feature.SignalPeptide;
-import org.gmod.schema.mapped.CvTerm;
-import org.gmod.schema.mapped.FeatureProp;
-import org.gmod.schema.mapped.Analysis;
+import org.genedb.top.chado.feature.Polypeptide;
+import org.genedb.top.chado.feature.SignalPeptide;
+import org.genedb.top.chado.mapped.CvTerm;
+import org.genedb.top.chado.mapped.FeatureProp;
+import org.genedb.top.chado.mapped.Analysis;
 
 import org.apache.log4j.Logger;
 import org.hibernate.Session;

@@ -2,13 +2,13 @@ package org.genedb.db.loading.auxiliary;
 
 import static org.junit.Assert.*;
 
-import org.gmod.schema.feature.HelixTurnHelix;
-import org.gmod.schema.feature.Polypeptide;
-import org.gmod.schema.mapped.Analysis;
-import org.gmod.schema.mapped.AnalysisFeature;
-import org.gmod.schema.mapped.FeatureLoc;
-import org.gmod.schema.mapped.FeatureProp;
-import org.gmod.schema.mapped.Organism;
+import org.genedb.top.chado.feature.HelixTurnHelix;
+import org.genedb.top.chado.feature.Polypeptide;
+import org.genedb.top.chado.mapped.Analysis;
+import org.genedb.top.chado.mapped.AnalysisFeature;
+import org.genedb.top.chado.mapped.FeatureLoc;
+import org.genedb.top.chado.mapped.FeatureProp;
+import org.genedb.top.chado.mapped.Organism;
 
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;

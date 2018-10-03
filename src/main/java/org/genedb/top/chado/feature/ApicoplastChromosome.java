@@ -1,8 +1,8 @@
 package org.genedb.top.chado.feature;
 
-import org.gmod.schema.cfg.FeatureType;
-import org.gmod.schema.mapped.Organism;
-import org.gmod.schema.feature.Chromosome;
+import org.genedb.top.chado.cfg.FeatureType;
+import org.genedb.top.chado.mapped.Organism;
+import org.genedb.top.chado.feature.Chromosome;
 
 import java.sql.Timestamp;
 

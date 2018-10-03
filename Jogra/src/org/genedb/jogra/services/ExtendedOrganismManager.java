@@ -25,12 +25,12 @@ import java.util.Map;
 import org.genedb.db.dao.CvDao;
 import org.genedb.db.dao.PhylogenyDao;
 
-import org.gmod.schema.mapped.Cv;
-import org.gmod.schema.mapped.CvTerm;
-import org.gmod.schema.mapped.Organism;
-import org.gmod.schema.mapped.Phylonode;
-import org.gmod.schema.mapped.PhylonodeOrganism;
-import org.gmod.schema.mapped.Phylotree;
+import org.genedb.top.chado.mapped.Cv;
+import org.genedb.top.chado.mapped.CvTerm;
+import org.genedb.top.chado.mapped.Organism;
+import org.genedb.top.chado.mapped.Phylonode;
+import org.genedb.top.chado.mapped.PhylonodeOrganism;
+import org.genedb.top.chado.mapped.Phylotree;
 
 public class ExtendedOrganismManager {
 

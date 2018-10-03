@@ -15,15 +15,15 @@ import java.util.Set;
 import java.util.Map.Entry;
 
 import org.apache.log4j.Logger;
-import org.gmod.schema.feature.AbstractGene;
-import org.gmod.schema.feature.ModifiedAminoAcidFeature;
-import org.gmod.schema.feature.Polypeptide;
-import org.gmod.schema.feature.Transcript;
-import org.gmod.schema.mapped.CvTerm;
-import org.gmod.schema.mapped.Db;
-import org.gmod.schema.mapped.Feature;
-import org.gmod.schema.mapped.FeatureLoc;
-import org.gmod.schema.mapped.FeatureProp;
+import org.genedb.top.chado.feature.AbstractGene;
+import org.genedb.top.chado.feature.ModifiedAminoAcidFeature;
+import org.genedb.top.chado.feature.Polypeptide;
+import org.genedb.top.chado.feature.Transcript;
+import org.genedb.top.chado.mapped.CvTerm;
+import org.genedb.top.chado.mapped.Db;
+import org.genedb.top.chado.mapped.Feature;
+import org.genedb.top.chado.mapped.FeatureLoc;
+import org.genedb.top.chado.mapped.FeatureProp;
 import org.hibernate.Session;
 
 public class PhosphopeptideLoader extends Loader {

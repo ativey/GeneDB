@@ -1,8 +1,8 @@
 package org.genedb.top.db.domain.objects;
 
-import org.gmod.schema.mapped.AnalysisFeature;
-import org.gmod.schema.mapped.DbXRef;
-import org.gmod.schema.mapped.FeatureLoc;
+import org.genedb.top.chado.mapped.AnalysisFeature;
+import org.genedb.top.chado.mapped.DbXRef;
+import org.genedb.top.chado.mapped.FeatureLoc;
 import org.springframework.util.StringUtils;
 
 import org.apache.log4j.Logger;

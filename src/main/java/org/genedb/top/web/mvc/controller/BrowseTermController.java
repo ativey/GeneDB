@@ -46,7 +46,7 @@ import org.genedb.querying.history.HistoryManager;
 import org.genedb.querying.history.HistoryType;
 import org.genedb.querying.tmpquery.BrowseCategory;
 
-import org.gmod.schema.utils.GeneNameOrganism;
+import org.genedb.top.chado.utils.GeneNameOrganism;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindException;

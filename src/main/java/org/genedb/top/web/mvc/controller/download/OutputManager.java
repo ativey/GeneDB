@@ -2,8 +2,8 @@ package org.genedb.top.web.mvc.controller.download;
 
 import org.genedb.top.web.utils.DownloadUtils;
 
-import org.gmod.schema.feature.TopLevelFeature;
-import org.gmod.schema.feature.Transcript;
+import org.genedb.top.chado.feature.TopLevelFeature;
+import org.genedb.top.chado.feature.Transcript;
 
 import org.apache.log4j.Logger;
 

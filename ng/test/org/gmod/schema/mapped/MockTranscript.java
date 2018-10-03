@@ -2,7 +2,7 @@ package org.gmod.schema.mapped;
 
 import java.sql.Timestamp;
 
-import org.gmod.schema.feature.Transcript;
+import org.genedb.top.chado.feature.Transcript;
 
 public class MockTranscript extends Transcript {
     private String uniqueName;

@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
 
 import org.apache.log4j.Logger;
 
-import org.gmod.schema.feature.Polypeptide;
+import org.genedb.top.chado.feature.Polypeptide;
 
 import org.hibernate.Session;
 

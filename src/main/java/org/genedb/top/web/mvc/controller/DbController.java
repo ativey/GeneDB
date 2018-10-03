@@ -3,7 +3,7 @@ package org.genedb.top.web.mvc.controller;
 import org.genedb.db.dao.GeneralDao;
 import org.genedb.util.Pair;
 
-import org.gmod.schema.mapped.Db;
+import org.genedb.top.chado.mapped.Db;
 
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;

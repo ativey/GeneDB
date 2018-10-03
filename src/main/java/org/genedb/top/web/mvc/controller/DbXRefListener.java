@@ -22,7 +22,7 @@ package org.genedb.top.web.mvc.controller;
 
 import org.genedb.db.dao.GeneralDao;
 
-import org.gmod.schema.mapped.Db;
+import org.genedb.top.chado.mapped.Db;
 
 import org.springframework.util.StringUtils;
 import org.springframework.web.context.WebApplicationContext;

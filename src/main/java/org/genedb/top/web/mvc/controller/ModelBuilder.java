@@ -1,9 +1,9 @@
 package org.genedb.top.web.mvc.controller;
 
-import org.gmod.schema.feature.AbstractGene;
-import org.gmod.schema.feature.Polypeptide;
-import org.gmod.schema.feature.Transcript;
-import org.gmod.schema.mapped.Feature;
+import org.genedb.top.chado.feature.AbstractGene;
+import org.genedb.top.chado.feature.Polypeptide;
+import org.genedb.top.chado.feature.Transcript;
+import org.genedb.top.chado.mapped.Feature;
 
 import org.apache.log4j.Logger;
 

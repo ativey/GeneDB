@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.model.types;
 
-import org.gmod.schema.utils.PeptideProperties;
+import org.genedb.top.chado.utils.PeptideProperties;
 import org.postgresql.util.PGobject;
 
 public class PeptidePropertiesType extends PGobject{

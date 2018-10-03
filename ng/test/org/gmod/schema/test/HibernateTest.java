@@ -4,8 +4,8 @@ import static org.junit.Assert.assertNotNull;
 
 import org.genedb.db.test.tools.BuildTestDatabase;
 
-import org.gmod.schema.cfg.ChadoAnnotationConfiguration;
-import org.gmod.schema.feature.AbstractGene;
+import org.genedb.top.chado.cfg.ChadoAnnotationConfiguration;
+import org.genedb.top.chado.feature.AbstractGene;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;

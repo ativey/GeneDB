@@ -12,7 +12,7 @@
 //import org.genedb.web.mvc.model.BerkeleyMapFactory;
 //import org.genedb.web.mvc.model.TranscriptDTO;
 //
-//import org.gmod.schema.mapped.Feature;
+//import org.genedb.top.chado.mapped.Feature;
 //
 //import org.apache.log4j.Logger;
 //import org.springframework.stereotype.Controller;

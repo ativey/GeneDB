@@ -11,11 +11,11 @@ import java.util.List;
 import java.util.Set;
 
 import org.apache.log4j.Logger;
-import org.gmod.schema.feature.AbstractGene;
-import org.gmod.schema.mapped.CvTerm;
-import org.gmod.schema.mapped.Feature;
-import org.gmod.schema.mapped.FeatureSynonym;
-import org.gmod.schema.mapped.Synonym;
+import org.genedb.top.chado.feature.AbstractGene;
+import org.genedb.top.chado.mapped.CvTerm;
+import org.genedb.top.chado.mapped.Feature;
+import org.genedb.top.chado.mapped.FeatureSynonym;
+import org.genedb.top.chado.mapped.Synonym;
 import org.hibernate.Session;
 
 /**

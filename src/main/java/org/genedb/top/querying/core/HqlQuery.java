@@ -26,7 +26,7 @@ import org.hibernate.SessionFactory;
 //import org.hibernate.validator.InvalidValue;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
-import org.springframework.orm.hibernate3.SessionFactoryUtils;
+import org.springframework.orm.hibernate5.SessionFactoryUtils;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.Errors;
 

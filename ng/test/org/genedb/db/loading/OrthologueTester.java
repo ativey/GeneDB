@@ -12,7 +12,7 @@ import org.genedb.top.chado.mapped.AnalysisFeature;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.springframework.orm.hibernate3.SessionFactoryUtils;
+import org.springframework.orm.hibernate5.SessionFactoryUtils;
 import org.springframework.stereotype.Component;
 
 import java.util.Collection;

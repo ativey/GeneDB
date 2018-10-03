@@ -19,7 +19,7 @@
 //import org.genedb.top.chado.mapped.Feature;
 //import org.hibernate.Session;
 //import org.hibernate.SessionFactory;
-//import org.springframework.orm.hibernate3.SessionFactoryUtils;
+//import org.springframework.orm.hibernate5.SessionFactoryUtils;
 //
 //import com.sleepycat.collections.StoredMap;
 //

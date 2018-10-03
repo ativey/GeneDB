@@ -3,7 +3,7 @@ package org.genedb.top.chado.cfg;
 import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean;
+import org.springframework.orm.hibernate5.annotation.AnnotationSessionFactoryBean;
 
 import java.util.Map;
 import java.util.Properties;

@@ -29,7 +29,7 @@
 //import org.hibernate.SessionFactory;
 //import org.springframework.context.ConfigurableApplicationContext;
 //import org.springframework.context.support.ClassPathXmlApplicationContext;
-//import org.springframework.orm.hibernate3.SessionFactoryUtils;
+//import org.springframework.orm.hibernate5.SessionFactoryUtils;
 //import org.springframework.stereotype.Repository;
 //import org.springframework.transaction.annotation.Transactional;
 //

@@ -30,10 +30,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.orm.hibernate3.SessionFactoryUtils;
+import org.springframework.orm.hibernate5.SessionFactoryUtils;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
-import org.testng.v6.Lists;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -193,21 +192,21 @@ public abstract class Feature implements java.io.Serializable, HasPubsAndDbXRefs
     @OneToMany(cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY, mappedBy = "feature")
     private Set<FeatureDbXRef> featureDbXRefs;
 
-    @OneToMany(cascade = {CascadeType.PERSIST}, fetch = FetchType.EAGER, mappedBy = "feature")
-    @Cascade({org.hibernate.annotations.CascadeType.ALL, org.hibernate.annotations.CascadeType.DELETE_ORPHAN})
+    @OneToMany(cascade = {CascadeType.PERSIST}, orphanRemoval=true, fetch = FetchType.EAGER, mappedBy = "feature")
+    @Cascade({org.hibernate.annotations.CascadeType.ALL})
     @OrderBy("locGroup ASC, rank ASC")
     private List<FeatureLoc> featureLocs;
 
-    @OneToMany(cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY, mappedBy = "feature")
-    @Cascade({org.hibernate.annotations.CascadeType.ALL, org.hibernate.annotations.CascadeType.DELETE_ORPHAN})
+    @OneToMany(cascade = {CascadeType.PERSIST}, orphanRemoval=true, fetch = FetchType.LAZY, mappedBy = "feature")
+    @Cascade({org.hibernate.annotations.CascadeType.ALL})
     private Set<FeatureCvTerm> featureCvTerms;
 
-    @OneToMany(cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY, mappedBy = "feature")
-    @Cascade({org.hibernate.annotations.CascadeType.ALL, org.hibernate.annotations.CascadeType.DELETE_ORPHAN})
+    @OneToMany(cascade = {CascadeType.PERSIST}, orphanRemoval=true, fetch = FetchType.LAZY, mappedBy = "feature")
+    @Cascade({org.hibernate.annotations.CascadeType.ALL})
     private Set<FeatureProp> featureProps;
 
-    @OneToMany(cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY, mappedBy = "feature")
-    @Cascade({org.hibernate.annotations.CascadeType.ALL, org.hibernate.annotations.CascadeType.DELETE_ORPHAN})
+    @OneToMany(cascade = {CascadeType.PERSIST}, orphanRemoval=true, fetch = FetchType.LAZY, mappedBy = "feature")
+    @Cascade({org.hibernate.annotations.CascadeType.ALL})
     private Set<FeaturePub> featurePubs;
 
     @OneToMany(cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY, mappedBy = "feature")

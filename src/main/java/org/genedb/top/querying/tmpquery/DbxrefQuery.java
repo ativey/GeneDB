@@ -14,7 +14,7 @@ import org.apache.lucene.search.WildcardQuery;
 import org.apache.lucene.search.BooleanClause.Occur;
 import org.genedb.querying.core.QueryParam;
 import org.hibernate.Session;
-import org.springframework.orm.hibernate3.SessionFactoryUtils;
+import org.springframework.orm.hibernate5.SessionFactoryUtils;
 import org.springframework.util.StringUtils;
 
 /**

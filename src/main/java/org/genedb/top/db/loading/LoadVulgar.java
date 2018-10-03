@@ -1,6 +1,7 @@
 package org.genedb.top.db.loading;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -17,7 +18,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class LoadVulgar extends FileProcessor {
-    private static final Logger logger = Logger.getLogger(LoadVulgar.class);
+    private static final Logger logger = LoggerFactory.getLogger(LoadVulgar.class);
 
     public static void main(String[] args) throws MissingPropertyException, IOException, ParsingException, SQLException {
         if (args.length > 0) {

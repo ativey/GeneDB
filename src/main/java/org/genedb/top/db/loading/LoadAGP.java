@@ -4,8 +4,8 @@ import org.genedb.top.chado.feature.Chromosome;
 import org.genedb.top.chado.feature.Contig;
 import org.genedb.top.chado.feature.Supercontig;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -29,7 +29,7 @@ import java.sql.SQLException;
 
 public class LoadAGP extends FileProcessor{
 
-    private static final Logger logger = Logger.getLogger(LoadAGP.class);
+    private static final Logger logger = LoggerFactory.getLogger(LoadAGP.class);
     
     /**
      * Takes no command-line arguments, but expects to find the following system properties that

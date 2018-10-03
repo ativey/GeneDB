@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.Map.Entry;
 
-import org.apache.log4j.Logger;
 import org.genedb.top.chado.feature.AbstractExon;
 import org.genedb.top.chado.feature.AbstractGene;
 import org.genedb.top.chado.feature.Polypeptide;
@@ -21,10 +20,12 @@ import org.genedb.top.chado.mapped.Feature;
 import org.genedb.top.chado.mapped.FeatureLoc;
 import org.genedb.top.chado.mapped.FeatureRelationship;
 import org.hibernate.Session;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class LocationLoader extends Loader {
 
-    private static final Logger logger    = Logger.getLogger(LocationLoader.class);
+    private static final Logger logger    = LoggerFactory.getLogger(LocationLoader.class);
     private String              delimiter = "\t";
     private String              sourceFeatureUniqueName;
     private int                 n         = 0;

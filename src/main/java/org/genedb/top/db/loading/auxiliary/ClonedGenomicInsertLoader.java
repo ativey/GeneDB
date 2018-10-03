@@ -11,16 +11,17 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.apache.log4j.Logger;
 import org.genedb.top.chado.feature.ClonedGenomicInsert;
 import org.genedb.top.chado.mapped.Feature;
 import org.genedb.top.chado.mapped.FeatureLoc;
 import org.genedb.top.chado.mapped.Organism;
 import org.hibernate.Session;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class ClonedGenomicInsertLoader extends Loader {
 
-    private static final Logger logger    = Logger.getLogger(ClonedGenomicInsertLoader.class);
+    private static final Logger logger = LoggerFactory.getLogger(ClonedGenomicInsertLoader.class);
     private String delimiter = "\t";
     private boolean delete = false;
     private boolean deleteall = false;

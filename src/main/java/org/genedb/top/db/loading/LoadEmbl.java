@@ -9,10 +9,8 @@ import org.genedb.top.chado.feature.Gene;
 import org.genedb.top.chado.feature.Plasmid;
 import org.genedb.top.chado.feature.Supercontig;
 
-import org.apache.log4j.AppenderSkeleton;
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -34,7 +32,7 @@ import java.util.regex.Pattern;
 public class LoadEmbl extends FileProcessor {
     
     
-     private static final Logger logger = Logger.getLogger(LoadEmbl.class);
+     private static final Logger logger = LoggerFactory.getLogger(LoadEmbl.class);
     /**
      * Recurse through a directory structure, loading each EMBL file we encounter.
      * <p>
@@ -107,9 +105,10 @@ public class LoadEmbl extends FileProcessor {
                    topLevelFeatureType, sloppyControlledCuration, goTermErrorsAreNotFatal,
                    ignoreQualifiers, ignoreFeatures));
 
-        if (quickAndDirty) {
-            ((AppenderSkeleton) Logger.getRootLogger().getAppender("stdout")).setThreshold(Level.WARN);
-        }
+        // FIXME - Restore using logback
+//        if (quickAndDirty) {
+//            ((AppenderSkeleton) Logger.getRootLogger().getAppender("stdout")).setThreshold(Level.WARN);
+//        }
         LoadEmbl loadEmbl = new LoadEmbl(organismCommonName, overwriteExisting,
             topLevelFeatureType, sloppyControlledCuration, goTermErrorsAreNotFatal,
             ignoreQualifiers, ignoreFeatures);

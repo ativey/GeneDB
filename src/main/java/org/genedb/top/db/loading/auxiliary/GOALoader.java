@@ -6,8 +6,9 @@ import org.genedb.top.db.loading.GoInstance;
 import org.genedb.top.chado.feature.Polypeptide;
 import org.genedb.top.chado.mapped.DbXRef;
 
-import org.apache.log4j.Logger;
 import org.hibernate.Session;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -21,7 +22,7 @@ import java.util.List;
 import java.util.Set;
 
 public class GOALoader extends Loader {
-    private static final Logger logger = Logger.getLogger(GOALoader.class);
+    private static final Logger logger = LoggerFactory.getLogger(GOALoader.class);
     
     Boolean goTermErrorsAreNotFatal = true;
     

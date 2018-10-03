@@ -19,7 +19,7 @@
 
 package org.genedb.top.db.loading;
 
-import org.genedb.db.dao.OrganismDao;
+import org.genedb.top.db.dao.OrganismDao;
 
 import org.genedb.top.chado.feature.Contig;
 import org.genedb.top.chado.feature.Supercontig;
@@ -27,10 +27,11 @@ import org.genedb.top.chado.feature.TopLevelFeature;
 import org.genedb.top.chado.mapped.Feature;
 import org.genedb.top.chado.mapped.Organism;
 
-import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.orm.hibernate5.SessionFactoryUtils;
@@ -45,7 +46,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Configurable
 public class FastaLoader {
 
-    private static final Logger logger = Logger.getLogger(FastaLoader.class);
+    private static final Logger logger = LoggerFactory.getLogger(FastaLoader.class);
 
     @Autowired
     private SessionFactory sessionFactory;

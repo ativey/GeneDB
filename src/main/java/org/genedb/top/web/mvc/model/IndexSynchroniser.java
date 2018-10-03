@@ -1,5 +1,6 @@
 package org.genedb.top.web.mvc.model;
 
+import org.apache.lucene.search.TopDocs;
 import org.genedb.top.db.audit.ChangeSet;
 
 import org.genedb.top.chado.feature.AbstractGene;
@@ -63,7 +64,7 @@ public class IndexSynchroniser implements IndexUpdater{
     public boolean updateAllCaches(ChangeSet changeSet) {
         logger.debug("Starting updateAllCaches");
         Session session = SessionFactoryUtils.getSession(sessionFactory, false);
-        FullTextSession fullTextSession = Search.createFullTextSession(session);
+        FullTextSession fullTextSession = Search.getFullTextSession(session);
 
         //Delete deleted features
         Set failedDeletes = deleteFeatures(fullTextSession, changeSet);
@@ -163,26 +164,18 @@ public class IndexSynchroniser implements IndexUpdater{
         deletedIds.addAll(changeSet.deletedFeatureIds(Gap.class));
 
         IndexSearcher indexSearcher = createIndexSearcher(session);
-        try {
-            for (Integer featureId : deletedIds) {
-                try {
-                    deleteFeature(session, indexSearcher, featureId);
-                } catch (Exception exp) {
-                    logger.error(String.format("Failed to delete %s", featureId), exp);
-                    failedDeletes.add(featureId);
-                }
-            }
-            if (failedDeletes.size()>0) {
-                logger.debug(String.format("Ended deleteFeatures with %s features undeleted due to failures", failedDeletes.size()));
-            } else {
-                logger.debug("Ended deleteFeatures with no errors");
-            }
-        } finally {
+        for (Integer featureId : deletedIds) {
             try {
-                indexSearcher.close();
-            } catch (IOException io) {
-                logger.error("Failed to close the Index Searcher", io);
+                deleteFeature(session, indexSearcher, featureId);
+            } catch (Exception exp) {
+                logger.error(String.format("Failed to delete %s", featureId), exp);
+                failedDeletes.add(featureId);
             }
+        }
+        if (failedDeletes.size()>0) {
+            logger.debug(String.format("Ended deleteFeatures with %s features undeleted due to failures", failedDeletes.size()));
+        } else {
+            logger.debug("Ended deleteFeatures with no errors");
         }
         return failedDeletes;
     }
@@ -207,6 +200,10 @@ public class IndexSynchroniser implements IndexUpdater{
      * @return
      */
     @SuppressWarnings("unchecked")
+
+//
+
+
     private IndexSearcher createIndexSearcher(FullTextSession session){
         logger.debug("Starting createIndexSearcher");
         SearchFactory searchFactory = session.getSearchFactory();
@@ -217,6 +214,16 @@ public class IndexSynchroniser implements IndexUpdater{
         logger.debug("Ending createIndexSearcher");
         return indexSearcher;
     }
+    IndexReader reader = searchFactory.getIndexReaderAccessor().open(Order.class);
+//try {
+//        //perform read-only operations on the reader
+//    }
+//finally {
+//        searchFactory.getIndexReaderAccessor().close(reader);
+//    }
+//
+
+
 
     /**
      *

@@ -3,9 +3,9 @@ package org.genedb.top.db.domain.hibernateImpls;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.genedb.db.domain.objects.Gene;
-import org.genedb.db.domain.objects.Transcript;
-import org.genedb.db.domain.services.GeneService;
+import org.genedb.top.db.domain.objects.Gene;
+import org.genedb.top.db.domain.objects.Transcript;
+import org.genedb.top.db.domain.services.GeneService;
 
 import org.genedb.top.chado.mapped.AnalysisFeature;
 import org.genedb.top.chado.mapped.Feature;

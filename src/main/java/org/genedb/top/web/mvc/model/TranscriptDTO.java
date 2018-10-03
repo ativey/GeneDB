@@ -5,12 +5,11 @@ package org.genedb.top.web.mvc.model;
 import java.io.Serializable;
 import java.util.List;
 
-import org.genedb.db.domain.objects.PolypeptideRegionGroup;
+import org.genedb.top.db.domain.objects.PolypeptideRegionGroup;
 import org.genedb.top.chado.utils.PeptideProperties;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
 
-@XStreamAlias("transcript")
+//@XStreamAlias("transcript")
 public class TranscriptDTO extends FeatureDTO implements Serializable {
 
     private PolypeptideDTO polypeptide;

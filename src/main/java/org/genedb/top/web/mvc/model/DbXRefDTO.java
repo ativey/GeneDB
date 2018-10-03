@@ -4,9 +4,8 @@ import org.genedb.top.chado.mapped.DbXRef;
 
 import java.io.Serializable;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
 
-@XStreamAlias("dbxref")
+//@XStreamAlias("dbxref")
 public class DbXRefDTO implements Serializable {
     private String dbName;
     private String accession;

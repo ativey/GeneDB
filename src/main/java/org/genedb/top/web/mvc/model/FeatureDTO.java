@@ -1,18 +1,18 @@
 package org.genedb.top.web.mvc.model;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.Serializable;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-//import org.apache.log4j.Logger;
-
-import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 
 public class FeatureDTO implements Serializable {
 
-	//private static final transient Logger logger = Logger.getLogger(TranscriptDTO.class);
+	private static final transient Logger logger = LoggerFactory.getLogger(TranscriptDTO.class);
 	private static final long serialVersionUID = 3878466785198622703L;
 	private Map<String,Object> algorithmData;
 	
@@ -21,7 +21,7 @@ public class FeatureDTO implements Serializable {
 	private List<String> comments;
 	private List<FeatureCvTermDTO> controlledCurations;
 	
-	@XStreamAlias("dbxrefs")
+	//@XStreamAlias("dbxrefs")
 	private List<DbXRefDTO> dbXRefDTOs;
 	
 	private String geneName;

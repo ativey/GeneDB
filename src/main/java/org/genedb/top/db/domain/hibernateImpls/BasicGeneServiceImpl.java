@@ -1,13 +1,13 @@
 package org.genedb.top.db.domain.hibernateImpls;
 
-import org.genedb.db.domain.objects.BasicGene;
-import org.genedb.db.domain.objects.Chromosome;
-import org.genedb.db.domain.objects.Exon;
-import org.genedb.db.domain.objects.Gap;
-import org.genedb.db.domain.objects.Gene;
-import org.genedb.db.domain.objects.Transcript;
-import org.genedb.db.domain.objects.TranscriptComponent;
-import org.genedb.db.domain.services.BasicGeneService;
+import org.genedb.top.db.domain.objects.BasicGene;
+import org.genedb.top.db.domain.objects.Chromosome;
+import org.genedb.top.db.domain.objects.Exon;
+import org.genedb.top.db.domain.objects.Gap;
+import org.genedb.top.db.domain.objects.Gene;
+import org.genedb.top.db.domain.objects.Transcript;
+import org.genedb.top.db.domain.objects.TranscriptComponent;
+import org.genedb.top.db.domain.services.BasicGeneService;
 
 import org.genedb.top.chado.mapped.CvTerm;
 import org.genedb.top.chado.mapped.Feature;
@@ -16,11 +16,12 @@ import org.genedb.top.chado.mapped.FeatureLoc;
 import org.genedb.top.chado.mapped.FeatureRelationship;
 import org.genedb.top.chado.mapped.FeatureSynonym;
 
-import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.CriteriaSpecification;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
@@ -32,7 +33,7 @@ import java.util.Set;
 
 public class BasicGeneServiceImpl implements BasicGeneService {
     protected SessionFactory sessionFactory;
-    protected static final Logger log = Logger.getLogger(BasicGeneServiceImpl.class);
+    protected static final Logger logger = LoggerFactory.getLogger(BasicGeneServiceImpl.class);
 
     protected Feature findGeneFeatureByUniqueName(String name) {
         // Fetch all the data we're going to need in a single query

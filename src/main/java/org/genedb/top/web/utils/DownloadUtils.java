@@ -1,17 +1,18 @@
 package org.genedb.top.web.utils;
 
 
-import org.apache.log4j.Logger;
-import org.genedb.util.SequenceUtils;
-import org.genedb.web.mvc.controller.download.SequenceType;
+import org.genedb.top.util.SequenceUtils;
+import org.genedb.top.web.mvc.controller.download.SequenceType;
 
-import org.gmod.schema.feature.AbstractExon;
-import org.gmod.schema.feature.AbstractGene;
-import org.gmod.schema.feature.Polypeptide;
-import org.gmod.schema.feature.ProductiveTranscript;
-import org.gmod.schema.feature.Transcript;
-import org.gmod.schema.mapped.Feature;
-import org.gmod.schema.mapped.FeatureLoc;
+import org.genedb.top.chado.feature.AbstractExon;
+import org.genedb.top.chado.feature.AbstractGene;
+import org.genedb.top.chado.feature.Polypeptide;
+import org.genedb.top.chado.feature.ProductiveTranscript;
+import org.genedb.top.chado.feature.Transcript;
+import org.genedb.top.chado.mapped.Feature;
+import org.genedb.top.chado.mapped.FeatureLoc;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ import java.util.Map;
 
 public class DownloadUtils {
 
-	private static Logger logger = Logger.getLogger(DownloadUtils.class);
+	private static Logger logger = LoggerFactory.getLogger(DownloadUtils.class);
 	
     private static int FEATURE_PREFIX_WIDTH = 22;
     private static int MAX_FEATURE_WIDTH = 18;
@@ -210,7 +211,7 @@ public class DownloadUtils {
 			try {
 				return new String(productiveTranscript.getProtein().getResidues());
 			} catch (NullPointerException npe) {
-				logger.error(npe.getStackTrace());
+				logger.error(npe.getStackTrace().toString());
 				return null;
 			}
 			

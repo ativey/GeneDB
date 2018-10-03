@@ -24,10 +24,11 @@ package org.genedb.top.web.mvc.controller;
 //import javax.servlet.http.HttpServletResponse;
 //import javax.servlet.http.HttpSession;
 
-import org.apache.log4j.Logger;
 
-import org.genedb.db.dao.SequenceDao;
+import org.genedb.top.db.dao.SequenceDao;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -41,12 +42,12 @@ import org.springframework.web.servlet.ModelAndView;
 //import org.genedb.util.Pair;
 //import org.genedb.web.mvc.model.BerkeleyMapFactory;
 //import org.genedb.web.mvc.model.TranscriptDTOFactory;
-import org.genedb.web.mvc.model.TranscriptDTO;
+import org.genedb.top.web.mvc.model.TranscriptDTO;
 
-import org.gmod.schema.feature.AbstractGene;
+import org.genedb.top.chado.feature.AbstractGene;
 //import org.gmod.schema.feature.Polypeptide;
-import org.gmod.schema.feature.Transcript;
-import org.gmod.schema.mapped.Feature;
+import org.genedb.top.chado.feature.Transcript;
+import org.genedb.top.chado.mapped.Feature;
 
 //import org.springframework.jmx.export.annotation.ManagedAttribute;
 //import org.springframework.util.StringUtils;
@@ -76,7 +77,7 @@ import com.google.common.collect.Maps;
 @RequestMapping("genes")
 public class NamedFeatureController {
 	
-	private static final Logger logger = Logger.getLogger(NamedFeatureController.class);
+	private static final Logger logger = LoggerFactory.getLogger(NamedFeatureController.class);
 	
 	private SequenceDao sequenceDao;
 	private String geneDetailsView;
@@ -94,7 +95,7 @@ public class NamedFeatureController {
 //	}
 	
 	public void setSequenceDao(SequenceDao sequenceDao) {
-		logger.info(sequenceDao);
+		logger.info(sequenceDao.toString());
 		this.sequenceDao = sequenceDao;
 	}
 

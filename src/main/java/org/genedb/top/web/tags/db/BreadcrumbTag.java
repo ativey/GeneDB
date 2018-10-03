@@ -2,15 +2,16 @@ package org.genedb.top.web.tags.db;
 
 import static javax.servlet.jsp.PageContext.APPLICATION_SCOPE;
 import static javax.servlet.jsp.PageContext.REQUEST_SCOPE;
-import static org.genedb.web.mvc.controller.TaxonManagerListener.TAXON_NODE_MANAGER;
-import static org.genedb.web.mvc.controller.WebConstants.TAXON_NODE;
+import static org.genedb.top.web.mvc.controller.TaxonManagerListener.TAXON_NODE_MANAGER;
+import static org.genedb.top.web.mvc.controller.WebConstants.TAXON_NODE;
 
-import org.apache.log4j.Logger;
-import org.genedb.db.taxon.TaxonNameType;
-import org.genedb.db.taxon.TaxonNode;
-import org.genedb.db.taxon.TaxonNodeManager;
-import org.genedb.web.mvc.controller.WebConstants;
+import org.genedb.top.db.taxon.TaxonNameType;
+import org.genedb.top.db.taxon.TaxonNode;
+import org.genedb.top.db.taxon.TaxonNodeManager;
+import org.genedb.top.web.mvc.controller.WebConstants;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.util.WebUtils;
 
 import com.google.common.collect.Maps;
@@ -38,7 +39,7 @@ public class BreadcrumbTag extends SimpleTagSupport {
 		this.selection = selection;
 	}
 
-	private static final Logger logger = Logger.getLogger(BreadcrumbTag.class);
+	private static final Logger logger = LoggerFactory.getLogger(BreadcrumbTag.class);
 	String separator = "<div class=\"breadcumb breadcrumb-separator ui-state-disabled ui-corner-all\"  > <span class=\"ui-icon ui-icon-carat-1-e\"></span> </div>";
 
     @Override

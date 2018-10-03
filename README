@@ -1,1 +1,4 @@
-genedb-compat   Module for generating backward compatible URLs
+This is a fork of the (private) Sanger GeneDB repository. It is currently undergoing heavy modification to bring it up to 
+date with modern libraries and practices.
+
+It is unlikely to compile during this process

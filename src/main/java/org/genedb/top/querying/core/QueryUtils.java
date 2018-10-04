@@ -28,7 +28,7 @@ import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.genedb.top.db.taxon.TaxonNameType;
 import org.genedb.top.db.taxon.TaxonNode;
 import org.genedb.top.db.taxon.TaxonNodeList;
-import org.genedb.query.sql.SqlQuery;
+import org.genedb.top.query.sql.SqlQuery;
 import org.genedb.top.querying.tmpquery.OrganismHqlQuery;
 import org.genedb.top.querying.tmpquery.OrganismLuceneQuery;
 import org.genedb.top.querying.tmpquery.ProteinMatchClusterOrthologueQuery;

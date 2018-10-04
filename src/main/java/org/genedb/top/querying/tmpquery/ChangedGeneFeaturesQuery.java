@@ -3,7 +3,7 @@ package org.genedb.top.querying.tmpquery;
 import java.util.Date;
 
 import org.slf4j.Logger;import org.slf4j.LoggerFactory;
-import org.genedb.query.sql.SqlQuery;
+import org.genedb.top.query.sql.SqlQuery;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowCallbackHandler;
 

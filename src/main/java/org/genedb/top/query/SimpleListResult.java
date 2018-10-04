@@ -1,6 +1,6 @@
 package org.genedb.top.query;
 
-import org.genedb.query.compatability.NullResultCompatibility;
+import org.genedb.top.query.compatability.NullResultCompatibility;
 
 import java.util.ArrayList;
 import java.util.Iterator;

@@ -1,6 +1,6 @@
 package org.genedb.top.query.compatability;
 
-import org.genedb.query.Result;
+import org.genedb.top.query.Result;
 import org.genedb.top.query.ResultCompatibility;
 
 import java.util.ArrayList;

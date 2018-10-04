@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.controller;
 
-import org.genedb.query.NumberedQueryI;
+import org.genedb.top.query.NumberedQueryI;
 
 /**
  * <code>MultiActionController</code> that handles all non-form URL's.

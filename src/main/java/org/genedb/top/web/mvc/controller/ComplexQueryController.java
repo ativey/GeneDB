@@ -1,10 +1,10 @@
 package org.genedb.top.web.mvc.controller;
 
-import org.genedb.query.BasicQueryI;
-import org.genedb.query.NumberedQueryI;
-import org.genedb.query.QueryPlaceHolder;
-import org.genedb.query.bool.BooleanOp;
-import org.genedb.query.bool.BooleanQuery;
+import org.genedb.top.query.BasicQueryI;
+import org.genedb.top.query.NumberedQueryI;
+import org.genedb.top.query.QueryPlaceHolder;
+import org.genedb.top.query.bool.BooleanOp;
+import org.genedb.top.query.bool.BooleanQuery;
 import org.genedb.top.web.tags.bool.QueryTreeWalker;
 
 import org.springframework.beans.factory.InitializingBean;

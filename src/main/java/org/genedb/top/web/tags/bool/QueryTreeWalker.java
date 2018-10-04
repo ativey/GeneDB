@@ -1,7 +1,7 @@
 package org.genedb.top.web.tags.bool;
 
-import org.genedb.query.NumberedQueryI;
-import org.genedb.query.bool.BooleanQuery;
+import org.genedb.top.query.NumberedQueryI;
+import org.genedb.top.query.bool.BooleanQuery;
 
 public class QueryTreeWalker {
 

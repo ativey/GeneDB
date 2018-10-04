@@ -85,17 +85,17 @@ public class FeatureCvTerm implements Serializable, Rankable, PropertyI, HasPubs
     @Column(name = "rank", unique = false, nullable = false, insertable = true, updatable = true)
     private int rank;
 
-    @OneToMany(cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY, mappedBy = "featureCvTerm")
-    @Cascade({org.hibernate.annotations.CascadeType.ALL, org.hibernate.annotations.CascadeType.DELETE_ORPHAN})
+    @OneToMany(cascade = {CascadeType.PERSIST}, orphanRemoval = true, fetch = FetchType.LAZY, mappedBy = "featureCvTerm")
+    @Cascade({org.hibernate.annotations.CascadeType.ALL})
     @OrderBy("rank")
     private List<FeatureCvTermProp> featureCvTermProps = new ArrayList<FeatureCvTermProp>();
 
-    @OneToMany(cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY, mappedBy = "featureCvTerm")
-    @Cascade({org.hibernate.annotations.CascadeType.ALL, org.hibernate.annotations.CascadeType.DELETE_ORPHAN})
+    @OneToMany(cascade = {CascadeType.PERSIST}, orphanRemoval = true,  fetch = FetchType.LAZY, mappedBy = "featureCvTerm")
+    @Cascade({org.hibernate.annotations.CascadeType.ALL})
     private Collection<FeatureCvTermPub> featureCvTermPubs = new HashSet<FeatureCvTermPub>();
 
-    @OneToMany(cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY, mappedBy = "featureCvTerm")
-    @Cascade({org.hibernate.annotations.CascadeType.ALL, org.hibernate.annotations.CascadeType.DELETE_ORPHAN})
+    @OneToMany(cascade = {CascadeType.PERSIST}, orphanRemoval = true,  fetch = FetchType.LAZY, mappedBy = "featureCvTerm")
+    @Cascade({org.hibernate.annotations.CascadeType.ALL})
     private Collection<FeatureCvTermDbXRef> featureCvTermDbXRefs = new HashSet<FeatureCvTermDbXRef>();
 
     // Constructors

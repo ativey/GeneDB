@@ -90,7 +90,7 @@ public class SequenceDao extends BaseDao {
         @SuppressWarnings("unchecked")
         List<T> features = getSession().createQuery(
             "from "+featureClass.getName()+" where uniqueName=:uniqueName")
-            .setString("uniqueName", uniqueName)
+            .setParameter("uniqueName", uniqueName)
             .list();
 
         if (features.size() == 0) {
@@ -110,7 +110,7 @@ public class SequenceDao extends BaseDao {
         @SuppressWarnings("unchecked")
         List<Feature> features = getSession().createQuery(
             "from Feature where uniqueName=:uniqueName")
-            .setString("uniqueName", uniqueName)
+            .setParameter("uniqueName", uniqueName)
             .list();
 
         if (features.size() == 0) {
@@ -198,8 +198,8 @@ public class SequenceDao extends BaseDao {
         @SuppressWarnings("unchecked")
         List<T> features = getSession().createQuery(
             "from "+featureClass.getName()+" where uniqueName=:uniqueName and organism.commonName = :organism")
-            .setString("uniqueName", uniqueName)
-            .setString("organism", organismCommonName)
+            .setParameter("uniqueName", uniqueName)
+            .setParameter("organism", organismCommonName)
             .list();
 
         if (features.size() == 0) {
@@ -234,8 +234,8 @@ public class SequenceDao extends BaseDao {
         List<T> features = getSession().createQuery(
             "from "+featureClass.getName()+" where uniqueName like :uniqueNamePattern" +
             " and organism.commonName = :organism")
-            .setString("uniqueNamePattern", uniqueNamePattern)
-            .setString("organism", organismCommonName)
+            .setParameter("uniqueNamePattern", uniqueNamePattern)
+            .setParameter("organism", organismCommonName)
             .list();
 
         if (features.size() == 0) {
@@ -261,7 +261,7 @@ public class SequenceDao extends BaseDao {
     public List<Feature> getFeaturesByUniqueNamePattern(String namePattern) {
         List features = getSession().createQuery(
                 "from Feature where uniqueName like :name")
-                .setString("name", namePattern).list();
+                .setParameter("name", namePattern).list();
         return features;
     }
 
@@ -275,7 +275,7 @@ public class SequenceDao extends BaseDao {
         @SuppressWarnings("unchecked")
         List<Feature> features = getSession().createQuery(
                         "select fs.feature from FeatureSynonym fs where fs.current=true and fs.synonym.name=:name")
-                        .setString("name", name).list();
+                        .setParameter("name", name).list();
         return features;
     }
 
@@ -298,9 +298,9 @@ public class SequenceDao extends BaseDao {
                         + "f = loc.feature and f.type.name=:type and loc.strand="
                         + strand + " and" + " loc.sourceFeature=" + fid + " and ("
                         + " loc.fmin<=:min and loc.fmax>=:max)")
-                    .setString("type", type)
-                    .setInteger("min", min)
-                    .setInteger("max", max)
+                    .setParameter("type", type)
+                    .setParameter("min", min)
+                    .setParameter("max", max)
                     .list();
         return features;
     }
@@ -320,7 +320,7 @@ public class SequenceDao extends BaseDao {
                         "from FeatureCvTerm fct where fct.feature=:feature and fct.cvTerm=:cvTerm and fct.not=:not")
                 .setParameter("feature", feature)
                 .setParameter("cvTerm", cvTerm)
-                .setBoolean("not", not)
+                .setParameter("not", not)
                 .list();
 
         return list;
@@ -333,7 +333,7 @@ public class SequenceDao extends BaseDao {
                         "from FeatureCvTerm fct where fct.feature=:feature and fct.cvTerm.cv.name=:cvName ")
                 .setParameter("feature", feature)
                 .setParameter("cvName", cvName)
-                .setBoolean("not", not)
+                .setParameter("not", not)
                 .list();
         return list;
     }
@@ -349,8 +349,8 @@ public class SequenceDao extends BaseDao {
                         +" from FeatureCvTerm fct"
                         +" where fct.feature.organism.commonName in ("+orgs+")"
                         +" and fct.cvTerm.cv.name=:cvName and fct.cvTerm.name=:cvTermName")
-                  .setString("cvName", cvName)
-                  .setString("cvTermName", cvTermName)
+                  .setParameter("cvName", cvName)
+                  .setParameter("cvTermName", cvTermName)
                   .list();
 
         return features;
@@ -366,8 +366,8 @@ public class SequenceDao extends BaseDao {
                     +" from FeatureCvTerm fct"
                     +" where fct.feature.organism.commonName in ("+orgs+")"
                     +" and fct.cvTerm.cv.name like :cvNamePattern and fct.cvTerm.name=:cvTermName")
-                .setString("cvNamePattern", cvNamePattern)
-                .setString("cvTermName", cvTermName)
+                .setParameter("cvNamePattern", cvNamePattern)
+                .setParameter("cvTermName", cvTermName)
                 .list();
 
         return features;
@@ -384,7 +384,7 @@ public class SequenceDao extends BaseDao {
         @SuppressWarnings("unchecked")
         List<Synonym> list = getSession().createQuery(
                 "from Synonym s where s.name=:name and s.type=:type")
-            .setString("name", name)
+            .setParameter("name", name)
             .setParameter("type", type)
             .list();
 
@@ -1149,7 +1149,7 @@ public class SequenceDao extends BaseDao {
             "   , match_on_region.feature_id" +
             "   )" +
             " );")
-            .setInteger(0, sourceFeature.getFeatureId())
+            .setParameter(0, sourceFeature.getFeatureId())
             .executeUpdate();
 
         logger.debug(String.format("Deleted %d similarity features from '%s'",
@@ -1178,7 +1178,7 @@ public class SequenceDao extends BaseDao {
 
         int numberOfRowsDeleted = getSession().createSQLQuery(
             " delete from featureloc where srcfeature_id= ? ;")
-            .setInteger(0, sourceFeature.getFeatureId())
+            .setParameter(0, sourceFeature.getFeatureId())
             .executeUpdate();
 
         logger.info(String.format("Deleted %d featurelocs pointing to '%s'",

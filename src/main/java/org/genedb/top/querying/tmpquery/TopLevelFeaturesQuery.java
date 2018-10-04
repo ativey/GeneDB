@@ -16,19 +16,16 @@ import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopDocs;
 import org.genedb.top.querying.core.QueryException;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
-
 public class TopLevelFeaturesQuery extends OrganismLuceneQuery {
 	
-	@XStreamAlias("feature")
+	//@XStreamAlias("feature")
 	public static class TopLevelFeature {
-		@XStreamAlias("length")
-	    @XStreamAsAttribute
+		//@XStreamAlias("length")
+	    //@XStreamAsAttribute
 	    public int length;
 		
-		@XStreamAlias("name")
-	    @XStreamAsAttribute
+		//@XStreamAlias("name")
+	    //@XStreamAsAttribute
 	    public String name;
 	}
 	

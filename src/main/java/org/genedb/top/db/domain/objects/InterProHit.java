@@ -2,8 +2,6 @@ package org.genedb.top.db.domain.objects;
 
 import org.genedb.top.chado.mapped.DbXRef;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-
 
 /**
  * A group of polypeptide domains.
@@ -11,7 +9,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
  *
  * @author rh11
  */
-@XStreamAlias("Interpro")
+//@XStreamAlias("Interpro")
 public class InterProHit extends PolypeptideRegionGroup {
     private String urlPrefix, description;
     String accession;

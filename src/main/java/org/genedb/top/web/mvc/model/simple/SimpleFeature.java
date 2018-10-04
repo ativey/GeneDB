@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 
 public class SimpleFeature {
 
-    private static final Logger logger = LoggerFactory.getLogger(SimpleFeature.class);
+    private static Logger logger = LoggerFactory.getLogger(SimpleFeature.class);
 
     private int featureId;
 
@@ -16,7 +16,7 @@ public class SimpleFeature {
         return featureId;
     }
 
-    public LoggerFactory.getLogger() {
+    public Logger getLogger() {
         return logger;
     }
 

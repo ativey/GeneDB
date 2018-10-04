@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.Set;
 
-import org.apache.log4j.Logger;
-import org.genedb.db.audit.ChangeSet;
-import org.genedb.db.audit.ChangeTracker;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
+import org.genedb.top.db.audit.ChangeSet;
+import org.genedb.top.db.audit.ChangeTracker;
 import org.genedb.top.web.mvc.model.IndexUpdater;
 import org.genedb.top.chado.feature.AbstractGene;
 import org.genedb.top.chado.feature.Polypeptide;
@@ -27,7 +27,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class TranscriptUpdater extends AbstractTranscriptLoader implements IndexUpdater{
     
-    Logger logger = Logger.getLogger(TranscriptUpdater.class);
+    Logger logger = LoggerFactory.getLogger(TranscriptUpdater.class);
 
     private ChangeTracker changeTracker;    
 

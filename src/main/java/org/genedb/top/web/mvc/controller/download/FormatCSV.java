@@ -3,12 +3,12 @@ package org.genedb.top.web.mvc.controller.download;
 import java.io.IOException;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.genedb.querying.tmpquery.GeneDetail;
 
 public class FormatCSV extends FormatBase {
 	
-	private Logger logger = Logger.getLogger(FormatCSV.class);
+	private Logger logger = LoggerFactory.getLogger(FormatCSV.class);
 	
 	public FormatCSV() {
 		super();

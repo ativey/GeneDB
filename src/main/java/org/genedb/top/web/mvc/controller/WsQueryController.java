@@ -1,19 +1,19 @@
 package org.genedb.top.web.mvc.controller;
 
-//import org.genedb.db.taxon.TaxonNode;
-import org.genedb.db.taxon.TaxonNodeList;
+//import org.genedb.top.db.taxon.TaxonNode;
+import org.genedb.top.db.taxon.TaxonNodeList;
 //import org.genedb.querying.core.LuceneQuery;
 import org.genedb.querying.core.Query;
 import org.genedb.querying.core.QueryException;
 import org.genedb.querying.core.QueryFactory;
 import org.genedb.querying.tmpquery.GeneSummary;
 import org.genedb.querying.tmpquery.TaxonQuery;
-import org.genedb.util.MutableInteger;
+import org.genedb.top.util.MutableInteger;
 //import org.genedb.web.mvc.controller.WebConstants;
 //import org.genedb.web.mvc.controller.download.ResultEntry;
 //import org.genedb.web.mvc.model.ResultsCacheFactory;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.MutablePropertyValues;
 import org.springframework.context.ApplicationContext;
@@ -48,7 +48,7 @@ import com.google.common.collect.Maps;
 @RequestMapping("/ws")
 public class WsQueryController implements ApplicationContextAware {
 
-    private static final Logger logger = Logger.getLogger(WsQueryController.class);
+    private static final Logger logger = LoggerFactory.getLogger(WsQueryController.class);
 
     private ApplicationContext applicationContext;
 

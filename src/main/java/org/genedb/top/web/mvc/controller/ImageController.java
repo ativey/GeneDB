@@ -2,7 +2,7 @@
 //
 //import org.genedb.web.mvc.model.BerkeleyMapFactory;
 //
-//import org.apache.log4j.Logger;
+//import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 //import org.springframework.stereotype.Controller;
 //import org.springframework.util.StringUtils;
 //import org.springframework.web.bind.annotation.PathVariable;
@@ -19,7 +19,7 @@
 //@RequestMapping("/Image")
 //public class ImageController {
 //
-//    private static final Logger logger = Logger.getLogger(ImageController.class);
+//    private static final Logger logger = LoggerFactory.getLogger(ImageController.class);
 //
 //    private BerkeleyMapFactory bmf;
 //

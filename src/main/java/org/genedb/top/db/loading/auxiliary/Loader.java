@@ -1,9 +1,9 @@
 package org.genedb.top.db.loading.auxiliary;
 
-import org.genedb.db.dao.CvDao;
-import org.genedb.db.dao.GeneralDao;
-import org.genedb.db.dao.PubDao;
-import org.genedb.db.dao.SequenceDao;
+import org.genedb.top.db.dao.CvDao;
+import org.genedb.top.db.dao.GeneralDao;
+import org.genedb.top.db.dao.PubDao;
+import org.genedb.top.db.dao.SequenceDao;
 import org.genedb.top.db.loading.FeatureUtils;
 
 import org.genedb.top.chado.feature.AbstractGene;
@@ -12,7 +12,7 @@ import org.genedb.top.chado.feature.ProductiveTranscript;
 import org.genedb.top.chado.feature.Transcript;
 import org.genedb.top.chado.utils.ObjectManager;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.orm.hibernate5.SessionFactoryUtils;
@@ -26,7 +26,7 @@ import java.util.Set;
 
 public abstract class Loader {
 
-    private static final Logger logger = Logger.getLogger(Loader.class);
+    private static final Logger logger = LoggerFactory.getLogger(Loader.class);
 
     protected GeneralDao generalDao;
     protected SequenceDao sequenceDao;

@@ -3,7 +3,7 @@ package org.genedb.top.db.audit;
 import org.genedb.top.chado.cfg.ChadoAnnotationConfiguration;
 import org.genedb.top.chado.cfg.ChadoSessionFactoryBean;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.hibernate.CacheMode;
 import org.hibernate.Hibernate;
 import org.hibernate.SQLQuery;
@@ -21,7 +21,7 @@ import java.sql.SQLException;
 import javax.annotation.Resource;
 
 public class HibernateChangeTracker implements ChangeTracker {
-    private static final Logger logger = Logger.getLogger(HibernateChangeTracker.class);
+    private static final Logger logger = LoggerFactory.getLogger(HibernateChangeTracker.class);
 
     @Resource(name="sessionFactory")
     private SessionFactory sessionFactory;

@@ -15,6 +15,6 @@ public class SequenceDifference extends Remark {
         super();
     }
     
-    //private static final Logger logger = Logger.getLogger(SequenceDifference.class);
+    //private static final Logger logger = LoggerFactory.getLogger(SequenceDifference.class);
 
 }

@@ -10,7 +10,7 @@ import org.genedb.top.chado.mapped.FeatureLoc;
 import org.genedb.top.chado.mapped.FeatureProp;
 import org.genedb.top.chado.mapped.Organism;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -53,7 +53,7 @@ import java.util.List;
 
 public class HTHLoaderTest {
     
-    private static final Logger logger = Logger.getLogger(HTHLoaderTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(HTHLoaderTest.class);
     
     //Constants. These should be changed if testing results for a different organism and/or if the first expected hit is different 
     private static final String FILE_NAME = "HTHPfalciparum.hth";

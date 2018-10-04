@@ -3,8 +3,8 @@ package org.genedb.db.loading;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import org.genedb.db.loading.EmblLocation;
-import org.genedb.db.loading.ParsingException;
+import org.genedb.top.db.loading.EmblLocation;
+import org.genedb.top.db.loading.ParsingException;
 
 import org.junit.Test;
 

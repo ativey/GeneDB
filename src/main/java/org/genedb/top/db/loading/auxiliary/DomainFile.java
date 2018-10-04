@@ -3,9 +3,9 @@ package org.genedb.top.db.loading.auxiliary;
 import org.genedb.top.db.loading.GoEvidenceCode;
 import org.genedb.top.db.loading.GoInstance;
 import org.genedb.top.db.loading.ParsingException;
-import org.genedb.util.TwoKeyMap;
+import org.genedb.top.util.TwoKeyMap;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -96,7 +96,7 @@ abstract class DomainRow {
  */
 
 class InterProRow extends DomainRow {
-    private static final Logger logger = Logger.getLogger(InterProRow.class);
+    private static final Logger logger = LoggerFactory.getLogger(InterProRow.class);
 
     Set<GoInstance> goTerms = new HashSet<GoInstance>();
 
@@ -246,7 +246,7 @@ class PfamRow extends DomainRow {
         today = dFormat.format(new Date());
     }
 
-    private static final Logger logger = Logger.getLogger(PfamRow.class);
+    private static final Logger logger = LoggerFactory.getLogger(PfamRow.class);
 
     // The columns we're interested in:
     private static final int COL_KEY         = 0;
@@ -494,7 +494,7 @@ class DomainAcc {
  * @author rh11
  */
 class DomainFile {
-    private static final Logger logger = Logger.getLogger(DomainFile.class);
+    private static final Logger logger = LoggerFactory.getLogger(DomainFile.class);
 
     private TwoKeyMap<String,DomainAcc,Set<DomainRow>> rowsByKeyAndAcc
         = new TwoKeyMap<String, DomainAcc, Set<DomainRow>>();
@@ -637,7 +637,7 @@ class ISOFormatDate {
 class Pfam2GoFile {
 
     Map<String, Set<String>> pfam2go;
-    private static final Logger logger = Logger.getLogger(Pfam2GoFile.class);
+    private static final Logger logger = LoggerFactory.getLogger(Pfam2GoFile.class);
 
     public Pfam2GoFile() throws IOException {
 

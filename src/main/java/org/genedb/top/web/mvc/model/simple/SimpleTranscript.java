@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.model.simple;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 
 public class SimpleTranscript extends SimpleFeature {
 
@@ -8,7 +8,7 @@ public class SimpleTranscript extends SimpleFeature {
 
     private int fmin;
 
-    Logger logger = Logger.getLogger(SimpleTranscript.class);
+    Logger logger = LoggerFactory.getLogger(SimpleTranscript.class);
 
     public String getCvtName() {
         return cvtName;

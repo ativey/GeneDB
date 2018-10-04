@@ -19,8 +19,8 @@
 
 package org.genedb.jogra.plugins;
 
-import org.genedb.db.taxon.TaxonNode;
-import org.genedb.db.taxon.TaxonNodeManager;
+import org.genedb.top.db.taxon.TaxonNode;
+import org.genedb.top.db.taxon.TaxonNodeManager;
 import org.genedb.jogra.domain.GeneDBMessage;
 import org.genedb.jogra.domain.Term;
 import org.genedb.jogra.drawing.Jogra;
@@ -31,7 +31,7 @@ import org.genedb.jogra.services.RationaliserJList;
 import org.genedb.jogra.services.RationaliserResult;
 import org.genedb.jogra.services.TermService;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.bushe.swing.event.EventBus;
 import org.springframework.util.StringUtils;
 
@@ -92,7 +92,7 @@ import javax.swing.event.ListSelectionListener;
  ********************************************************************************************************/
 public class TermRationaliser implements JograPlugin {
     
-    private static final Logger logger = Logger.getLogger(TermRationaliser.class);
+    private static final Logger logger = LoggerFactory.getLogger(TermRationaliser.class);
 
     /* Constants */
     private static final String WINDOW_TITLE = "Term Rationaliser";

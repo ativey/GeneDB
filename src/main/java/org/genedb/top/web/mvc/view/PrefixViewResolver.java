@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.view;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.core.Ordered;
 import org.springframework.web.servlet.View;
 import org.springframework.web.servlet.ViewResolver;
@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class PrefixViewResolver implements ViewResolver, Ordered {
 
-    private Logger logger = Logger.getLogger(PrefixViewResolver.class);
+    private Logger logger = LoggerFactory.getLogger(PrefixViewResolver.class);
 
     private Map<String, ViewResolver> viewResolverMap;
     private Map<String, View> viewMap;

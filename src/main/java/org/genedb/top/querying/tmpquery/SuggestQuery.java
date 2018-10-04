@@ -6,7 +6,7 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.IndexSearcher;
@@ -25,7 +25,7 @@ import org.genedb.web.mvc.model.PopulateLuceneDictionary;
 @SuppressWarnings("serial")
 public class SuggestQuery extends OrganismLuceneQuery {
 
-	private static final Logger logger = Logger.getLogger(SuggestQuery.class);
+	private static final Logger logger = LoggerFactory.getLogger(SuggestQuery.class);
 
 	private static SpellChecker spellChecker;
 	private String searchText;

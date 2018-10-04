@@ -3,7 +3,7 @@ package org.genedb.top.querying.tmpquery;
 import org.genedb.querying.core.QueryException;
 import org.genedb.querying.core.QueryParam;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.index.Term;
@@ -29,7 +29,7 @@ public class QuickSearchQuery extends OrganismLuceneQuery {
 
 	private static final long serialVersionUID = -3007330180211992013L;
 
-	private transient Logger logger = Logger.getLogger(QuickSearchQuery.class);
+	private transient Logger logger = LoggerFactory.getLogger(QuickSearchQuery.class);
 
 	private String searchText;
 

@@ -4,7 +4,7 @@
 //import java.util.Collection;
 //import java.util.List;
 //
-//import org.genedb.db.domain.test.MockBasicGeneService;
+//import org.genedb.top.db.domain.test.MockBasicGeneService;
 //import org.genedb.top.chado.feature.AbstractGene;
 //import org.genedb.top.chado.feature.Chromosome;
 //import org.genedb.top.chado.feature.Gene;

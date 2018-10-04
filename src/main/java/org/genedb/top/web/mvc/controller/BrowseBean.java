@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.genedb.db.dao.CvDao;
-import org.genedb.db.dao.SequenceDao;
+import org.genedb.top.db.dao.CvDao;
+import org.genedb.top.db.dao.SequenceDao;
 
 import org.genedb.top.chado.mapped.Cv;
 import org.genedb.top.chado.mapped.Feature;

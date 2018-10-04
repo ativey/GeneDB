@@ -7,7 +7,7 @@ import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.genedb.util.Pair;
+import org.genedb.top.util.Pair;
 
 /**
  * @author art

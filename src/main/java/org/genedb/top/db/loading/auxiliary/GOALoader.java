@@ -134,7 +134,7 @@ public class GOALoader extends Loader {
 /* Class corresponding to GO Association file */
 
 class GOAssociationFile {
-    private static final Logger logger = Logger.getLogger(GOAssociationFile.class);
+    private static final Logger logger = LoggerFactory.getLogger(GOAssociationFile.class);
 
     private List<GOHit> hits = new ArrayList<GOHit>();
 

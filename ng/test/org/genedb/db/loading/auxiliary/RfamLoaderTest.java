@@ -11,7 +11,7 @@ import org.genedb.top.chado.mapped.AnalysisFeature;
 import org.genedb.top.chado.mapped.DbXRef;
 import org.genedb.top.chado.mapped.FeatureLoc;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -46,7 +46,7 @@ import java.util.List;
 
 public class RfamLoaderTest {
     //Constants
-    private static final Logger logger = Logger.getLogger(RfamLoaderTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(RfamLoaderTest.class);
     private static final int EXPECTED_NUMBER_OF_GENES_AND_TRANSCRIPTS = 4;
     private static final String CHROMOSOME_NAME = "Pf3D7_01";
     private static final String TYPE_OF_FIRST_TRANSCRIPT = "ncRNA";

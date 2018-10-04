@@ -10,7 +10,7 @@
 //import org.genedb.top.chado.utils.PeptideProperties;
 //
 //import org.apache.commons.io.IOUtils;
-//import org.apache.log4j.Logger;
+//import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 //import org.springframework.dao.EmptyResultDataAccessException;
 //import org.springframework.jdbc.core.simple.ParameterizedRowMapper;
 //import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
@@ -39,7 +39,7 @@
 //@Transactional
 //public class DtoDb {
 //
-//    Logger logger = Logger.getLogger(DtoDb.class);
+//    Logger logger = LoggerFactory.getLogger(DtoDb.class);
 //
 //    private SimpleJdbcTemplate template;
 //

@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.model;
 
-import org.genedb.db.audit.ChangeSet;
+import org.genedb.top.db.audit.ChangeSet;
 
 import org.genedb.top.chado.feature.AbstractGene;
 import org.genedb.top.chado.feature.Gap;
@@ -10,8 +10,7 @@ import org.genedb.top.chado.feature.ProductiveTranscript;
 import org.genedb.top.chado.feature.Transcript;
 import org.genedb.top.chado.mapped.Feature;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.Term;
 import org.hibernate.CacheMode;
@@ -75,7 +74,7 @@ public class PopulateLuceneIndices implements IndexUpdater {
         return 0;
     }
 
-    private static Logger logger = Logger.getLogger(PopulateLuceneIndices.class);
+    private static Logger logger = LoggerFactory.getLogger(PopulateLuceneIndices.class);
 
     /**
      * The number of features to be processed in a single batch. If it's set too

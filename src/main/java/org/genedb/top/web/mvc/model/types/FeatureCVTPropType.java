@@ -1,10 +1,10 @@
 package org.genedb.top.web.mvc.model.types;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 
 public class FeatureCVTPropType {
 
-    private static Logger logger = Logger.getLogger(FeatureCVTPropType.class);
+    private static Logger logger = LoggerFactory.getLogger(FeatureCVTPropType.class);
 
     private String fctTypeName;
     private String fctValue;

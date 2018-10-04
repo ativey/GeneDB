@@ -6,8 +6,8 @@ import java.util.List;
 
 import javax.servlet.jsp.JspWriter;
 
-import org.genedb.db.taxon.TaxonNameType;
-import org.genedb.db.taxon.TaxonNode;
+import org.genedb.top.db.taxon.TaxonNameType;
+import org.genedb.top.db.taxon.TaxonNode;
 
 public class PhylonodeHomePageListTag extends AbstractHomepageTag {
 

@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.controller;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,7 +26,7 @@ import javax.servlet.http.HttpServletResponse;
 @RequestMapping("/gmodrest/v1/")
 public class CommonUrlController {
 
-    Logger logger = Logger.getLogger(CommonUrlController.class);
+    Logger logger = LoggerFactory.getLogger(CommonUrlController.class);
 
     @RequestMapping(method=RequestMethod.GET, value="organisms")
     public ModelAndView listOrganisms() {

@@ -1,10 +1,10 @@
 package org.genedb.top.db.loading.auxiliary;
 
-import org.genedb.db.dao.CvDao;
-import org.genedb.db.dao.GeneralDao;
-import org.genedb.db.dao.OrganismDao;
-import org.genedb.db.dao.PubDao;
-import org.genedb.db.dao.SequenceDao;
+import org.genedb.top.db.dao.CvDao;
+import org.genedb.top.db.dao.GeneralDao;
+import org.genedb.top.db.dao.OrganismDao;
+import org.genedb.top.db.dao.PubDao;
+import org.genedb.top.db.dao.SequenceDao;
 
 import org.genedb.top.chado.feature.AbstractGene;
 import org.genedb.top.chado.feature.Chromosome;
@@ -22,7 +22,7 @@ import org.genedb.top.chado.mapped.FeatureLoc;
 import org.genedb.top.chado.mapped.Organism;
 import org.genedb.top.chado.utils.ObjectManager;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.jdbc.Work;
@@ -95,7 +95,7 @@ import java.util.regex.Pattern;
  */
 public class RfamLoader extends Loader{
     //Constants
-    private static final Logger logger = Logger.getLogger(RfamLoader.class);
+    private static final Logger logger = LoggerFactory.getLogger(RfamLoader.class);
     private final String DBNAME = "RFAM";
     private Class<? extends TopLevelFeature> topLevelFeatureClass = Chromosome.class; //Change whenever it is decided that chromosome is no longer the sourcefeature for the gene & transcript
     
@@ -243,7 +243,7 @@ public class RfamLoader extends Loader{
      */
     
     class RfamFile {
-        private static final Logger logger = Logger.getLogger(RfamFile.class);
+        private static final Logger logger = LoggerFactory.getLogger(RfamFile.class);
         private List<RfamHit> hits = new ArrayList<RfamHit>();
 
         public RfamFile(InputStream inputStream) throws IOException {

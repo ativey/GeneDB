@@ -1,6 +1,5 @@
 package org.genedb.top.db.adhoc;
 
-import org.apache.log4j.PropertyConfigurator;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.context.ApplicationContext;
@@ -32,7 +31,8 @@ public class Query {
             throw new RuntimeException("Could not find classpath resource /log4j.test.properties");
         }
         System.out.printf("Configuring Log4J from '%s'\n", url);
-        PropertyConfigurator.configure(url);
+        // FIXME
+        // PropertyConfigurator.configure(url);
     }
 
     public static void main(String[] args) throws IOException {

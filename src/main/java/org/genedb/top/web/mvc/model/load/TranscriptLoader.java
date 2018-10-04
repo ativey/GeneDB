@@ -3,7 +3,7 @@ package org.genedb.top.web.mvc.model.load;
 import java.util.Date;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class TranscriptLoader extends AbstractTranscriptLoader{
 
-    Logger logger = Logger.getLogger(TranscriptLoader.class);
+    Logger logger = LoggerFactory.getLogger(TranscriptLoader.class);
 
     public static void main(String args[])throws Exception{
 

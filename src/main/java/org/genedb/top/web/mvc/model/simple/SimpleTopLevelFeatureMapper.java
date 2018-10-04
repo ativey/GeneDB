@@ -3,13 +3,13 @@ package org.genedb.top.web.mvc.model.simple;
 import org.genedb.web.mvc.model.load.FeatureMapper;
 import org.genedb.web.mvc.model.load.TopLevelFeatureMapper;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class SimpleTopLevelFeatureMapper extends FeatureMapper {
-    Logger logger = Logger.getLogger(TopLevelFeatureMapper.class);
+    Logger logger = LoggerFactory.getLogger(TopLevelFeatureMapper.class);
 
     public static final String SQL =
             " select uniquename, f.name as fname, seqlen, cvt.name as cvtname" + " from feature f, cvterm cvt "

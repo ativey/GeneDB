@@ -1,12 +1,12 @@
 package org.genedb.top.web.mvc.controller;
 
-import org.genedb.db.dao.CvDao;
-import org.genedb.db.dao.OrganismDao;
-import org.genedb.db.dao.SequenceDao;
-import org.genedb.db.taxon.TaxonNameType;
-import org.genedb.db.taxon.TaxonNode;
-import org.genedb.db.taxon.TaxonNodeList;
-import org.genedb.db.taxon.TaxonNodeManager;
+import org.genedb.top.db.dao.CvDao;
+import org.genedb.top.db.dao.OrganismDao;
+import org.genedb.top.db.dao.SequenceDao;
+import org.genedb.top.db.taxon.TaxonNameType;
+import org.genedb.top.db.taxon.TaxonNode;
+import org.genedb.top.db.taxon.TaxonNodeList;
+import org.genedb.top.db.taxon.TaxonNodeManager;
 import org.genedb.querying.core.NumericQueryVisibility;
 import org.genedb.querying.core.QueryException;
 import org.genedb.querying.core.QueryFactory;
@@ -23,7 +23,7 @@ import org.genedb.top.chado.mapped.CvTerm;
 import org.genedb.top.chado.mapped.Feature;
 import org.genedb.top.chado.mapped.Organism;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
@@ -64,7 +64,7 @@ import com.thoughtworks.xstream.annotations.XStreamImplicit;
 @RequestMapping("/service")
 public class RestController {
 
-    private static final Logger logger = Logger.getLogger(RestController.class);
+    private static final Logger logger = LoggerFactory.getLogger(RestController.class);
 
     @Autowired
     private ApplicationContext applicationContext;

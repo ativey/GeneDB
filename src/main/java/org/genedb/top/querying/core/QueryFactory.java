@@ -1,6 +1,6 @@
 package org.genedb.top.querying.core;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.util.StringUtils;
@@ -21,7 +21,7 @@ import com.google.common.collect.Maps;
  */
 public class QueryFactory<T extends QueryVisibility> {
 
-    private static Logger logger = Logger.getLogger(QueryFactory.class);
+    private static Logger logger = LoggerFactory.getLogger(QueryFactory.class);
 
     @Autowired
     private ApplicationContext applicationContext;

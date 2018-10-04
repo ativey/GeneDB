@@ -2,10 +2,10 @@ package org.genedb.db.loading;
 
 import static org.junit.Assert.*;
 
-import org.genedb.db.loading.FeatureTester.GeneTester;
-import org.genedb.db.loading.FeatureTester.GenericTester;
-import org.genedb.db.loading.FeatureTester.PolypeptideTester;
-import org.genedb.db.loading.FeatureTester.TranscriptTester;
+import org.genedb.top.db.loading.FeatureTester.GeneTester;
+import org.genedb.top.db.loading.FeatureTester.GenericTester;
+import org.genedb.top.db.loading.FeatureTester.PolypeptideTester;
+import org.genedb.top.db.loading.FeatureTester.TranscriptTester;
 
 import org.genedb.top.chado.feature.AbstractGene;
 import org.genedb.top.chado.feature.Contig;
@@ -32,7 +32,7 @@ import java.util.Collection;
  *
  */
 public class EmblLoaderSyntheticTest {
-    //private static final Logger logger = Logger.getLogger(EmblLoaderSyntheticTest.class);
+    //private static final Logger logger = LoggerFactory.getLogger(EmblLoaderSyntheticTest.class);
 
     protected static EmblLoaderTestHelper helper;
     protected static FeatureTester tester;

@@ -6,7 +6,7 @@ import org.genedb.top.chado.mapped.CvTerm;
 import org.genedb.top.chado.mapped.FeatureProp;
 import org.genedb.top.chado.mapped.Analysis;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.hibernate.Session;
 
 import java.io.BufferedReader;
@@ -24,7 +24,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class SignalPLoader extends Loader {
-    private static final Logger logger = Logger.getLogger(SignalPLoader.class);
+    private static final Logger logger = LoggerFactory.getLogger(SignalPLoader.class);
 
     String analysisProgramVersion;
     private Analysis analysis;
@@ -134,7 +134,7 @@ public class SignalPLoader extends Loader {
 }
 
 class SignalPFileV4 {
-    private static final Logger logger = Logger.getLogger(SignalPFileV4.class);
+    private static final Logger logger = LoggerFactory.getLogger(SignalPFileV4.class);
     private List<SignalPHit> hits = new ArrayList<SignalPHit>();
 
     public SignalPFileV4(InputStream inputStream) throws IOException {
@@ -191,7 +191,7 @@ class SignalPFileV4 {
 }
 
 class SignalPFile {
-    private static final Logger logger = Logger.getLogger(SignalPFile.class);
+    private static final Logger logger = LoggerFactory.getLogger(SignalPFile.class);
 
     private List<SignalPHit> hits = new ArrayList<SignalPHit>();
 

@@ -1,6 +1,6 @@
 package org.genedb.top.web.tags.misc;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.text.DateFormat;
@@ -13,7 +13,7 @@ import javax.servlet.jsp.tagext.SimpleTagSupport;
 
 public class DisplayDateTag extends SimpleTagSupport {
 
-    private static final Logger logger = Logger.getLogger(DisplayDateTag.class);
+    private static final Logger logger = LoggerFactory.getLogger(DisplayDateTag.class);
 
     private long time;
 

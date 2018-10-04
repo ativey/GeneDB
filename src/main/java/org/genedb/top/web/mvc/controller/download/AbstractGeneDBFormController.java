@@ -6,9 +6,9 @@ import java.util.List;
 
 import javax.servlet.ServletRequest;
 
-import org.apache.log4j.Logger;
-import org.genedb.db.taxon.TaxonNode;
-import org.genedb.db.taxon.TaxonNodeList;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
+import org.genedb.top.db.taxon.TaxonNode;
+import org.genedb.top.db.taxon.TaxonNodeList;
 import org.genedb.querying.core.Query;
 import org.genedb.querying.tmpquery.GeneSummary;
 import org.genedb.querying.tmpquery.TaxonQuery;
@@ -25,7 +25,7 @@ import com.google.common.collect.Lists;
 
 public class AbstractGeneDBFormController {
 
-    private Logger logger = Logger.getLogger(AbstractGeneDBFormController.class);
+    private Logger logger = LoggerFactory.getLogger(AbstractGeneDBFormController.class);
 
     //@Autowired
     //private ResultsCacheFactory resultsCacheFactory;

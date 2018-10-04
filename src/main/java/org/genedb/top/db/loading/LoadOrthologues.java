@@ -1,7 +1,7 @@
 package org.genedb.top.db.loading;
 
-import org.genedb.db.dao.OrganismDao;
-import org.genedb.db.dao.SequenceDao;
+import org.genedb.top.db.dao.OrganismDao;
+import org.genedb.top.db.dao.SequenceDao;
 
 import org.genedb.top.chado.feature.AbstractGene;
 import org.genedb.top.chado.feature.Polypeptide;
@@ -13,7 +13,7 @@ import org.genedb.top.chado.mapped.AnalysisFeature;
 import org.genedb.top.chado.mapped.FeatureRelationship;
 import org.genedb.top.chado.mapped.Organism;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.context.ApplicationContext;
@@ -75,7 +75,7 @@ import java.util.Map;
  *
  */
 public class LoadOrthologues extends FileProcessor {
-    private static final Logger logger = Logger.getLogger(LoadOrthologues.class);
+    private static final Logger logger = LoggerFactory.getLogger(LoadOrthologues.class);
     public static void main(String[] args) throws MissingPropertyException, IOException, ParsingException, SQLException {
         if (args.length > 0) {
             logger.warn("Ignoring command-line arguments");
@@ -233,7 +233,7 @@ class OrthologueFile {
 
 @Transactional(rollbackFor=DataError.class) // Will also rollback for runtime exceptions, by default
 class OrthologuesLoader {
-    private static final Logger logger = Logger.getLogger(OrthologuesLoader.class);
+    private static final Logger logger = LoggerFactory.getLogger(OrthologuesLoader.class);
 
     private static final int BATCH_SIZE = 50;
 

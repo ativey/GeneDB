@@ -6,8 +6,8 @@ import org.genedb.top.chado.feature.Polypeptide;
 import org.genedb.top.chado.feature.TopLevelFeature;
 import org.genedb.top.chado.feature.Transcript;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -52,19 +52,6 @@ public class HibernateChangeTrackerTest {
     private SessionFactory sessionFactory;
 
     private static Logger logger;
-
-    @BeforeClass
-    public static void configureLogging() {
-        String logFile = "/log4j.test.properties";
-        URL url = HibernateChangeTrackerTest.class.getResource(logFile);
-        if (url == null) {
-            throw new RuntimeException("Could not find classpath resource " + logFile);
-        }
-        System.out.printf("Configuring Log4J from '%s'\n", url);
-        PropertyConfigurator.configure(url);
-
-        logger = Logger.getLogger(HibernateChangeTrackerTest.class);
-    }
 
     @Before
     @Transactional

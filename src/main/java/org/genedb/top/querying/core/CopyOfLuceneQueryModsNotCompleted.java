@@ -19,7 +19,7 @@
 
 package org.genedb.top.querying.core;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.search.BooleanClause;
@@ -45,7 +45,7 @@ import javax.annotation.PostConstruct;
 @Configurable
 public abstract class CopyOfLuceneQueryModsNotCompleted implements Query {
 
-    private static transient final Logger logger = Logger.getLogger(CopyOfLuceneQueryModsNotCompleted.class);
+    private static transient final Logger logger = LoggerFactory.getLogger(CopyOfLuceneQueryModsNotCompleted.class);
 
     private int order;
 

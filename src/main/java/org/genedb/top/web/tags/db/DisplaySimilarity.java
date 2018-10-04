@@ -5,7 +5,7 @@ import org.genedb.top.chado.mapped.Feature;
 import org.genedb.top.chado.mapped.FeatureLoc;
 import org.genedb.top.chado.mapped.FeatureProp;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
 
 public class DisplaySimilarity extends SimpleTagSupport {
-    private final Logger logger = Logger.getLogger(DisplaySimilarity.class);
+    private final Logger logger = LoggerFactory.getLogger(DisplaySimilarity.class);
 
     Feature polypeptide;
     Feature transcript;

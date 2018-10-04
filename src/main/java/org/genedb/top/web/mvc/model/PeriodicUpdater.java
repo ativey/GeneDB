@@ -1,9 +1,9 @@
 package org.genedb.top.web.mvc.model;
 
-import org.genedb.db.audit.ChangeSet;
-import org.genedb.db.audit.ChangeTracker;
+import org.genedb.top.db.audit.ChangeSet;
+import org.genedb.top.db.audit.ChangeTracker;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -19,7 +19,7 @@ import java.util.List;
  */
 public class PeriodicUpdater {
 
-    private Logger logger = Logger.getLogger(PeriodicUpdater.class);
+    private Logger logger = LoggerFactory.getLogger(PeriodicUpdater.class);
 
     private List<IndexUpdater> indexUpdaters;
 

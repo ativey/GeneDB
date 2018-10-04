@@ -19,14 +19,14 @@
 
 package org.genedb.top.web.mvc.controller;
 
-import org.genedb.db.dao.SequenceDao;
+import org.genedb.top.db.dao.SequenceDao;
 import org.genedb.querying.history.HistoryManager;
 import org.genedb.querying.history.HistoryType;
 
 import org.genedb.top.chado.feature.Transcript;
 import org.genedb.top.chado.mapped.Feature;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -46,7 +46,7 @@ import javax.servlet.http.HttpSession;
 @RequestMapping("/Basket")
 public class BasketController {
 
-    private static final Logger logger = Logger.getLogger(BasketController.class);
+    private static final Logger logger = LoggerFactory.getLogger(BasketController.class);
 
     private SequenceDao sequenceDao;
     private HistoryManagerFactory hmFactory;

@@ -19,12 +19,12 @@
 
 package org.genedb.jogra.services;
 
-import org.genedb.db.taxon.TaxonNode;
-import org.genedb.db.taxon.TaxonNodeManager;
+import org.genedb.top.db.taxon.TaxonNode;
+import org.genedb.top.db.taxon.TaxonNodeManager;
 import org.genedb.jogra.domain.Term;
 import org.genedb.jogra.domain.FeatureCvTerm;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.util.StringUtils;
@@ -60,7 +60,7 @@ import javax.sql.DataSource;
 
 public class SqlTermService implements TermService {
     
-    private static final Logger logger = Logger.getLogger(SqlTermService.class);
+    private static final Logger logger = LoggerFactory.getLogger(SqlTermService.class);
 
     /* Configured during runtime */
     private JdbcTemplate jdbcTemplate;

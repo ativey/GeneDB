@@ -8,7 +8,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 
 import org.genedb.top.chado.feature.Polypeptide;
 
@@ -16,7 +16,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 public class PlasmoAPLoader extends Loader {
-    private static final Logger logger = Logger.getLogger(PlasmoAPLoader.class);
+    private static final Logger logger = LoggerFactory.getLogger(PlasmoAPLoader.class);
 
     @Override
     public void doLoad(InputStream inputStream, Session session) throws IOException {

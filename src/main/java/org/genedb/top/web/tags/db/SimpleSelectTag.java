@@ -1,8 +1,8 @@
 package org.genedb.top.web.tags.db;
 
 import org.apache.commons.lang.StringUtils;
-import org.apache.log4j.Logger;
-import org.genedb.db.taxon.TaxonNode;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
+import org.genedb.top.db.taxon.TaxonNode;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -14,7 +14,7 @@ import javax.servlet.jsp.PageContext;
 
 public class SimpleSelectTag extends AbstractHomepageTag {
 
-	private static final Logger logger = Logger.getLogger(SimpleSelectTag.class);
+	private static final Logger logger = LoggerFactory.getLogger(SimpleSelectTag.class);
 	private String selection;
 	private boolean unlinkgroups = false;
 	private String id;

@@ -1,6 +1,6 @@
 //package org.genedb.web.mvc.model;
 //
-//import org.genedb.util.MutableInteger;
+//import org.genedb.top.util.MutableInteger;
 //
 //import java.util.Map;
 //

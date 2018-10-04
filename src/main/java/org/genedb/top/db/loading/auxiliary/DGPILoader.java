@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 
 import org.genedb.top.chado.feature.Polypeptide;
 
@@ -20,7 +20,7 @@ import org.hibernate.Session;
 
 
 public class DGPILoader extends Loader {
-    private static final Logger logger = Logger.getLogger(DGPILoader.class);
+    private static final Logger logger = LoggerFactory.getLogger(DGPILoader.class);
 
     @Override
     public void doLoad(InputStream inputStream, Session session) throws IOException {

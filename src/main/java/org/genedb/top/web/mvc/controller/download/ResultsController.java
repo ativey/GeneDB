@@ -16,7 +16,7 @@ import org.genedb.querying.tmpquery.SuggestQuery;
 import org.genedb.top.web.mvc.controller.HistoryManagerFactory;
 //import org.genedb.web.mvc.model.ResultsCacheFactory;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 //import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -40,7 +40,7 @@ import javax.servlet.http.HttpSession;
 //@RequestMapping("/Results")
 public class ResultsController {
 
-//    private static final Logger logger = Logger.getLogger(ResultsController.class);
+//    private static final Logger logger = LoggerFactory.getLogger(ResultsController.class);
 //
 //    //private static final String IDS_TO_GENE_SUMMARY_QUERY = "idsToGeneSummary";
 //

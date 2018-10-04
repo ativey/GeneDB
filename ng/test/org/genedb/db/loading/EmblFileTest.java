@@ -2,9 +2,9 @@ package org.genedb.db.loading;
 
 import static org.junit.Assert.*;
 
-import org.genedb.db.loading.FeatureTable.Feature;
+import org.genedb.top.db.loading.FeatureTable.Feature;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,7 +13,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class EmblFileTest {
-    private static final Logger logger = Logger.getLogger(EmblFileTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(EmblFileTest.class);
     private EmblFile emblFile;
 
     @Before

@@ -25,7 +25,7 @@ import org.genedb.jogra.drawing.JograProgressBar.Position;
 import org.genedb.jogra.services.DatabaseLogin;
 import org.genedb.jogra.services.DatabaseLogin.AbortException;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.bushe.swing.event.EventBus;
 import org.bushe.swing.event.EventSubscriber;
 import org.bushe.swing.event.EventTopicSubscriber;
@@ -73,7 +73,7 @@ import javax.swing.border.Border;
 public class Jogra implements SingleInstanceListener, PropertyChangeListener, EventSubscriber<GeneDBMessage> {
 
     public static int TIMER_DELAY = 10*1000;
-    private static final Logger logger = Logger.getLogger(Jogra.class);
+    private static final Logger logger = LoggerFactory.getLogger(Jogra.class);
     private Map<String, JograPlugin> pluginMap;
     private SingleInstanceService sis;
     private final JFrame mainFrame = new JFrame();

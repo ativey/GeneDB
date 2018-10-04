@@ -7,7 +7,7 @@ import org.genedb.top.chado.feature.EST;
 import org.genedb.top.chado.feature.Plasmid;
 import org.genedb.top.chado.feature.Supercontig;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -24,7 +24,7 @@ import java.sql.SQLException;
  *
  */
 public class LoadFasta extends FileProcessor {
-    private static final Logger logger = Logger.getLogger(LoadFasta.class);
+    private static final Logger logger = LoggerFactory.getLogger(LoadFasta.class);
 
     /**
      * Recurse through a directory structure, loading each FASTA file we encounter.

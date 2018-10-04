@@ -2,8 +2,8 @@ package org.genedb.top.web.mvc.controller.download;
 
 import org.displaytag.tags.TableTagParameters;
 import org.displaytag.util.ParamEncoder;
-import org.genedb.db.taxon.TaxonNodeList;
-import org.genedb.db.taxon.TaxonNodeManager;
+import org.genedb.top.db.taxon.TaxonNodeList;
+import org.genedb.top.db.taxon.TaxonNodeManager;
 import org.genedb.querying.core.PagedQuery;
 import org.genedb.querying.core.Query;
 import org.genedb.querying.core.QueryException;
@@ -18,7 +18,7 @@ import org.genedb.querying.tmpquery.OrganismLuceneQuery;
 import org.genedb.querying.tmpquery.QuickSearchQuery;
 import org.genedb.querying.tmpquery.SuggestQuery;
 import org.genedb.top.web.mvc.controller.HistoryManagerFactory;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
@@ -45,7 +45,7 @@ import javax.servlet.http.HttpSession;
 @RequestMapping("/Query")
 public class QueryController extends AbstractGeneDBFormController{
 
-    private static final Logger logger = Logger.getLogger(QueryController.class);
+    private static final Logger logger = LoggerFactory.getLogger(QueryController.class);
 
     private QueryFactory<NumericQueryVisibility> queryFactory;
 

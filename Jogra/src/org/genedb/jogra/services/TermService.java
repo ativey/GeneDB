@@ -1,6 +1,6 @@
 package org.genedb.jogra.services;
 
-import org.genedb.db.taxon.TaxonNode;
+import org.genedb.top.db.taxon.TaxonNode;
 import org.genedb.jogra.domain.Term;
 
 import java.sql.SQLException;

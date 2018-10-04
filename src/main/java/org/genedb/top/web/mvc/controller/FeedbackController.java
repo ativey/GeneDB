@@ -19,7 +19,7 @@
 
 package org.genedb.top.web.mvc.controller;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Controller;
@@ -36,7 +36,7 @@ import java.net.URI;
 @Controller
 @RequestMapping("/Feedback")
 public class FeedbackController {
-     private static final Logger logger = Logger.getLogger(FeedbackController.class);
+     private static final Logger logger = LoggerFactory.getLogger(FeedbackController.class);
 
     private String formView = "feedback/general";
 

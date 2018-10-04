@@ -5,8 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
-import org.genedb.db.dao.SequenceDao;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
+import org.genedb.top.db.dao.SequenceDao;
 import org.genedb.querying.core.HqlQuery;
 import org.genedb.querying.core.Query;
 import org.genedb.querying.core.QueryException;
@@ -24,7 +24,7 @@ import com.google.common.collect.Lists;
 
 public class ProteinMatchClusterOrthologueQuery extends OrganismHqlQuery {
 	
-	private static final Logger logger = Logger.getLogger(ProteinMatchClusterOrthologueQuery.class);
+	private static final Logger logger = LoggerFactory.getLogger(ProteinMatchClusterOrthologueQuery.class);
 	
 	@Autowired
 	private SequenceDao sequenceDao;

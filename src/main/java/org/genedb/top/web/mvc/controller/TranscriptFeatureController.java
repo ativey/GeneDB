@@ -19,7 +19,7 @@
 
 package org.genedb.top.web.mvc.controller;
 
-import org.genedb.db.dao.SequenceDao;
+import org.genedb.top.db.dao.SequenceDao;
 import org.genedb.querying.history.HistoryItem;
 import org.genedb.querying.history.HistoryManager;
 import org.genedb.querying.history.HistoryType;
@@ -31,7 +31,7 @@ import org.genedb.web.mvc.model.TranscriptDTO;
 import org.genedb.top.chado.feature.AbstractGene;
 import org.genedb.top.chado.mapped.Feature;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.jmx.export.annotation.ManagedAttribute;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -58,7 +58,7 @@ import com.google.common.collect.Maps;
 @RequestMapping("/gene")
 //@ManagedResource(objectName="bean:name=namedFeatureController", description="NamedFeature Controller")
 public class TranscriptFeatureController {
-     private static final Logger logger = Logger.getLogger(TranscriptFeatureController.class);
+     private static final Logger logger = LoggerFactory.getLogger(TranscriptFeatureController.class);
 
     private SequenceDao sequenceDao;
     private String formView;

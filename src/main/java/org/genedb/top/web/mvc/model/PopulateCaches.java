@@ -1,8 +1,8 @@
 //package org.genedb.web.mvc.model;
 //
 //
-//import org.genedb.db.domain.luceneImpls.BasicGeneServiceImpl;
-//import org.genedb.db.domain.services.BasicGeneService;
+//import org.genedb.top.db.domain.luceneImpls.BasicGeneServiceImpl;
+//import org.genedb.top.db.domain.services.BasicGeneService;
 //import org.genedb.querying.core.LuceneIndex;
 //import org.genedb.querying.core.LuceneIndexFactory;
 //import org.genedb.web.gui.DiagramCache;
@@ -14,9 +14,8 @@
 //import org.genedb.top.chado.feature.Transcript;
 //import org.genedb.top.chado.mapped.Feature;
 //
-//import org.apache.log4j.BasicConfigurator;
-//import org.apache.log4j.Logger;
-//import org.apache.log4j.PropertyConfigurator;
+//import org.slf4j.Logger;
+// import org.slf4j.LoggerFactory;
 //import org.hibernate.Query;
 //import org.hibernate.Session;
 //import org.hibernate.SessionFactory;
@@ -43,7 +42,7 @@
 //@Repository
 //@Transactional
 //public class PopulateCaches {
-//    private static final Logger logger = Logger.getLogger(PopulateCaches.class);
+//    private static final Logger logger = LoggerFactory.getLogger(PopulateCaches.class);
 //
 //    private BerkeleyMapFactory bmf;
 //

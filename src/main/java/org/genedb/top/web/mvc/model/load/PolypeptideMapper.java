@@ -1,11 +1,11 @@
 package org.genedb.top.web.mvc.model.load;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 
 
 
 public class PolypeptideMapper extends FeatureMapper {
-    private Logger logger = Logger.getLogger(PolypeptideMapper.class);
+    private Logger logger = LoggerFactory.getLogger(PolypeptideMapper.class);
 
     public static final String SQL = "select f.* " +
     		" from feature f, feature_relationship fr, cvterm cvt, cv" +

@@ -4,7 +4,7 @@ import org.genedb.top.chado.feature.HelixTurnHelix;
 import org.genedb.top.chado.feature.Polypeptide;
 import org.genedb.top.chado.mapped.Analysis;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.jdbc.Work;
@@ -36,7 +36,7 @@ import java.util.regex.Pattern;
 
 
 public class HTHLoader extends Loader {
-    private static final Logger logger = Logger.getLogger(HTHLoader.class);
+    private static final Logger logger = LoggerFactory.getLogger(HTHLoader.class);
     private int number = 0;
     private String analysisProgramVersion = "unknown"; //Cannot be null in database; get right version number when known; update code to handle commandline args
     private Analysis analysis;
@@ -129,7 +129,7 @@ public class HTHLoader extends Loader {
 /* Class corresponding to HTH file */
 
 class HTHFile {
-    private static final Logger logger = Logger.getLogger(HTHFile.class);
+    private static final Logger logger = LoggerFactory.getLogger(HTHFile.class);
 
     private List<HTHHit> hits = new ArrayList<HTHHit>();
 

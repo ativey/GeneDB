@@ -7,7 +7,7 @@ import org.genedb.top.chado.feature.PolypeptideDomain;
 import org.genedb.top.chado.mapped.DbXRef;
 import org.genedb.top.chado.mapped.FeatureDbXRef;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -28,7 +28,7 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 
 public class DomainLoaderTest {
-	private static final Logger logger = Logger.getLogger(DomainLoaderTest.class);
+	private static final Logger logger = LoggerFactory.getLogger(DomainLoaderTest.class);
     private static DomainLoader loader;
 
     @BeforeClass

@@ -1,6 +1,6 @@
 package org.genedb.top.querying.core;
 
-//import org.apache.log4j.Logger;
+//import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.CorruptIndexException;
@@ -45,7 +45,7 @@ public class LuceneIndex {
         return indexName;
     }
 
-//    private static final Logger logger = Logger.getLogger(LuceneIndex.class);
+//    private static final Logger logger = LoggerFactory.getLogger(LuceneIndex.class);
 
     private IndexReader indexReader;
 

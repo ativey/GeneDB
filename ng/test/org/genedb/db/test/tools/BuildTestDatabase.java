@@ -1,7 +1,7 @@
 package org.genedb.db.test.tools;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.net.URL;
 import java.sql.BatchUpdateException;
@@ -27,7 +27,7 @@ import java.util.Set;
  */
 public class BuildTestDatabase {
     //private static final String SCHEMA = "public";
-    private static final Logger logger = Logger.getLogger(org.genedb.db.test.tools.BuildTestDatabase.class);
+    private static final Logger logger = LoggerFactory.getLogger(org.genedb.db.test.tools.BuildTestDatabase.class);
 
     /**
      * Usage: java BuildTestDatabase <source URL> <username> <password> <target name> [<organism ID>]
@@ -57,13 +57,6 @@ public class BuildTestDatabase {
         if (!onlySchema && args.length > 4) {
             organismId = Integer.parseInt(args[4]);
         }
-
-        URL url = BuildTestDatabase.class.getResource("/log4j.test.properties");
-        if (url == null) {
-            throw new RuntimeException("Could not find classpath resource /log4j.test.properties");
-        }
-        System.out.printf("Configuring Log4J from '%s'\n", url);
-        PropertyConfigurator.configure(url);
 
         Class.forName("org.postgresql.Driver");
         Class.forName("org.hsqldb.jdbcDriver");

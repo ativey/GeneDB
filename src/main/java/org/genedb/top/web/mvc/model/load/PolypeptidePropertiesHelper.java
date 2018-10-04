@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.model.load;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.biojava.bio.BioException;
 import org.biojava.bio.proteomics.IsoelectricPointCalc;
 import org.biojava.bio.proteomics.MassCalc;
@@ -18,7 +18,7 @@ import org.genedb.top.chado.utils.PeptideProperties;
  * Much of these methods contain snippets from the Polypeptide class
  */
 public class PolypeptidePropertiesHelper {
-    private static Logger logger = Logger.getLogger(PolypeptidePropertiesHelper.class);
+    private static Logger logger = LoggerFactory.getLogger(PolypeptidePropertiesHelper.class);
     /**
      * Calculate the predicted properties of this polypeptide.
      *

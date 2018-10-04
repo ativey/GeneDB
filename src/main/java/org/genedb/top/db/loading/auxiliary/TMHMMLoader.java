@@ -4,7 +4,7 @@ import org.genedb.top.chado.feature.MembraneStructure;
 import org.genedb.top.chado.feature.Polypeptide;
 import org.genedb.top.chado.mapped.Analysis;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.hibernate.Session;
 
 import java.io.BufferedReader;
@@ -21,7 +21,7 @@ import java.util.Set;
 
 public class TMHMMLoader extends Loader {
 
-    private static Logger logger = Logger.getLogger(TMHMMLoader.class);
+    private static Logger logger = LoggerFactory.getLogger(TMHMMLoader.class);
 
     String analysisProgramVersion = "unknown";
     Boolean notFoundNotFatal = false;

@@ -1,11 +1,11 @@
 package org.genedb.top.web.mvc.controller;
 
-import org.genedb.db.dao.GeneralDao;
-import org.genedb.util.Pair;
+import org.genedb.top.db.dao.GeneralDao;
+import org.genedb.top.util.Pair;
 
 import org.genedb.top.chado.mapped.Db;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.StringUtils;
@@ -30,7 +30,7 @@ public class DbController {
 
     private static final String WWW = "redirect:http://www.genedb.org/";
 
-    private Logger logger = Logger.getLogger(DbController.class);
+    private Logger logger = LoggerFactory.getLogger(DbController.class);
 
     private GeneralDao generalDao;
 

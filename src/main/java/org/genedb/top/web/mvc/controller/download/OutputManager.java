@@ -5,7 +5,7 @@ import org.genedb.top.web.utils.DownloadUtils;
 import org.genedb.top.chado.feature.TopLevelFeature;
 import org.genedb.top.chado.feature.Transcript;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 
 import java.io.PrintWriter;
 import java.io.Writer;
@@ -13,7 +13,7 @@ import java.util.List;
 
 public class OutputManager {
 
-    private static Logger logger = Logger.getLogger(OutputManager.class);
+    private static Logger logger = LoggerFactory.getLogger(OutputManager.class);
 
     private OutputFormat outputFormat;
     private OutputContent outputContent;

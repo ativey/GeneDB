@@ -3,11 +3,11 @@ package org.genedb.top.web.mvc.model.load;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.simple.ParameterizedRowMapper;
 
 public class OrganismMapper  implements ParameterizedRowMapper<OrganismMapper>{    
-    Logger logger = Logger.getLogger(OrganismMapper.class);
+    Logger logger = LoggerFactory.getLogger(OrganismMapper.class);
     
     public static final String GET_ALL_ORGANISMS_SQL =  "select * from organism";
     

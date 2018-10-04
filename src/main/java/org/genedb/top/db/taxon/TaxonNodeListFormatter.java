@@ -1,7 +1,7 @@
 package org.genedb.top.db.taxon;
 
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.format.Formatter;
 import org.springframework.util.StringUtils;
 
@@ -10,7 +10,7 @@ import java.util.Locale;
 
 public class TaxonNodeListFormatter implements Formatter<TaxonNodeList> {
 
-	private Logger logger = Logger.getLogger(TaxonNodeListFormatter.class);
+	private Logger logger = LoggerFactory.getLogger(TaxonNodeListFormatter.class);
 
     private TaxonNodeManager taxonNodeManager;
 

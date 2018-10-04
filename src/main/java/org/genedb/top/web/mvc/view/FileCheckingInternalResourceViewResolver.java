@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.view;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.View;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
@@ -15,7 +15,7 @@ import com.google.common.collect.Lists;
 
 public class FileCheckingInternalResourceViewResolver extends InternalResourceViewResolver {
 
-    private Logger logger = Logger.getLogger(FileCheckingInternalResourceViewResolver.class);
+    private Logger logger = LoggerFactory.getLogger(FileCheckingInternalResourceViewResolver.class);
 
     private Set<String> validViews = new HashSet<String>();
 

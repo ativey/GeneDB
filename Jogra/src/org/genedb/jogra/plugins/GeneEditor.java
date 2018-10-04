@@ -34,7 +34,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingWorker;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.bushe.swing.event.EventBus;
 import org.genedb.jogra.domain.Gene;
 import org.genedb.jogra.domain.GeneDBMessage;
@@ -47,7 +47,7 @@ import org.genedb.jogra.services.LockStatus;
 
 public class GeneEditor implements JograPlugin {
 
-	private static final Logger logger = Logger.getLogger(GeneEditor.class);
+	private static final Logger logger = LoggerFactory.getLogger(GeneEditor.class);
 	
 	private LockAndNotificationService lockAndNotificationService;
 	private GeneService geneService;

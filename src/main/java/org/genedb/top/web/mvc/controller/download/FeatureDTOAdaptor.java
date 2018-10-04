@@ -3,9 +3,9 @@
 //import java.util.List;
 //import java.util.Map;
 //
-//import org.apache.log4j.Logger;
-//import org.genedb.db.domain.objects.PolypeptideRegion;
-//import org.genedb.db.domain.objects.PolypeptideRegionGroup;
+//import org.slf4j.Logger;import org.slf4j.LoggerFactory;
+//import org.genedb.top.db.domain.objects.PolypeptideRegion;
+//import org.genedb.top.db.domain.objects.PolypeptideRegionGroup;
 //import org.genedb.web.mvc.model.DbXRefDTO;
 //import org.genedb.web.mvc.model.FeatureCvTermDTO;
 //import org.genedb.web.mvc.model.FeatureDTO;
@@ -16,7 +16,7 @@
 //
 //public class FeatureDTOAdaptor {
 //
-//	private static final Logger logger = Logger.getLogger(FeatureDTOAdaptor.class);
+//	private static final Logger logger = LoggerFactory.getLogger(FeatureDTOAdaptor.class);
 //
 //	private FeatureDTO dto;
 //

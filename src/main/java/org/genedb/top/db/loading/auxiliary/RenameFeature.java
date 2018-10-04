@@ -10,7 +10,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.genedb.top.chado.feature.AbstractGene;
 import org.genedb.top.chado.mapped.CvTerm;
 import org.genedb.top.chado.mapped.Feature;
@@ -26,7 +26,7 @@ import org.hibernate.Session;
  */
 public class RenameFeature extends Loader {
 	
-	private static final Logger logger = Logger.getLogger(RenameFeature.class);
+	private static final Logger logger = LoggerFactory.getLogger(RenameFeature.class);
 	
 	private String delimiter = "\t";
 	private boolean matchPrefixOnly = false;

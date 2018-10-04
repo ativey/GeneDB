@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.controller;
 
-import org.genedb.db.dao.SequenceDao;
+import org.genedb.top.db.dao.SequenceDao;
 import org.genedb.querying.history.HistoryManager;
 import org.genedb.querying.history.HistoryType;
 
@@ -8,7 +8,7 @@ import org.genedb.top.chado.feature.Gene;
 import org.genedb.top.chado.feature.Transcript;
 import org.genedb.top.chado.mapped.Feature;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,7 +33,7 @@ import com.google.common.collect.Lists;
 @RequestMapping("/IdList")
 public class IdListController {
 
-    private final Logger logger = Logger.getLogger(IdListController.class);
+    private final Logger logger = LoggerFactory.getLogger(IdListController.class);
 
     private HistoryManagerFactory hmFactory;
 

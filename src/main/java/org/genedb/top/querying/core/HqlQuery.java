@@ -19,7 +19,7 @@
 
 package org.genedb.top.querying.core;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 //import org.hibernate.validator.ClassValidator;
@@ -39,7 +39,7 @@ import java.util.Map;
 @Configurable
 public abstract class HqlQuery implements PagedQuery {
 
-	private static final Logger logger = Logger.getLogger(HqlQuery.class);
+	private static final Logger logger = LoggerFactory.getLogger(HqlQuery.class);
 
     @Autowired
     protected SessionFactory sessionFactory;

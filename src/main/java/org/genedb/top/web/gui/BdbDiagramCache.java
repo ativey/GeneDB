@@ -2,7 +2,7 @@
 //
 //import org.genedb.web.mvc.model.BerkeleyMapFactory;
 //
-//import org.apache.log4j.Logger;
+//import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 //import org.springframework.beans.factory.annotation.Required;
 //
 //import java.io.ByteArrayOutputStream;
@@ -10,7 +10,7 @@
 //
 //public class BdbDiagramCache implements DiagramCache {
 //
-//    private static final Logger logger = Logger.getLogger(BdbDiagramCache.class);
+//    private static final Logger logger = LoggerFactory.getLogger(BdbDiagramCache.class);
 //
 //    private BerkeleyMapFactory bmf;
 //

@@ -6,12 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import org.genedb.db.domain.objects.Chromosome;
-import org.genedb.db.domain.objects.LocatedFeature;
-import org.genedb.db.domain.objects.TranscriptComponent;
-import org.genedb.db.domain.objects.Transcript;
-import org.genedb.db.domain.services.BasicGeneService;
-import org.genedb.db.domain.test.MockBasicGeneService;
+import org.genedb.top.db.domain.objects.Chromosome;
+import org.genedb.top.db.domain.objects.LocatedFeature;
+import org.genedb.top.db.domain.objects.TranscriptComponent;
+import org.genedb.top.db.domain.objects.Transcript;
+import org.genedb.top.db.domain.services.BasicGeneService;
+import org.genedb.top.db.domain.test.MockBasicGeneService;
 import org.junit.Test;
 
 /**

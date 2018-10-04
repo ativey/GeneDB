@@ -3,7 +3,7 @@ package org.genedb.top.chado.feature;
 import org.genedb.top.chado.cfg.FeatureType;
 import org.genedb.top.chado.mapped.Organism;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.hibernate.search.annotations.Indexed;
 
 import java.sql.Timestamp;
@@ -15,7 +15,7 @@ import javax.persistence.Transient;
 @FeatureType(cv = "sequence", term = "mRNA")
 @Indexed
 public class MRNA extends ProductiveTranscript {
-    private static final Logger logger = Logger.getLogger(MRNA.class);
+    private static final Logger logger = LoggerFactory.getLogger(MRNA.class);
 
     MRNA() {
         // empty

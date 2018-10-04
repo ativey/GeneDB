@@ -8,8 +8,8 @@
 //import net.sf.json.JSON;
 //import net.sf.json.JSONSerializer;
 //
-//import org.apache.log4j.Logger;
-//import org.genedb.db.domain.services.BasicGeneService;
+//import org.slf4j.Logger;import org.slf4j.LoggerFactory;
+//import org.genedb.top.db.domain.services.BasicGeneService;
 //import org.genedb.web.gui.ContextMapDiagram;
 //import org.genedb.web.gui.DiagramCache;
 //import org.genedb.web.gui.ImageCreationException;
@@ -29,7 +29,7 @@
 // *
 // */
 //public class CacheDBHelper {
-//    private static final Logger logger = Logger.getLogger(CacheDBHelper.class);
+//    private static final Logger logger = LoggerFactory.getLogger(CacheDBHelper.class);
 //
 //    private static final int TILE_WIDTH = 5000;
 //    private static final int THUMBNAIL_WIDTH = 600;

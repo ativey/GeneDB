@@ -2,7 +2,7 @@
 //
 //import org.genedb.web.mvc.controller.download.ResultEntry;
 //
-//import org.apache.log4j.Logger;
+//import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 //
 //import java.io.File;
 //
@@ -44,7 +44,7 @@
 //
 //    private boolean allowCreate = false;
 //
-//	private final static Logger logger = Logger.getLogger(ResultsCacheFactory.class);
+//	private final static Logger logger = LoggerFactory.getLogger(ResultsCacheFactory.class);
 //
 //    private final String CLASS_CATALOG = "java_class_catalog";
 //

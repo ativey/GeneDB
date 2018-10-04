@@ -2,13 +2,13 @@ package org.gmod.schema.test;
 
 import static org.junit.Assert.assertNotNull;
 
-import org.genedb.db.test.tools.BuildTestDatabase;
+import org.genedb.top.db.test.tools.BuildTestDatabase;
 
 import org.genedb.top.chado.cfg.ChadoAnnotationConfiguration;
 import org.genedb.top.chado.feature.AbstractGene;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -34,14 +34,15 @@ public class HibernateTest {
     private static Logger logger;
 
     public static void configureLogging() {
-        URL url = BuildTestDatabase.class.getResource("/log4j.test.properties");
-        if (url == null) {
-            throw new RuntimeException("Could not find classpath resource /log4j.test.properties");
-        }
-        System.out.printf("Configuring Log4J from '%s'\n", url);
-        PropertyConfigurator.configure(url);
-
-        logger = Logger.getLogger(HibernateTest.class);
+    // FIXME
+        //        URL url = BuildTestDatabase.class.getResource("/log4j.test.properties");
+//        if (url == null) {
+//            throw new RuntimeException("Could not find classpath resource /log4j.test.properties");
+//        }
+//        System.out.printf("Configuring Log4J from '%s'\n", url);
+//        PropertyConfigurator.configure(url);
+//
+//        logger = LoggerFactory.getLogger(HibernateTest.class);
     }
 
     @BeforeClass

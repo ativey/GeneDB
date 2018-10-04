@@ -22,8 +22,8 @@ package org.genedb.jogra.services;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.genedb.db.dao.CvDao;
-import org.genedb.db.dao.PhylogenyDao;
+import org.genedb.top.db.dao.CvDao;
+import org.genedb.top.db.dao.PhylogenyDao;
 
 import org.genedb.top.chado.mapped.Cv;
 import org.genedb.top.chado.mapped.CvTerm;

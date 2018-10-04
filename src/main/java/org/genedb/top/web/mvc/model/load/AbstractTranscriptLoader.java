@@ -7,8 +7,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.genedb.top.web.mvc.model.types.DBXRefType;
 import org.genedb.top.web.mvc.model.types.DtoObjectArrayField;
 import org.genedb.top.web.mvc.model.types.DtoStringArrayField;
@@ -19,17 +19,7 @@ import org.springframework.util.CollectionUtils;
 
 
 public abstract class AbstractTranscriptLoader {
-    private Logger logger = Logger.getLogger(AbstractTranscriptLoader.class);
-
-    /**
-     * Set up logging
-     */
-    protected static void setUpLogging() {
-        String log4jprops = "/log4j.TranscriptLoader.properties";
-        URL url = TranscriptLoader.class.getResource(log4jprops);
-        System.out.printf("Configuring Log4J from '%s'\n", url);
-        PropertyConfigurator.configure(url);
-    }
+    private Logger logger = LoggerFactory.getLogger(AbstractTranscriptLoader.class);
 
     protected SimpleJdbcTemplate template;
 

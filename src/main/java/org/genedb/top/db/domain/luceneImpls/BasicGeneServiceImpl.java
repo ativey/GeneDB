@@ -1,16 +1,16 @@
 package org.genedb.top.db.domain.luceneImpls;
 
-import org.genedb.db.domain.objects.BasicGene;
-import org.genedb.db.domain.objects.Chromosome;
-import org.genedb.db.domain.objects.Exon;
-import org.genedb.db.domain.objects.Gap;
-import org.genedb.db.domain.objects.Transcript;
-import org.genedb.db.domain.objects.TranscriptComponent;
-import org.genedb.db.domain.objects.UTR;
-import org.genedb.db.domain.services.BasicGeneService;
+import org.genedb.top.db.domain.objects.BasicGene;
+import org.genedb.top.db.domain.objects.Chromosome;
+import org.genedb.top.db.domain.objects.Exon;
+import org.genedb.top.db.domain.objects.Gap;
+import org.genedb.top.db.domain.objects.Transcript;
+import org.genedb.top.db.domain.objects.TranscriptComponent;
+import org.genedb.top.db.domain.objects.UTR;
+import org.genedb.top.db.domain.services.BasicGeneService;
 import org.genedb.querying.core.LuceneIndex;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.index.Term;
@@ -39,7 +39,7 @@ import java.util.TreeSet;
 public class BasicGeneServiceImpl implements BasicGeneService {
 
     private LuceneIndex luceneIndex;
-    private static Logger logger = Logger.getLogger(BasicGeneServiceImpl.class);
+    private static Logger logger = LoggerFactory.getLogger(BasicGeneServiceImpl.class);
 
     public BasicGeneServiceImpl(LuceneIndex luceneIndex) {
         this.luceneIndex = luceneIndex;

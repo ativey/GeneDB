@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.model.simple;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class SimpleGeneMapper extends SimpleFeatureMapper implements RowMapper<SimpleGene> {
 
-    Logger logger = Logger.getLogger(SimpleGeneMapper.class);
+    Logger logger = LoggerFactory.getLogger(SimpleGeneMapper.class);
 
     public static final String GENE_TYPE_SQL =
             " select cvterm_id " + " from cvterm cvt, cv " + " where cvt.cv_id = cv.cv_id "

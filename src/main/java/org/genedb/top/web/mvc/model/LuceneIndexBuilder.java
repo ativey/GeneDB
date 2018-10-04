@@ -1,9 +1,9 @@
 package org.genedb.top.web.mvc.model;
 
-import org.genedb.db.analyzers.AllNamesAnalyzer;
+import org.genedb.top.db.analyzers.AllNamesAnalyzer;
 import org.genedb.top.chado.utils.CvTermUtils;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
@@ -39,15 +39,12 @@ import java.util.Set;
  *
  */
 public class LuceneIndexBuilder {
-    private static final Logger logger = Logger.getLogger(LuceneIndexBuilder.class);
+    private static final Logger logger = LoggerFactory.getLogger(LuceneIndexBuilder.class);
 
     private static final String TRANSCRIPT_INDEX_NAME = "transcript";
 
     public static void main(String[] args)
-        throws IOException, ClassNotFoundException, SQLException, ProcessingException
-    {
-    	
-    	PropertyConfigurator.configure("resources/classpath/log4j.index.properties");
+        throws IOException, ClassNotFoundException, SQLException, ProcessingException {
     	
         String jdbcConnectionString = args[0];
         String databaseUser = args[1];

@@ -3,10 +3,10 @@ package org.genedb.db.domain.test;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.genedb.db.domain.objects.BasicGene;
-import org.genedb.db.domain.objects.Exon;
-import org.genedb.db.domain.objects.Transcript;
-import org.genedb.db.domain.objects.TranscriptComponent;
+import org.genedb.top.db.domain.objects.BasicGene;
+import org.genedb.top.db.domain.objects.Exon;
+import org.genedb.top.db.domain.objects.Transcript;
+import org.genedb.top.db.domain.objects.TranscriptComponent;
 
 /**
  * Extends BasicGene with a method {@link #transcript}, which makes

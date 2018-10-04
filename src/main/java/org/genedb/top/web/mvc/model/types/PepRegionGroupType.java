@@ -1,7 +1,7 @@
 package org.genedb.top.web.mvc.model.types;
 
-import org.genedb.db.domain.objects.InterProHit;
-import org.genedb.db.domain.objects.SimpleRegionGroup;
+import org.genedb.top.db.domain.objects.InterProHit;
+import org.genedb.top.db.domain.objects.SimpleRegionGroup;
 
 public class PepRegionGroupType {
     private int fmin;

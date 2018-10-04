@@ -1,7 +1,7 @@
 package org.genedb.top.db.loading;
 
 import org.apache.commons.dbcp.BasicDataSource;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -18,7 +18,7 @@ import java.sql.SQLException;
  *
  */
 public class LoggingDataSource extends BasicDataSource {
-    private static final Logger logger = Logger.getLogger(LoggingDataSource.class);
+    private static final Logger logger = LoggerFactory.getLogger(LoggingDataSource.class);
 
     private boolean logStackTrace = false;
     private boolean neverLogStackTrace = false;

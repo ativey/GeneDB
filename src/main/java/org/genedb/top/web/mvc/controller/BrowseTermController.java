@@ -30,15 +30,15 @@ import javax.servlet.http.HttpServletResponse;
 import net.sf.json.spring.web.servlet.view.JsonView;
 
 import org.apache.commons.lang.NotImplementedException;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.Hits;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TopDocs;
 
-import org.genedb.db.dao.SequenceDao;
-import org.genedb.db.taxon.TaxonUtils;
+import org.genedb.top.db.dao.SequenceDao;
+import org.genedb.top.db.taxon.TaxonUtils;
 import org.genedb.querying.core.LuceneIndex;
 import org.genedb.querying.core.LuceneIndexFactory;
 import org.genedb.querying.history.HistoryItem;
@@ -63,7 +63,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/BrowseTerm")
 public class BrowseTermController {
 
-    private static final Logger logger = Logger.getLogger(BrowseTermController.class);
+    private static final Logger logger = LoggerFactory.getLogger(BrowseTermController.class);
     private SequenceDao sequenceDao;
     private String geneView;
     private JsonView jsonView;

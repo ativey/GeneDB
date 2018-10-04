@@ -3,13 +3,13 @@ package org.genedb.top.web.tags.db;
 import static javax.servlet.jsp.PageContext.APPLICATION_SCOPE;
 import static org.genedb.web.mvc.controller.TaxonManagerListener.TAXON_NODE_MANAGER;
 
-import org.genedb.db.taxon.TaxonNameType;
-import org.genedb.db.taxon.TaxonNode;
-import org.genedb.db.taxon.TaxonNodeManager;
+import org.genedb.top.db.taxon.TaxonNameType;
+import org.genedb.top.db.taxon.TaxonNode;
+import org.genedb.top.db.taxon.TaxonNodeManager;
 import org.genedb.querying.tmpquery.QuickSearchQuery;
 
 import org.apache.commons.lang.StringUtils;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.TreeMap;
@@ -19,7 +19,7 @@ import javax.servlet.jsp.tagext.SimpleTagSupport;
 
 public class QuickSearchMessageTag extends SimpleTagSupport {
 
-    private static final Logger logger = Logger.getLogger(QuickSearchMessageTag.class);
+    private static final Logger logger = LoggerFactory.getLogger(QuickSearchMessageTag.class);
 
     private TreeMap<String, Integer> taxonGroup;
 

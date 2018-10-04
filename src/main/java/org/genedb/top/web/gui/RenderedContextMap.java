@@ -2,14 +2,14 @@
 //
 //import net.sf.json.JSONString;
 //
-//import org.genedb.db.domain.objects.CompoundLocatedFeature;
-//import org.genedb.db.domain.objects.Exon;
-//import org.genedb.db.domain.objects.Gap;
-//import org.genedb.db.domain.objects.LocatedFeature;
-//import org.genedb.db.domain.objects.Transcript;
-//import org.genedb.db.domain.objects.TranscriptComponent;
+//import org.genedb.top.db.domain.objects.CompoundLocatedFeature;
+//import org.genedb.top.db.domain.objects.Exon;
+//import org.genedb.top.db.domain.objects.Gap;
+//import org.genedb.top.db.domain.objects.LocatedFeature;
+//import org.genedb.top.db.domain.objects.Transcript;
+//import org.genedb.top.db.domain.objects.TranscriptComponent;
 //
-//import org.apache.log4j.Logger;
+//import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 //
 //import java.awt.Color;
 //import java.awt.image.IndexColorModel;
@@ -41,7 +41,7 @@
 // * @author rh11
 // */
 //public class RenderedContextMap extends RenderedDiagram {
-//    static final Logger logger = Logger.getLogger(RenderedContextMap.class);
+//    static final Logger logger = LoggerFactory.getLogger(RenderedContextMap.class);
 //
 //    /**
 //     * The height of the rectangle representing an exon

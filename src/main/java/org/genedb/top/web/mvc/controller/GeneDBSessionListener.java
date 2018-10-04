@@ -23,7 +23,7 @@ package org.genedb.top.web.mvc.controller;
 import org.genedb.web.mvc.controller.download.ResultEntry;
 //import org.genedb.web.mvc.model.ResultsCacheFactory;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
@@ -39,7 +39,7 @@ import com.sleepycat.collections.StoredMap;
 
 public class GeneDBSessionListener implements HttpSessionListener {
     
-    private static final Logger logger = Logger.getLogger(GeneDBSessionListener.class);
+    private static final Logger logger = LoggerFactory.getLogger(GeneDBSessionListener.class);
 
 
     @Override

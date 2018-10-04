@@ -1,6 +1,6 @@
 package org.genedb.top.web.gui;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 
 import java.util.BitSet;
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.util.TreeMap;
  * @author rh11
  */
 public class DiagramLayout {
-    protected static final Logger logger = Logger.getLogger(DiagramLayout.class);
+    protected static final Logger logger = LoggerFactory.getLogger(DiagramLayout.class);
 
     /**
      * Maps position to a set of tracks that are filled from that location rightwards.

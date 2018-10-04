@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.model.types;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 
 import java.sql.Array;
 import java.sql.ResultSet;
@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class DtoObjectArrayField implements Array {
 
-    private static Logger logger = Logger.getLogger(DtoObjectArrayField.class);
+    private static Logger logger = LoggerFactory.getLogger(DtoObjectArrayField.class);
 
     private List<?> arrayField = null;
     private String baseTypeName = null;

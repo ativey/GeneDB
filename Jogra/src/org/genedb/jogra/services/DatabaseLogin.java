@@ -19,7 +19,7 @@
 
 package org.genedb.jogra.services;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
 
 import java.sql.Connection;
@@ -55,7 +55,7 @@ import javax.swing.JTextField;
 
 public class DatabaseLogin {
 
-    private static final Logger logger = Logger.getLogger(DatabaseLogin.class);
+    private static final Logger logger = LoggerFactory.getLogger(DatabaseLogin.class);
 
     private JTextField hostname = new JTextField(20);
     private JTextField port = new JTextField(20);

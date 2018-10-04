@@ -39,7 +39,7 @@ import org.springframework.web.servlet.ModelAndView;
 //import org.genedb.querying.history.HistoryItem;
 //import org.genedb.querying.history.HistoryManager;
 //import org.genedb.querying.history.HistoryType;
-//import org.genedb.util.Pair;
+//import org.genedb.top.util.Pair;
 //import org.genedb.web.mvc.model.BerkeleyMapFactory;
 //import org.genedb.web.mvc.model.TranscriptDTOFactory;
 import org.genedb.top.web.mvc.model.TranscriptDTO;

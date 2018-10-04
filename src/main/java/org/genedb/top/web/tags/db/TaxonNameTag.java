@@ -10,10 +10,10 @@ import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
 
 import org.apache.commons.lang.StringUtils;
-import org.apache.log4j.Logger;
-import org.genedb.db.taxon.TaxonNameType;
-import org.genedb.db.taxon.TaxonNode;
-import org.genedb.db.taxon.TaxonNodeManager;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
+import org.genedb.top.db.taxon.TaxonNameType;
+import org.genedb.top.db.taxon.TaxonNode;
+import org.genedb.top.db.taxon.TaxonNodeManager;
 
 /**
  * 
@@ -26,7 +26,7 @@ public class TaxonNameTag extends SimpleTagSupport {
     
     private String taxonNameType;
 
-    private static final Logger logger = Logger.getLogger(TaxonNameTag.class);
+    private static final Logger logger = LoggerFactory.getLogger(TaxonNameTag.class);
 
      @Override
     public void doTag() throws JspException, IOException {

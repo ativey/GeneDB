@@ -1,7 +1,7 @@
 package org.genedb.top.db.loading.auxiliary;
 
 import org.apache.commons.dbcp.BasicDataSource;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 
 /**
  * 
@@ -13,7 +13,7 @@ import org.apache.log4j.Logger;
  */
 public class SystemPropertyOverridingDataSource extends BasicDataSource {
 	
-	 private static final Logger logger = Logger.getLogger(SystemPropertyOverridingDataSource.class);
+	 private static final Logger logger = LoggerFactory.getLogger(SystemPropertyOverridingDataSource.class);
 	
 	@Override public void setUrl(String url) {
 		

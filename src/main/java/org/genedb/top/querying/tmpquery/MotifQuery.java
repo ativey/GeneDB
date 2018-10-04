@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 
 
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.Query;
@@ -25,7 +25,7 @@ import org.genedb.querying.core.LuceneQuery.Pager;
 
 public class MotifQuery extends OrganismLuceneQuery {
 	
-	private static Logger logger = Logger.getLogger(MotifQuery.class);
+	private static Logger logger = LoggerFactory.getLogger(MotifQuery.class);
 	
 	private static Map<Character,String> PROTEIN_GROUP_MAP;
 	

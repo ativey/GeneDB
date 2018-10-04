@@ -1,11 +1,11 @@
 //package org.genedb.web.mvc.controller;
 //
-//import org.genedb.db.dao.SequenceDao;
+//import org.genedb.top.db.dao.SequenceDao;
 //import org.genedb.web.mvc.model.BerkeleyMapFactory;
 //
 //import org.genedb.top.chado.feature.TopLevelFeature;
 //
-//import org.apache.log4j.Logger;
+//import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.stereotype.Controller;
 //import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,7 +26,7 @@
 //     */
 //    //private static final int TILE_WIDTH = 5000; // in pixels
 //
-//    private Logger logger = Logger.getLogger(this.getClass());
+//    private Logger logger = LoggerFactory.getLogger(this.getClass());
 //
 //    private BerkeleyMapFactory bmf;
 //

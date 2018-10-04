@@ -12,14 +12,14 @@ import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.tagext.JspFragment;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 
 import org.genedb.top.chado.mapped.CvTerm;
 import org.genedb.top.chado.utils.propinterface.PropertyI;
 
 public class PropertyFilterTag extends SimpleTagSupport {
 
-    private static final Logger logger = Logger.getLogger(PropertyFilterTag.class);
+    private static final Logger logger = LoggerFactory.getLogger(PropertyFilterTag.class);
 
     private Collection<PropertyI> items;
     private String cvName, cvTermName, var;

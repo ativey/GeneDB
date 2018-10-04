@@ -1,11 +1,11 @@
 package org.genedb.top.web.mvc.controller;
 
-//import org.genedb.db.dao.SequenceDao;
+//import org.genedb.top.db.dao.SequenceDao;
 //import org.genedb.querying.core.QueryException;
 //import org.genedb.querying.tmpquery.GeneSummary;
 import org.genedb.web.mvc.controller.download.BaseCachingController;
 //
-//import org.apache.log4j.Logger;
+//import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 //import org.genedb.top.chado.feature.Polypeptide;
 //import org.genedb.top.chado.feature.ProteinMatch;
 //import org.genedb.top.chado.mapped.Feature;
@@ -34,7 +34,7 @@ import org.genedb.web.mvc.controller.download.BaseCachingController;
 //@RequestMapping("/Orthologs")
 public class OrthologsController extends BaseCachingController {
 
-//    private static final Logger logger = Logger.getLogger(OrthologsController.class);
+//    private static final Logger logger = LoggerFactory.getLogger(OrthologsController.class);
 //
 //    private static final String NO_VALUE_SUPPLIED = "_NO_VALUE_SUPPLIED";
 //

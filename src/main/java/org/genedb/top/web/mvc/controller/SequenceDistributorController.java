@@ -29,7 +29,7 @@ import java.util.Map.Entry;
 
 import javax.servlet.http.HttpServletResponse;
 
-import org.genedb.db.dao.SequenceDao;
+import org.genedb.top.db.dao.SequenceDao;
 
 import org.genedb.top.chado.feature.Polypeptide;
 import org.genedb.top.chado.feature.ProductiveTranscript;
@@ -41,7 +41,7 @@ import org.apache.commons.httpclient.HttpException;
 import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.httpclient.methods.PostMethod;
 import org.apache.commons.io.IOUtils;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -58,7 +58,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping("/SequenceDistributor")
 public class SequenceDistributorController {
-    private static final Logger logger = Logger.getLogger(SequenceDistributorController.class);
+    private static final Logger logger = LoggerFactory.getLogger(SequenceDistributorController.class);
 
     private static final String LOCAL_BLAST = "http://www.genedb.org/blast/submitblast";
 

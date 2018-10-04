@@ -1,8 +1,8 @@
 //package org.genedb.web.gui;
 //
-//import org.genedb.db.domain.objects.CompoundLocatedFeature;
-//import org.genedb.db.domain.objects.LocatedFeature;
-//import org.genedb.db.domain.objects.PolypeptideRegion;
+//import org.genedb.top.db.domain.objects.CompoundLocatedFeature;
+//import org.genedb.top.db.domain.objects.LocatedFeature;
+//import org.genedb.top.db.domain.objects.PolypeptideRegion;
 //
 //import org.genedb.top.chado.feature.CytoplasmicRegion;
 //import org.genedb.top.chado.feature.MembraneStructure;
@@ -10,7 +10,7 @@
 //import org.genedb.top.chado.feature.NonCytoplasmicRegion;
 //import org.genedb.top.chado.feature.TransmembraneRegion;
 //
-//import org.apache.log4j.Logger;
+//import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 //import org.postgresql.util.MD5Digest;
 //
 //import java.awt.Color;
@@ -29,7 +29,7 @@
 //import java.util.TreeSet;
 //
 //public class RenderedProteinMap extends RenderedDiagram {
-//    private static final Logger logger = Logger.getLogger(RenderedProteinMap.class);
+//    private static final Logger logger = LoggerFactory.getLogger(RenderedProteinMap.class);
 //
 //    private int hitHeight = 4;
 //    private int membraneStructureTrackHeight = 12;

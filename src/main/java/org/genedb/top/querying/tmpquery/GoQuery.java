@@ -1,6 +1,6 @@
 package org.genedb.top.querying.tmpquery;
 
-import org.genedb.db.taxon.TaxonNode;
+import org.genedb.top.db.taxon.TaxonNode;
 import org.genedb.querying.core.QueryClass;
 import org.genedb.querying.core.QueryParam;
 

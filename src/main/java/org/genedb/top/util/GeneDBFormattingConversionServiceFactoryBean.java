@@ -2,7 +2,7 @@ package org.genedb.top.util;
 
 import java.util.Map;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.format.Formatter;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.format.support.FormattingConversionServiceFactoryBean;
@@ -11,7 +11,7 @@ public class GeneDBFormattingConversionServiceFactoryBean extends
 		FormattingConversionServiceFactoryBean {
 
 	private Map<Class<?>, Formatter<?>> formatters;
-	private static final Logger logger = Logger.getLogger(GeneDBFormattingConversionServiceFactoryBean.class);
+	private static final Logger logger = LoggerFactory.getLogger(GeneDBFormattingConversionServiceFactoryBean.class);
 
 	@Override
 	protected void installFormatters(FormatterRegistry registry) {

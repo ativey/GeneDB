@@ -4,7 +4,7 @@ import org.genedb.top.chado.cfg.FeatureType;
 import org.genedb.top.chado.mapped.FeatureProp;
 import org.genedb.top.chado.mapped.Organism;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 
 import java.sql.Timestamp;
 
@@ -20,7 +20,7 @@ import javax.persistence.Transient;
 @Entity
 @FeatureType(cv="sequence", term="remark")
 public class Remark extends Region {
-    private static final Logger logger = Logger.getLogger(Remark.class);
+    private static final Logger logger = LoggerFactory.getLogger(Remark.class);
 
     Remark() {
         // empty

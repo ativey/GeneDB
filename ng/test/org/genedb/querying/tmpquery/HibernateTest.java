@@ -7,9 +7,9 @@ import java.util.List;
 
 import junit.framework.Assert;
 
-import org.apache.log4j.Logger;
-import org.genedb.db.taxon.TaxonNode;
-import org.genedb.db.taxon.TaxonNodeManager;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
+import org.genedb.top.db.taxon.TaxonNode;
+import org.genedb.top.db.taxon.TaxonNodeManager;
 import org.genedb.querying.core.QueryException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -33,7 +33,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class HibernateTest extends AbstractTransactionalJUnit4SpringContextTests {
 
-	private static final Logger logger = Logger.getLogger(HibernateTest.class);
+	private static final Logger logger = LoggerFactory.getLogger(HibernateTest.class);
 
 	@Autowired
 	private TaxonNodeManager taxonNodeManager;

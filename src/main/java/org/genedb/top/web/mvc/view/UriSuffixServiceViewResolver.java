@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.view;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.core.Ordered;
 import org.springframework.util.Assert;
 import org.springframework.web.context.request.RequestAttributes;
@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 
 public class UriSuffixServiceViewResolver implements ViewResolver, Ordered {
 
-    private static final Logger logger = Logger.getLogger(UriSuffixServiceViewResolver.class);
+    private static final Logger logger = LoggerFactory.getLogger(UriSuffixServiceViewResolver.class);
 
     private ServiceView serviceView;
 

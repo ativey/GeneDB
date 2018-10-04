@@ -3,11 +3,11 @@ package org.genedb.top.web.mvc.model.load;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 
 public class GeneMapper extends FeatureMapper {
 
-    Logger logger = Logger.getLogger(GeneMapper.class);
+    Logger logger = LoggerFactory.getLogger(GeneMapper.class);
 
     public static final String GENE_TYPE_SQL =
         " select cvterm_id " +

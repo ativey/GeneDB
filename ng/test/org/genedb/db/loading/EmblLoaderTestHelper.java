@@ -1,11 +1,11 @@
 package org.genedb.db.loading;
 
-import org.genedb.db.dao.OrganismDao;
-import org.genedb.db.loading.EmblLoader.OverwriteExisting;
+import org.genedb.top.db.dao.OrganismDao;
+import org.genedb.top.db.loading.EmblLoader.OverwriteExisting;
 
 import org.genedb.top.chado.mapped.Organism;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.context.ApplicationContext;
@@ -32,7 +32,7 @@ import java.io.IOException;
  *
  */
 public class EmblLoaderTestHelper {
-    private static final Logger logger = TestLogger.getLogger(EmblLoaderTestHelper.class);
+    private static final Logger logger = TestLoggerFactory.getLogger(EmblLoaderTestHelper.class);
 
     private EmblLoader loader;
     private SessionFactory sessionFactory;

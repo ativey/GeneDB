@@ -2,9 +2,9 @@ package org.genedb.querying.tmpquery;
 
 import java.util.List;
 
-import org.apache.log4j.Logger;
-import org.genedb.db.taxon.TaxonNode;
-import org.genedb.db.taxon.TaxonNodeManager;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
+import org.genedb.top.db.taxon.TaxonNode;
+import org.genedb.top.db.taxon.TaxonNodeManager;
 import org.genedb.querying.core.QueryException;
 import org.genedb.querying.tmpquery.QuickSearchQuery.QuickSearchQueryResults;
 import org.junit.BeforeClass;
@@ -20,7 +20,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(locations={"classpath:testContext-query.xml"})
 public class QuickSearchQueryTest {
 		
-	private static final Logger logger = Logger.getLogger(QuickSearchQueryTest.class);
+	private static final Logger logger = LoggerFactory.getLogger(QuickSearchQueryTest.class);
 	
  	@Autowired
     private QuickSearchQuery quickSearchQuery;

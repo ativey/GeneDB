@@ -11,9 +11,9 @@ package org.genedb.top.web.mvc.controller.download;
 //import com.google.common.collect.Lists;
 //import com.sleepycat.collections.StoredMap;
 //
-//import org.apache.log4j.Logger;
-//import org.genedb.db.taxon.TaxonNode;
-////import org.genedb.db.taxon.TaxonNodeArrayPropertyEditor;
+//import org.slf4j.Logger;import org.slf4j.LoggerFactory;
+//import org.genedb.top.db.taxon.TaxonNode;
+////import org.genedb.top.db.taxon.TaxonNodeArrayPropertyEditor;
 //import org.genedb.querying.core.Query;
 //import org.genedb.querying.core.QueryException;
 //import org.genedb.querying.core.QueryFactory;

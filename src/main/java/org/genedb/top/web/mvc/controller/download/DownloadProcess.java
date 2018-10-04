@@ -12,9 +12,8 @@ import java.util.List;
 
 import javax.mail.MessagingException;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
-import org.genedb.db.dao.SequenceDao;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
+import org.genedb.top.db.dao.SequenceDao;
 import org.genedb.querying.core.QueryException;
 import org.genedb.querying.tmpquery.GeneDetail;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -27,7 +26,7 @@ import uk.co.flamingpenguin.jewel.cli.Option;
 
 public class DownloadProcess {
 	
-	private static Logger logger = Logger.getLogger(DownloadProcess.class);
+	private static Logger logger = LoggerFactory.getLogger(DownloadProcess.class);
 	
 	OutputFormat outputFormat = OutputFormat.CSV;
 	//String[] custFields = new String[0];
@@ -132,8 +131,6 @@ public class DownloadProcess {
 	 * @throws MessagingException 
 	 */
 	public static void main(String[] args) throws ArgumentValidationException, QueryException, IOException, MessagingException  {
-		
-		PropertyConfigurator.configure("resources/classpath/log4j.download.properties");
 		
 		ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext(
 				new String[] {"classpath:Load.xml", "classpath:Download.xml"});

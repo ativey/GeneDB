@@ -1,6 +1,6 @@
 package org.genedb.top.db.loading;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
@@ -27,7 +27,7 @@ public class VulgarLoader {
      * to use JDBC, and is now thoroughly database-bound and reasonably fast.
      */
 
-    private static final Logger logger = Logger.getLogger(VulgarLoader.class);
+    private static final Logger logger = LoggerFactory.getLogger(VulgarLoader.class);
 
     @Autowired
     private SimpleJdbcTemplate simpleJdbcTemplate;

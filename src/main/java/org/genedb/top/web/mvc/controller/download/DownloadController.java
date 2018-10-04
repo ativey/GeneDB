@@ -26,7 +26,7 @@ import org.genedb.querying.history.HistoryManager;
 import org.genedb.top.web.mvc.controller.HistoryController;
 import org.genedb.top.web.mvc.controller.HistoryManagerFactory;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -69,7 +69,7 @@ import com.google.gson.Gson;
 @RequestMapping("/Download")
 public class DownloadController {
 
-    private Logger logger = Logger.getLogger(this.getClass());
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
     
     private final boolean deleteFiles = true;
     

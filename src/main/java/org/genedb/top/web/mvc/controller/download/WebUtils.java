@@ -2,12 +2,12 @@ package org.genedb.top.web.mvc.controller.download;
 
 import javax.servlet.http.HttpSession;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.genedb.top.web.mvc.controller.WebConstants;
 
 public class WebUtils {
 
-	private static Logger logger = Logger.getLogger(WebUtils.class);
+	private static Logger logger = LoggerFactory.getLogger(WebUtils.class);
 
 	public static void setFlashMessage(String message, HttpSession session) {
 		logger.error("Setting flash message '"+message+"' in session '"+session.getId()+"'");

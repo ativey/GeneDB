@@ -228,7 +228,7 @@ public class RfamLoader extends Loader{
      */
     
     class RfamFile {
-        private static final Logger logger = Logger.getLogger(RfamFile.class);
+        private static final Logger logger = LoggerFactory.getLogger(RfamFile.class);
         private List<RfamHit> hits = new ArrayList<RfamHit>();
 
         public RfamFile(InputStream inputStream) throws IOException {

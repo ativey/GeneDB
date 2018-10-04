@@ -2,7 +2,7 @@ package org.genedb.jogra.domain;
 
 import java.util.List;
 import java.util.Set;
-import org.genedb.db.taxon.TaxonNode;
+import org.genedb.top.db.taxon.TaxonNode;
 
 /**
  * This class encapsulates the details of controlled vocabulary terms. These can either

@@ -2,7 +2,7 @@ package org.genedb.top.db.loading.auxiliary;
 
 import org.genedb.top.chado.feature.Polypeptide;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.hibernate.Session;
 
 import java.io.BufferedReader;
@@ -39,7 +39,7 @@ import java.util.Set;
  *
  */
 public class AddFeatureProperty extends Loader {
-    private static final Logger logger = Logger.getLogger(AddFeatureProperty.class);
+    private static final Logger logger = LoggerFactory.getLogger(AddFeatureProperty.class);
 
     Boolean errorsAreNotFatal = true;
     Collection<String> featuresSeen = new HashSet<String>();
@@ -142,7 +142,7 @@ public class AddFeatureProperty extends Loader {
 /* Class corresponding to feat Association file */
 
 class inputFile {
-    private static final Logger logger = Logger.getLogger(inputFile.class);
+    private static final Logger logger = LoggerFactory.getLogger(inputFile.class);
 
     private List<featProp> props = new ArrayList<featProp>();
 

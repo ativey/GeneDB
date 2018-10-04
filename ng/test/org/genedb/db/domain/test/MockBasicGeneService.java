@@ -1,13 +1,13 @@
 package org.genedb.db.domain.test;
 
-import org.genedb.db.domain.objects.BasicGene;
-import org.genedb.db.domain.objects.Chromosome;
-import org.genedb.db.domain.objects.Exon;
-import org.genedb.db.domain.objects.Gap;
-import org.genedb.db.domain.objects.Transcript;
-import org.genedb.db.domain.objects.TranscriptComponent;
-import org.genedb.db.domain.services.BasicGeneService;
-import org.genedb.util.TwoKeyMap;
+import org.genedb.top.db.domain.objects.BasicGene;
+import org.genedb.top.db.domain.objects.Chromosome;
+import org.genedb.top.db.domain.objects.Exon;
+import org.genedb.top.db.domain.objects.Gap;
+import org.genedb.top.db.domain.objects.Transcript;
+import org.genedb.top.db.domain.objects.TranscriptComponent;
+import org.genedb.top.db.domain.services.BasicGeneService;
+import org.genedb.top.util.TwoKeyMap;
 
 import java.util.ArrayList;
 import java.util.Collection;

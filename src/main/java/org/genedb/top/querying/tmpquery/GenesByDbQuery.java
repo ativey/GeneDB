@@ -3,7 +3,7 @@ package org.genedb.top.querying.tmpquery;
 import org.genedb.querying.core.QueryClass;
 import org.genedb.querying.core.QueryParam;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.hibernate.Query;
 
 @QueryClass(
@@ -13,7 +13,7 @@ import org.hibernate.Query;
     )
 public class GenesByDbQuery extends OrganismHqlQuery {
 
-    private static final Logger logger = Logger.getLogger(GenesByDbQuery.class);
+    private static final Logger logger = LoggerFactory.getLogger(GenesByDbQuery.class);
 
     @QueryParam(
             order=1,

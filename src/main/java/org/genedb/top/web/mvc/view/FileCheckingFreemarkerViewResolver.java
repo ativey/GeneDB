@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.view;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -19,7 +19,7 @@ import com.google.common.collect.Maps;
 
 public class FileCheckingFreemarkerViewResolver implements ViewResolver, ApplicationContextAware {
 
-    private Logger logger = Logger.getLogger(FileCheckingFreemarkerViewResolver.class);
+    private Logger logger = LoggerFactory.getLogger(FileCheckingFreemarkerViewResolver.class);
 
     private Map<String, FreeMarkerView> validViews = Maps.newHashMap();
 

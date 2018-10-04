@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.controller;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -74,7 +74,7 @@ public class ClassicCompatabilityController {
         classicMap.put("styphi", "Styphi");
     }
 
-    private Logger logger = Logger.getLogger(ClassicCompatabilityController.class);
+    private Logger logger = LoggerFactory.getLogger(ClassicCompatabilityController.class);
 
     // Homepage
     @RequestMapping(method=RequestMethod.GET, value={"/{nickname}", "/{nickname}/", "/{nickname}/index.jsp"})

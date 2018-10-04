@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.controller.download;
 //
-//import org.apache.log4j.Logger;
+//import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 //import org.genedb.querying.tmpquery.GeneSummary;
 //import org.genedb.web.mvc.controller.WebConstants;
 //import org.genedb.web.mvc.model.ResultsCacheFactory;
@@ -20,7 +20,7 @@ package org.genedb.top.web.mvc.controller.download;
 //@Controller
 //@RequestMapping("/ResultsNavigator")
 //public class ResultsNavigatorController {
-//    private static final Logger logger = Logger.getLogger(ResultsNavigatorController.class);
+//    private static final Logger logger = LoggerFactory.getLogger(ResultsNavigatorController.class);
 //
 //    //@Autowired
 ////    private ResultsCacheFactory resultsCacheFactory;

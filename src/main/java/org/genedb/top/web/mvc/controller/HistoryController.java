@@ -6,7 +6,7 @@ import org.genedb.top.querying.core.QueryUtils;
 import org.genedb.top.querying.history.HistoryItem;
 import org.genedb.top.querying.history.HistoryManager;
 
-//import org.apache.log4j.Logger;
+//import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,7 +35,7 @@ import com.google.common.collect.Lists;
 @RequestMapping("/History")
 public class HistoryController {
 
-//    Logger logger = Logger.getLogger(HistoryController.class);
+//    Logger logger = LoggerFactory.getLogger(HistoryController.class);
 
     private HistoryManagerFactory historyManagerFactory;
     private String historyView;

@@ -3,7 +3,7 @@ package org.genedb.top.querying.tmpquery;
 import org.genedb.querying.core.QueryClass;
 import org.genedb.querying.core.QueryParam;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.FuzzyQuery;
@@ -23,7 +23,7 @@ import java.util.regex.Pattern;
     )
 public class PfamQuery extends OrganismLuceneQuery {
 
-    private static Logger logger = Logger.getLogger(PfamQuery.class);
+    private static Logger logger = LoggerFactory.getLogger(PfamQuery.class);
     
     @QueryParam(
             order=1,

@@ -1,8 +1,8 @@
 //package org.genedb.web.mvc.controller;
 //
-//import org.genedb.db.dao.SequenceDao;
-//import org.genedb.db.taxon.TaxonNode;
-//import org.genedb.db.taxon.TaxonNodeManager;
+//import org.genedb.top.db.dao.SequenceDao;
+//import org.genedb.top.db.taxon.TaxonNode;
+//import org.genedb.top.db.taxon.TaxonNodeManager;
 //import org.genedb.querying.core.NumericQueryVisibility;
 //import org.genedb.querying.core.QueryException;
 //import org.genedb.querying.core.QueryFactory;
@@ -14,7 +14,7 @@
 //
 //import org.genedb.top.chado.mapped.Feature;
 //
-//import org.apache.log4j.Logger;
+//import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 //import org.springframework.stereotype.Controller;
 //import org.springframework.ui.ModelMap;
 //import org.springframework.web.bind.annotation.PathVariable;
@@ -38,7 +38,7 @@
 //
 //    private static final String DEFAULT_VIEW = "xml:";
 //
-//    private Logger logger = Logger.getLogger(GmodRestControllerV1.class);
+//    private Logger logger = LoggerFactory.getLogger(GmodRestControllerV1.class);
 //
 //    private TaxonNodeManager tnm;
 //

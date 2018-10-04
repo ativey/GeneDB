@@ -1,7 +1,7 @@
 package org.genedb.top.db.loading;
 
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.context.ApplicationContext;
@@ -46,7 +46,7 @@ import java.util.Map;
  *
  */
 public class LoadSNPs extends FileProcessor {
-    private static final Logger logger = Logger.getLogger(LoadSNPs.class);
+    private static final Logger logger = LoggerFactory.getLogger(LoadSNPs.class);
     private static String dbSchema;
     public static void main(String[] args) throws MissingPropertyException, IOException, ParsingException, SQLException {
         if (args.length > 0) {
@@ -194,7 +194,7 @@ class SNPFile {
 
 @Transactional(rollbackFor=DataError.class) // Will also rollback for runtime exceptions, by default
 class SNPsLoader {
-    private static final Logger logger = Logger.getLogger(SNPsLoader.class);
+    private static final Logger logger = LoggerFactory.getLogger(SNPsLoader.class);
 
     private SimpleJdbcTemplate simpleJdbcTemplate;
 

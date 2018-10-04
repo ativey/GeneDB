@@ -3,7 +3,6 @@ package org.genedb.web.gui;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import org.apache.log4j.PropertyConfigurator;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,14 +10,6 @@ import java.net.URL;
 
 
 public class DiagramLayoutTest {
-
-    @Before
-    public void setUpLogging() {
-        String log4jprops = "/log4j.test.properties";
-        URL url = this.getClass().getResource(log4jprops);
-        System.out.printf("Configuring Log4J from '%s'\n", url);
-        PropertyConfigurator.configure(url);
-    }
 
     @Test
     public void simpleFindFirstFit() {

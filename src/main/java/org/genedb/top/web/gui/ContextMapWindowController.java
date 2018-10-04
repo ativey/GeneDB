@@ -1,6 +1,6 @@
 package org.genedb.top.web.gui;
 
-import org.genedb.util.ColorUtils;
+import org.genedb.top.util.ColorUtils;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;

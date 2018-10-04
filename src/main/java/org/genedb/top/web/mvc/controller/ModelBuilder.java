@@ -5,14 +5,14 @@ import org.genedb.top.chado.feature.Polypeptide;
 import org.genedb.top.chado.feature.Transcript;
 import org.genedb.top.chado.mapped.Feature;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 
 import java.util.Collection;
 
 
 public class ModelBuilder {
 //
-    private static final Logger logger = Logger.getLogger(ModelBuilder.class);
+    private static final Logger logger = LoggerFactory.getLogger(ModelBuilder.class);
 //
 //    private DiagramCache diagramCache;
 //

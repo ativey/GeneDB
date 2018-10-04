@@ -19,9 +19,9 @@
 
 package org.genedb.top.db.loading;
 
-import org.genedb.db.dao.OrganismDao;
-import org.genedb.db.dao.SequenceDao;
-import org.genedb.util.SequenceUtils;
+import org.genedb.top.db.dao.OrganismDao;
+import org.genedb.top.db.dao.SequenceDao;
+import org.genedb.top.util.SequenceUtils;
 
 import org.genedb.top.chado.feature.Chromosome;
 import org.genedb.top.chado.feature.Contig;
@@ -33,8 +33,8 @@ import org.genedb.top.chado.mapped.FeatureLoc;
 import org.genedb.top.chado.mapped.FeatureProp;
 import org.genedb.top.chado.mapped.Organism;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -84,7 +84,7 @@ import java.util.regex.Pattern;
 
 public class AGPLoader {
 
-    private static final Logger logger = Logger.getLogger(AGPLoader.class);
+    private static final Logger logger = LoggerFactory.getLogger(AGPLoader.class);
     
     @Autowired
     private SessionFactory sessionFactory;
@@ -837,7 +837,7 @@ class AGPFile {
  * Class that represents a line of an AGP file
  */
 class AGPLine {
-    private static final Logger logger = Logger.getLogger(AGPLine.class);
+    private static final Logger logger = LoggerFactory.getLogger(AGPLine.class);
 
     private String topLevelName, entryName, entryType, entryStrand, gapType, gapLinkage;
     private int topLevelStart, topLevelEnd, entryStart, entryEnd;

@@ -1,10 +1,10 @@
 package org.genedb.top.db.fixup;
 
-import org.genedb.util.SequenceUtils;
-import org.genedb.util.TranslationException;
+import org.genedb.top.util.SequenceUtils;
+import org.genedb.top.util.TranslationException;
 
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -51,7 +51,7 @@ import java.util.TreeSet;
  *
  */
 public class FixResidues {
-    private final Logger logger = Logger.getLogger(FixResidues.class);
+    private final Logger logger = LoggerFactory.getLogger(FixResidues.class);
 
     /*
      * This is what we're currently using for apicoplast chromosomes, but it ain't right.
@@ -170,12 +170,13 @@ public class FixResidues {
     }
 
     private FixResidues setVerbose(boolean verbose) {
-        if (verbose) {
-            logger.setLevel(Level.DEBUG);
-        }
-        else {
-            logger.setLevel(Level.INFO);
-        }
+        //FIXME
+//        if (verbose) {
+//            logger.setLevel(Level.DEBUG);
+//        }
+//        else {
+//            logger.setLevel(Level.INFO);
+//        }
         return this;
     }
 

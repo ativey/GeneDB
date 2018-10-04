@@ -2,14 +2,14 @@ package org.genedb.db.loading;
 
 import static org.junit.Assert.*;
 
-import org.genedb.db.dao.SequenceDao;
+import org.genedb.top.db.dao.SequenceDao;
 
 import org.genedb.top.chado.feature.Polypeptide;
 import org.genedb.top.chado.feature.ProteinMatch;
 import org.genedb.top.chado.mapped.Analysis;
 import org.genedb.top.chado.mapped.AnalysisFeature;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.orm.hibernate5.SessionFactoryUtils;
@@ -23,7 +23,7 @@ import javax.annotation.Resource;
 
 @Component("orthologueTester")
 public class OrthologueTester {
-    private static final Logger logger = Logger.getLogger(OrthologueTester.class);
+    private static final Logger logger = LoggerFactory.getLogger(OrthologueTester.class);
 
     @Resource(name="sessionFactory")
     private SessionFactory sessionFactory;

@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.controller;
 
-import org.genedb.db.dao.OrganismDao;
+import org.genedb.top.db.dao.OrganismDao;
 
 import org.genedb.top.chado.mapped.Organism;
 

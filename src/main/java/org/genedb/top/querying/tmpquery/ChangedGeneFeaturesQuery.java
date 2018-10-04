@@ -2,7 +2,7 @@ package org.genedb.top.querying.tmpquery;
 
 import java.util.Date;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.genedb.query.sql.SqlQuery;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowCallbackHandler;
@@ -19,7 +19,7 @@ public class ChangedGeneFeaturesQuery extends SqlQuery {
 	private Date date;
 	private int organismId;
 	private String type;
-	private static final Logger logger = Logger.getLogger(ChangedGeneFeaturesQuery.class);
+	private static final Logger logger = LoggerFactory.getLogger(ChangedGeneFeaturesQuery.class);
 	
 	public void setDate(Date date)
 	{

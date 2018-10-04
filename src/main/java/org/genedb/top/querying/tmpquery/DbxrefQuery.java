@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.Query;
@@ -26,7 +26,7 @@ import org.springframework.util.StringUtils;
  */
 public class DbxrefQuery extends OrganismLuceneQuery {
 	
-	private static final Logger logger = Logger.getLogger(DbxrefQuery.class);
+	private static final Logger logger = LoggerFactory.getLogger(DbxrefQuery.class);
 	private static final long serialVersionUID = 5845342305225726744L;
 	
 	@QueryParam(

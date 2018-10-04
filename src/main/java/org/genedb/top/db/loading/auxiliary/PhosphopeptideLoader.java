@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.Map.Entry;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.genedb.top.chado.feature.AbstractGene;
 import org.genedb.top.chado.feature.ModifiedAminoAcidFeature;
 import org.genedb.top.chado.feature.Polypeptide;
@@ -28,7 +28,7 @@ import org.hibernate.Session;
 
 public class PhosphopeptideLoader extends Loader {
 
-    private static final Logger logger    = Logger.getLogger(PhosphopeptideLoader.class);
+    private static final Logger logger    = LoggerFactory.getLogger(PhosphopeptideLoader.class);
     private int                 n         = 0;
     private String              delimiter = ",";
     private boolean delete = false;

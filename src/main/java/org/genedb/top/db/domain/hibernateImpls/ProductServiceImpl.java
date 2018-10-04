@@ -1,11 +1,11 @@
 package org.genedb.top.db.domain.hibernateImpls;
 
-import org.genedb.db.domain.misc.MethodResult;
-import org.genedb.db.domain.misc.SemanticLog;
-import org.genedb.db.domain.objects.Product;
-import org.genedb.db.domain.services.LockAndNotificationService;
-import org.genedb.db.domain.services.LockStatus;
-import org.genedb.db.domain.services.ProductService;
+import org.genedb.top.db.domain.misc.MethodResult;
+import org.genedb.top.db.domain.misc.SemanticLog;
+import org.genedb.top.db.domain.objects.Product;
+import org.genedb.top.db.domain.services.LockAndNotificationService;
+import org.genedb.top.db.domain.services.LockStatus;
+import org.genedb.top.db.domain.services.ProductService;
 
 import org.genedb.top.chado.mapped.CvTerm;
 import org.genedb.top.chado.mapped.FeatureCvTerm;

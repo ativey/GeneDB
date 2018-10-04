@@ -5,7 +5,7 @@ import org.genedb.top.chado.mapped.DbXRef;
 import org.genedb.top.chado.mapped.FeatureLoc;
 import org.springframework.util.StringUtils;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 
 import java.awt.Color;
 import java.util.HashMap;
@@ -22,7 +22,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 public class DatabasePolypeptideRegion extends PolypeptideRegion {
     private static final long serialVersionUID = 1934739510074730316L;
 
-    private static final Logger logger = Logger.getLogger(DatabasePolypeptideRegion.class);
+    private static final Logger logger = LoggerFactory.getLogger(DatabasePolypeptideRegion.class);
 
     private static final Map<String,Color> colorsByDatabase = new HashMap<String,Color>() {
         private static final long serialVersionUID = -7259392507851534561L;

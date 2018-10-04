@@ -16,7 +16,7 @@ public class SimpleFeature {
         return featureId;
     }
 
-    public Logger getLogger() {
+    public LoggerFactory.getLogger() {
         return logger;
     }
 

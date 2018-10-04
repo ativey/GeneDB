@@ -23,13 +23,13 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
-import org.apache.log4j.Logger;
-import org.genedb.db.dao.CvDao;
-import org.genedb.db.dao.GeneralDao;
-import org.genedb.db.dao.SequenceDao;
-import org.genedb.db.taxon.TaxonNode;
-import org.genedb.db.taxon.TaxonNodeList;
-import org.genedb.db.taxon.TaxonNodeManager;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
+import org.genedb.top.db.dao.CvDao;
+import org.genedb.top.db.dao.GeneralDao;
+import org.genedb.top.db.dao.SequenceDao;
+import org.genedb.top.db.taxon.TaxonNode;
+import org.genedb.top.db.taxon.TaxonNodeList;
+import org.genedb.top.db.taxon.TaxonNodeManager;
 import org.genedb.querying.tmpquery.BrowseCategory;
 import org.genedb.top.chado.utils.CountedName;
 import org.springframework.stereotype.Controller;
@@ -53,7 +53,7 @@ import com.google.common.collect.Lists;
 @RequestMapping("/category")
 public class BrowseCategoryController extends BaseController {
 
-    private static final Logger logger = Logger.getLogger(BrowseCategoryController.class);
+    private static final Logger logger = LoggerFactory.getLogger(BrowseCategoryController.class);
 
     //private String formView = "jsp:search/browseCategory";
     private String successView = "jsp:list/categories";

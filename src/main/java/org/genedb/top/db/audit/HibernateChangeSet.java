@@ -3,7 +3,7 @@ package org.genedb.top.db.audit;
 import org.genedb.top.chado.cfg.ChadoAnnotationConfiguration;
 import org.genedb.top.chado.mapped.Feature;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.hibernate.Session;
 
 import java.sql.SQLException;
@@ -14,7 +14,7 @@ import java.util.Set;
 import java.util.TreeMap;
 
 public class HibernateChangeSet implements ChangeSet {
-    private static final Logger logger = Logger.getLogger(HibernateChangeSet.class);
+    private static final Logger logger = LoggerFactory.getLogger(HibernateChangeSet.class);
 
     private Session session;
     private String key;

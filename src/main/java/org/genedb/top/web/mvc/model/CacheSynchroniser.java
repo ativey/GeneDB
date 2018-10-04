@@ -7,11 +7,11 @@
 //import java.util.List;
 //import java.util.Set;
 //
-//import org.apache.log4j.Logger;
-//import org.genedb.db.audit.ChangeSet;
-//import org.genedb.db.audit.ChangeTracker;
-//import org.genedb.db.domain.luceneImpls.BasicGeneServiceImpl;
-//import org.genedb.db.domain.services.BasicGeneService;
+//import org.slf4j.Logger;import org.slf4j.LoggerFactory;
+//import org.genedb.top.db.audit.ChangeSet;
+//import org.genedb.top.db.audit.ChangeTracker;
+//import org.genedb.top.db.domain.luceneImpls.BasicGeneServiceImpl;
+//import org.genedb.top.db.domain.services.BasicGeneService;
 //import org.genedb.querying.core.LuceneIndex;
 //import org.genedb.querying.core.LuceneIndexFactory;
 //import org.genedb.web.gui.DiagramCache;
@@ -49,7 +49,7 @@
 //        return 0;
 //    }
 //
-//    private static final Logger logger = Logger.getLogger(CacheSynchroniser.class);
+//    private static final Logger logger = LoggerFactory.getLogger(CacheSynchroniser.class);
 //    
 //    
 //    private RenderedDiagramFactory renderedDiagramFactory;

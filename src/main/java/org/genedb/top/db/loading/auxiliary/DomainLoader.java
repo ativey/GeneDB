@@ -10,7 +10,7 @@ import org.genedb.top.chado.mapped.Analysis;
 import org.genedb.top.chado.mapped.DbXRef;
 import org.genedb.top.chado.mapped.FeatureDbXRef;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.jdbc.Work;
@@ -47,7 +47,7 @@ import java.util.Set;
  * @author te3
  */
 public class DomainLoader extends Loader {
-    private static final Logger logger = Logger.getLogger(DomainLoader.class);
+    private static final Logger logger = LoggerFactory.getLogger(DomainLoader.class);
 
     //Constants
     String analysisProgramVersion;

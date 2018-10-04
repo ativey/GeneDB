@@ -24,10 +24,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
-import org.genedb.db.taxon.TaxonNameType;
-import org.genedb.db.taxon.TaxonNode;
-import org.genedb.db.taxon.TaxonNodeList;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
+import org.genedb.top.db.taxon.TaxonNameType;
+import org.genedb.top.db.taxon.TaxonNode;
+import org.genedb.top.db.taxon.TaxonNodeList;
 import org.genedb.query.sql.SqlQuery;
 import org.genedb.top.querying.tmpquery.OrganismHqlQuery;
 import org.genedb.top.querying.tmpquery.OrganismLuceneQuery;
@@ -37,7 +37,7 @@ import org.springframework.util.StringUtils;
 
 public class QueryUtils {
 	
-	private static final Logger logger = Logger.getLogger(QueryUtils.class);
+	private static final Logger logger = LoggerFactory.getLogger(QueryUtils.class);
 	
     public static String makeParseableDescription(String name, String[] paramNames, Object[] paramValues) {
         StringBuilder ret = new StringBuilder();

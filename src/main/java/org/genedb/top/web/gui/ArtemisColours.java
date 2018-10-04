@@ -5,7 +5,7 @@ import java.awt.image.IndexColorModel;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 
 /**
  * Traditional mapping from internal colour numbers to real Color
@@ -14,7 +14,7 @@ import org.apache.log4j.Logger;
  */
 public class ArtemisColours {
 	
-	private static final Logger logger = Logger.getLogger(ArtemisColours.class);
+	private static final Logger logger = LoggerFactory.getLogger(ArtemisColours.class);
 	
     /**
      * The number of elements in the mapping

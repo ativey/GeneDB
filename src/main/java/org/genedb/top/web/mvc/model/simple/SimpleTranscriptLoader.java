@@ -2,7 +2,7 @@ package org.genedb.top.web.mvc.model.simple;
 
 import org.genedb.web.mvc.model.load.TimerHelper;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -60,7 +60,7 @@ public class SimpleTranscriptLoader {
     // return loadCount;
     // }
 
-    Logger logger = Logger.getLogger(SimpleTranscriptLoader.class);
+    Logger logger = LoggerFactory.getLogger(SimpleTranscriptLoader.class);
 
     protected SimpleJdbcTemplate template;
 

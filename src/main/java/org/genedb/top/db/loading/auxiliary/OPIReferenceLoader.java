@@ -4,7 +4,7 @@ import org.genedb.top.chado.feature.Polypeptide;
 import org.genedb.top.chado.mapped.DbXRef;
 import org.genedb.top.chado.mapped.FeatureDbXRef;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -30,7 +30,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class OPIReferenceLoader extends Loader {
-    private static final Logger logger = Logger.getLogger(OPIReferenceLoader.class);
+    private static final Logger logger = LoggerFactory.getLogger(OPIReferenceLoader.class);
 
     private static final String proxyURL = "http://wwwcache.sanger.ac.uk:3128";
     private static final String opiURL = "http://chemlims.com/OPI/MServlet.ChemInfo?module=Gene&DataSet=1&saveAll=YES";

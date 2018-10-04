@@ -3,8 +3,8 @@ package org.genedb.top.web.mvc.model;
 import java.io.File;
 import java.io.IOException;
 
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.search.spell.LuceneDictionary;
@@ -21,7 +21,7 @@ public class PopulateLuceneDictionary {
 	 */
 	public static final String[] fields = new String[] { "expandedProduct", "allNames", "synonym" };
 	
-    private static final Logger logger = Logger.getLogger(PopulateLuceneDictionary.class);
+    private static final Logger logger = LoggerFactory.getLogger(PopulateLuceneDictionary.class);
     private static final String indexName = "org.gmod.schema.mapped.Feature";
     
     public PopulateLuceneDictionary(String indexDirectoryName) throws CorruptIndexException, IOException {
@@ -50,8 +50,6 @@ public class PopulateLuceneDictionary {
      * @throws Exception 
      */
     public static void main(String[] args) throws CorruptIndexException, IOException, Exception {
-    	
-    	// logger.setLevel(Level.DEBUG);
 		
     	if (args.length < 1) {
     		throw new Exception("No lucene index path supplied.");

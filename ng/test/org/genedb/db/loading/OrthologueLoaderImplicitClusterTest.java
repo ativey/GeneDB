@@ -2,7 +2,7 @@ package org.genedb.db.loading;
 
 import org.genedb.top.chado.feature.Chromosome;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -29,7 +29,7 @@ import java.io.Reader;
  */
 public class OrthologueLoaderImplicitClusterTest {
 
-    private static final Logger logger = TestLogger.getLogger(OrthologueLoaderImplicitClusterTest.class);
+    private static final Logger logger = TestLoggerFactory.getLogger(OrthologueLoaderImplicitClusterTest.class);
 
     private static ApplicationContext applicationContext;
     private static OrthologueTester tester;

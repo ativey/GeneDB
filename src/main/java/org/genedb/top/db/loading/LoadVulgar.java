@@ -187,7 +187,7 @@ enum VulgarMatchType {
  *
  */
 class VulgarMapping {
-    private static final Logger logger = Logger.getLogger(VulgarMapping.class);
+    private static final Logger logger = LoggerFactory.getLogger(VulgarMapping.class);
     private static final Pattern vulgarPattern = Pattern.compile(
         "vulgar: (\\S+) (\\d+) (\\d+) ([+-]) (\\S+) (\\d+) (\\d+) " +
         "([+-]) (\\d+)((?: [MCGN53ISF] \\d+ \\d+)+)?(?:\\tPROM=\\d+)?\\s*");

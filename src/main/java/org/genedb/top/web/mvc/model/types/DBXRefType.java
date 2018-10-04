@@ -2,11 +2,11 @@ package org.genedb.top.web.mvc.model.types;
 
 import org.genedb.top.web.mvc.model.DbXRefDTO;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 
 public class DBXRefType {
 
-    private static final Logger logger = Logger.getLogger(DBXRefType.class);
+    private static final Logger logger = LoggerFactory.getLogger(DBXRefType.class);
 
     private String accession;
     private String dbName;

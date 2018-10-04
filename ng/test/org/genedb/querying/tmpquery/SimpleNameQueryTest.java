@@ -2,9 +2,9 @@ package org.genedb.querying.tmpquery;
 
 import static org.junit.Assert.*;
 
-import org.genedb.db.taxon.TaxonNode;
-import org.genedb.db.taxon.TaxonNodeList;
-import org.genedb.db.taxon.TaxonNodeManager;
+import org.genedb.top.db.taxon.TaxonNode;
+import org.genedb.top.db.taxon.TaxonNodeList;
+import org.genedb.top.db.taxon.TaxonNodeManager;
 import org.genedb.querying.core.QueryException;
 
 import org.junit.Test;

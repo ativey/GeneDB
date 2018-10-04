@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.view;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.validation.BeanPropertyBindingResult;
 import org.springframework.web.servlet.View;
 
@@ -30,7 +30,7 @@ public class ServiceView implements View {
 
     private String contentType = "application/xml";
 
-    private static final Logger logger = Logger.getLogger(ServiceView.class);
+    private static final Logger logger = LoggerFactory.getLogger(ServiceView.class);
 
     @Override
     public String getContentType() {

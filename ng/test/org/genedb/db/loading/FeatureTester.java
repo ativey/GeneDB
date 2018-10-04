@@ -24,7 +24,7 @@ import org.genedb.top.chado.mapped.Pub;
 import org.genedb.top.chado.mapped.PubDbXRef;
 import org.genedb.top.chado.mapped.Synonym;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.hibernate.Session;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
@@ -42,7 +42,7 @@ import java.util.regex.Pattern;
 
 
 public class FeatureTester {
-    private static final Logger logger = Logger.getLogger(FeatureTester.class);
+    private static final Logger logger = LoggerFactory.getLogger(FeatureTester.class);
 
     private Session session;
     public FeatureTester(Session session) {

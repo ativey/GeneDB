@@ -1,8 +1,8 @@
 package org.genedb.top.db.fixup;
 
-import org.genedb.util.TwoKeyMap;
+import org.genedb.top.util.TwoKeyMap;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -20,7 +20,7 @@ import java.util.Map;
  *
  */
 public class TypeCodes {
-    private static final Logger logger = Logger.getLogger(TypeCodes.class);
+    private static final Logger logger = LoggerFactory.getLogger(TypeCodes.class);
 
     private TwoKeyMap<String,String,Integer> idByCvNameAndTermName = new TwoKeyMap<String,String,Integer>();
     private Map<Integer,String> cvNameById = new HashMap<Integer,String>();

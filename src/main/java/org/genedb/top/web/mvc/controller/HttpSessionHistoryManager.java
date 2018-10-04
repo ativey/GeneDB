@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.controller;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.genedb.querying.core.PagedQuery;
 import org.genedb.querying.core.Query;
 import org.genedb.querying.history.HistoryItem;
@@ -22,7 +22,7 @@ import javax.servlet.http.HttpSession;
  */
 public class HttpSessionHistoryManager implements HistoryManager {
 	
-	private static final Logger logger = Logger.getLogger(HttpSessionHistoryManager.class);
+	private static final Logger logger = LoggerFactory.getLogger(HttpSessionHistoryManager.class);
 	
 	// TODO use map for storage
     // gv1 TODONE

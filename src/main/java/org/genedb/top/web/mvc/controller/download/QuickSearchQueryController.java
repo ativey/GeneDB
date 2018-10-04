@@ -1,8 +1,8 @@
 package org.genedb.top.web.mvc.controller.download;
 
-import org.genedb.db.taxon.TaxonNode;
-import org.genedb.db.taxon.TaxonNodeList;
-import org.genedb.db.taxon.TaxonNodeManager;
+import org.genedb.top.db.taxon.TaxonNode;
+import org.genedb.top.db.taxon.TaxonNodeList;
+import org.genedb.top.db.taxon.TaxonNodeManager;
 import org.genedb.querying.core.NumericQueryVisibility;
 import org.genedb.querying.core.Query;
 import org.genedb.querying.core.QueryException;
@@ -18,7 +18,7 @@ import org.genedb.querying.tmpquery.QuickSearchQuery.QuickSearchQueryResults;
 import org.genedb.top.web.mvc.controller.HistoryManagerFactory;
 
 import org.apache.commons.lang.StringUtils;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
@@ -45,7 +45,7 @@ public class QuickSearchQueryController extends AbstractGeneDBFormController {
 
 //    public static final String QUERY_NAME = "quickSearch";
 //
-//    Logger logger = Logger.getLogger(QuickSearchQueryController.class);
+//    Logger logger = LoggerFactory.getLogger(QuickSearchQueryController.class);
 //
 //    //@Autowired
 //    private QueryFactory queryFactory;

@@ -1,6 +1,6 @@
 package org.genedb.top.chado.utils;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class CvTermUtils {
-    private static final Logger logger = Logger.getLogger(CvTermUtils.class);
+    private static final Logger logger = LoggerFactory.getLogger(CvTermUtils.class);
 
     public static void checkCvTermPath(Connection conn) throws SQLException {
         PreparedStatement st = conn.prepareStatement(

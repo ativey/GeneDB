@@ -3,9 +3,9 @@ package org.genedb.top.web.tags.db;
 import static javax.servlet.jsp.PageContext.APPLICATION_SCOPE;
 import static org.genedb.web.mvc.controller.TaxonManagerListener.TAXON_NODE_MANAGER;
 
-import org.genedb.db.taxon.TaxonNameType;
-import org.genedb.db.taxon.TaxonNode;
-import org.genedb.db.taxon.TaxonNodeManager;
+import org.genedb.top.db.taxon.TaxonNameType;
+import org.genedb.top.db.taxon.TaxonNode;
+import org.genedb.top.db.taxon.TaxonNodeManager;
 
 import java.io.IOException;
 

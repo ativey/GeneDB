@@ -1,10 +1,10 @@
 //package org.genedb.web.mvc.model;
 //
-//import org.genedb.db.dao.SequenceDao;
-//import org.genedb.db.domain.objects.DatabasePolypeptideRegion;
-//import org.genedb.db.domain.objects.InterProHit;
-//import org.genedb.db.domain.objects.PolypeptideRegionGroup;
-//import org.genedb.db.domain.objects.SimpleRegionGroup;
+//import org.genedb.top.db.dao.SequenceDao;
+//import org.genedb.top.db.domain.objects.DatabasePolypeptideRegion;
+//import org.genedb.top.db.domain.objects.InterProHit;
+//import org.genedb.top.db.domain.objects.PolypeptideRegionGroup;
+//import org.genedb.top.db.domain.objects.SimpleRegionGroup;
 //import org.genedb.web.gui.DiagramCache;
 //import org.genedb.web.gui.ImageCreationException;
 //import org.genedb.web.gui.ImageMapSummary;
@@ -34,7 +34,7 @@
 //import org.genedb.top.chado.mapped.Organism;
 //import org.genedb.top.chado.mapped.Synonym;
 //
-//import org.apache.log4j.Logger;
+//import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 //import org.hibernate.Hibernate;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.beans.factory.annotation.Configurable;
@@ -55,7 +55,7 @@
 //@Configurable
 //public class TranscriptDTOFactory {
 //
-//    private transient Logger logger = Logger.getLogger(TranscriptDTOFactory.class);
+//    private transient Logger logger = LoggerFactory.getLogger(TranscriptDTOFactory.class);
 //
 //    @Autowired
 //    private transient SequenceDao sequenceDao;

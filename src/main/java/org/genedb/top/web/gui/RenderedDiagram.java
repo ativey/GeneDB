@@ -1,13 +1,13 @@
 //package org.genedb.web.gui;
 //
-//import org.genedb.db.domain.objects.CompoundLocatedFeature;
-//import org.genedb.db.domain.objects.Gap;
-//import org.genedb.db.domain.objects.LocatedFeature;
+//import org.genedb.top.db.domain.objects.CompoundLocatedFeature;
+//import org.genedb.top.db.domain.objects.Gap;
+//import org.genedb.top.db.domain.objects.LocatedFeature;
 //import org.genedb.web.mvc.model.BerkeleyMapFactory;
 //
 //import org.genedb.top.chado.feature.Region;
 //
-//import org.apache.log4j.Logger;
+//import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 //
 //import net.sf.json.JSONString;
 //
@@ -35,7 +35,7 @@
 //import javax.imageio.ImageIO;
 //
 //public abstract class RenderedDiagram {
-//    private static final Logger logger = Logger.getLogger(RenderedDiagram.class);
+//    private static final Logger logger = LoggerFactory.getLogger(RenderedDiagram.class);
 //
 //    private static final int MAX_HEIGHT=5000;
 //

@@ -19,7 +19,7 @@
 
 package org.genedb.top.web.mvc.controller;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,7 +34,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping("/Page")
 public class MiscPageController {
-     private static final Logger logger = Logger.getLogger(MiscPageController.class);
+     private static final Logger logger = LoggerFactory.getLogger(MiscPageController.class);
 
     @RequestMapping(method=RequestMethod.GET, value="/{page}")
     public ModelAndView redirectToPage(@PathVariable("page") String pageName) {

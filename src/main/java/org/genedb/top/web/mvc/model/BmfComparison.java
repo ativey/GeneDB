@@ -1,6 +1,6 @@
 //package org.genedb.web.mvc.model;
 //
-//import org.genedb.util.MD5Util;
+//import org.genedb.top.util.MD5Util;
 //
 //import java.io.ByteArrayOutputStream;
 //import java.io.IOException;

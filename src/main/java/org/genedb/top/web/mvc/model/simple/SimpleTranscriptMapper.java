@@ -1,13 +1,13 @@
 package org.genedb.top.web.mvc.model.simple;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class SimpleTranscriptMapper extends SimpleFeatureMapper implements RowMapper<SimpleTranscript> {
-    Logger logger = Logger.getLogger(SimpleTranscriptMapper.class);
+    Logger logger = LoggerFactory.getLogger(SimpleTranscriptMapper.class);
 
     public static final String SQL_WITH_GENE_ID_PARAM =
             " select f.*, cvt.name as cvtname, cv.name as cvname "

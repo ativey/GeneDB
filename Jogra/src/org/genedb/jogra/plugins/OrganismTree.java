@@ -19,13 +19,13 @@
 
 package org.genedb.jogra.plugins;
 
-import org.genedb.db.taxon.TaxonNode;
-import org.genedb.db.taxon.TaxonNodeManager;
+import org.genedb.top.db.taxon.TaxonNode;
+import org.genedb.top.db.taxon.TaxonNodeManager;
 import org.genedb.jogra.drawing.Jogra;
 import org.genedb.jogra.drawing.JograPlugin;
 import org.genedb.jogra.services.NamedVector;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.bushe.swing.event.EventBus;
 
 import it.cnr.imaa.essi.lablib.gui.checkboxtree.CheckboxTree;
@@ -64,7 +64,7 @@ public class OrganismTree implements JograPlugin {
     private List<String> userSelection = new ArrayList<String>(); //Stores the organism names that the user selects
     private Jogra jogra;
 
-    private static final Logger logger = Logger.getLogger(OrganismTree.class);
+    private static final Logger logger = LoggerFactory.getLogger(OrganismTree.class);
 
     public void setTaxonNodeManager(TaxonNodeManager taxonNodeManager) {
         this.taxonNodeManager = taxonNodeManager;

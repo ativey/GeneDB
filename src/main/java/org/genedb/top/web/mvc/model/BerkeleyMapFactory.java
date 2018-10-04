@@ -1,6 +1,6 @@
 //package org.genedb.web.mvc.model;
 //
-//import org.apache.log4j.Logger;
+//import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 //
 //import java.io.File;
 //
@@ -50,7 +50,7 @@
 //    private StoredMap<Integer, String> contextMapMap;
 //    private Database contextMapDb;
 //
-//    private final static Logger logger = Logger.getLogger(BerkeleyMapFactory.class);
+//    private final static Logger logger = LoggerFactory.getLogger(BerkeleyMapFactory.class);
 //
 //    private final String CLASS_CATALOG = "java_class_catalog";
 //

@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.controller;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +14,7 @@ import java.util.StringTokenizer;
 @RequestMapping("/DbLinkRedirect")
 public class DbLinkRedirectController {
 
-    private static final Logger logger = Logger.getLogger(DbLinkRedirectController.class);
+    private static final Logger logger = LoggerFactory.getLogger(DbLinkRedirectController.class);
 
     private static final String QMW_PREFIX = "http://www.chem.qmul.ac.uk/iubmb/enzyme/EC";
 

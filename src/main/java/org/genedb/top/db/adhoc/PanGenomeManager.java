@@ -1,6 +1,6 @@
 package org.genedb.top.db.adhoc;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -45,7 +45,7 @@ public class PanGenomeManager {
     private enum PanGeneBioType {CODING,NONCODING,PSEUDO,MIXED};
 
     private Connection conn;
-    private static final Logger logger = Logger.getLogger(PanGenomeManager.class);
+    private static final Logger logger = LoggerFactory.getLogger(PanGenomeManager.class);
 
 
     private PanGenomeManager(Connection conn) {

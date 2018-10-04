@@ -14,7 +14,7 @@ import java.util.zip.ZipOutputStream;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-import org.genedb.db.dao.SequenceDao;
+import org.genedb.top.db.dao.SequenceDao;
 import org.genedb.querying.core.NumericQueryVisibility;
 import org.genedb.querying.core.QueryException;
 import org.genedb.querying.core.QueryFactory;

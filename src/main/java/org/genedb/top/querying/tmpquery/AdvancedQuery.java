@@ -1,7 +1,7 @@
 package org.genedb.top.querying.tmpquery;
 
-import org.genedb.querying.core.QueryClass;
-import org.genedb.querying.core.QueryParam;
+import org.genedb.top.querying.core.QueryClass;
+import org.genedb.top.querying.core.QueryParam;
 
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.BooleanClause;

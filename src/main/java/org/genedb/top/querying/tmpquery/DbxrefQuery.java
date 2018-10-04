@@ -12,7 +12,7 @@ import org.apache.lucene.search.Query;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.WildcardQuery;
 import org.apache.lucene.search.BooleanClause.Occur;
-import org.genedb.querying.core.QueryParam;
+import org.genedb.top.querying.core.QueryParam;
 import org.hibernate.Session;
 import org.springframework.orm.hibernate5.SessionFactoryUtils;
 import org.springframework.util.StringUtils;

@@ -18,9 +18,9 @@ import org.apache.lucene.search.regex.JakartaRegexpCapabilities;
 import org.apache.lucene.search.regex.JavaUtilRegexCapabilities;
 import org.apache.lucene.search.regex.RegexQuery;
 
-import org.genedb.querying.core.QueryException;
-import org.genedb.querying.core.QueryParam;
-import org.genedb.querying.core.LuceneQuery.Pager;
+import org.genedb.top.querying.core.QueryException;
+import org.genedb.top.querying.core.QueryParam;
+import org.genedb.top.querying.core.LuceneQuery.Pager;
 
 
 public class MotifQuery extends OrganismLuceneQuery {

@@ -20,9 +20,9 @@
 package org.genedb.top.web.mvc.controller;
 
 import org.genedb.top.db.dao.SequenceDao;
-import org.genedb.querying.history.HistoryItem;
-import org.genedb.querying.history.HistoryManager;
-import org.genedb.querying.history.HistoryType;
+import org.genedb.top.querying.history.HistoryItem;
+import org.genedb.top.querying.history.HistoryManager;
+import org.genedb.top.querying.history.HistoryType;
 import org.genedb.web.mvc.model.DTOFactory;
 import org.genedb.web.mvc.model.FeatureDTO;
 import org.genedb.web.mvc.model.GeneDTO;

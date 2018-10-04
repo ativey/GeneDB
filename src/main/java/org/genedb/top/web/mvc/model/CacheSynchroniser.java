@@ -12,8 +12,8 @@
 //import org.genedb.top.db.audit.ChangeTracker;
 //import org.genedb.top.db.domain.luceneImpls.BasicGeneServiceImpl;
 //import org.genedb.top.db.domain.services.BasicGeneService;
-//import org.genedb.querying.core.LuceneIndex;
-//import org.genedb.querying.core.LuceneIndexFactory;
+//import org.genedb.top.querying.core.LuceneIndex;
+//import org.genedb.top.querying.core.LuceneIndexFactory;
 //import org.genedb.web.gui.DiagramCache;
 //import org.genedb.web.gui.RenderedDiagramFactory;
 //import org.genedb.web.mvc.controller.ModelBuilder;

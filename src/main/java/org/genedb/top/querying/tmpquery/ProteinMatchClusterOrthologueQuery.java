@@ -7,10 +7,10 @@ import java.util.Map;
 
 import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.genedb.top.db.dao.SequenceDao;
-import org.genedb.querying.core.HqlQuery;
-import org.genedb.querying.core.Query;
-import org.genedb.querying.core.QueryException;
-import org.genedb.querying.core.QueryUtils;
+import org.genedb.top.querying.core.HqlQuery;
+import org.genedb.top.querying.core.Query;
+import org.genedb.top.querying.core.QueryException;
+import org.genedb.top.querying.core.QueryUtils;
 import org.genedb.top.chado.feature.Polypeptide;
 import org.genedb.top.chado.feature.ProteinMatch;
 import org.genedb.top.chado.mapped.Feature;

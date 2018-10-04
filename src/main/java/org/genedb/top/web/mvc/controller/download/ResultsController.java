@@ -3,16 +3,16 @@ package org.genedb.top.web.mvc.controller.download;
 import org.displaytag.tags.TableTagParameters;
 import org.displaytag.util.ParamEncoder;
 
-import org.genedb.querying.core.Query;
-import org.genedb.querying.core.QueryException;
-import org.genedb.querying.core.QueryFactory;
-import org.genedb.querying.core.NumericQueryVisibility;
-import org.genedb.querying.history.HistoryItem;
-import org.genedb.querying.history.HistoryManager;
-import org.genedb.querying.tmpquery.GeneSummary;
-import org.genedb.querying.tmpquery.IdsToGeneSummaryQuery;
-import org.genedb.querying.tmpquery.QuickSearchQuery;
-import org.genedb.querying.tmpquery.SuggestQuery;
+import org.genedb.top.querying.core.Query;
+import org.genedb.top.querying.core.QueryException;
+import org.genedb.top.querying.core.QueryFactory;
+import org.genedb.top.querying.core.NumericQueryVisibility;
+import org.genedb.top.querying.history.HistoryItem;
+import org.genedb.top.querying.history.HistoryManager;
+import org.genedb.top.querying.tmpquery.GeneSummary;
+import org.genedb.top.querying.tmpquery.IdsToGeneSummaryQuery;
+import org.genedb.top.querying.tmpquery.QuickSearchQuery;
+import org.genedb.top.querying.tmpquery.SuggestQuery;
 import org.genedb.top.web.mvc.controller.HistoryManagerFactory;
 //import org.genedb.web.mvc.model.ResultsCacheFactory;
 

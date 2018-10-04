@@ -6,8 +6,8 @@ import org.apache.lucene.index.Term;
 import org.apache.lucene.search.ConstantScoreRangeQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.TermQuery;
-import org.genedb.querying.core.QueryClass;
-import org.genedb.querying.core.QueryParam;
+import org.genedb.top.querying.core.QueryClass;
+import org.genedb.top.querying.core.QueryParam;
 
 //import org.hibernate.validator.Min;
 import org.springframework.validation.Errors;

@@ -8,7 +8,7 @@ import org.genedb.top.db.domain.objects.Transcript;
 import org.genedb.top.db.domain.objects.TranscriptComponent;
 import org.genedb.top.db.domain.objects.UTR;
 import org.genedb.top.db.domain.services.BasicGeneService;
-import org.genedb.querying.core.LuceneIndex;
+import org.genedb.top.querying.core.LuceneIndex;
 
 import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.apache.lucene.document.Document;

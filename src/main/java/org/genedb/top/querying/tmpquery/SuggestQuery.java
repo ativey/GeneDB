@@ -16,7 +16,7 @@ import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.search.spell.LuceneDictionary;
 import org.apache.lucene.search.spell.SpellChecker;
-import org.genedb.querying.core.QueryException;
+import org.genedb.top.querying.core.QueryException;
 import org.genedb.web.mvc.model.PopulateLuceneDictionary;
 
 /*

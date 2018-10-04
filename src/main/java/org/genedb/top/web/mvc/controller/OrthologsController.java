@@ -1,8 +1,8 @@
 package org.genedb.top.web.mvc.controller;
 
 //import org.genedb.top.db.dao.SequenceDao;
-//import org.genedb.querying.core.QueryException;
-//import org.genedb.querying.tmpquery.GeneSummary;
+//import org.genedb.top.querying.core.QueryException;
+//import org.genedb.top.querying.tmpquery.GeneSummary;
 import org.genedb.web.mvc.controller.download.BaseCachingController;
 //
 //import org.slf4j.Logger;import org.slf4j.LoggerFactory;

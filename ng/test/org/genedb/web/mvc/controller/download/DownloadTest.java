@@ -7,7 +7,7 @@ import java.io.StringWriter;
 import java.util.Arrays;
 import java.util.List;
 
-import org.genedb.querying.core.QueryException;
+import org.genedb.top.querying.core.QueryException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

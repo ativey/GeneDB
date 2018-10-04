@@ -20,9 +20,9 @@
 package org.genedb.top.web.mvc.controller.download;
 
 
-import org.genedb.querying.core.QueryException;
-import org.genedb.querying.history.HistoryItem;
-import org.genedb.querying.history.HistoryManager;
+import org.genedb.top.querying.core.QueryException;
+import org.genedb.top.querying.history.HistoryItem;
+import org.genedb.top.querying.history.HistoryManager;
 import org.genedb.top.web.mvc.controller.HistoryController;
 import org.genedb.top.web.mvc.controller.HistoryManagerFactory;
 

@@ -15,11 +15,11 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 import org.genedb.top.db.dao.SequenceDao;
-import org.genedb.querying.core.NumericQueryVisibility;
-import org.genedb.querying.core.QueryException;
-import org.genedb.querying.core.QueryFactory;
-import org.genedb.querying.tmpquery.GeneDetail;
-import org.genedb.querying.tmpquery.IdsToGeneDetailQuery;
+import org.genedb.top.querying.core.NumericQueryVisibility;
+import org.genedb.top.querying.core.QueryException;
+import org.genedb.top.querying.core.QueryFactory;
+import org.genedb.top.querying.tmpquery.GeneDetail;
+import org.genedb.top.querying.tmpquery.IdsToGeneDetailQuery;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;

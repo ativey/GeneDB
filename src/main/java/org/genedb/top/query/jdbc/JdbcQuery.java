@@ -19,9 +19,9 @@
 
 package org.genedb.top.query.jdbc;
 
-import org.genedb.querying.core.Query;
-import org.genedb.querying.core.QueryException;
-import org.genedb.querying.core.QueryUtils;
+import org.genedb.top.querying.core.Query;
+import org.genedb.top.querying.core.QueryException;
+import org.genedb.top.querying.core.QueryUtils;
 
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;

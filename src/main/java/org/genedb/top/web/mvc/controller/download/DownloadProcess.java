@@ -14,8 +14,8 @@ import javax.mail.MessagingException;
 
 import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.genedb.top.db.dao.SequenceDao;
-import org.genedb.querying.core.QueryException;
-import org.genedb.querying.tmpquery.GeneDetail;
+import org.genedb.top.querying.core.QueryException;
+import org.genedb.top.querying.tmpquery.GeneDetail;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

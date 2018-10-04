@@ -36,9 +36,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 //import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-//import org.genedb.querying.history.HistoryItem;
-//import org.genedb.querying.history.HistoryManager;
-//import org.genedb.querying.history.HistoryType;
+//import org.genedb.top.querying.history.HistoryItem;
+//import org.genedb.top.querying.history.HistoryManager;
+//import org.genedb.top.querying.history.HistoryType;
 //import org.genedb.top.util.Pair;
 //import org.genedb.web.mvc.model.BerkeleyMapFactory;
 //import org.genedb.web.mvc.model.TranscriptDTOFactory;

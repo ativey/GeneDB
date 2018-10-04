@@ -1,8 +1,8 @@
 package org.genedb.top.querying.tmpquery;
 
-import org.genedb.querying.core.LuceneQuery;
-import org.genedb.querying.core.QueryException;
-import org.genedb.querying.core.LuceneQuery.Pager;
+import org.genedb.top.querying.core.LuceneQuery;
+import org.genedb.top.querying.core.QueryException;
+import org.genedb.top.querying.core.LuceneQuery.Pager;
 
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.CorruptIndexException;

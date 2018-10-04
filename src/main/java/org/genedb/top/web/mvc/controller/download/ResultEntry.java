@@ -1,7 +1,7 @@
 package org.genedb.top.web.mvc.controller.download;
 
-//import org.genedb.querying.core.Query;
-//import org.genedb.querying.tmpquery.GeneSummary;
+//import org.genedb.top.querying.core.Query;
+//import org.genedb.top.querying.tmpquery.GeneSummary;
 //
 //import java.io.Serializable;
 //import java.util.List;

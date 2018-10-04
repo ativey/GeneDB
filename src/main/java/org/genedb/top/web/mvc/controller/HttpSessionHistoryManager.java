@@ -1,12 +1,12 @@
 package org.genedb.top.web.mvc.controller;
 
 import org.slf4j.Logger;import org.slf4j.LoggerFactory;
-import org.genedb.querying.core.PagedQuery;
-import org.genedb.querying.core.Query;
-import org.genedb.querying.history.HistoryItem;
-import org.genedb.querying.history.HistoryManager;
-import org.genedb.querying.history.HistoryType;
-import org.genedb.querying.history.QueryHistoryItem;
+import org.genedb.top.querying.core.PagedQuery;
+import org.genedb.top.querying.core.Query;
+import org.genedb.top.querying.history.HistoryItem;
+import org.genedb.top.querying.history.HistoryManager;
+import org.genedb.top.querying.history.HistoryType;
+import org.genedb.top.querying.history.QueryHistoryItem;
 
 import com.google.common.collect.Lists;
 

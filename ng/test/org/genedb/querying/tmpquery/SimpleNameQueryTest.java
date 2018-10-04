@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.genedb.top.db.taxon.TaxonNode;
 import org.genedb.top.db.taxon.TaxonNodeList;
 import org.genedb.top.db.taxon.TaxonNodeManager;
-import org.genedb.querying.core.QueryException;
+import org.genedb.top.querying.core.QueryException;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

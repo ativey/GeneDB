@@ -30,7 +30,7 @@ import org.genedb.top.db.dao.SequenceDao;
 import org.genedb.top.db.taxon.TaxonNode;
 import org.genedb.top.db.taxon.TaxonNodeList;
 import org.genedb.top.db.taxon.TaxonNodeManager;
-import org.genedb.querying.tmpquery.BrowseCategory;
+import org.genedb.top.querying.tmpquery.BrowseCategory;
 import org.genedb.top.chado.utils.CountedName;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.WebDataBinder;

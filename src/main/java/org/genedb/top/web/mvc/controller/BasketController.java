@@ -20,8 +20,8 @@
 package org.genedb.top.web.mvc.controller;
 
 import org.genedb.top.db.dao.SequenceDao;
-import org.genedb.querying.history.HistoryManager;
-import org.genedb.querying.history.HistoryType;
+import org.genedb.top.querying.history.HistoryManager;
+import org.genedb.top.querying.history.HistoryType;
 
 import org.genedb.top.chado.feature.Transcript;
 import org.genedb.top.chado.mapped.Feature;

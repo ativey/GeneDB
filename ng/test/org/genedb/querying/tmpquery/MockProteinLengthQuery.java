@@ -6,9 +6,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import org.genedb.querying.core.Query;
-import org.genedb.querying.core.QueryException;
-import org.genedb.querying.core.NumericQueryVisibility;
+import org.genedb.top.querying.core.Query;
+import org.genedb.top.querying.core.QueryException;
+import org.genedb.top.querying.core.NumericQueryVisibility;
 import org.springframework.validation.Errors;
 
 import com.google.common.collect.Maps;

@@ -3,12 +3,12 @@
 //import org.genedb.top.db.dao.SequenceDao;
 //import org.genedb.top.db.taxon.TaxonNode;
 //import org.genedb.top.db.taxon.TaxonNodeManager;
-//import org.genedb.querying.core.NumericQueryVisibility;
-//import org.genedb.querying.core.QueryException;
-//import org.genedb.querying.core.QueryFactory;
-//import org.genedb.querying.tmpquery.ControlledCurationQuery;
-//import org.genedb.querying.tmpquery.GeneLocationQuery;
-//import org.genedb.querying.tmpquery.GenesByDbQuery;
+//import org.genedb.top.querying.core.NumericQueryVisibility;
+//import org.genedb.top.querying.core.QueryException;
+//import org.genedb.top.querying.core.QueryFactory;
+//import org.genedb.top.querying.tmpquery.ControlledCurationQuery;
+//import org.genedb.top.querying.tmpquery.GeneLocationQuery;
+//import org.genedb.top.querying.tmpquery.GenesByDbQuery;
 //import org.genedb.web.mvc.model.BerkeleyMapFactory;
 //import org.genedb.web.mvc.model.TranscriptDTO;
 //

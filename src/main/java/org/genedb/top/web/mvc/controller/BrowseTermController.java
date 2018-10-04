@@ -39,12 +39,12 @@ import org.apache.lucene.search.TopDocs;
 
 import org.genedb.top.db.dao.SequenceDao;
 import org.genedb.top.db.taxon.TaxonUtils;
-import org.genedb.querying.core.LuceneIndex;
-import org.genedb.querying.core.LuceneIndexFactory;
-import org.genedb.querying.history.HistoryItem;
-import org.genedb.querying.history.HistoryManager;
-import org.genedb.querying.history.HistoryType;
-import org.genedb.querying.tmpquery.BrowseCategory;
+import org.genedb.top.querying.core.LuceneIndex;
+import org.genedb.top.querying.core.LuceneIndexFactory;
+import org.genedb.top.querying.history.HistoryItem;
+import org.genedb.top.querying.history.HistoryManager;
+import org.genedb.top.querying.history.HistoryType;
+import org.genedb.top.querying.tmpquery.BrowseCategory;
 
 import org.genedb.top.chado.utils.GeneNameOrganism;
 

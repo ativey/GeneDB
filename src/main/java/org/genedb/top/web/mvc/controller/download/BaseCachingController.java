@@ -14,11 +14,11 @@ package org.genedb.top.web.mvc.controller.download;
 //import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 //import org.genedb.top.db.taxon.TaxonNode;
 ////import org.genedb.top.db.taxon.TaxonNodeArrayPropertyEditor;
-//import org.genedb.querying.core.Query;
-//import org.genedb.querying.core.QueryException;
-//import org.genedb.querying.core.QueryFactory;
-//import org.genedb.querying.tmpquery.GeneSummary;
-//import org.genedb.querying.tmpquery.TaxonQuery;
+//import org.genedb.top.querying.core.Query;
+//import org.genedb.top.querying.core.QueryException;
+//import org.genedb.top.querying.core.QueryFactory;
+//import org.genedb.top.querying.tmpquery.GeneSummary;
+//import org.genedb.top.querying.tmpquery.TaxonQuery;
 //import org.genedb.web.mvc.controller.WebConstants;
 //import org.genedb.web.mvc.model.ResultsCacheFactory;
 //

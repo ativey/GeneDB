@@ -2,8 +2,8 @@ package org.genedb.top.querying.tmpquery;
 
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.TermQuery;
-import org.genedb.querying.core.QueryClass;
-import org.genedb.querying.core.QueryParam;
+import org.genedb.top.querying.core.QueryClass;
+import org.genedb.top.querying.core.QueryParam;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;

@@ -2,9 +2,9 @@ package org.genedb.top.querying.tmpquery;
 
 import org.genedb.top.db.taxon.TaxonNode;
 import org.genedb.top.db.taxon.TaxonNodeList;
-import org.genedb.querying.core.HqlQuery;
-import org.genedb.querying.core.QueryClass;
-import org.genedb.querying.core.QueryParam;
+import org.genedb.top.querying.core.HqlQuery;
+import org.genedb.top.querying.core.QueryClass;
+import org.genedb.top.querying.core.QueryParam;
 
 import org.springframework.util.StringUtils;
 import org.springframework.validation.Errors;

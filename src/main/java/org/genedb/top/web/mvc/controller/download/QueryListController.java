@@ -2,9 +2,9 @@ package org.genedb.top.web.mvc.controller.download;
 
 import java.util.List;
 
-import org.genedb.querying.core.NumericQueryVisibility;
-import org.genedb.querying.core.QueryDetails;
-import org.genedb.querying.core.QueryFactory;
+import org.genedb.top.querying.core.NumericQueryVisibility;
+import org.genedb.top.querying.core.QueryDetails;
+import org.genedb.top.querying.core.QueryFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

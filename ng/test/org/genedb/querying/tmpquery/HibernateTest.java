@@ -10,7 +10,7 @@ import junit.framework.Assert;
 import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.genedb.top.db.taxon.TaxonNode;
 import org.genedb.top.db.taxon.TaxonNodeManager;
-import org.genedb.querying.core.QueryException;
+import org.genedb.top.querying.core.QueryException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

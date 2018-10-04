@@ -2,12 +2,12 @@ package org.genedb.top.web.mvc.controller;
 
 //import org.genedb.top.db.taxon.TaxonNode;
 import org.genedb.top.db.taxon.TaxonNodeList;
-//import org.genedb.querying.core.LuceneQuery;
-import org.genedb.querying.core.Query;
-import org.genedb.querying.core.QueryException;
-import org.genedb.querying.core.QueryFactory;
-import org.genedb.querying.tmpquery.GeneSummary;
-import org.genedb.querying.tmpquery.TaxonQuery;
+//import org.genedb.top.querying.core.LuceneQuery;
+import org.genedb.top.querying.core.Query;
+import org.genedb.top.querying.core.QueryException;
+import org.genedb.top.querying.core.QueryFactory;
+import org.genedb.top.querying.tmpquery.GeneSummary;
+import org.genedb.top.querying.tmpquery.TaxonQuery;
 import org.genedb.top.util.MutableInteger;
 //import org.genedb.web.mvc.controller.WebConstants;
 //import org.genedb.web.mvc.controller.download.ResultEntry;

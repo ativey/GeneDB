@@ -1,7 +1,7 @@
 package org.genedb.top.querying.tmpquery;
 
-import org.genedb.querying.core.QueryException;
-import org.genedb.querying.core.QueryParam;
+import org.genedb.top.querying.core.QueryException;
+import org.genedb.top.querying.core.QueryParam;
 
 import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.apache.lucene.document.Document;

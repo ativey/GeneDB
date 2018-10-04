@@ -19,8 +19,6 @@ import java.util.List;
 
 import com.google.common.base.Function;
 import com.google.common.collect.Lists;
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
 
 
@@ -71,7 +69,7 @@ public class DbController {
 
 }
 
-@XStreamAlias("results")
+//@XStreamAlias("results")
 class DbDTO {
     int dbId;
     String name;

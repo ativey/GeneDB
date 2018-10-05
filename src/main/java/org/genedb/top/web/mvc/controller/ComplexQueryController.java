@@ -8,8 +8,9 @@ import org.genedb.top.query.bool.BooleanQuery;
 import org.genedb.top.web.tags.bool.QueryTreeWalker;
 
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
+//import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,7 +25,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Adrian Tivey
  */
-public class ComplexQueryController extends MultiActionController implements InitializingBean {
+@Controller
+public class ComplexQueryController { //extends MultiActionController implements InitializingBean {
 
     public void afterPropertiesSet() throws Exception {
         // Deliberately empty

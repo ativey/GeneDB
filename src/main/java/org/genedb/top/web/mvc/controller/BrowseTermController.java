@@ -35,7 +35,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.Term;
-import org.apache.lucene.search.Hits;
+//import org.apache.lucene.search.Hits;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TopDocs;
 
@@ -157,7 +157,7 @@ public class BrowseTermController {
         model.put("features", features);
 
         // FIXME - Let Spring handle conversion
-        return new ModelAndView(jsonView, model);
+        return new ModelAndView("FIXME", model);
     }
 
     public void setSequenceDao(SequenceDao sequenceDao) {

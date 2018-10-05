@@ -69,7 +69,7 @@ public class FormatExcel extends FormatBase {
 		
 		HSSFCellStyle style = workbook.createCellStyle();
 		HSSFFont font = workbook.createFont();
-        font.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);
+        //font.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);
         style.setFont(font);
 		
 		HSSFRow heading = sheet.createRow(rcount);

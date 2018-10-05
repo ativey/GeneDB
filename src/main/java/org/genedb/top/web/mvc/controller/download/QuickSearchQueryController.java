@@ -1,8 +1,7 @@
 package org.genedb.top.web.mvc.controller.download;
 
-import org.genedb.top.querying.tmpquery.SuggestQuery;
+//import org.genedb.top.querying.tmpquery.SuggestQuery;
 
-import org.apache.commons.lang.StringUtils;
 
 /**
  *

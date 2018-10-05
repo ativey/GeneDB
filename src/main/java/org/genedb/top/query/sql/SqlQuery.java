@@ -78,7 +78,7 @@ public class SqlQuery extends AbstractQuery implements DataSourceAware {
     }
 
     /**
-     * @see org.genedb.zoe.query.Query#process()
+     *
      */
     public Result process() {
         final SimpleListResult slr = new SimpleListResult();
@@ -114,7 +114,7 @@ public class SqlQuery extends AbstractQuery implements DataSourceAware {
 	public void processCallBack(RowCallbackHandler callBack)
 	{
 		JdbcTemplate jt = new JdbcTemplate(dataSource);
-		logger.debug(args);
+		logger.debug(args.toString());
 		logger.debug(sql);
 		jt.query(sql, args, callBack);
 	}
@@ -122,8 +122,8 @@ public class SqlQuery extends AbstractQuery implements DataSourceAware {
 	public void processCallBack(String _sql, Object[] _args, RowCallbackHandler callBack)
 	{
 		JdbcTemplate jt = new JdbcTemplate(dataSource);
-		logger.debug(_args);
-		logger.debug(_sql);
+		logger.debug(_args.toString());
+		logger.debug(_sql.toString());
 		jt.query(_sql, _args, callBack);
 	}
 

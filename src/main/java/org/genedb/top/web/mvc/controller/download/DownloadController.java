@@ -53,7 +53,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.google.common.collect.Lists;
-import com.google.gson.Gson;
 
 
 
@@ -418,11 +417,12 @@ public class DownloadController {
 		String filePath = downloadTmpFolder + "/" + scriptFileNamePrefix + ".json";
 		
 		FileWriter out = new FileWriter(filePath);
-		Gson gson = new Gson();
-		gson.toJson(ht, out);
+		// FIXME Use Jackson
+		//Gson gson = new Gson();
+		//gson.toJson(ht, out);
 		out.close();
 		
-		logger.info("Wrote to JSON file: " + filePath);
+		logger.info("FIXME Wrote to JSON file: " + filePath);
 		
 	}
 

@@ -13,9 +13,9 @@ public class GeneDBFormattingConversionServiceFactoryBean extends
 	private Map<Class<?>, Formatter<?>> formatters;
 	private static final Logger logger = LoggerFactory.getLogger(GeneDBFormattingConversionServiceFactoryBean.class);
 
-	@Override
+	//@Override
 	protected void installFormatters(FormatterRegistry registry) {
-		super.installFormatters(registry);
+		//super.installFormatters(registry);
 		logger.info("*** Registering ");
 		for (Map.Entry<Class<?>, Formatter<?>> entry : formatters.entrySet()) {
 			logger.info("*** Registering '"+entry.getKey()+"', '"+entry.getValue()+"'");

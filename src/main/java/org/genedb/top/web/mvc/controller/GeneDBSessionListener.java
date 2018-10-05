@@ -35,7 +35,6 @@ import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
 import com.google.common.collect.Lists;
-import com.sleepycat.collections.StoredMap;
 
 public class GeneDBSessionListener implements HttpSessionListener {
     

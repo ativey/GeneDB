@@ -1,9 +1,9 @@
 package org.genedb.top.web.mvc.model.types;
 
 import org.genedb.top.chado.utils.PeptideProperties;
-import org.postgresql.util.PGobject;
+// import org.postgresql.util.PGobject;
 
-public class PeptidePropertiesType extends PGobject{
+public class PeptidePropertiesType {//extends PGobject{
 
     private String massInDaltons;
     private String aminoAcids;
@@ -11,7 +11,7 @@ public class PeptidePropertiesType extends PGobject{
     private String charge;
     
     public PeptidePropertiesType(PeptideProperties peptideProperties){
-        setType("peptidepropertiestype");
+        //setType("peptidepropertiestype");
         
         massInDaltons = peptideProperties.getMass();
         aminoAcids = String.valueOf(peptideProperties.getAminoAcids());
@@ -19,7 +19,7 @@ public class PeptidePropertiesType extends PGobject{
         charge = peptideProperties.getCharge();
     }
     
-    @Override
+    //@Override
     public String getValue(){
         return toString();
     }

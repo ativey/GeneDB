@@ -3,7 +3,7 @@ package org.genedb.top.web.tags.misc;
 import org.springframework.web.servlet.tags.HtmlEscapingAwareTag;
 import org.springframework.web.servlet.tags.Param;
 import org.springframework.web.servlet.tags.ParamAware;
-import org.springframework.web.util.ExpressionEvaluationUtils;
+//import org.springframework.web.util.ExpressionEvaluationUtils;
 import org.springframework.web.util.HtmlUtils;
 import org.springframework.web.util.JavaScriptUtils;
 import org.springframework.web.util.TagUtils;
@@ -44,7 +44,7 @@ public class UrlTag extends HtmlEscapingAwareTag implements ParamAware {
 
     private int scope = PageContext.PAGE_SCOPE;
 
-    private boolean javaScriptEscape = false;
+//    private boolean javaScriptEscape = false;
 
     private boolean includeSessionInUrl = false;
 
@@ -99,10 +99,10 @@ public class UrlTag extends HtmlEscapingAwareTag implements ParamAware {
      * Set JavaScript escaping for this tag, as boolean value.
      * Default is "false".
      */
-    public void setJavaScriptEscape(String javaScriptEscape) throws JspException {
-        this.javaScriptEscape =
-                ExpressionEvaluationUtils.evaluateBoolean("javaScriptEscape", javaScriptEscape, pageContext);
-    }
+//    public void setJavaScriptEscape(String javaScriptEscape) throws JspException {
+//        this.javaScriptEscape =
+//                ExpressionEvaluationUtils.evaluateBoolean("javaScriptEscape", javaScriptEscape, pageContext);
+//    }
 
     public void addParam(Param param) {
         this.params.add(param);
@@ -171,7 +171,7 @@ public class UrlTag extends HtmlEscapingAwareTag implements ParamAware {
 
         // HTML and/or JavaScript escape, if demanded.
         urlStr = isHtmlEscape() ? HtmlUtils.htmlEscape(urlStr) : urlStr;
-        urlStr = this.javaScriptEscape ? JavaScriptUtils.javaScriptEscape(urlStr) : urlStr;
+        // urlStr = this.javaScriptEscape ? JavaScriptUtils.javaScriptEscape(urlStr) : urlStr;
 
         return urlStr;
     }

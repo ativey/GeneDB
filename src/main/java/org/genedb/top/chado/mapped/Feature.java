@@ -1,6 +1,7 @@
 package org.genedb.top.chado.mapped;
 
 //import org.genedb.top.db.analyzers.AllNamesAnalyzer;
+import com.google.common.collect.Lists;
 import org.genedb.top.db.dao.CvDao;
 import org.genedb.top.db.dao.GeneralDao;
 import org.genedb.top.db.dao.SequenceDao;

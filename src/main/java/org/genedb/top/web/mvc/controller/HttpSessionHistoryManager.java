@@ -132,8 +132,8 @@ public class HttpSessionHistoryManager implements HistoryManager {
     		logger.info("Item already there ");
     	}
     	
-    	logger.info(this.getHistoryItems());
-		logger.info(this.getHistoryItems().get(name));
+    	logger.info(this.getHistoryItems().toString());
+		logger.info(this.getHistoryItems().get(name).toString());
     	
     	
 		return item;

@@ -1,8 +1,8 @@
 package org.genedb.top.web.tags.db;
 
-import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.genedb.top.db.taxon.TaxonNode;
+import org.springframework.util.StringUtils;
 
 import java.io.IOException;
 import java.util.Collections;

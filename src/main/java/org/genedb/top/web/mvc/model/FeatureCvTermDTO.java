@@ -1,5 +1,7 @@
 package org.genedb.top.web.mvc.model;
 
+import com.google.common.collect.ListMultimap;
+import com.google.common.collect.MultimapBuilder;
 import org.genedb.top.chado.mapped.FeatureCvTerm;
 import org.genedb.top.chado.mapped.FeatureCvTermDbXRef;
 import org.genedb.top.chado.mapped.FeatureCvTermProp;
@@ -23,7 +25,10 @@ public class FeatureCvTermDTO implements Serializable {
     private List<String> pubs;
     private String withFrom;
     private List<DbXRefDTO> dbXRefDtoList;
-    private Multimap<String, String> props = Multimaps.newArrayListMultimap();
+
+    private ListMultimap<String, String> props =
+            MultimapBuilder.hashKeys().arrayListValues().build();
+
     private long count;
 
     public FeatureCvTermDTO(FeatureCvTerm fct) {

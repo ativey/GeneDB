@@ -111,8 +111,12 @@ public class PanGenomeManager {
             st = conn.prepareStatement(allgenesQuery);
             logger.info("sql= "+allgenesQuery);
             rs = st.executeQuery();
-            UndirectedGraph<Long, DefaultEdge> geneGraph = new SimpleGraph<Long, DefaultEdge>(DefaultEdge.class);
-            long vertexcount=0;
+
+
+            // FIXME
+            var simpleGraph = new SimpleGraph<Long, DefaultEdge>(DefaultEdge.class);
+        long vertexcount=0;
+            AsUndirectedGraph<Long, DefaultEdge> geneGraph = (AsUndirectedGraph<Long, DefaultEdge>) Graphs.undirectedGraph(simpleGraph);
             logger.info("Adding all vertices to the graph ");
             while (rs.next()) {
                 Long geneID=rs.getLong("feature_id");

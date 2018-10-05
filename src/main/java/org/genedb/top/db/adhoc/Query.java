@@ -98,7 +98,7 @@ public class Query {
             return;
         }
 
-        Session session = SessionFactoryUtils.getSession(sessionFactory, false);
+        Session session = sessionFactory.getCurrentSession();
         org.hibernate.Query q = session.createQuery(query);
 
         if (query.matches("(?is)delete\\b.*")) {

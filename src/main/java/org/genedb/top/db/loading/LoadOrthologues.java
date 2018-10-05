@@ -286,7 +286,7 @@ class OrthologuesLoader {
     
     public void load(OrthologueFile orthologueFile) throws DataError {
 
-        Session session = SessionFactoryUtils.getSession(sessionFactory, false);
+        Session session = sessionFactory.getCurrentSession();
         dummyOrganism = organismDao.getOrganismByCommonName("dummy");
 
         if (analysis != null) {
@@ -318,7 +318,7 @@ class OrthologuesLoader {
     }
 
     private void persistAnalysis() {
-        SessionFactoryUtils.getSession(sessionFactory, false).persist(analysis);
+        sessionFactory.getCurrentSession().persist(analysis);
     }
 
     private void processLine(File file, OrthologueFile.Line line,
@@ -349,7 +349,7 @@ class OrthologuesLoader {
     }
 
     private void loadClusters(Map<String, Collection<Integer>> clustersByName) {
-        Session session = SessionFactoryUtils.getSession(sessionFactory, false);
+        Session session = sessionFactory.getCurrentSession();
         int n = 0;
 
         for (Map.Entry<String, Collection<Integer>> entry: clustersByName.entrySet()) {
@@ -438,7 +438,7 @@ class OrthologuesLoader {
             loadCluster(clusterName, polypeptideIds, identity, this.loadAsParalogues);
         } else {
             // Manually-curated orthologue. Add a simple orthologous_to/paralogous_to relationship in both directions.
-            Session session = SessionFactoryUtils.getSession(sessionFactory, false);
+            Session session = sessionFactory.getCurrentSession();
             if (this.loadAsParalogues == true) {
             	session.persist(sourcePolypeptide.addParalogue(targetPolypeptide));
             	session.persist(targetPolypeptide.addParalogue(sourcePolypeptide));
@@ -450,7 +450,7 @@ class OrthologuesLoader {
     }
 
     private void loadCluster(String clusterName, Collection<Integer> polypeptideIds, Double identity, Boolean loadAsParalogues) {
-        Session session = SessionFactoryUtils.getSession(sessionFactory, false);
+        Session session = sessionFactory.getCurrentSession();
 
         if (datasetName == null) {
             throw new NullPointerException("The datasetName is null - did you call setDatasetName?");

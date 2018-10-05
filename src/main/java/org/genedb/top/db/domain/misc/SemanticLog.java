@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 
 public class SemanticLog {
 
-    private static final Logger logger = LoggerFactory.getLogger(this.getClass());
+    private static final Logger logger = LoggerFactory.getLogger(SemanticLog.class);
 
     public void log(String msg, Object... args) {
 

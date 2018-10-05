@@ -149,7 +149,7 @@ class GOAssociationFile {
                 lineNumber++;
                 StringBuilder sb = new StringBuilder(line);
                 sb.append('\n');
-                logger.trace(sb);
+                logger.trace(sb.toString());
                 GOHit hit = new GOHit(lineNumber, line);
                 hits.add(hit);
             }

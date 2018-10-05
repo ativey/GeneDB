@@ -21,7 +21,7 @@ public class BaseDao {
     }
 
     protected Session getSession() {
-        return SessionFactoryUtils.getSession(sessionFactory, false);
+        return sessionFactory.getCurrentSession();
     }
 
     protected <T> List<T> performQuery(Class<T> typeToken, String queryString) {

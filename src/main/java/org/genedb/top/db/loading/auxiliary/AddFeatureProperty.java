@@ -157,7 +157,7 @@ class inputFile {
                 lineNumber++;
                 StringBuilder sb = new StringBuilder(line);
                 sb.append('\n');
-                logger.trace(sb);
+                logger.trace(sb.toString());
                 featProp prop = new featProp(lineNumber, line);
                 props.add(prop);
             }

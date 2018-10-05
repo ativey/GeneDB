@@ -114,7 +114,7 @@ public class HTHLoader extends Loader {
 
     @Transactional
     public void clear(final String organismCommonName, final String analysisProgram) throws HibernateException, SQLException {
-        Session session = SessionFactoryUtils.getSession(sessionFactory, false);
+        Session session = sessionFactory.getCurrentSession();
         session.doWork(new Work() {
                public void execute(Connection connection) throws SQLException {
                     new ClearHTH(connection, organismCommonName, analysisProgram).clear();
@@ -146,7 +146,7 @@ class HTHFile {
                     sb.append(line);
                     sb.append('\n');
                 }
-                logger.trace(sb);
+                logger.trace(sb.toString());
                 parseSummary(sb);
             }
 

@@ -212,7 +212,7 @@ class SignalPFile {
                     sb.append(line);
                     sb.append('\n');
                 }
-                logger.trace(sb);
+                logger.trace(sb.toString());
                 parseSummary(sb);
             }
 

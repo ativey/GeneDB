@@ -182,7 +182,7 @@ public class DomainLoader extends Loader {
         int n = -1;
         for (DomainRow row: domainFile.rows(gene, acc)) {
             n++;
-            logger.debug(row);
+            logger.debug(row.toString());
 
             // Insert polypeptide_domain
             DbXRef dbxref = objectManager.getDbXRef(row.db(), row.nativeAcc(), row.nativeDesc());
@@ -241,14 +241,14 @@ public class DomainLoader extends Loader {
                 featureUtils.createGoEntries(polypeptide, goInstance,
                     comment, withFrom);
             } catch (ParsingException e) {
-                logger.error(e);
+                logger.error(e.toString());
             }
         }
     }
 
     @Transactional
     void clear(final String organismCommonName, final String analysisProgram) throws HibernateException, SQLException {
-        Session session = SessionFactoryUtils.getSession(sessionFactory, false);
+        Session session = sessionFactory.getCurrentSession());
         session.doWork(new Work() {
             public void execute(Connection connection) throws SQLException {
                 new ClearDomains(connection, organismCommonName, analysisProgram).clear();

@@ -75,7 +75,7 @@ public abstract class Loader {
 
     @Transactional(rollbackFor=IOException.class)
     void load(InputStream inputStream) throws IOException {
-        Session session = SessionFactoryUtils.getSession(sessionFactory, false);
+        Session session = sessionFactory.getCurrentSession();
         doLoad(inputStream, session);
     }
 

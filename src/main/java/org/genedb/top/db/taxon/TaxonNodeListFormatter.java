@@ -47,7 +47,7 @@ public class TaxonNodeListFormatter implements Formatter<TaxonNodeList> {
             }
             logger.error("Adding node of '"+node+"'");
             nodeList.add(node);
-            logger.debug(node);
+            logger.debug(node.toString());
         }
         return nodeList;
     }

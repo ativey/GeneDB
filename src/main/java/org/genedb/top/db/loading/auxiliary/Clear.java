@@ -157,7 +157,7 @@ public abstract class Clear {
                 logger.info(String.format("Deleted %d %s for %s %s using %s", numberDeleted, description, analysisProgram, organismCommonName, sql));
             }
             finally {
-                try { st.close(); } catch (SQLException e) { logger.error(e); }
+                try { st.close(); } catch (SQLException e) { logger.error(e.toString()); }
             }
 
         }

@@ -80,7 +80,7 @@ public class PhosphopeptideLoader extends Loader {
                     }
                     instructions.get(instruction.geneName).add(instruction);
                     
-                    logger.info(instruction);
+                    logger.info(instruction.toString());
                 
                 } catch (NumberFormatException nfe) {
                     logger.warn(String.format("Could not extract position from line '%s'", line));
@@ -95,7 +95,7 @@ public class PhosphopeptideLoader extends Loader {
 
             for (Instruction instruction : geneInstructions.getValue()) {
                 Feature feature = sequenceDao.getFeatureByUniqueName(instruction.geneName, Feature.class);
-                logger.info(feature);
+                logger.info(feature.toString());
                 if (feature == null) {
                     logger.warn(String.format("%s is not a feature, skipping", instruction.geneName));
                     continue;

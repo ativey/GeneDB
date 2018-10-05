@@ -83,7 +83,7 @@ public class BasicGeneServiceImpl implements BasicGeneService {
 
         for (FeatureRelationship fr : feat.getFeatureRelationshipsForObjectId()) {
             Feature otherFeat = fr.getSubjectFeature();
-            if (otherFeat instanceof org.gmod.schema.feature.Transcript) {
+            if (otherFeat instanceof org.genedb.top.chado.feature.Transcript) {
                 ret.addTranscript(makeTranscript(otherFeat));
             }
         }

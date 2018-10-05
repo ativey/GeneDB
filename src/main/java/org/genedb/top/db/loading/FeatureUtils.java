@@ -208,7 +208,7 @@ public class FeatureUtils implements InitializingBean {
 
     public void createGoEntries(Feature polypeptide, GoInstance go, String comment,
             List<DbXRef> withFromDbXRefs) throws DataError {
-        Session session = SessionFactoryUtils.getSession(sessionFactory, false);
+        Session session = sessionFactory.getCurrentSession();
 
         CvTerm cvTerm = getGoTerm(go.getId());
         if (cvTerm == null) {

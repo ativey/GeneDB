@@ -128,7 +128,7 @@ public class AGPLoader {
         //PropertyConfigurator.configure("resources/classpath/log4j.loader.properties"); 
         
         /* Initialising values*/
-        this.setSession(SessionFactoryUtils.doGetSession(sessionFactory, false));
+        this.setSession(sessionFactory.getCurrentSession());
         String prevTopLevelName = new String();
         TopLevelFeature topLevelFeature = null;
         List<AGPLine> agpLines = new ArrayList<AGPLine>();

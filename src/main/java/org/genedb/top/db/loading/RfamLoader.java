@@ -238,7 +238,7 @@ public class RfamLoader extends Loader{
                 if(0 < line.length()){
                     StringBuilder sb = new StringBuilder(line);
                     sb.append('\n');
-                    logger.trace(sb);
+                    logger.trace(sb.toString());
                     parseLine(sb);
                 }
             }       

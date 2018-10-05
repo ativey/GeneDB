@@ -124,8 +124,6 @@ public class RfamLoader extends Loader{
 
     /**
      * Reads the Rfam file and parses the lines in the file
-     *   
-     * @param InputStream, Session
      * @throws IOError if a data problem is discovered
      */
     @Override
@@ -221,7 +219,7 @@ public class RfamLoader extends Loader{
     
     @Transactional
     public void clear(final String organismCommonName, final String analysisProgram) throws HibernateException, SQLException {
-        Session session = SessionFactoryUtils.getSession(sessionFactory, false);
+        Session session = sessionFactory.getCurrentSession();
         session.doWork(new Work() {
                public void execute(Connection connection) throws SQLException {
                     new ClearRfam(connection, organismCommonName, analysisProgram).clear();
@@ -253,7 +251,7 @@ public class RfamLoader extends Loader{
                 if(0 < line.length()){
                     StringBuilder sb = new StringBuilder(line);
                     sb.append('\n');
-                    logger.trace(sb);
+                    logger.trace(sb.toString());
                     parseLine(sb);
                 }
             }       

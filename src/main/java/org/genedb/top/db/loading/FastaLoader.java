@@ -120,7 +120,7 @@ public class FastaLoader {
     public void load(String fileId, Iterable<FastaRecord> records) {
         logger.debug(String.format("beginFastaFile(%s)", fileId));
 
-        Session session = SessionFactoryUtils.doGetSession(sessionFactory, false);
+        Session session = sessionFactory.getCurrentSession();
         StringBuilder concatenatedSequences = new StringBuilder();
 
         Feature existingTopLevelFeature = (Feature) session.createCriteria(Feature.class)

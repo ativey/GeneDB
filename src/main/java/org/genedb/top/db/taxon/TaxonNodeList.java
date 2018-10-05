@@ -26,7 +26,7 @@ public class TaxonNodeList implements Serializable {
     public List<TaxonNode> getNodes() {
     	logger.debug("Returning");
     	for (TaxonNode node : nodes) {
-    		logger.debug(node);
+    		logger.debug(node.toString());
     	}
         return nodes;
     }

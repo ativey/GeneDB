@@ -265,7 +265,6 @@ class PfamRow extends DomainRow {
      *          Used to produce more helpful diagnostics if there's a
      *          problem decoding the line.
      * @param pfam2GoFile
-     * @param rowFields a line of the input file
      */
     public PfamRow(int lineNumber, String row, Pfam2GoFile pfam2GoFile) {
         this(lineNumber, row.split("\\s+"), pfam2GoFile);
@@ -329,7 +328,7 @@ class PfamRow extends DomainRow {
                 goInstance.setEvidence(evidenceCode);
                 goTerms.add(goInstance);
             } catch (ParsingException e) {
-                logger.error(e);
+                logger.error(e.toString());
             }
         }
         return goTerms;

@@ -44,7 +44,7 @@ public class ClearOPIReferences {
             logger.info(String.format("Deleted %d OPI dbxref entries", numDeleted));
         }
         finally {
-            try {st.close();} catch (SQLException e) { logger.error(e); }
+            try {st.close();} catch (SQLException e) { logger.error(e.toString()); }
         }
     }
 

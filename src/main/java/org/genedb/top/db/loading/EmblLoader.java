@@ -326,7 +326,7 @@ class EmblLoader {
          * we're called, which will be committed on successful
          * return or rolled back if we throw an exception.
          */
-        this.session = SessionFactoryUtils.doGetSession(sessionFactory, false);
+        this.session = sessionFactory.getCurrentSession();
 
         synonymManager.startSession(session);
         taxonomicDivision = emblFile.getTaxonomicDivision();
@@ -384,7 +384,7 @@ class EmblLoader {
     private TopLevelFeature getTopLevelFeature(String uniqueName)
             throws TopLevelFeatureException {
 
-        Session session = SessionFactoryUtils.doGetSession(sessionFactory, false);
+        Session session = sessionFactory.getCurrentSession();
         Feature existingTopLevelFeature = (Feature) session.createCriteria(Feature.class)
             .add(Restrictions.eq("organism", organism))
             .add(Restrictions.eq("uniqueName", uniqueName))
@@ -771,7 +771,7 @@ class EmblLoader {
             for (String qualifierName: entry.getValue()) {
                 message.append(String.format("\t/%s%n", qualifierName));
             }
-            logger.warn(message);
+            logger.warn(message.toString());
         }
     }
 

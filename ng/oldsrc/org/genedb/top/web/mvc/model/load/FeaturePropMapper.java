@@ -4,10 +4,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.genedb.top.web.mvc.model.types.FeaturePropType;
-import org.springframework.jdbc.core.simple.ParameterizedRowMapper;
+import org.springframework.jdbc.core.RowMapper;
 
 public class FeaturePropMapper implements
-        ParameterizedRowMapper<FeaturePropType> {
+        RowMapper<FeaturePropType> {
     
 //    public static final String SQL = "select value " +
 //    		" from featureProp fp, cvterm cvt, cv" +

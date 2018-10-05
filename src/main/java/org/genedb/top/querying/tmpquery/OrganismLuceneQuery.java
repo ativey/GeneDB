@@ -1,5 +1,6 @@
 package org.genedb.top.querying.tmpquery;
 
+import org.apache.lucene.search.BooleanClause;
 import org.genedb.top.db.taxon.TaxonNodeList;
 import org.genedb.top.db.taxon.TaxonNodeManager;
 import org.genedb.top.querying.core.LuceneQuery;
@@ -16,6 +17,7 @@ import org.apache.lucene.search.BooleanClause.Occur;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.validation.Errors;
 
 import java.util.List;
@@ -31,15 +33,16 @@ public abstract class OrganismLuceneQuery extends LuceneQuery implements TaxonQu
 
     protected static final TermQuery geneQuery = new TermQuery(new Term("type.name","gene"));
     protected static final TermQuery pseudogeneQuery = new TermQuery(new Term("type.name","pseudogene"));
-    protected static final BooleanQuery geneOrPseudogeneQuery = new BooleanQuery();
-    static {
-        geneOrPseudogeneQuery.add(geneQuery, Occur.SHOULD);
-        geneOrPseudogeneQuery.add(pseudogeneQuery, Occur.SHOULD);
-    }
+
+    protected static final BooleanQuery geneOrPseudogeneQuery = new BooleanQuery.Builder()
+            .add(geneQuery, Occur.SHOULD)
+    .add(pseudogeneQuery, Occur.SHOULD)
+    .build();
+
 
     protected static final TermQuery mRNAQuery = new TermQuery(new Term("type.name", "mRNA"));
     protected static final TermQuery pseudogenicTranscriptQuery = new TermQuery(new Term("type.name","pseudogenic_transcript"));
-    protected BooleanQuery productiveTranscriptQuery = new BooleanQuery();
+    protected BooleanQuery productiveTranscriptQuery;
 
     private transient OrganismHeirachy organismHeirachy;
 
@@ -55,9 +58,11 @@ public abstract class OrganismLuceneQuery extends LuceneQuery implements TaxonQu
     @Autowired
     public void setOrganismHeirachy(OrganismHeirachy organismHeirachy) {
         this.organismHeirachy = organismHeirachy;
+        var builder = new BooleanQuery.Builder();
         for (Integer id : organismHeirachy.getIds()) {
-            productiveTranscriptQuery.add(new TermQuery(new Term("type.cvTermId", "" + id)), Occur.SHOULD);
+            builder.add(new TermQuery(new Term("type.cvTermId", "" + id)), Occur.SHOULD);
         }
+        productiveTranscriptQuery = builder.build();
     }
 
 
@@ -98,10 +103,11 @@ public abstract class OrganismLuceneQuery extends LuceneQuery implements TaxonQu
         if (taxonNames.size() == 0) {
             return;
         }
-        BooleanQuery organismQuery = new BooleanQuery();
+        var builder = new BooleanQuery.Builder();
         for (String organism : taxonNames) {
-            organismQuery.add(new TermQuery(new Term("organism.commonName",organism)), Occur.SHOULD);
+            builder.add(new TermQuery(new Term("organism.commonName",organism)), Occur.SHOULD);
         }
+        BooleanQuery organismQuery =builder.build();
         queries.add(organismQuery);
     }
 

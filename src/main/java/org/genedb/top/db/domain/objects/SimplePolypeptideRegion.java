@@ -15,7 +15,7 @@ public class SimplePolypeptideRegion extends PolypeptideRegion {
         this.color = color;
     }
 
-    public static SimplePolypeptideRegion build(org.gmod.schema.feature.PolypeptideRegion region, String description, String score, String significance, Color color) {
+    public static SimplePolypeptideRegion build(org.genedb.top.chado.feature.PolypeptideRegion region, String description, String score, String significance, Color color) {
         FeatureLoc regionLoc = region.getRankZeroFeatureLoc();
         return new SimplePolypeptideRegion(regionLoc.getFmin(), regionLoc.getFmax(), region.getUniqueName(), description, score, significance, color);
     }

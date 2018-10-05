@@ -6,10 +6,10 @@ import java.util.Date;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.jdbc.core.simple.ParameterizedRowMapper;
+import org.springframework.jdbc.core.RowMapper;
 
 
-public class FeatureMapper implements ParameterizedRowMapper<FeatureMapper> {
+public class FeatureMapper implements RowMapper<FeatureMapper> {
     private static final Logger logger = LoggerFactory.getLogger(FeatureMapper.class);
 
     public String getResidues() {

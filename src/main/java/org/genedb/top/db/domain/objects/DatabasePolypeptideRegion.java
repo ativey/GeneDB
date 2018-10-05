@@ -67,7 +67,7 @@ public class DatabasePolypeptideRegion extends PolypeptideRegion {
         this.url         = url;
     }
 
-    public static DatabasePolypeptideRegion build(org.gmod.schema.feature.PolypeptideRegion region) {
+    public static DatabasePolypeptideRegion build(org.genedb.top.chado.feature.PolypeptideRegion region) {
         FeatureLoc domainLoc = region.getRankZeroFeatureLoc();
         DbXRef dbxref = region.getDbXRef();
         if (dbxref == null) {

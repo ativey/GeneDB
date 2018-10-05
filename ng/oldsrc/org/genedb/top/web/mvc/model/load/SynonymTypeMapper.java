@@ -4,14 +4,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.genedb.top.web.mvc.model.types.SynonymType;
-import org.springframework.jdbc.core.simple.ParameterizedRowMapper;
+import org.springframework.jdbc.core.RowMapper;
 
 /**
  * 
  * @author lo2@sangerinstitute
  *
  */
-public class SynonymTypeMapper  implements ParameterizedRowMapper<SynonymType>{
+public class SynonymTypeMapper  implements RowMapper<SynonymType>{
     public static final String SQL = "select fs.is_current, s.name as sname, cvt.name as cvtname " +
     		" from feature_synonym fs, synonym s, cvterm cvt" +
     		" where fs.feature_id = ?" +

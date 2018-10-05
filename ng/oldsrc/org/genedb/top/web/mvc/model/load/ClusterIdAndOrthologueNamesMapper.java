@@ -3,9 +3,9 @@ package org.genedb.top.web.mvc.model.load;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import org.springframework.jdbc.core.simple.ParameterizedRowMapper;
+import org.springframework.jdbc.core.RowMapper;
 
-public class ClusterIdAndOrthologueNamesMapper implements ParameterizedRowMapper<ClusterIdAndOrthologueNamesMapper> {
+public class ClusterIdAndOrthologueNamesMapper implements RowMapper<ClusterIdAndOrthologueNamesMapper> {
     
     public static final String SQL = 
             " select f.uniquename, cvt.name " +

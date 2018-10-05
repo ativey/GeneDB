@@ -26,15 +26,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.genedb.top.db.taxon.TaxonNode;
 import org.genedb.top.db.taxon.TaxonNodeManager;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindException;
 import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.AbstractCommandController;
 
 /**
  * Choose an organism, or set of orgs, usually as a 'filter' before going to
@@ -42,13 +44,17 @@ import org.springframework.web.servlet.mvc.AbstractCommandController;
  * 
  * @author Adrian Tivey (art)
  */
-public class OrganismChooserController extends AbstractCommandController {
+@Controller
+public class OrganismChooserController {
+
+    @Autowired
+    private ServletContext servletContext;
 
     protected ModelAndView onSubmit(HttpServletRequest request, HttpServletResponse response)
             throws Exception {
 
         String organism = ServletRequestUtils.getStringParameter(request, "organism");
-        TaxonNodeManager tnm = (TaxonNodeManager) getServletContext().getAttribute(
+        TaxonNodeManager tnm = (TaxonNodeManager) servletContext.getAttribute(
             TAXON_NODE_MANAGER);
         TaxonNode taxonNode = tnm.getTaxonNodeForLabel(organism);
         // OrganismChooserBean ocb = (OrganismChooserBean) command;
@@ -74,7 +80,6 @@ public class OrganismChooserController extends AbstractCommandController {
         return new ModelAndView("organism/organism", model);
     }
 
-    @Override
     protected ModelAndView handle(HttpServletRequest request, HttpServletResponse response,
             Object command, BindException arg3) throws Exception {
 
@@ -82,7 +87,7 @@ public class OrganismChooserController extends AbstractCommandController {
 
         // TaxonNode taxonNode = ocb.getOrganism();
         String organism = ServletRequestUtils.getStringParameter(request, "organism");
-        TaxonNodeManager tnm = (TaxonNodeManager) getServletContext().getAttribute(
+        TaxonNodeManager tnm = (TaxonNodeManager) servletContext.getAttribute(
             TAXON_NODE_MANAGER);
         TaxonNode taxonNode = tnm.getTaxonNodeForLabel(organism);
 

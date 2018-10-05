@@ -1,6 +1,6 @@
 package org.genedb.top.chado.mapped;
 
-import org.genedb.top.db.analyzers.AllNamesAnalyzer;
+//import org.genedb.top.db.analyzers.AllNamesAnalyzer;
 import org.genedb.top.db.dao.CvDao;
 import org.genedb.top.db.dao.GeneralDao;
 import org.genedb.top.db.dao.SequenceDao;
@@ -17,14 +17,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
-import org.hibernate.search.annotations.Analyzer;
-import org.hibernate.search.annotations.DocumentId;
-import org.hibernate.search.annotations.Field;
-import org.hibernate.search.annotations.FieldBridge;
-import org.hibernate.search.annotations.Index;
-import org.hibernate.search.annotations.Indexed;
-import org.hibernate.search.annotations.IndexedEmbedded;
-import org.hibernate.search.annotations.Store;
+import org.hibernate.search.annotations.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -138,11 +131,11 @@ public abstract class Feature implements java.io.Serializable, HasPubsAndDbXRefs
     private CvTerm type;
 
     @Column(name = "name", unique = false, nullable = true, insertable = true, updatable = true)
-    @Field(index = Index.UN_TOKENIZED, store = Store.YES)
+    @Field(analyze= Analyze.NO, store = Store.YES)
     private String name;
 
     @Column(name = "uniquename", unique = false, nullable = false, insertable = true, updatable = true)
-    @Field(index = Index.UN_TOKENIZED, store = Store.YES)
+    @Field(analyze=Analyze.NO, store = Store.YES)
     private String uniqueName;
 
     @Column(name = "seqlen", unique = false, nullable = true, insertable = true, updatable = true)
@@ -152,11 +145,11 @@ public abstract class Feature implements java.io.Serializable, HasPubsAndDbXRefs
     private String md5Checksum;
 
     @Column(name = "is_analysis", unique = false, nullable = false, insertable = true, updatable = true)
-    @Field(index = Index.UN_TOKENIZED, store = Store.NO)
+    @Field(analyze=Analyze.NO, store = Store.NO)
     private boolean analysis;
 
     @Column(name = "is_obsolete", unique = false, nullable = false, insertable = true, updatable = true)
-    @Field(index = Index.UN_TOKENIZED, store = Store.YES)
+    @Field(analyze=Analyze.NO, store = Store.YES)
     private boolean obsolete;
 
     @Column(name = "timeaccessioned", unique = false, nullable = false, insertable = true, updatable = true, length = 29)
@@ -775,8 +768,8 @@ public abstract class Feature implements java.io.Serializable, HasPubsAndDbXRefs
     }
 
     @Transient
-    @Field(name = "synonym", index = Index.TOKENIZED, store = Store.YES)
-    @Analyzer(impl = AllNamesAnalyzer.class)
+    @Field(name = "synonym", store = Store.YES)
+//    @Analyzer(impl = AllNamesAnalyzer.class)
 	protected String getSynonymsAsSpaceSeparatedString() {
         List<String> synonyms = Lists.newArrayList();
         for (Synonym synonym: getSynonyms()) {
@@ -792,8 +785,8 @@ public abstract class Feature implements java.io.Serializable, HasPubsAndDbXRefs
      * @return
      */
     @Transient
-    @Field(name = "allNames", index = Index.TOKENIZED, store = Store.YES)
-    @Analyzer(impl = AllNamesAnalyzer.class)
+    @Field(name = "allNames", store = Store.YES)
+//    @Analyzer(impl = AllNamesAnalyzer.class)
     public String getAllNames() {
     	List<String> names = generateNamesList();
         
@@ -866,7 +859,7 @@ public abstract class Feature implements java.io.Serializable, HasPubsAndDbXRefs
     }
 
     @Transient
-    @Field(name = "strand", index=Index.UN_TOKENIZED, store = Store.YES)
+    @Field(name = "strand", analyze=Analyze.NO, store = Store.YES)
     public int getStrand() {
         FeatureLoc loc = getRankZeroFeatureLoc();
         if (loc == null) {
@@ -880,7 +873,7 @@ public abstract class Feature implements java.io.Serializable, HasPubsAndDbXRefs
     }
 
     @Transient
-    @Field(name = "chr", index=Index.UN_TOKENIZED, store = Store.YES)
+    @Field(name = "chr", analyze=Analyze.NO, store = Store.YES)
     String getChr() {
         FeatureLoc loc = getRankZeroFeatureLoc();
         if (loc == null) {
@@ -890,7 +883,7 @@ public abstract class Feature implements java.io.Serializable, HasPubsAndDbXRefs
     }
 
     @Transient
-    @Field(name = "chrId", index=Index.UN_TOKENIZED, store = Store.YES)
+    @Field(name = "chrId", analyze=Analyze.NO, store = Store.YES)
     int getChrId() {
         FeatureLoc loc = getRankZeroFeatureLoc();
         if (loc == null) {
@@ -1451,8 +1444,8 @@ public abstract class Feature implements java.io.Serializable, HasPubsAndDbXRefs
     
     
     @Transient
-    @Analyzer(impl = AllNamesAnalyzer.class)
-    @Field(name = "dbxref", index = Index.TOKENIZED, store = Store.YES)
+//    @Analyzer(impl = AllNamesAnalyzer.class)
+    @Field(name = "dbxref", store = Store.YES)
     public String getDbxrefsAsSpaceSeparatedString() {
     	List<String> dbxrefs = new ArrayList<String>();
     	

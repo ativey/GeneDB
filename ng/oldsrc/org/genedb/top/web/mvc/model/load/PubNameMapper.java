@@ -3,10 +3,10 @@ package org.genedb.top.web.mvc.model.load;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import org.springframework.jdbc.core.simple.ParameterizedRowMapper;
+import org.springframework.jdbc.core.RowMapper;
 
 public class PubNameMapper implements
-ParameterizedRowMapper<String> {
+RowMapper<String> {
 
     public static final String SQL = "select uniquename " +
         " from feature_pub fp, pub" +

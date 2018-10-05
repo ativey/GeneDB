@@ -12,7 +12,7 @@
 //import org.apache.commons.io.IOUtils;
 //import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 //import org.springframework.dao.EmptyResultDataAccessException;
-//import org.springframework.jdbc.core.simple.ParameterizedRowMapper;
+//import org.springframework.jdbc.core.RowMapper;
 //import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
 //import org.springframework.transaction.annotation.Transactional;
 //
@@ -235,7 +235,7 @@
 //
 //
 //
-//    class TranscriptDTOMapper implements ParameterizedRowMapper<TranscriptDTO> {
+//    class TranscriptDTOMapper implements RowMapper<TranscriptDTO> {
 //
 //        @SuppressWarnings("unchecked")
 //        @Override

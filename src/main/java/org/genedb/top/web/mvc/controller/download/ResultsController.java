@@ -3,37 +3,11 @@ package org.genedb.top.web.mvc.controller.download;
 import org.displaytag.tags.TableTagParameters;
 import org.displaytag.util.ParamEncoder;
 
-import org.genedb.top.querying.core.Query;
-import org.genedb.top.querying.core.QueryException;
-import org.genedb.top.querying.core.QueryFactory;
-import org.genedb.top.querying.core.NumericQueryVisibility;
-import org.genedb.top.querying.history.HistoryItem;
-import org.genedb.top.querying.history.HistoryManager;
-import org.genedb.top.querying.tmpquery.GeneSummary;
-import org.genedb.top.querying.tmpquery.IdsToGeneSummaryQuery;
-import org.genedb.top.querying.tmpquery.QuickSearchQuery;
 import org.genedb.top.querying.tmpquery.SuggestQuery;
-import org.genedb.top.web.mvc.controller.HistoryManagerFactory;
 //import org.genedb.top.web.mvc.model.ResultsCacheFactory;
 
-import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 //import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 //
 //@Controller

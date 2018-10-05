@@ -4,9 +4,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.genedb.top.web.mvc.model.types.DBXRefType;
-import org.springframework.jdbc.core.simple.ParameterizedRowMapper;
+import org.springframework.jdbc.core.RowMapper;
 
-public class DbxRefMapper implements ParameterizedRowMapper<DBXRefType> {
+public class DbxRefMapper implements RowMapper<DBXRefType> {
 
     
     public static final String SQL ="select accession, db.name, db.urlprefix " +

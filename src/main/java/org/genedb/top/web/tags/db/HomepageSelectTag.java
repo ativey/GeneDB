@@ -11,7 +11,7 @@ import java.util.List;
 
 import javax.servlet.jsp.JspWriter;
 
-import static org.genedb.db.taxon.TaxonNameType.FULL;
+import static org.genedb.top.db.taxon.TaxonNameType.FULL;
 
 public class HomepageSelectTag extends AbstractHomepageTag {
 

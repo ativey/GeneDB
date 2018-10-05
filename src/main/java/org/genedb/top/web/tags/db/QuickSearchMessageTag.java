@@ -1,15 +1,15 @@
 package org.genedb.top.web.tags.db;
 
 import static javax.servlet.jsp.PageContext.APPLICATION_SCOPE;
-import static org.genedb.web.mvc.controller.TaxonManagerListener.TAXON_NODE_MANAGER;
+import static org.genedb.top.web.mvc.controller.TaxonManagerListener.TAXON_NODE_MANAGER;
 
 import org.genedb.top.db.taxon.TaxonNameType;
 import org.genedb.top.db.taxon.TaxonNode;
 import org.genedb.top.db.taxon.TaxonNodeManager;
 import org.genedb.top.querying.tmpquery.QuickSearchQuery;
 
-import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;import org.slf4j.LoggerFactory;
+import org.springframework.util.StringUtils;
 
 import java.io.IOException;
 import java.util.TreeMap;
@@ -104,7 +104,6 @@ public class QuickSearchMessageTag extends SimpleTagSupport {
     /**
      * No results found in argument
      * @param resultsSize
-     * @param taxonGroup
      * @return
      */
     private boolean noResultsFound(Integer resultsSize ){

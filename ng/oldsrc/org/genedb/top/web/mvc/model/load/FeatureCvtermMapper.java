@@ -4,9 +4,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.genedb.top.web.mvc.model.types.FeatureCvtermType;
-import org.springframework.jdbc.core.simple.ParameterizedRowMapper;
+import org.springframework.jdbc.core.RowMapper;
 
-public class FeatureCvtermMapper implements ParameterizedRowMapper<FeatureCvtermType>{
+public class FeatureCvtermMapper implements RowMapper<FeatureCvtermType>{
     
     public static final String SQL = "select fcvt.*, cvt.name as cvtname, cv.name as cvname, pub.uniquename as pubuniquename" +
             " from feature_cvterm fcvt, cvterm cvt, cv, pub" +

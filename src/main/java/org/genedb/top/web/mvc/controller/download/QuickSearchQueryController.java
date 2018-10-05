@@ -1,38 +1,8 @@
 package org.genedb.top.web.mvc.controller.download;
 
-import org.genedb.top.db.taxon.TaxonNode;
-import org.genedb.top.db.taxon.TaxonNodeList;
-import org.genedb.top.db.taxon.TaxonNodeManager;
-import org.genedb.top.querying.core.NumericQueryVisibility;
-import org.genedb.top.querying.core.Query;
-import org.genedb.top.querying.core.QueryException;
-import org.genedb.top.querying.core.QueryFactory;
-import org.genedb.top.querying.history.HistoryItem;
-import org.genedb.top.querying.history.HistoryManager;
-import org.genedb.top.querying.history.HistoryType;
-import org.genedb.top.querying.tmpquery.GeneSummary;
-import org.genedb.top.querying.tmpquery.QuickSearchQuery;
 import org.genedb.top.querying.tmpquery.SuggestQuery;
-import org.genedb.top.querying.tmpquery.TaxonQuery;
-import org.genedb.top.querying.tmpquery.QuickSearchQuery.QuickSearchQueryResults;
-import org.genedb.top.web.mvc.controller.HistoryManagerFactory;
 
 import org.apache.commons.lang.StringUtils;
-import org.slf4j.Logger;import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-
-import com.google.common.collect.Lists;
-
-
-import java.util.List;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 /**
  *

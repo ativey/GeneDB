@@ -27,7 +27,7 @@ import java.util.Map;
 @Transactional(readOnly = true)
 public class CvDao extends BaseDao {
 
-    private static final Logger logger = LoggerFactory.getLogger(cvDao.class);
+    private static final Logger logger = LoggerFactory.getLogger(CvDao.class);
 
     private static final int CVTERM_MAX_LENGTH = 1024;
     private static final int DBXREF_ACCESSION_MAX_LENGTH = 255;
@@ -42,7 +42,7 @@ public class CvDao extends BaseDao {
         @SuppressWarnings("unchecked")
         List<Cv> cvs = getSession().createQuery(
             "from Cv cv where cv.name like :name")
-            .setString("name", namePattern).list();
+            .setParameter("name", namePattern).list();
         return cvs;
     }
 
@@ -55,7 +55,7 @@ public class CvDao extends BaseDao {
         @SuppressWarnings("unchecked")
         List<Cv> cvs = getSession().createQuery(
             "from Cv cv where cv.name like :name")
-            .setString("name", name).list();
+            .setParameter("name", name).list();
         if (cvs.isEmpty()) {
             logger.warn(String.format("Failed to find CV with name '%s'", name));
             return null;

@@ -4,9 +4,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.slf4j.Logger;import org.slf4j.LoggerFactory;
-import org.springframework.jdbc.core.simple.ParameterizedRowMapper;
+import org.springframework.jdbc.core.RowMapper;
 
-public class OrganismMapper  implements ParameterizedRowMapper<OrganismMapper>{    
+public class OrganismMapper  implements RowMapper<OrganismMapper>{    
     Logger logger = LoggerFactory.getLogger(OrganismMapper.class);
     
     public static final String GET_ALL_ORGANISMS_SQL =  "select * from organism";

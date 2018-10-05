@@ -7,7 +7,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.RowMapperResultSetExtractor;
-import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -27,9 +27,9 @@ public class SqlListConstraintDelegate implements ListConstraint, SimpleJdbcTemp
     private String validSql;
     private String allSql;
     private String partialSql;
-    private SimpleJdbcTemplate sjt;
+    private JdbcTemplate sjt;
 
-    public void setSimpleJdbcTemplate(SimpleJdbcTemplate sjt) {
+    public void setSimpleJdbcTemplate(JdbcTemplate sjt) {
         this.sjt = sjt;
     }
 

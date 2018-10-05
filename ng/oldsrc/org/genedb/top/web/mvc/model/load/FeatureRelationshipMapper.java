@@ -7,11 +7,11 @@ import org.genedb.top.web.mvc.model.types.DBXRefType;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.jdbc.core.simple.ParameterizedRowMapper;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
 
 
-public class FeatureRelationshipMapper implements ParameterizedRowMapper<FeatureRelationshipMapper>  {
+public class FeatureRelationshipMapper implements RowMapper<FeatureRelationshipMapper>  {
 
     public int getSubjectId() {
         return subjectId;

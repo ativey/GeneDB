@@ -4,10 +4,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.genedb.top.web.mvc.model.types.TranscriptRegionType;
-import org.springframework.jdbc.core.simple.ParameterizedRowMapper;
+import org.springframework.jdbc.core.RowMapper;
 
 public class TranscriptRegionMapper implements
-        ParameterizedRowMapper<TranscriptRegionType> {
+        RowMapper<TranscriptRegionType> {
     
     public static final String SQL = 
         " select f.feature_id, f.uniquename, fl.fmin, fl.fmax, cvt.name" +

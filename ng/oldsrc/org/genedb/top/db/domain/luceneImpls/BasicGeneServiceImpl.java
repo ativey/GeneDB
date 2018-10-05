@@ -189,7 +189,7 @@ public class BasicGeneServiceImpl implements BasicGeneService {
                 numberStart++;
                 numberEnd--;
             }
-            int dots = loc.indexOf("..");
+            int dots = loc.indexOf("src/test");
             if (dots < 1) {
                 throw new IllegalArgumentException(String.format("Failed to parse exon location '%s' from string '%s'", loc, locs));
             }

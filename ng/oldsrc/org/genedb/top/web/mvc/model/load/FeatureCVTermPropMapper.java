@@ -4,9 +4,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.genedb.top.web.mvc.model.types.FeatureCVTPropType;
-import org.springframework.jdbc.core.simple.ParameterizedRowMapper;
+import org.springframework.jdbc.core.RowMapper;
 
-public class FeatureCVTermPropMapper implements ParameterizedRowMapper<FeatureCVTPropType>{
+public class FeatureCVTermPropMapper implements RowMapper<FeatureCVTPropType>{
     
     public static final String SQL = 
         " select fcvtp.value, cvt.name " +

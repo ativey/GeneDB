@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.model.types;
 
-import org.apache.commons.lang.StringUtils;
+import org.springframework.util.StringUtils;
 
 public class SynonymType {
 

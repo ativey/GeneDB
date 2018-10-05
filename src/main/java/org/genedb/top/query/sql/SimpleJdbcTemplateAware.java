@@ -1,7 +1,7 @@
 package org.genedb.top.query.sql;
 
 //import org.springframework.beans.factory.annotation.Required;
-import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 /**
  * Marker interface for classes which want a datasource injected
@@ -15,6 +15,6 @@ public interface SimpleJdbcTemplateAware {
      * 
      * @param ds The datasource
      */
-    public void setSimpleJdbcTemplate(SimpleJdbcTemplate sjt);
+    public void setSimpleJdbcTemplate(JdbcTemplate sjt);
     
 }

@@ -4,11 +4,7 @@ import static javax.persistence.GenerationType.SEQUENCE;
 
 import org.genedb.top.db.dao.CvDao;
 import org.hibernate.annotations.Proxy;
-import org.hibernate.search.annotations.DocumentId;
-import org.hibernate.search.annotations.Field;
-import org.hibernate.search.annotations.Index;
-import org.hibernate.search.annotations.Indexed;
-import org.hibernate.search.annotations.Store;
+import org.hibernate.search.annotations.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,19 +49,19 @@ public class Organism implements Serializable {
     private int organismId;
 
     @Column(name = "abbreviation", unique = false, nullable = true, insertable = true, updatable = true)
-    @Field(index = Index.UN_TOKENIZED)
+    @Field(analyze = Analyze.NO)
     private String abbreviation;
 
     @Column(name = "genus", unique = false, nullable = false, insertable = true, updatable = true)
-    @Field(index = Index.UN_TOKENIZED)
+    @Field(analyze = Analyze.NO)
     private String genus;
 
     @Column(name = "species", unique = false, nullable = false, insertable = true, updatable = true)
-    @Field(index = Index.UN_TOKENIZED)
+    @Field(analyze = Analyze.NO)
     private String species;
 
     @Column(name = "common_name", unique = false, nullable = true, insertable = true, updatable = true)
-    @Field(index = Index.UN_TOKENIZED, store=Store.YES)
+    @Field(analyze = Analyze.NO, store=Store.YES)
     private String commonName;
 
     @Column(name = "comment", unique = false, nullable = true, insertable = true, updatable = true)

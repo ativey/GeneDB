@@ -1,7 +1,7 @@
 package org.genedb.top.web.mvc.controller.download;
 
-import org.displaytag.tags.TableTagParameters;
-import org.displaytag.util.ParamEncoder;
+//import org.displaytag.tags.TableTagParameters;
+//import org.displaytag.util.ParamEncoder;
 import org.genedb.top.db.taxon.TaxonNodeList;
 import org.genedb.top.db.taxon.TaxonNodeManager;
 import org.genedb.top.querying.core.PagedQuery;
@@ -13,10 +13,10 @@ import org.genedb.top.querying.history.HistoryManager;
 import org.genedb.top.querying.history.QueryHistoryItem;
 import org.genedb.top.querying.tmpquery.GeneSummary;
 import org.genedb.top.querying.tmpquery.IdsToGeneSummaryQuery;
-import org.genedb.top.querying.tmpquery.MotifQuery;
+//import org.genedb.top.querying.tmpquery.MotifQuery;
 import org.genedb.top.querying.tmpquery.OrganismLuceneQuery;
 import org.genedb.top.querying.tmpquery.QuickSearchQuery;
-import org.genedb.top.querying.tmpquery.SuggestQuery;
+//import org.genedb.top.querying.tmpquery.SuggestQuery;
 import org.genedb.top.web.mvc.controller.HistoryManagerFactory;
 import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -177,7 +177,7 @@ public class QueryController extends AbstractGeneDBFormController{
             model.addAttribute(BindingResult.MODEL_KEY_PREFIX + "query", errors);
             logger.debug("Returning due to binding error");
             for (ObjectError error : errors.getAllErrors()) {
-            	logger.error(error);
+            	logger.error(error.toString());
             }
             return "search/"+queryName;
         }
@@ -228,7 +228,7 @@ public class QueryController extends AbstractGeneDBFormController{
 
         logger.info("Size :: ");
 
-        logger.info(ids.size());
+        logger.info(Integer.toString(ids.size()));
 
 //        for (String id : ids) {
 //    		logger.info(id);
@@ -236,7 +236,7 @@ public class QueryController extends AbstractGeneDBFormController{
 
         List<GeneSummary> results = summaries(ids);
 
-        logger.info(results.size());
+        logger.info(Integer.toString(results.size()));
 
 
 //        QueryHistoryItem qhi = hm.getQueryHistoryItem(key);
@@ -263,13 +263,13 @@ public class QueryController extends AbstractGeneDBFormController{
         	model.addAttribute("taxonGroup", quickSearchQuery.getQuickSearchQueryResults().getTaxonGroup());
         }
 
-    	if (queryName.equals("motif")) {
-    		MotifQuery motifQuery = (MotifQuery) query;
-    		logger.info("motif query, let's get motif results for " + bounds.page + " " + bounds.length);
-    		@SuppressWarnings("rawtypes")
-			Map motifs = motifQuery.getMotifResults(bounds.page, bounds.length);
-    		model.addAttribute("motifs", motifs);
-    	}
+//    	if (queryName.equals("motif")) {
+//    		MotifQuery motifQuery = (MotifQuery) query;
+//    		logger.info("motif query, let's get motif results for " + bounds.page + " " + bounds.length);
+//    		@SuppressWarnings("rawtypes")
+//			Map motifs = motifQuery.getMotifResults(bounds.page, bounds.length);
+//    		model.addAttribute("motifs", motifs);
+//    	}
 
     	if (results.size() == 1 && redirect) {
 
@@ -295,15 +295,15 @@ public class QueryController extends AbstractGeneDBFormController{
 
     	if (queryName.equals("quickSearch")) {
 
-        	QuickSearchQuery quickSearchQuery = (QuickSearchQuery) query;
-        	logger.info("Running suggest query as no result found");
-        	SuggestQuery squery = (SuggestQuery) queryFactory.retrieveQuery("suggest", NumericQueryVisibility.PRIVATE);
-        	squery.setSearchText(quickSearchQuery.getSearchText());
-        	squery.setTaxons(quickSearchQuery.getTaxons());
-        	squery.setMax(30);
-
-			List<String> sResults = squery.getResults();
-			model.addAttribute("suggestions", sResults);
+//        	QuickSearchQuery quickSearchQuery = (QuickSearchQuery) query;
+//        	logger.info("Running suggest query as no result found");
+//        	SuggestQuery squery = (SuggestQuery) queryFactory.retrieveQuery("suggest", NumericQueryVisibility.PRIVATE);
+//        	squery.setSearchText(quickSearchQuery.getSearchText());
+//        	squery.setTaxons(quickSearchQuery.getTaxons());
+//        	squery.setMax(30);
+//
+//			List<String> sResults = squery.getResults();
+//			model.addAttribute("suggestions", sResults);
 
         }
 
@@ -314,15 +314,15 @@ public class QueryController extends AbstractGeneDBFormController{
     }
 
     @SuppressWarnings("unused")
-	private List<GeneSummary> motifSummaries (MotifQuery query, List<String> ids) throws QueryException {
-    	IdsToGeneSummaryQuery idsToGeneSummary = (IdsToGeneSummaryQuery) queryFactory.retrieveQuery("idsToGeneSummary", NumericQueryVisibility.PRIVATE);
-    	idsToGeneSummary.setIds(ids);
-    	List<GeneSummary> summaries = idsToGeneSummary.getResultsSummaries();
-    	for (GeneSummary summary : summaries) {
-    		logger.info(summary.getDisplayId());
-    	}
-    	return summaries;
-    }
+//	private List<GeneSummary> motifSummaries (MotifQuery query, List<String> ids) throws QueryException {
+//    	IdsToGeneSummaryQuery idsToGeneSummary = (IdsToGeneSummaryQuery) queryFactory.retrieveQuery("idsToGeneSummary", NumericQueryVisibility.PRIVATE);
+//    	idsToGeneSummary.setIds(ids);
+//    	List<GeneSummary> summaries = idsToGeneSummary.getResultsSummaries();
+//    	for (GeneSummary summary : summaries) {
+//    		logger.info(summary.getDisplayId());
+//    	}
+//    	return summaries;
+//    }
 
     private List<GeneSummary> summaries (List<String> ids) throws QueryException {
     	IdsToGeneSummaryQuery idsToGeneSummary = (IdsToGeneSummaryQuery) queryFactory.retrieveQuery("idsToGeneSummary", NumericQueryVisibility.PRIVATE);
@@ -346,13 +346,13 @@ public class QueryController extends AbstractGeneDBFormController{
     }
 
     private Bounds getQueryBounds(HttpServletRequest request) {
-        String startString = request.getParameter((new ParamEncoder("row").encodeParameterName(TableTagParameters.PARAMETER_PAGE)));
+        //String startString = request.getParameter((new ParamEncoder("row").encodeParameterName(TableTagParameters.PARAMETER_PAGE)));
         // Use 1-based index for start and end
         int page = 0;
-        if (startString != null) {
+        //if (startString != null) {
             //start = (Integer.parseInt(startString) - 1) * DEFAULT_LENGTH + 1;
-        	page = Integer.parseInt(startString) - 1 ;
-        }
+        	//page = Integer.parseInt(startString) - 1 ;
+        //}
 
         return new Bounds(page,DEFAULT_LENGTH);
     }

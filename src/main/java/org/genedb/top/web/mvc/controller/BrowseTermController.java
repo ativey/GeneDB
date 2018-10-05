@@ -27,10 +27,12 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import net.sf.json.spring.web.servlet.view.JsonView;
+//import net.sf.json.spring.web.servlet.view.JsonView;
 
-import org.apache.commons.lang.NotImplementedException;
-import org.slf4j.Logger;import org.slf4j.LoggerFactory;
+//import org.apache.commons.lang.NotImplementedException;
+import com.fasterxml.jackson.annotation.JsonView;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.Hits;
@@ -66,7 +68,6 @@ public class BrowseTermController {
     private static final Logger logger = LoggerFactory.getLogger(BrowseTermController.class);
     private SequenceDao sequenceDao;
     private String geneView;
-    private JsonView jsonView;
     private String successView;
     private HistoryManagerFactory historyManagerFactory;
     private LuceneIndexFactory luceneIndexFactory;
@@ -155,6 +156,7 @@ public class BrowseTermController {
 
         model.put("features", features);
 
+        // FIXME - Let Spring handle conversion
         return new ModelAndView(jsonView, model);
     }
 
@@ -171,10 +173,6 @@ public class BrowseTermController {
     }
 
 
-    public void setJsonView(JsonView jsonView) {
-        this.jsonView = jsonView;
-    }
-
     public void setHistoryManagerFactory(HistoryManagerFactory historyManagerFactory) {
         this.historyManagerFactory = historyManagerFactory;
     }
@@ -186,7 +184,7 @@ public class BrowseTermController {
     //  TODO
     private ModelAndView showForm(HttpServletRequest request,
             HttpServletResponse response, BindException be) {
-        throw new NotImplementedException("Missing code");
+        throw new RuntimeException("Missing code");
     }
 
     public String getSuccessView() {

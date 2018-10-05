@@ -30,7 +30,7 @@ public class Cv implements Serializable {
     private int cvId;
 
     @Column(name="name", unique=true, nullable=false, insertable=true, updatable=true)
-    @Field(index = Index.TOKENIZED)
+    @Field()
     private String name;
 
     @Column(name="definition", unique=false, nullable=true, insertable=true, updatable=true)

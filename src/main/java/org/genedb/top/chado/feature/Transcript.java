@@ -1,17 +1,13 @@
 package org.genedb.top.chado.feature;
 
-import org.genedb.top.db.analyzers.AllNamesAnalyzer;
+//import org.genedb.top.db.analyzers.AllNamesAnalyzer;
 import org.genedb.top.chado.cfg.FeatureType;
 import org.genedb.top.chado.mapped.Feature;
 import org.genedb.top.chado.mapped.FeatureLoc;
 import org.genedb.top.chado.mapped.FeatureRelationship;
 import org.genedb.top.chado.mapped.Organism;
 
-import org.hibernate.search.annotations.Analyzer;
-import org.hibernate.search.annotations.Field;
-import org.hibernate.search.annotations.Index;
-import org.hibernate.search.annotations.Indexed;
-import org.hibernate.search.annotations.Store;
+import org.hibernate.search.annotations.*;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -133,7 +129,7 @@ public class Transcript extends Region {
      * @return
      */
     @Transient
-    @Field(name = "gene", index = Index.UN_TOKENIZED, store = Store.YES)
+    @Field(name = "gene", analyze = Analyze.NO, store = Store.YES)
     public String getGeneUniqueName() {
     	AbstractGene gene = getGene();
         if (gene != null) {
@@ -143,7 +139,7 @@ public class Transcript extends Region {
     }
     
     @Transient
-    @Field(name = "alternateTranscriptNumber", index = Index.UN_TOKENIZED, store = Store.YES)
+    @Field(name = "alternateTranscriptNumber", analyze = Analyze.NO, store = Store.YES)
     public int alternateTranscriptNumber() {
     	AbstractGene gene = getGene();
         if (gene != null) {
@@ -153,7 +149,7 @@ public class Transcript extends Region {
     }
     
     @Transient
-    @Field(name = "alternateTranscripts", index = Index.UN_TOKENIZED, store = Store.YES)
+    @Field(name = "alternateTranscripts", analyze = Analyze.NO, store = Store.YES)
     public String alternateTranscripts() {
     	AbstractGene gene = getGene();
     	if (gene != null) {
@@ -163,8 +159,8 @@ public class Transcript extends Region {
     }
     
     @Transient
-    @Analyzer(impl = AllNamesAnalyzer.class)
-    @Field(name = "product", index = Index.TOKENIZED, store = Store.YES)
+//    @Analyzer(impl = AllNamesAnalyzer.class)
+    @Field(name = "product", store = Store.YES)
     public String getProductsAsSpaceSeparatedString() {
     	if (getPolypeptide() != null) {
     		return getPolypeptide().getProductsAsSpaceSeparatedString();

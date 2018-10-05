@@ -1,17 +1,14 @@
 package org.genedb.top.chado.feature;
 
-import org.genedb.top.db.analyzers.AllNamesAnalyzer;
-import org.genedb.top.db.analyzers.AlphaNumericAnalyzer;
+//import org.genedb.top.db.analyzers.AllNamesAnalyzer;
+//import org.genedb.top.db.analyzers.AlphaNumericAnalyzer;
 
 import org.genedb.top.chado.mapped.Feature;
 import org.genedb.top.chado.mapped.FeatureRelationship;
 import org.genedb.top.chado.mapped.Organism;
 import org.genedb.top.chado.mapped.Synonym;
 
-import org.hibernate.search.annotations.Analyzer;
-import org.hibernate.search.annotations.Field;
-import org.hibernate.search.annotations.Index;
-import org.hibernate.search.annotations.Store;
+import org.hibernate.search.annotations.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -116,8 +113,8 @@ public abstract class ProductiveTranscript extends Transcript {
     }
 
     @Transient
-    @Analyzer(impl = AllNamesAnalyzer.class)
-    @Field(name = "product", index = Index.TOKENIZED, store = Store.YES)
+ //   @Analyzer(impl = AllNamesAnalyzer.class)
+    @Field(name = "product", store = Store.YES)
     public String getProductsAsSpaceSeparatedString() {
     	Polypeptide protein = getProtein();
     	if (protein != null) {
@@ -127,8 +124,8 @@ public abstract class ProductiveTranscript extends Transcript {
     }
 
     @Transient
-    @Analyzer(impl = AllNamesAnalyzer.class)
-    @Field(name = "expandedProduct", index = Index.TOKENIZED, store = Store.YES)
+//    @Analyzer(impl = AllNamesAnalyzer.class)
+    @Field(name = "expandedProduct", store = Store.YES)
     public String getProductsAsSeparatedString() {
     	Polypeptide protein = getProtein();
     	if (protein != null) {
@@ -138,8 +135,8 @@ public abstract class ProductiveTranscript extends Transcript {
     }
     
     @Transient
-    @Analyzer(impl = AlphaNumericAnalyzer.class)
-    @Field(name = "productAlphanumeric", index = Index.TOKENIZED, store = Store.YES)
+//    @Analyzer(impl = AlphaNumericAnalyzer.class)
+    @Field(name = "productAlphanumeric", store = Store.YES)
     public String getProductsAlphanumeric(){
         Polypeptide protein = getProtein();
         if (protein != null) {
@@ -151,7 +148,7 @@ public abstract class ProductiveTranscript extends Transcript {
 
     @Override
     @Transient
-    @Field(name = "colour", index = Index.UN_TOKENIZED, store = Store.YES)
+    @Field(name = "colour", analyze = Analyze.NO, store = Store.YES)
     public Integer getColourId() {
         Polypeptide protein = getProtein();
         if (protein == null) {
@@ -172,8 +169,8 @@ public abstract class ProductiveTranscript extends Transcript {
 
 
     @Transient
-    @Field(name = "allNames", index = Index.TOKENIZED, store = Store.YES)
-    @Analyzer(impl = AllNamesAnalyzer.class)
+    @Field(name = "allNames", store = Store.YES)
+    //@Analyzer(impl = AllNamesAnalyzer.class)
     public String getAllTranscriptNames() {
     	List<String> names = Lists.newArrayList();
 

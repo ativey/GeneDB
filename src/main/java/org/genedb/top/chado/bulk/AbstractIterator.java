@@ -48,7 +48,7 @@ public abstract class AbstractIterator<E> implements Iterator<E> {
                 return getNext();
             }
             catch (DataIntegrityViolation e) {
-                logger.error(e);
+                logger.error(e.toString());
             }
             catch (SQLException e) {
                 throw new DatabaseException(e);

@@ -1,9 +1,9 @@
 package org.genedb.top.web.mvc.controller.download;
 
-import org.displaytag.tags.TableTagParameters;
-import org.displaytag.util.ParamEncoder;
+//import org.displaytag.tags.TableTagParameters;
+//import org.displaytag.util.ParamEncoder;
 
-import org.genedb.top.querying.tmpquery.SuggestQuery;
+//import org.genedb.top.querying.tmpquery.SuggestQuery;
 //import org.genedb.top.web.mvc.model.ResultsCacheFactory;
 
 //import org.springframework.beans.factory.annotation.Autowired;

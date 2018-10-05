@@ -1,8 +1,8 @@
 package org.genedb.top.chado.feature;
 
 
-import org.genedb.top.db.analyzers.AllNamesAnalyzer;
-import org.genedb.top.db.analyzers.AlphaNumericAnalyzer;
+//import org.genedb.top.db.analyzers.AllNamesAnalyzer;
+//import org.genedb.top.db.analyzers.AlphaNumericAnalyzer;
 import org.genedb.top.chado.cfg.FeatureType;
 import org.genedb.top.chado.mapped.CvTerm;
 import org.genedb.top.chado.mapped.DbXRef;
@@ -22,11 +22,7 @@ import org.biojava.bio.seq.io.SymbolTokenization;
 import org.biojava.bio.symbol.SimpleSymbolList;
 import org.biojava.bio.symbol.SymbolList;
 import org.biojava.bio.symbol.SymbolPropertyTable;
-import org.hibernate.search.annotations.Analyzer;
-import org.hibernate.search.annotations.Field;
-import org.hibernate.search.annotations.Index;
-import org.hibernate.search.annotations.Indexed;
-import org.hibernate.search.annotations.Store;
+import org.hibernate.search.annotations.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
@@ -99,7 +95,7 @@ public class Polypeptide extends Region {
     }
     
     @Transient
-    @Field(name = "gene", index = Index.UN_TOKENIZED, store = Store.YES)
+    @Field(name = "gene", analyze = Analyze.NO, store = Store.YES)
     public String getGeneUniqueName() {
     	//logger.warn("Getting gene name");
         AbstractGene gene = getGene();
@@ -110,7 +106,7 @@ public class Polypeptide extends Region {
     }
     
     @Transient
-    @Field(name = "alternateTranscriptNumber", index = Index.UN_TOKENIZED, store = Store.YES)
+    @Field(name = "alternateTranscriptNumber", analyze = Analyze.NO, store = Store.YES)
     public int getAlternateTranscriptNumber() {
     	AbstractGene gene = getGene();
         if (gene != null) {
@@ -120,7 +116,7 @@ public class Polypeptide extends Region {
     }
     
     @Transient
-    @Field(name = "alternateTranscripts", index = Index.UN_TOKENIZED, store = Store.YES)
+    @Field(name = "alternateTranscripts", analyze = Analyze.NO, store = Store.YES)
     public String getAlternateTranscripts() {
     	AbstractGene gene = getGene();
     	if (gene != null) {
@@ -342,7 +338,7 @@ public class Polypeptide extends Region {
     }
 
     @Transient
-    @Field(name="gpiAnchored", index=Index.UN_TOKENIZED, store=Store.NO)
+    @Field(name="gpiAnchored", analyze = Analyze.NO, store=Store.NO)
     public boolean isGPIAnchored() {
         return hasProperty("genedb_misc", "GPI_anchored");
     }
@@ -366,7 +362,7 @@ public class Polypeptide extends Region {
     }
 
     @Transient
-    @Field(name="signalP", index=Index.UN_TOKENIZED, store=Store.NO)
+    @Field(name="signalP", analyze = Analyze.NO, store=Store.NO)
     public boolean isSignalP() {
     	//logger.warn("Getting signal P");
         if (hasProperty("genedb_misc", "SignalP_prediction")
@@ -378,7 +374,7 @@ public class Polypeptide extends Region {
     }
     
     @Transient
-    @Field(index=Index.UN_TOKENIZED, store=Store.YES)
+    @Field(analyze = Analyze.NO, store=Store.YES)
     public String getSequenceResidues() {
         String residues = getResidues();
         if (residues != null) {
@@ -394,7 +390,7 @@ public class Polypeptide extends Region {
 
 
     @Transient
-    @Field(name="apicoplast", index=Index.UN_TOKENIZED, store=Store.NO)
+    @Field(name="apicoplast", analyze = Analyze.NO, store=Store.NO)
     public boolean isApicoplast() {
         String s = getProperty("genedb_misc", "PlasmoAP_score");
         int score;
@@ -411,7 +407,7 @@ public class Polypeptide extends Region {
     }
 
     @Transient
-    @Field(index=Index.UN_TOKENIZED, store=Store.NO)
+    @Field(analyze = Analyze.NO, store=Store.NO)
     public String getNumberTMDomains() {
         return String.format("%05d", this.getRegions(TransmembraneRegion.class).size());
     }
@@ -419,7 +415,7 @@ public class Polypeptide extends Region {
 
 
     @Transient
-    @Field(index=Index.TOKENIZED, store=Store.YES)
+    @Field(store=Store.YES)
     public String getSequenceLength(){
         return String.format("%06d",  this.getSeqLen());
     }
@@ -429,8 +425,8 @@ public class Polypeptide extends Region {
      * @return
      */
     @Transient
-    @Analyzer(impl = AllNamesAnalyzer.class)
-    @Field(name = "product", index = Index.TOKENIZED, store = Store.YES)
+//    @Analyzer(impl = AllNamesAnalyzer.class)
+    @Field(name = "product", store = Store.YES)
     public String getProductsAsSpaceSeparatedString() {
         List<String> products = getProducts();
         if (products == null) {
@@ -444,8 +440,8 @@ public class Polypeptide extends Region {
      * @return
      */
     @Transient
-    @Analyzer(impl = AllNamesAnalyzer.class)
-    @Field(name = "expandedProduct", index = Index.TOKENIZED, store = Store.YES)
+//    @Analyzer(impl = AllNamesAnalyzer.class)
+    @Field(name = "expandedProduct", store = Store.YES)
     public String getProductsAsSeparatedString() {
         List<String> products = getProducts();
         if (products == null) {
@@ -466,8 +462,8 @@ public class Polypeptide extends Region {
     }
     
     @Transient
-    @Analyzer(impl = AlphaNumericAnalyzer.class)
-    @Field(name = "productAlphanumeric", index = Index.TOKENIZED, store = Store.YES)
+//    @Analyzer(impl = AlphaNumericAnalyzer.class)
+    @Field(name = "productAlphanumeric", store = Store.YES)
     public String getProductsAlphanumeric(){
         List<String> products = getProducts();
         if (products == null) {
@@ -480,7 +476,7 @@ public class Polypeptide extends Region {
 
 
     @Transient
-    @Field(index=Index.UN_TOKENIZED, store=Store.NO)
+    @Field(analyze = Analyze.NO, store=Store.NO)
     public String getMass() {
         try {
             PeptideProperties pp = calculateStats();
@@ -496,7 +492,7 @@ public class Polypeptide extends Region {
     }
 
     @Transient
-    @Field(index=Index.TOKENIZED, store=Store.NO)
+    @Field(store=Store.NO)
     public String getEcNums() {
         List<String> ecNums = new ArrayList<String>();
         for (FeatureProp fp : getFeatureProps()) {
@@ -510,7 +506,7 @@ public class Polypeptide extends Region {
 
 
     @Transient
-    @Field(index=Index.TOKENIZED, store=Store.YES)
+    @Field(store=Store.YES)
     public String getAllCuration() {
         List<String> curation = new ArrayList<String>();
         for (FeatureProp fp : getFeatureProps()) {
@@ -532,7 +528,7 @@ public class Polypeptide extends Region {
 
 
     @Transient
-    @Field(index=Index.TOKENIZED, store=Store.NO)
+    @Field(store=Store.NO)
     public String getGo() {
         List<String> go = new ArrayList<String>();
         go.addAll(populateFromFeatureCvTerms("biological_process"));
@@ -550,8 +546,8 @@ public class Polypeptide extends Region {
     }
 
     @Transient
-    @Analyzer(impl = AllNamesAnalyzer.class)
-    @Field(index=Index.TOKENIZED, store=Store.YES)
+//    @Analyzer(impl = AllNamesAnalyzer.class)
+    @Field(store=Store.YES)
     public String getPfam(){
         List<String> pfams = new ArrayList<String>();
         for (PolypeptideDomain domain : this.getDomains()) {

@@ -10,11 +10,11 @@
 //
 //import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 //import org.genedb.top.db.domain.services.BasicGeneService;
-//import org.genedb.web.gui.ContextMapDiagram;
-//import org.genedb.web.gui.DiagramCache;
-//import org.genedb.web.gui.ImageCreationException;
-//import org.genedb.web.gui.RenderedContextMap;
-//import org.genedb.web.gui.RenderedDiagramFactory;
+//import org.genedb.top.web.gui.ContextMapDiagram;
+//import org.genedb.top.web.gui.DiagramCache;
+//import org.genedb.top.web.gui.ImageCreationException;
+//import org.genedb.top.web.gui.RenderedContextMap;
+//import org.genedb.top.web.gui.RenderedDiagramFactory;
 //import org.genedb.top.chado.feature.AbstractGene;
 //import org.genedb.top.chado.mapped.Feature;
 //import org.hibernate.Session;

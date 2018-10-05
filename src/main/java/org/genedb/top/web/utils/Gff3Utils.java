@@ -19,7 +19,7 @@
 
 package org.genedb.top.web.utils;
 
-import org.genedb.web.mvc.controller.Strand;
+import org.genedb.top.web.mvc.controller.Strand;
 
 import org.genedb.top.chado.mapped.Feature;
 

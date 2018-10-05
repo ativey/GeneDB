@@ -1,6 +1,6 @@
 //package org.genedb.web.gui;
 //
-//import org.genedb.web.mvc.model.BerkeleyMapFactory;
+//import org.genedb.top.web.mvc.model.BerkeleyMapFactory;
 //
 //import org.springframework.beans.BeansException;
 //import org.springframework.beans.factory.annotation.Required;

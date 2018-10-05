@@ -12,7 +12,7 @@ import org.genedb.top.db.taxon.TaxonNodeList;
 import org.genedb.top.querying.core.Query;
 import org.genedb.top.querying.tmpquery.GeneSummary;
 import org.genedb.top.querying.tmpquery.TaxonQuery;
-//import org.genedb.web.mvc.model.ResultsCacheFactory;
+//import org.genedb.top.web.mvc.model.ResultsCacheFactory;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.validation.BindingResult;

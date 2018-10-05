@@ -14,9 +14,9 @@
 //import org.genedb.top.db.domain.services.BasicGeneService;
 //import org.genedb.top.querying.core.LuceneIndex;
 //import org.genedb.top.querying.core.LuceneIndexFactory;
-//import org.genedb.web.gui.DiagramCache;
-//import org.genedb.web.gui.RenderedDiagramFactory;
-//import org.genedb.web.mvc.controller.ModelBuilder;
+//import org.genedb.top.web.gui.DiagramCache;
+//import org.genedb.top.web.gui.RenderedDiagramFactory;
+//import org.genedb.top.web.mvc.controller.ModelBuilder;
 //import org.genedb.top.chado.feature.AbstractGene;
 //import org.genedb.top.chado.feature.Gap;
 //import org.genedb.top.chado.feature.Gene;

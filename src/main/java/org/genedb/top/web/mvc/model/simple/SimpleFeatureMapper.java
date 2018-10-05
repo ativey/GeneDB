@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.model.simple;
 
-import org.genedb.web.mvc.model.load.FeatureMapper;
+import org.genedb.top.web.mvc.model.load.FeatureMapper;
 
 import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 

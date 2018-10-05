@@ -14,7 +14,7 @@ import org.genedb.top.querying.tmpquery.IdsToGeneSummaryQuery;
 import org.genedb.top.querying.tmpquery.QuickSearchQuery;
 import org.genedb.top.querying.tmpquery.SuggestQuery;
 import org.genedb.top.web.mvc.controller.HistoryManagerFactory;
-//import org.genedb.web.mvc.model.ResultsCacheFactory;
+//import org.genedb.top.web.mvc.model.ResultsCacheFactory;
 
 import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 //import org.springframework.beans.factory.annotation.Autowired;

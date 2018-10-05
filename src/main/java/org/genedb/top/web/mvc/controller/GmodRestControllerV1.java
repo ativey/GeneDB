@@ -9,8 +9,8 @@
 //import org.genedb.top.querying.tmpquery.ControlledCurationQuery;
 //import org.genedb.top.querying.tmpquery.GeneLocationQuery;
 //import org.genedb.top.querying.tmpquery.GenesByDbQuery;
-//import org.genedb.web.mvc.model.BerkeleyMapFactory;
-//import org.genedb.web.mvc.model.TranscriptDTO;
+//import org.genedb.top.web.mvc.model.BerkeleyMapFactory;
+//import org.genedb.top.web.mvc.model.TranscriptDTO;
 //
 //import org.genedb.top.chado.mapped.Feature;
 //

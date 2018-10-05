@@ -9,9 +9,9 @@ import org.genedb.top.querying.core.QueryFactory;
 import org.genedb.top.querying.tmpquery.GeneSummary;
 import org.genedb.top.querying.tmpquery.TaxonQuery;
 import org.genedb.top.util.MutableInteger;
-//import org.genedb.web.mvc.controller.WebConstants;
-//import org.genedb.web.mvc.controller.download.ResultEntry;
-//import org.genedb.web.mvc.model.ResultsCacheFactory;
+//import org.genedb.top.web.mvc.controller.WebConstants;
+//import org.genedb.top.web.mvc.controller.download.ResultEntry;
+//import org.genedb.top.web.mvc.model.ResultsCacheFactory;
 
 import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;

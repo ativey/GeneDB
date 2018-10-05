@@ -3,7 +3,7 @@
 //import org.genedb.top.db.domain.objects.CompoundLocatedFeature;
 //import org.genedb.top.db.domain.objects.Gap;
 //import org.genedb.top.db.domain.objects.LocatedFeature;
-//import org.genedb.web.mvc.model.BerkeleyMapFactory;
+//import org.genedb.top.web.mvc.model.BerkeleyMapFactory;
 //
 //import org.genedb.top.chado.feature.Region;
 //

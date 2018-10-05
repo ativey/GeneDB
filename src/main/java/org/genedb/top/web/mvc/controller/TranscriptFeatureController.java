@@ -23,10 +23,10 @@ import org.genedb.top.db.dao.SequenceDao;
 import org.genedb.top.querying.history.HistoryItem;
 import org.genedb.top.querying.history.HistoryManager;
 import org.genedb.top.querying.history.HistoryType;
-import org.genedb.web.mvc.model.DTOFactory;
-import org.genedb.web.mvc.model.FeatureDTO;
-import org.genedb.web.mvc.model.GeneDTO;
-import org.genedb.web.mvc.model.TranscriptDTO;
+import org.genedb.top.web.mvc.model.DTOFactory;
+import org.genedb.top.web.mvc.model.FeatureDTO;
+import org.genedb.top.web.mvc.model.GeneDTO;
+import org.genedb.top.web.mvc.model.TranscriptDTO;
 
 import org.genedb.top.chado.feature.AbstractGene;
 import org.genedb.top.chado.mapped.Feature;

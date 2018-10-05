@@ -1,11 +1,11 @@
 //package org.genedb.web.mvc.model;
 //
-//import org.genedb.web.gui.ImageMapSummary;
-//import org.genedb.web.mvc.model.types.DBXRefType;
-//import org.genedb.web.mvc.model.types.DtoObjectArrayField;
-//import org.genedb.web.mvc.model.types.DtoStringArrayField;
-//import org.genedb.web.mvc.model.types.FeatureCVTPropType;
-//import org.genedb.web.mvc.model.types.PeptidePropertiesType;
+//import org.genedb.top.web.gui.ImageMapSummary;
+//import org.genedb.top.web.mvc.model.types.DBXRefType;
+//import org.genedb.top.web.mvc.model.types.DtoObjectArrayField;
+//import org.genedb.top.web.mvc.model.types.DtoStringArrayField;
+//import org.genedb.top.web.mvc.model.types.FeatureCVTPropType;
+//import org.genedb.top.web.mvc.model.types.PeptidePropertiesType;
 //
 //import org.genedb.top.chado.utils.PeptideProperties;
 //

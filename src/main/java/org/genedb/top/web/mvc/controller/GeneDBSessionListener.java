@@ -20,8 +20,8 @@
 package org.genedb.top.web.mvc.controller;
 
 
-import org.genedb.web.mvc.controller.download.ResultEntry;
-//import org.genedb.web.mvc.model.ResultsCacheFactory;
+import org.genedb.top.web.mvc.controller.download.ResultEntry;
+//import org.genedb.top.web.mvc.model.ResultsCacheFactory;
 
 import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.web.context.WebApplicationContext;

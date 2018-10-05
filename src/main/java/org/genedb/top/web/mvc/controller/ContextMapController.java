@@ -1,7 +1,7 @@
 //package org.genedb.web.mvc.controller;
 //
 //import org.genedb.top.db.dao.SequenceDao;
-//import org.genedb.web.mvc.model.BerkeleyMapFactory;
+//import org.genedb.top.web.mvc.model.BerkeleyMapFactory;
 //
 //import org.genedb.top.chado.feature.TopLevelFeature;
 //

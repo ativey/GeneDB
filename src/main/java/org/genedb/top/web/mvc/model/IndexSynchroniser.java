@@ -70,7 +70,7 @@ public class IndexSynchroniser implements IndexUpdater{
         Set failedDeletes = deleteFeatures(fullTextSession, changeSet);
 
         //prevent unncecesary flush
-        fullTextSession.setFlushMode(FlushMode.MANUAL);
+        fullTextSession.setHibernateFlushMode(FlushMode.MANUAL);
 
         //disable 2nd-level cache ops
         fullTextSession.setCacheMode(CacheMode.IGNORE);

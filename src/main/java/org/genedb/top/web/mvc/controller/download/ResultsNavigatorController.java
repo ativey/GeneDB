@@ -2,8 +2,8 @@ package org.genedb.top.web.mvc.controller.download;
 //
 //import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 //import org.genedb.top.querying.tmpquery.GeneSummary;
-//import org.genedb.web.mvc.controller.WebConstants;
-//import org.genedb.web.mvc.model.ResultsCacheFactory;
+//import org.genedb.top.web.mvc.controller.WebConstants;
+//import org.genedb.top.web.mvc.model.ResultsCacheFactory;
 //
 //import org.springframework.stereotype.Controller;
 //import org.springframework.web.bind.annotation.PathVariable;

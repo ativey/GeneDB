@@ -6,10 +6,10 @@
 //import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 //import org.genedb.top.db.domain.objects.PolypeptideRegion;
 //import org.genedb.top.db.domain.objects.PolypeptideRegionGroup;
-//import org.genedb.web.mvc.model.DbXRefDTO;
-//import org.genedb.web.mvc.model.FeatureCvTermDTO;
-//import org.genedb.web.mvc.model.FeatureDTO;
-//import org.genedb.web.mvc.model.TranscriptDTO;
+//import org.genedb.top.web.mvc.model.DbXRefDTO;
+//import org.genedb.top.web.mvc.model.FeatureCvTermDTO;
+//import org.genedb.top.web.mvc.model.FeatureDTO;
+//import org.genedb.top.web.mvc.model.TranscriptDTO;
 //import org.springframework.util.StringUtils;
 //
 //import com.google.common.collect.Lists;

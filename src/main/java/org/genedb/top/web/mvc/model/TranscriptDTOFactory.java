@@ -5,12 +5,12 @@
 //import org.genedb.top.db.domain.objects.InterProHit;
 //import org.genedb.top.db.domain.objects.PolypeptideRegionGroup;
 //import org.genedb.top.db.domain.objects.SimpleRegionGroup;
-//import org.genedb.web.gui.DiagramCache;
-//import org.genedb.web.gui.ImageCreationException;
-//import org.genedb.web.gui.ImageMapSummary;
-//import org.genedb.web.gui.ProteinMapDiagram;
-//import org.genedb.web.gui.RenderedDiagramFactory;
-//import org.genedb.web.gui.RenderedProteinMap;
+//import org.genedb.top.web.gui.DiagramCache;
+//import org.genedb.top.web.gui.ImageCreationException;
+//import org.genedb.top.web.gui.ImageMapSummary;
+//import org.genedb.top.web.gui.ProteinMapDiagram;
+//import org.genedb.top.web.gui.RenderedDiagramFactory;
+//import org.genedb.top.web.gui.RenderedProteinMap;
 //
 //import org.genedb.top.chado.feature.AbstractGene;
 //import org.genedb.top.chado.feature.GPIAnchorCleavageSite;

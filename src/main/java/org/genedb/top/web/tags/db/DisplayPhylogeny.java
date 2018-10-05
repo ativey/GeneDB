@@ -9,9 +9,9 @@ import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.PageContext;
 
 import org.genedb.top.db.taxon.TaxonNode;
-import org.genedb.web.menu.CompositeMenu;
-import org.genedb.web.menu.Menu;
-import org.genedb.web.menu.SimpleMenu;
+import org.genedb.top.web.menu.CompositeMenu;
+import org.genedb.top.web.menu.Menu;
+import org.genedb.top.web.menu.SimpleMenu;
 
 public class DisplayPhylogeny extends AbstractHomepageTag {
 

@@ -7,7 +7,6 @@ import org.genedb.top.querying.core.QueryParam;
 
 import org.genedb.top.chado.cfg.OrganismHeirachy;
 
-import org.apache.commons.lang.StringUtils;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.BooleanQuery;

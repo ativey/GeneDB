@@ -1,6 +1,6 @@
 package org.genedb.top.web.mvc.model.simple;
 
-import org.genedb.web.mvc.model.load.TimerHelper;
+import org.genedb.top.web.mvc.model.load.TimerHelper;
 
 import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;

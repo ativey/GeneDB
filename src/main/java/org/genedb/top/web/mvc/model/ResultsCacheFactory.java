@@ -1,6 +1,6 @@
 //package org.genedb.web.mvc.model;
 //
-//import org.genedb.web.mvc.controller.download.ResultEntry;
+//import org.genedb.top.web.mvc.controller.download.ResultEntry;
 //
 //import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 //

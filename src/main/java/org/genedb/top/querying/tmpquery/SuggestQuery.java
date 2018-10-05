@@ -17,7 +17,7 @@ import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.search.spell.LuceneDictionary;
 import org.apache.lucene.search.spell.SpellChecker;
 import org.genedb.top.querying.core.QueryException;
-import org.genedb.web.mvc.model.PopulateLuceneDictionary;
+import org.genedb.top.web.mvc.model.PopulateLuceneDictionary;
 
 /*
  * Uses the lucene spellchecker to suggest alternative words. To be used as a fallback when there are no quick search results.

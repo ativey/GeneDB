@@ -6,7 +6,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.servlet.view.feed.AbstractRssFeedView;
-import org.genedb.web.mvc.model.AnnotationChangesRssContent;
+import org.genedb.top.web.mvc.model.AnnotationChangesRssContent;
 import com.sun.syndication.feed.rss.Channel;
 import com.sun.syndication.feed.rss.Content;
 import com.sun.syndication.feed.rss.Item;

@@ -19,8 +19,8 @@ package org.genedb.top.web.mvc.controller.download;
 //import org.genedb.top.querying.core.QueryFactory;
 //import org.genedb.top.querying.tmpquery.GeneSummary;
 //import org.genedb.top.querying.tmpquery.TaxonQuery;
-//import org.genedb.web.mvc.controller.WebConstants;
-//import org.genedb.web.mvc.model.ResultsCacheFactory;
+//import org.genedb.top.web.mvc.controller.WebConstants;
+//import org.genedb.top.web.mvc.model.ResultsCacheFactory;
 //
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.beans.propertyeditors.CustomDateEditor;

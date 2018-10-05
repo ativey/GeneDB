@@ -33,7 +33,7 @@ import org.springframework.http.client.ClientHttpRequest;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
-import org.genedb.web.mvc.model.AnnotationChangesRssContent;
+import org.genedb.top.web.mvc.model.AnnotationChangesRssContent;
 
 @Controller
 @RequestMapping(value="/rss")

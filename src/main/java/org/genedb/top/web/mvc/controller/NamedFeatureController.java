@@ -40,8 +40,8 @@ import org.springframework.web.servlet.ModelAndView;
 //import org.genedb.top.querying.history.HistoryManager;
 //import org.genedb.top.querying.history.HistoryType;
 //import org.genedb.top.util.Pair;
-//import org.genedb.web.mvc.model.BerkeleyMapFactory;
-//import org.genedb.web.mvc.model.TranscriptDTOFactory;
+//import org.genedb.top.web.mvc.model.BerkeleyMapFactory;
+//import org.genedb.top.web.mvc.model.TranscriptDTOFactory;
 import org.genedb.top.web.mvc.model.TranscriptDTO;
 
 import org.genedb.top.chado.feature.AbstractGene;

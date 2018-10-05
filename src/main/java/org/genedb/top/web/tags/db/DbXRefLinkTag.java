@@ -1,6 +1,6 @@
 package org.genedb.top.web.tags.db;
 
-import org.genedb.web.mvc.controller.DbXRefListener;
+import org.genedb.top.web.mvc.controller.DbXRefListener;
 
 import java.io.IOException;
 import java.util.Map;

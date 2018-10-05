@@ -12,10 +12,10 @@ import org.genedb.top.querying.core.NumericQueryVisibility;
 import org.genedb.top.querying.history.HistoryManager;
 import org.genedb.top.querying.history.QueryHistoryItem;
 import org.genedb.top.querying.tmpquery.GeneSummary;
-import org.genedb.top.querying.tmpquery.IdsToGeneSummaryQuery;
+//import org.genedb.top.querying.tmpquery.IdsToGeneSummaryQuery;
 //import org.genedb.top.querying.tmpquery.MotifQuery;
-import org.genedb.top.querying.tmpquery.OrganismLuceneQuery;
-import org.genedb.top.querying.tmpquery.QuickSearchQuery;
+//import org.genedb.top.querying.tmpquery.OrganismLuceneQuery;
+//import org.genedb.top.querying.tmpquery.QuickSearchQuery;
 //import org.genedb.top.querying.tmpquery.SuggestQuery;
 import org.genedb.top.web.mvc.controller.HistoryManagerFactory;
 import org.slf4j.Logger;import org.slf4j.LoggerFactory;
@@ -185,13 +185,14 @@ public class QueryController extends AbstractGeneDBFormController{
         /*
          * Bodge to make sure organism lucene queries have a taxon.
          * */
-        if (query instanceof OrganismLuceneQuery) {
-            OrganismLuceneQuery oq = (OrganismLuceneQuery) query;
-            if (oq.getTaxons() == null ) {
-                TaxonNodeManager tnm = (TaxonNodeManager) applicationContext.getBean("taxonNodeManager", TaxonNodeManager.class);
-                oq.setTaxons(new TaxonNodeList(tnm.getTaxonNodeByString("Root", false)));
-            }
-        }
+    // FIXME
+        //        if (query instanceof OrganismLuceneQuery) {
+//            OrganismLuceneQuery oq = (OrganismLuceneQuery) query;
+//            if (oq.getTaxons() == null ) {
+//                TaxonNodeManager tnm = (TaxonNodeManager) applicationContext.getBean("taxonNodeManager", TaxonNodeManager.class);
+//                oq.setTaxons(new TaxonNodeList(tnm.getTaxonNodeByString("Root", false)));
+//            }
+//        }
 
         // Validate initialised form
         query.validate(query, errors);
@@ -257,11 +258,12 @@ public class QueryController extends AbstractGeneDBFormController{
         logger.info("Total result size " + totalResultsSize);
     	model.addAttribute("resultsSize", totalResultsSize);
 
-    	if (queryName.equals("quickSearch")) {
-        	QuickSearchQuery quickSearchQuery = (QuickSearchQuery) query;
-        	logger.info("Fetching quick search taxons");
-        	model.addAttribute("taxonGroup", quickSearchQuery.getQuickSearchQueryResults().getTaxonGroup());
-        }
+    	// FIXME
+//    	if (queryName.equals("quickSearch")) {
+//        	QuickSearchQuery quickSearchQuery = (QuickSearchQuery) query;
+//        	logger.info("Fetching quick search taxons");
+//        	model.addAttribute("taxonGroup", quickSearchQuery.getQuickSearchQueryResults().getTaxonGroup());
+//        }
 
 //    	if (queryName.equals("motif")) {
 //    		MotifQuery motifQuery = (MotifQuery) query;
@@ -325,13 +327,15 @@ public class QueryController extends AbstractGeneDBFormController{
 //    }
 
     private List<GeneSummary> summaries (List<String> ids) throws QueryException {
-    	IdsToGeneSummaryQuery idsToGeneSummary = (IdsToGeneSummaryQuery) queryFactory.retrieveQuery("idsToGeneSummary", NumericQueryVisibility.PRIVATE);
-    	idsToGeneSummary.setIds(ids);
-    	List<GeneSummary> summaries = idsToGeneSummary.getResultsSummaries();
-    	for (GeneSummary summary : summaries) {
-    		logger.info(summary.getDisplayId() + " ... " + summary.getProduct());
-    	}
-    	return summaries;
+//    	IdsToGeneSummaryQuery idsToGeneSummary = (IdsToGeneSummaryQuery) queryFactory.retrieveQuery("idsToGeneSummary", NumericQueryVisibility.PRIVATE);
+//    	idsToGeneSummary.setIds(ids);
+//    	List<GeneSummary> summaries = idsToGeneSummary.getResultsSummaries();
+//    	for (GeneSummary summary : summaries) {
+//    		logger.info(summary.getDisplayId() + " ... " + summary.getProduct());
+//    	}
+//    	return summaries;
+    	// FIXME
+        return List.of();
     }
 
     public class Bounds {

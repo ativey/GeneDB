@@ -29,7 +29,7 @@ public class QueryHistoryItem extends HistoryItem {
     			try {
     				ids = new HashSet<String>(query.getResults(0, maxIndex));
     				logger.info(" ids ");
-    				logger.info(ids);
+    				logger.info(ids.toString());
     			} catch (QueryException e) {
     				throw new RuntimeException(e);
     			}

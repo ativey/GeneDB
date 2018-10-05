@@ -14,6 +14,8 @@ import org.apache.lucene.search.Sort;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
+import org.apache.lucene.store.IOContext;
+import org.apache.lucene.store.IndexInput;
 import org.springframework.util.StringUtils;
 
 import java.io.File;
@@ -63,7 +65,6 @@ public class LuceneIndex {
     /**
      * Open the named Lucene index from the default location.
      *
-     * @param indexName The name of the index
      * @return
      * @throws IOException
      */
@@ -75,8 +76,7 @@ public class LuceneIndex {
         String indexFilename = indexDirectoryName + File.separatorChar + indexName;
 //        logger.info(String.format("Opening Lucene index at '%s'", indexFilename));
         try {
-
-        	directory = FSDirectory.getDirectory(new File(indexFilename));
+            directory = FSDirectory.getDirectory(new File(indexFilename));
             indexReader = IndexReader.open(directory, true);
 
         } catch (IOException exp) {

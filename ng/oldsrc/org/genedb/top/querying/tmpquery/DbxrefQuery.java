@@ -1,9 +1,6 @@
 package org.genedb.top.querying.tmpquery;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 
 import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.apache.lucene.index.Term;
@@ -13,8 +10,6 @@ import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.WildcardQuery;
 import org.apache.lucene.search.BooleanClause.Occur;
 import org.genedb.top.querying.core.QueryParam;
-import org.hibernate.Session;
-import org.springframework.orm.hibernate5.SessionFactoryUtils;
 import org.springframework.util.StringUtils;
 
 /**

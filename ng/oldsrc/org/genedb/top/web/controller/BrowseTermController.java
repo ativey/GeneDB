@@ -30,7 +30,6 @@ import javax.servlet.http.HttpServletResponse;
 //import net.sf.json.spring.web.servlet.view.JsonView;
 
 //import org.apache.commons.lang.NotImplementedException;
-import com.fasterxml.jackson.annotation.JsonView;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.apache.lucene.document.Document;
@@ -40,7 +39,6 @@ import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TopDocs;
 
 import org.genedb.top.db.dao.SequenceDao;
-import org.genedb.top.db.taxon.TaxonUtils;
 import org.genedb.top.querying.core.LuceneIndex;
 import org.genedb.top.querying.core.LuceneIndexFactory;
 import org.genedb.top.querying.history.HistoryItem;

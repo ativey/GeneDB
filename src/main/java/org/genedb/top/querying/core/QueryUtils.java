@@ -19,9 +19,7 @@
 
 package org.genedb.top.querying.core;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import org.slf4j.Logger;import org.slf4j.LoggerFactory;
@@ -30,10 +28,9 @@ import org.genedb.top.db.taxon.TaxonNode;
 import org.genedb.top.db.taxon.TaxonNodeList;
 import org.genedb.top.query.sql.SqlQuery;
 import org.genedb.top.querying.tmpquery.OrganismHqlQuery;
-import org.genedb.top.querying.tmpquery.OrganismLuceneQuery;
+//import org.genedb.top.querying.tmpquery.OrganismLuceneQuery;
 import org.genedb.top.querying.tmpquery.ProteinMatchClusterOrthologueQuery;
 import org.springframework.beans.BeanWrapperImpl;
-import org.springframework.util.StringUtils;
 
 public class QueryUtils {
 	
@@ -77,17 +74,21 @@ public class QueryUtils {
     	String[] paramNames = null;
     	
     	TaxonNodeList taxons = null;
-    	
-    	if (query instanceof LuceneQuery) {
-    		LuceneQuery luceneQuery = (LuceneQuery) query;
-    		paramNames = luceneQuery.getParamNames();
-    		
-    		if (luceneQuery instanceof OrganismLuceneQuery) {
-    			taxons = ((OrganismLuceneQuery) luceneQuery).getTaxons();
-    		}
-    		
-    		
-    	} else if (query instanceof HqlQuery) {
+
+    	// FIXME
+//    	if (query instanceof LuceneQuery) {
+//    		LuceneQuery luceneQuery = (LuceneQuery) query;
+//    		paramNames = luceneQuery.getParamNames();
+//
+//    		if (luceneQuery instanceof OrganismLuceneQuery) {
+//    			taxons = ((OrganismLuceneQuery) luceneQuery).getTaxons();
+//    		}
+//
+//
+//    	} else
+//
+
+    	    if (query instanceof HqlQuery) {
     		HqlQuery hqlQuery = (HqlQuery) query;
     		paramNames = hqlQuery.getParamNames();
     		

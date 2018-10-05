@@ -73,7 +73,7 @@ public abstract class HqlQuery implements PagedQuery {
     @Override
 	public List<String> getResults() throws QueryException {
 
-		Session session = SessionFactoryUtils.doGetSession(sessionFactory, false);
+		Session session = sessionFactory.getCurrentSession();
 
 		Map<String,String> map = new HashMap<String,String>();
         map.put("ORGANISM", getOrganismHql());
@@ -103,7 +103,7 @@ public abstract class HqlQuery implements PagedQuery {
     @Override
 	public List<String> getResults(int start, int end) throws QueryException {
 
-		Session session = SessionFactoryUtils.doGetSession(sessionFactory, false);
+		Session session = sessionFactory.getCurrentSession();
 
 		Map<String,String> map = new HashMap<String,String>();
         map.put("ORGANISM", getOrganismHql());
@@ -137,7 +137,7 @@ public abstract class HqlQuery implements PagedQuery {
 	@Override
 	public int getTotalResultsSize() {
 
-		Session session = SessionFactoryUtils.doGetSession(sessionFactory, false);
+		Session session = sessionFactory.getCurrentSession();
 
         Map<String,String> map = new HashMap<String,String>();
         map.put("ORGANISM", getOrganismHql());

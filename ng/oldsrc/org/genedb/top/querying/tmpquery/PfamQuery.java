@@ -6,10 +6,7 @@ import org.genedb.top.querying.core.QueryParam;
 import org.slf4j.Logger;import org.slf4j.LoggerFactory;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.BooleanQuery;
-import org.apache.lucene.search.FuzzyQuery;
-import org.apache.lucene.search.PhraseQuery;
 import org.apache.lucene.search.TermQuery;
-import org.apache.lucene.search.WildcardQuery;
 import org.apache.lucene.search.BooleanClause.Occur;
 
 import java.util.List;

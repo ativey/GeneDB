@@ -1,6 +1,5 @@
 package org.genedb.top.querying.tmpquery;
 
-import org.apache.lucene.search.BooleanClause;
 import org.genedb.top.db.taxon.TaxonNodeList;
 import org.genedb.top.db.taxon.TaxonNodeManager;
 import org.genedb.top.querying.core.LuceneQuery;
@@ -8,7 +7,6 @@ import org.genedb.top.querying.core.QueryParam;
 
 import org.genedb.top.chado.cfg.OrganismHeirachy;
 
-import org.apache.lucene.document.Document;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.Query;

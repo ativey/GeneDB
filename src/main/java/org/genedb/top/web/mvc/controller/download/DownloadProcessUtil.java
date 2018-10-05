@@ -19,7 +19,7 @@ import org.genedb.top.querying.core.NumericQueryVisibility;
 import org.genedb.top.querying.core.QueryException;
 import org.genedb.top.querying.core.QueryFactory;
 import org.genedb.top.querying.tmpquery.GeneDetail;
-import org.genedb.top.querying.tmpquery.IdsToGeneDetailQuery;
+//import org.genedb.top.querying.tmpquery.IdsToGeneDetailQuery;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
@@ -134,11 +134,13 @@ public class DownloadProcessUtil {
     
     public List<GeneDetail> getResults(List<String> uniqueNames) throws QueryException {
     	
-    	@SuppressWarnings("unchecked")
-    	IdsToGeneDetailQuery query = (IdsToGeneDetailQuery) queryFactory.retrieveQuery("idsToGeneDetail",  NumericQueryVisibility.PRIVATE);
-        query.setIds(uniqueNames);
-        
-        return query.getGeneDetails(0, uniqueNames.size());
+//    	@SuppressWarnings("unchecked")
+//    	IdsToGeneDetailQuery query = (IdsToGeneDetailQuery) queryFactory.retrieveQuery("idsToGeneDetail",  NumericQueryVisibility.PRIVATE);
+//        query.setIds(uniqueNames);
+//
+//        return query.getGeneDetails(0, uniqueNames.size());
+        // FIXME
+		return List.of();
     }
     
 	public String getTime() {

@@ -1,6 +1,5 @@
 package org.genedb.top.querying.tmpquery;
 
-import org.genedb.top.db.taxon.TaxonNode;
 import org.genedb.top.querying.core.QueryClass;
 import org.genedb.top.querying.core.QueryParam;
 
@@ -11,11 +10,7 @@ import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.WildcardQuery;
 import org.apache.lucene.search.BooleanClause.Occur;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @QueryClass(
         title="Coding and pseudogenes by protein length",

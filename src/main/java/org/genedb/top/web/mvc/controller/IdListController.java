@@ -178,8 +178,8 @@ public class IdListController {
         if (f == null) {
             return null;
         }
-        if (f instanceof org.gmod.schema.feature.Gene) {
-            Gene g = (org.gmod.schema.feature.Gene) f;
+        if (f instanceof org.genedb.top.chado.feature.Gene) {
+            Gene g = (org.genedb.top.chado.feature.Gene) f;
             Transcript t = g.getTranscripts().iterator().next();
             return t.getUniqueName();
         }

@@ -219,7 +219,7 @@ public abstract class AbstractGene extends TopLevelFeature {
     public <T extends Transcript> T makeTranscript(Class<T> transcriptClass, String transcriptUniqueName,
                 int fmin, int fmax, AbstractGene gene, EmblLocation location) {
 
-        Session session = SessionFactoryUtils.getSession(sessionFactory, false);
+        Session session = sessionFactory.getCurrentSession();
         T transcript = Transcript.construct(transcriptClass, getOrganism(), transcriptUniqueName, null);
         session.persist(transcript);
 

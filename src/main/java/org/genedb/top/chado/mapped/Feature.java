@@ -1160,7 +1160,7 @@ public abstract class Feature implements java.io.Serializable, HasPubsAndDbXRefs
      * within this object.
      */
     protected Pub nullPub() {
-        Session session = SessionFactoryUtils.getSession(sessionFactory, false);
+        Session session = sessionFactory.getCurrentSession();
         return (Pub) session.load(Pub.class, 1);
     }
 
@@ -1314,7 +1314,7 @@ public abstract class Feature implements java.io.Serializable, HasPubsAndDbXRefs
         logger.trace(String.format("Adding similarity '%s' to feature '%s' (ID=%d)",
             similarity, getUniqueName(), getFeatureId()));
 
-        Session session = SessionFactoryUtils.getSession(sessionFactory, false);
+        Session session = sessionFactory.getCurrentSession();
 
         Analysis analysis = similarity.getAnalysis();
         if (analysis == null) {

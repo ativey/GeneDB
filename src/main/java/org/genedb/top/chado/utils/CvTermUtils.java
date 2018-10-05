@@ -41,7 +41,7 @@ public class CvTermUtils {
                 analyzeCvTermPath(conn);
         }
         finally {
-            try {st.close(); conn.commit();} catch (SQLException e) {logger.error(e);}
+            try {st.close(); conn.commit();} catch (SQLException e) {logger.error(e.toString());}
         }
     }
 
@@ -53,7 +53,7 @@ public class CvTermUtils {
             st.execute();
         }
         finally {
-            try {st.close();} catch (SQLException e) {logger.error(e);}
+            try {st.close();} catch (SQLException e) {logger.error(e.toString());}
         }
     }
 
@@ -64,7 +64,7 @@ public class CvTermUtils {
             st.execute("analyze cvtermpath");
         }
         finally {
-            try { st.close(); } catch (SQLException e) {logger.error(e);}
+            try { st.close(); } catch (SQLException e) {logger.error(e.toString());}
         }
     }
 

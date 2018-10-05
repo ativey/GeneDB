@@ -3,10 +3,7 @@ package org.genedb.top.chado.mapped;
 import static javax.persistence.GenerationType.SEQUENCE;
 
 import org.hibernate.annotations.Cascade;
-import org.hibernate.search.annotations.DocumentId;
-import org.hibernate.search.annotations.Field;
-import org.hibernate.search.annotations.Index;
-import org.hibernate.search.annotations.Store;
+import org.hibernate.search.annotations.*;
 
 import java.io.Serializable;
 import java.util.Collection;

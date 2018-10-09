@@ -2,3 +2,4 @@ This is a fork of the (private) Sanger GeneDB repository. It is currently underg
 date with modern libraries and practices.
 
 The code compiles, and is being tested against a Chado database. A few changes previously made are being reintegrated. 
+Please see the Wiki for details.
